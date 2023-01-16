@@ -10,19 +10,19 @@ from VulnScan.scanvuln import checkvuln
 
 
 def menu():
+    print(R+'''
 
-    print('''
-
- █████╗ ███╗   ███╗██████╗
-██╔══██╗████╗ ████║██╔══██╗
-███████║██╔████╔██║██████╔╝         /-version 1.0-/
-██╔══██║██║╚██╔╝██║██╔═══╝         /this tool is for educational purposes only/
-██║  ██║██║ ╚═╝ ██║██║
-╚═╝  ╚═╝╚═╝     ╚═╝╚═╝
-
+  █████╗ ███╗   ███╗██████╗
+ ██╔══██╗████╗ ████║██╔══██╗
+ ███████║██╔████╔██║██████╔╝         /-version 1.0-/
+ ██╔══██║██║╚██╔╝██║██╔═══╝         /this tool is for educational purposes only/
+ ██║  ██║██║ ╚═╝ ██║██║
+ ╚═╝  ╚═╝╚═╝     ╚═╝╚═╝
+''' + W + '''
     [*]   use -h or --help for help
-    [*]   example: python3 main.py example.com
+    [*]   example:''' + G + ''' python3 main.py example.com
 ''')
+
 
 
 def main(target):
@@ -39,16 +39,23 @@ def main(target):
     checkvuln(target)
 
 
+
 if __name__ == "__main__":
+    W = "\033[0m"
+    R = "\033[31m"
+    G = "\033[32m"
+    O = "\033[33m"
+    B = "\033[34m"
     try:
         target = sys.argv[1]
-        while (target == "" or target == None or target == "-h" or target == "--help"):
-            menu()
-            target = input("Enter a target: ")
-        if target.startswith("http") | target.startswith("https"):
-            target = target.split("/")[2]
-        main(target)
+        if (target == '-h' or target == '--help'):
+            raise Exception
     except:
         menu()
-        target = input("Enter a target: ")
-        main(target)
+        target = input(B + "Enter a target: ")
+        while (target == '' or target == None):
+            menu()
+            target = input("Enter a target: ")
+    if target.startswith("http") | target.startswith("https"):
+        target = target.split("/")[2]
+    main(target)
