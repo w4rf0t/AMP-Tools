@@ -20,8 +20,7 @@ def menu():
  ╚═╝  ╚═╝╚═╝     ╚═╝╚═╝
 ''' + W + '''
     [*]   use -h or --help for help
-    [*]   example:''' + G + ''' python3 main.py example.com
-''')
+    [*]   example:''' + G + ''' python3 main.py example.com''', end='\n'+B)
 
 
 
