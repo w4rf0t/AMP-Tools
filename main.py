@@ -10,6 +10,7 @@ from VulnScan.scanvuln import checkvuln
 
 
 def menu():
+    subprocess.call("clear", shell=True)
     print(R+'''
 
   █████╗ ███╗   ███╗██████╗
