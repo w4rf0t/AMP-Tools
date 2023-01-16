@@ -1,4 +1,4 @@
-# AMP Tool
+# AMP Tool 
 
 **1. Tiện ích:**
 
@@ -9,13 +9,14 @@
 
 - Giao diện thân thiện, chạy trong terminal với kernel là Linux
 - Dưới đây là hình ảnh demo của tool
-![image](https://user-images.githubusercontent.com/61643034/212250194-0bd4966b-2117-4bf9-9eaf-b8d6b8894cf6.png)
+![image](https://user-images.githubusercontent.com/61643034/212592445-1a13068f-357f-4b9b-9755-261adead0fb2.png)
+
 
 **3. Hướng dẫn sử dụng**
 
 - Đầu tiên, bạn cần sử dụng lệnh 
 ```bash
-  git clone https://github.com/w4rf0t/AMP-Tools ; cd AMP-Tools ; chmod +x AutoRecon/install.sh; ./AutoRecon/install.sh
+  cd $HOME; git clone https://github.com/w4rf0t/AMP-Tools ; cd AMP-Tools ; chmod +x AutoRecon/install.sh; ./AutoRecon/install.sh
   ``` 
 để cài các **_requirements_** cần thiết cho chương trình
 - Sau đấy để tools chạy 1 cách mượt mà nhất, bạn cần sửa file `config.json` của knockpy.
