@@ -33,7 +33,7 @@ _regex = {
     'name_for_my_regex' : r'my_regex'
 }
 
-path = "/home/kali/google.com.txt"
+path = "RESULT/{target}/{target}_urls/js_urls.txt"
 def get_js(path):
     try:
         with open(path,'r') as f:
