@@ -13,6 +13,10 @@
 
 **3. Hướng dẫn sử dụng**
 
-- Đầu tiên, bạn cần sử dụng lệnh `git clone https://github.com/w4rf0t/AMP-Tools ; cd AMP-Tools ; chmod +x AutoRecon/install.sh; ./AutoRecon/install.sh` để cài các **_requirements_** cần thiết cho chương trình
+- Đầu tiên, bạn cần sử dụng lệnh 
+```bash
+  git clone https://github.com/w4rf0t/AMP-Tools ; cd AMP-Tools ; chmod +x AutoRecon/install.sh; ./AutoRecon/install.sh
+  ``` 
+để cài các **_requirements_** cần thiết cho chương trình
 - Sau đấy để tools chạy 1 cách mượt mà nhất, bạn cần sửa file `config.json` của knockpy.
 - Nếu bạn cài bằng pip thì file này ở trong /dist_packages/knockpy `"strftime":""` (trường này để format output của chương trình)
