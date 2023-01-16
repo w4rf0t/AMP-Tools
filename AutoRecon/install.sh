@@ -4,6 +4,7 @@ cd ~
 git clone https://github.com/shmilylty/OneForAll.git; cd OneForAll; pip3 install -r requirements.txt; 
 git clone https://github.com/guelfoweb/knock.git; cd knock; pip3 install -r requirements.txt; 
 go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+pip install scanless --user
 go install github.com/tomnomnom/waybackurls@latest
 $ GO111MODULE=on go get -u -v github.com/lc/subjs@latest
 go install github.com/tomnomnom/qsreplace@latest
