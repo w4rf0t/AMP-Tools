@@ -9,6 +9,7 @@
 
 - Giao diện thân thiện, chạy trong terminal với kernel là Linux
 - Dưới đây là hình ảnh demo của tool
+
 ![image](https://user-images.githubusercontent.com/61643034/212615800-9fbf87c4-8577-4593-b79e-025639a1949b.png)
 
 
