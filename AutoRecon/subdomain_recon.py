@@ -24,16 +24,16 @@ def call_oneforall(target):
 def call_subfinder(target):
     os.system(f"subfinder -d {target} -o AutoRecon/RESULT/{target}/subdomain_{target}.txt ")
 
-def call_knockpy(target):
-    os.system(f"knockpy {target} -o AutoRecon/RESULT/{target}")
-#     # xu ly json
-    with open(f"AutoRecon/RESULT/{target}/{target}_.json", "r") as f:
-        data = json.load(f)
-#     # Get a list of all the domain names that end in ".vietnamairport.vn"
-    with open(f'AutoRecon/RESULT/{target}/subdomain_{target}.txt', 'a') as file:
-        for domain in data:
-            if domain.endswith(f".{target}"):
-                file.write(domain + "\n")
+# def call_knockpy(target):
+#     os.system(f"knockpy {target} -o AutoRecon/RESULT/{target}")
+#  #xu ly json
+#     with open(f"AutoRecon/RESULT/{target}/{target}_.json", "r") as f:
+#         data = json.load(f)
+# # Get a list of all the domain names that end in ".vietnamairport.vn"
+#     with open(f'AutoRecon/RESULT/{target}/subdomain_{target}.txt', 'a') as file:
+#         for domain in data:
+#             if domain.endswith(f".{target}"):
+#                 file.write(domain + "\n")
 
 def sanitize_input(target):
     os.system(f"awk '!seen[$0]++' AutoRecon/RESULT/{target}/subdomain_{target}.txt > AutoRecon/RESULT/{target}/final_subdomain_{target}.txt ")
