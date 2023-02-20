@@ -5,11 +5,9 @@ export GOROOT=/usr/lib/go
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
-pip install futures
 go install github.com/lc/subjs@latest
 go install github.com/tomnomnom/waybackurls@latest
 go install github.com/projectdiscovery/katana/cmd/katana@latest
-
 github.com/d3mondev/puredns/v2@latest
 mkdir .gf
 go install github.com/tomnomnom/qsreplace@latest
