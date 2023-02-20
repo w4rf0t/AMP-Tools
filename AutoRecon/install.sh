@@ -1,14 +1,21 @@
 #!/bin/bash
 
 cd ~
-git clone https://github.com/shmilylty/OneForAll.git; cd OneForAll; pip3 install -r requirements.txt; 
-git clone https://github.com/guelfoweb/knock.git; cd knock; pip3 install -r requirements.txt; 
+export GOROOT=/usr/lib/go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
-pip install scanless --user
+pip install futures
+go install github.com/lc/subjs@latest
 go install github.com/tomnomnom/waybackurls@latest
-$ GO111MODULE=on go get -u -v github.com/lc/subjs@latest
+go install github.com/projectdiscovery/katana/cmd/katana@latest
+
+github.com/d3mondev/puredns/v2@latest
+mkdir .gf
 go install github.com/tomnomnom/qsreplace@latest
-go get -u github.com/tomnomnom/gf
-echo 'source $GOPATH/src/github.com/tomnomnom/gf/gf-completion.bash' >> ~/.bashrc
-cp -r $GOPATH/src/github.com/tomnomnom/gf/examples ~/.gf
+git clone https://github.com/tomnomnom/gf
+git clone https://github.com/1ndianl33t/Gf-Patterns
+mv gf/examples/* .gf
+mv Gf-Patterns/*.json ~/.gf
+rm gf Gf-Patterns
 pip3 install -r requirements.txt

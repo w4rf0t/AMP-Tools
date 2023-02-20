@@ -4,7 +4,7 @@ from threading import Thread
 from AutoRecon.subfolder_recon import *
 from AutoRecon.subdomain_recon import *
 from AutoRecon.ip_recon import *
-from AutoRecon.tech_detect import *
+from AutoRecon.find_sensitive import *
 import os
 from VulnScan.scanvuln import checkvuln
 
@@ -26,16 +26,14 @@ def menu():
 
 
 def main(target):
-    canlam2(target)
+    # canlam2(target)
     t1 = Thread(target=js_recon, args=[target])
-    t2 = Thread(target=canlam, args=[target])
-    t3 = Thread(target=canlam3, args=[target])
-    t1.start()
-    t2.start()
-    t3.start()
-    t1.join()
-    t2.join()
-    t3.join()
+    # t2 = Thread(target=canlam, args=[target])
+    # find_sensitive(target)
+    # t1.start()
+    # t2.start()
+    # t1.join()
+    # t2.join()
     checkvuln(target)
 
 
@@ -58,4 +56,8 @@ if __name__ == "__main__":
             target = input("Enter a target: ")
     if target.startswith("http") | target.startswith("https"):
         target = target.split("/")[2]
+    try:
+        os.makedirs(f'Result/{target}', exist_ok=True)
+    except FileExistsError:
+        pass
     main(target)

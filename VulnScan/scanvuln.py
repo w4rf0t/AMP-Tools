@@ -105,7 +105,7 @@ def f_menu(target):
         subprocess.call("clear", shell=True)
         print(G+"====SQL Injecion From List====")
         print(B)
-        urls = 'AutoRecon/RESULT/' + target + '/sqli.txt'
+        urls = 'Result/' + target + '/sqli.txt'
         print("SQL Injection Scanning..")
         sql = subprocess.Popen(
             'python VulnScan/modules/sqlmap/sqlmap.py -m "'
@@ -119,7 +119,7 @@ def f_menu(target):
         print(G+"====Admin page finder====")
         # print(B)
         # afsite = input("Enter the site eg target.com: ")
-        with open('AutoRecon/RESULT/' + target + '/final_subdomain_'+target+'.txt', 'r') as f:
+        with open('Result/' + target + '/final_subdomain_'+target+'.txt', 'r') as f:
             print("Admin page finder scanning..")
             for line in f:
                 afsite = line.strip()
@@ -173,7 +173,7 @@ def f_menu(target):
 
 
 def xssTest(target):
-    XssList = 'AutoRecon/RESULT/'+target+'/xss.txt'
+    XssList = 'Result/'+target+'/xss.txt'
     list1 = [
         line.strip()
         for line in open(XssList, "r", errors="ignore", encoding="utf-8")
