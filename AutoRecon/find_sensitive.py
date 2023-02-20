@@ -73,17 +73,7 @@ def find_sensitive(target):
     with open(f'Result/{target}/temp.txt', 'w') as f:
         with open(f'Result/{target}/{target}_url/js_urls.txt',"r") as file1:
             list_urls = file1.readlines()
-            for url in 
-Trying 10.2.10.32...
-Connected to 10.2.10.32.
-Escape character is '^]'.
-
-
-
-PConnection closed by foreign host.
-                                                                                                                                                                                                                                            
-┌──(kali㉿kali)-[~/Desktop/AMP-Tools/AutoRecon/Asset]
-list_urls:
+            for url in list_urls:
                 response = requests.get(url)
                 contents = response.text
                 for key, values in patterns.items():

@@ -7,13 +7,13 @@ import re
 def call_subfinder(target):
     print('Enumeration subdomain')
     #Passive
-    # os.system(f"~/go/bin/subfinder -d {target} -silent -all -o Result/{target}/subdomain_{target}_subfinder.txt")
+    os.system(f"~/go/bin/subfinder -d {target} -silent -all -o Result/{target}/subdomain_{target}_subfinder.txt")
 
     #bruteforce:
-    # os.system(f'~/go/bin/puredns bruteforce AutoRecon/Asset/dns-subdomain.txt {target} -l 5000 -r AutoRecon/Asset/resolvers.txt -w Result/{target}/subdomain_{target}_puredns.txt  > /dev/null')
+    os.system(f'~/go/bin/puredns bruteforce AutoRecon/Asset/dns-subdomain.txt {target} -l 5000 -r AutoRecon/Asset/resolvers.txt -w Result/{target}/subdomain_{target}_puredns.txt  > /dev/null')
 
     os.system(f'cat Result/{target}/subdomain_{target}_*.txt | sort -u | uniq >> Result/{target}/subdomain_{target}.txt')
-    # os.system(f'rm Result/{target}/subdomain_{target}_*.txt')
+    os.system(f'rm Result/{target}/subdomain_{target}_*.txt') 
 
     proxies= {
         'http': 'http://209.9.37.60:8087'
