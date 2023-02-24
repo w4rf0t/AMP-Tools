@@ -29,11 +29,11 @@ def main(target):
     canlam2(target)
     t1 = Thread(target=js_recon, args=[target])
     t2 = Thread(target=canlam, args=[target])
-    find_sensitive(target)
     t1.start()
     t2.start()
     t1.join()
     t2.join()
+    find_sensitive(target)
     checkvuln(target)
 
 
