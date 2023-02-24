@@ -20,6 +20,4 @@
   ```
 để cài các requirements cần thiết cho chương trình
 
-- Sau đấy để tools chạy 1 cách mượt mà nhất, bạn cần sửa file ``config.json`` của knockpy.
-- Nếu bạn cài bằng pip thì file này ở trong ``/dist_packages/knockpy "strftime":""`` (trường này để format output của chương trình)
 - Sau đấy chỉ cần ``python3 main.py`` và enjoy cái moment này :>
