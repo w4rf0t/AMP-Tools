@@ -16,7 +16,7 @@
 
 - Đầu tiên, bạn cần sử dụng lệnh
   ```bash
-  cd $HOME; git clone https://github.com/w4rf0t/AMP-Tools.git ; cd AMP-Tools ; chmod +x AutoRecon/install.sh; ./AutoRecon/install.sh
+  git clone https://github.com/w4rf0t/AMP-Tools.git ; cd AMP-Tools ; chmod +x AutoRecon/install.sh; ./AutoRecon/install.sh
   ```
 để cài các requirements cần thiết cho chương trình
 
