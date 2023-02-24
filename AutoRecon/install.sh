@@ -1,4 +1,5 @@
 #!/bin/bash
+
 cd ~
 git clone https://github.com/blechschmidt/massdns.git
 cd massdns
@@ -19,5 +20,6 @@ git clone https://github.com/tomnomnom/gf
 git clone https://github.com/1ndianl33t/Gf-Patterns
 mv gf/examples/* .gf
 mv Gf-Patterns/*.json ~/.gf
-rm -rf gf Gf-Patterns
+rm -rf gf
+rm -rf Gf-Patterns
 
