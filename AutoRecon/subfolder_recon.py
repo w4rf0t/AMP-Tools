@@ -16,7 +16,7 @@ def js_recon(target):
 
     crawl_output_file = f"Result/{target}/{target}_url/crawl_urls.txt"
 
-    os.system(f"cat Result/{target}/sub_available_{target}.txt | ~/go/bin/katana -d 4 -jc -ef css,png,svg,ico,woff,gif >> {crawl_output_file}")
+    os.system(f"~/go/bin/katana -list Result/{target}/sub_available_{target}.txt -d 4 -jc -ef css,png,svg,ico,woff,gif >> {crawl_output_file}")
     os.system(f"cat Result/{target}/{target}_url/crawl_urls.txt | grep '.js$' >> Result/{target}/{target}_url/js_urls.txt")
 
     os.system(f"for i in `~/go/bin/gf -list`;do cat Result/{target}/{target}_url/crawl_urls.txt | gf $i | ~/go/bin/qsreplace -a | ~/go/bin/httpx -mc 200 -silent  >> Result/{target}/{target}_url/$i.txt ; done")
