@@ -1,5 +1,8 @@
 #!/bin/bash
-
+git clone https://github.com/blechschmidt/massdns.git
+cd massdns
+make
+make install
 cd ~
 export GOROOT=/usr/lib/go
 export GOPATH=$HOME/go
