@@ -16,4 +16,4 @@ git clone https://github.com/1ndianl33t/Gf-Patterns
 mv gf/examples/* .gf
 mv Gf-Patterns/*.json ~/.gf
 rm gf Gf-Patterns
-pip3 install -r requirements.txt
+
