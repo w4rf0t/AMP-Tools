@@ -8,7 +8,7 @@ go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 go install github.com/lc/subjs@latest
 go install github.com/tomnomnom/waybackurls@latest
 go install github.com/projectdiscovery/katana/cmd/katana@latest
-github.com/d3mondev/puredns/v2@latest
+go install github.com/d3mondev/puredns/v2@latest
 mkdir .gf
 go install github.com/tomnomnom/qsreplace@latest
 git clone https://github.com/tomnomnom/gf
