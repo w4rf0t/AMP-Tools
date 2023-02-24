@@ -7,7 +7,7 @@ make install
 rm -rf ../massdns
 
 curl -sSL https://install.python-poetry.org | python3 - --git https://github.com/python-poetry/poetry.git@master
-export poetry=$HOME/.local/bin/poetry
+export PATH="/home/w4rf0t/.local/bin:$PATH"
 
 git clone git@github.com:censys/censys-python.git
 cd censys-python
