@@ -26,7 +26,7 @@ def menu():
 
 
 def main(target):
-    # canlam2(target)
+    canlam2(target)
     t1 = Thread(target=js_recon, args=[target])
     t2 = Thread(target=canlam, args=[target])
     find_sensitive(target)
