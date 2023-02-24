@@ -1,9 +1,10 @@
 #!/bin/bash
+cd ~
 git clone https://github.com/blechschmidt/massdns.git
 cd massdns
 make
 make install
-cd ~
+rm -rf massdns
 export GOROOT=/usr/lib/go
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
