@@ -15,5 +15,5 @@ git clone https://github.com/tomnomnom/gf
 git clone https://github.com/1ndianl33t/Gf-Patterns
 mv gf/examples/* .gf
 mv Gf-Patterns/*.json ~/.gf
-rm gf Gf-Patterns
+rm -rf gf Gf-Patterns
 
