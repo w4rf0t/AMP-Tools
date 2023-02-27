@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo apt install golang-go -y
+
 git clone https://github.com/blechschmidt/massdns.git
 cd massdns
 make
@@ -14,7 +16,6 @@ poetry install
 rm -rf ../censys-python
 
 cd ~
-sudo apt install golang-go -y
 export GOROOT=/usr/lib/go
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
