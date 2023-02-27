@@ -14,7 +14,7 @@ poetry install
 rm -rf ../censys-python
 
 cd ~
-sudo apt install golang-go
+sudo apt install golang-go -y
 export GOROOT=/usr/lib/go
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
