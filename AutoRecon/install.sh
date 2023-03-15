@@ -7,14 +7,7 @@ cd massdns
 make
 make install
 rm -rf ../massdns
-
-curl -sSL https://install.python-poetry.org | POETRY_HOME=/etc/poetry python3 -
-
-git clone git@github.com:censys/censys-python.git
-cd censys-python
-poetry install
-rm -rf ../censys-python
-
+pip3 install censys
 cd ~
 export GOROOT=/usr/lib/go
 export GOPATH=$HOME/go
