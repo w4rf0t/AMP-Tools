@@ -32,20 +32,12 @@ def call_subfinder(target):
     else:
         pass
 
-    req = requests.get("https://crt.sh/?q=%.{d}&output=json".format(d=target))
-
-    if req.status_code == 200:
-        for subdomain in response_json["subdomains"]:
-            full_subdomain = f"{subdomain}.{target}"
-            subdomains.add(full_subdomain)
-    else:
-        pass
     with open(f"Result/{target}/subdomain_{target}_securitytraials.txt", "a") as f:
         for subdomain in subdomains:
             f.write("%s\n" % subdomain)
 
 def sanitize_input(target):
-    os.system(f"cat Result/{target}/subdomain_{target}_* >> Result/{target}/subdomain_{target}.txt; rm ")
+    os.system(f"cat Result/{target}/subdomain_{target}_* >> Result/{target}/subdomain_{target}.txt; rm Result/{target}/subdomain_{target}_securitytraials.txt")
     os.system(f"awk '!seen[$0]++' Result/{target}/subdomain_{target}.txt > Result/{target}/final_subdomain_{target}.txt ")
 
     os.system(f"cat Result/{target}/final_subdomain_{target}.txt | ~/go/bin/httpx -sc -td -ip -o Result/{target}/sub_status_{target}.txt")
