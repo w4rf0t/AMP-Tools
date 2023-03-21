@@ -5,7 +5,6 @@ import json
 import requests
 import re
 
-target = input("Enter root domain: ")
 
 def call_subfinder(target):
     print('Enumerating subdomain...',"\r")
@@ -75,4 +74,3 @@ def canlam2(target):
     call_subfinder(target)
     sanitize_input(target)
     print("Enumerating subdomain done !!!")
-canlam2(target)
