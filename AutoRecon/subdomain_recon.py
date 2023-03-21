@@ -43,26 +43,31 @@ def sanitize_input(target):
     subprocess.run(command_httpx, stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)
 
     with open(f'Result/{target}/final_status_{target}.json', 'r') as f:
-        contents = f.readlines()
+            contents = f.readlines()
     with open(f'Result/{target}/{target}_RESULT.json', 'w') as clgt:
-                clgt.write('[\n')
-                for i in contents:
-                    i=i.strip()
-                    clgt.write(i + ',\n') 
-                clgt.seek(clgt.tell()-2,os.SEEK_SET)
-                clgt.write('\n]')
-    os.system('rm -rf Result/{target}/final_status_{target}.json')
-
-    # with open(f'Result/{target}/final_status_{target}.txt',"r") as file1:
-    #     content = file1.readlines()
-    #     with open(f'Result/{target}/sub_available_{target}.txt',"w") as file2:
-    #         with open(f'Result/{target}/ip_available_{target}.txt',"w") as file3:
-    #             for line in content:
-    #                 if "200" or "301" or "302" or "403" in line:
-    #                     file2.write(line.split("[")[0]+"\n")
-    #                     file3.write((line.split("[")[4]).replace("]", "")+"\n")
-    # os.system(f"sed -i '/^[[:space:]]*$/d' Result/{target}/sub_available_{target}.txt ; awk -i inplace '!seen[$0]++' Result/{target}/ip_available_{target}.txt")
-    # os.system(f'rm Result/{target}/final_status_{target}.txt')
+                    clgt.write('[\n')
+                    for i in contents:
+                        i=i.strip()
+                        clgt.write(i + ',\n') 
+                    clgt.seek(clgt.tell()-2,os.SEEK_SET)
+                    clgt.write('\n]')
+    subprocess.run('rm -rf Result/{target}/final_subdomain_{target}.txt', stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)
+    with open(f'Result/{target}/{target}_RESULT.json', 'r') as f:
+        datas = json.load(f)
+    finaldata = []
+    for data in datas:
+        port = data['port']
+        scheme = data['scheme']
+        tech = data['tech']
+        try:
+            title = data['title']
+        except:
+            title = None
+        object = { data['url'].split("//")[1] : { 'port': port, 'scheme': scheme, 'tech': tech, 'title': title } }
+        finaldata.append(object)
+    with open(f'Result/{target}/final_status_{target}.json', 'w',encoding='utf-8') as f:
+        json.dump(finaldata, f, indent=4,ensure_ascii=False)
+    subprocess.run('rm -rf Result/{target}/{target}_RESULT.json', stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)
 def canlam2(target):
     try:
         if not(os.path.exists(f'Result/{target}')):

@@ -1,0 +1,192 @@
+[
+    {
+        "customer.epass-vdtc.com.vn": {
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Google Tag Manager",
+                "Nginx"
+            ],
+            "title": "Cổng thông tin Chủ phương tiện - Hệ thống thu phí dịch vụ không dừng"
+        }
+    },
+    {
+        "customer.epass-vdtc.com.vn": {
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Google Tag Manager",
+                "Nginx"
+            ],
+            "title": "Cổng thông tin Chủ phương tiện - Hệ thống thu phí dịch vụ không dừng"
+        }
+    },
+    {
+        "backend.epass-vdtc.com.vn": {
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Kong:2.1.1"
+            ],
+            "title": null
+        }
+    },
+    {
+        "www.epass-vdtc.com.vn": {
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Nginx:1.20.1",
+                "PHP:7.4.24"
+            ],
+            "title": null
+        }
+    },
+    {
+        "backend.epass-vdtc.com.vn": {
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Kong:2.1.1"
+            ],
+            "title": null
+        }
+    },
+    {
+        "sinvoice.epass-vdtc.com.vn": {
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Nginx"
+            ],
+            "title": "Phân hệ Hóa đơn - Hệ thống thu phí dịch vụ không dừng"
+        }
+    },
+    {
+        "www.epass-vdtc.com.vn": {
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Nginx:1.20.1",
+                "PHP:7.4.24"
+            ],
+            "title": null
+        }
+    },
+    {
+        "sinvoice.epass-vdtc.com.vn": {
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Nginx"
+            ],
+            "title": "Phân hệ Hóa đơn - Hệ thống thu phí dịch vụ không dừng"
+        }
+    },
+    {
+        "epass-vdtc.com.vn": {
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Google Tag Manager",
+                "MySQL",
+                "Nginx:1.20.1",
+                "PHP:7.4.24",
+                "W3 Total Cache",
+                "WordPress:5.7.2"
+            ],
+            "title": "ePass - Thu phí tự động không dừng - Công ty Cp Giao thông số Việt Nam"
+        }
+    },
+    {
+        "etctest.epass-vdtc.com.vn": {
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Google Tag Manager",
+                "MySQL",
+                "Nginx:1.22.0",
+                "PHP:7.4.33",
+                "W3 Total Cache",
+                "WordPress:5.7.2"
+            ],
+            "title": "ePass - Thu phí tự động không dừng - Công ty Cp Giao thông số Việt Nam"
+        }
+    },
+    {
+        "epass-vdtc.com.vn": {
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Google Tag Manager",
+                "MySQL",
+                "Nginx:1.20.1",
+                "PHP:7.4.24",
+                "W3 Total Cache",
+                "WordPress:5.7.2"
+            ],
+            "title": "ePass - Thu phí tự động không dừng - Công ty Cp Giao thông số Việt Nam"
+        }
+    },
+    {
+        "etctest.epass-vdtc.com.vn": {
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Google Tag Manager",
+                "MySQL",
+                "Nginx:1.22.0",
+                "PHP:7.4.33",
+                "W3 Total Cache",
+                "WordPress:5.7.2"
+            ],
+            "title": "ePass - Thu phí tự động không dừng - Công ty Cp Giao thông số Việt Nam"
+        }
+    },
+    {
+        "dangky.epass-vdtc.com.vn": {
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Google Tag Manager",
+                "Nginx",
+                "OpenResty"
+            ],
+            "title": "ePass - MIỄN PHÍ THU PHÍ KHÔNG DỪNG"
+        }
+    },
+    {
+        "dangky.epass-vdtc.com.vn": {
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Google Tag Manager",
+                "Nginx",
+                "OpenResty"
+            ],
+            "title": "ePass - MIỄN PHÍ THU PHÍ KHÔNG DỪNG"
+        }
+    },
+    {
+        "new.epass-vdtc.com.vn": {
+            "port": "80",
+            "scheme": "http",
+            "tech": [
+                "Apache HTTP Server:2.4.51",
+                "Debian",
+                "PHP:7.4.24"
+            ],
+            "title": null
+        }
+    },
+    {
+        "tracuuhoadon.epass-vdtc.com.vn": {
+            "port": "80",
+            "scheme": "http",
+            "tech": [
+                "Nginx"
+            ],
+            "title": null
+        }
+    }
+]
