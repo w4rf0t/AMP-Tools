@@ -94,12 +94,12 @@ def f_menu(target):
     logo()
     print(
         G + "===========Vuln Scanner=============\n")
-    print("[1] SQL Injecion From List")
-    print("[2] Admin page finder")
-    print("[3] Brute Force Login Page From List")
-    print("[4] XSS Scan")
-    print("[5] LFI Scan")
-    print("[0] Exit\n")
+    print(" [1] SQL Injecion From List")
+    print(" [2] Admin page finder")
+    print(" [3] Brute Force Login Page From List")
+    print(" [4] XSS Scan")
+    print(" [5] LFI Scan")
+    print(" [0] Exit\n")
     chce = input(B+"Your choice: ")
     if chce == "1":
         subprocess.call("clear", shell=True)

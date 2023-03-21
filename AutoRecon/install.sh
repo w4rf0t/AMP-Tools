@@ -18,7 +18,6 @@ go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 go install github.com/lc/subjs@latest
 go install github.com/tomnomnom/waybackurls@latest
 go install github.com/projectdiscovery/katana/cmd/katana@latest
-go install github.com/d3mondev/puredns/v2@latest
 go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 go install github.com/tomnomnom/httprobe@latest
 mkdir .gf

@@ -31,19 +31,6 @@ def call_subfinder(target):
         for subdomain in subdomains:
             f.write("%s\n" % subdomain)
 
-    # ======================================================================================================================================================
-    #bruteforce:
-    # os.system(f'~/go/bin/puredns bruteforce AutoRecon/Asset/dns-subdomain.txt {targetls} -l 5000 -r AutoRecon/Asset/resolvers.txt -w Result/{target}/subdomain_{target}_puredns.txt  > /dev/null')
-
-    # req = requests.get("https://crt.sh/?q=%.{d}&output=json".format(d=target))
-
-    # if req.status_code == 200:
-    #     for subdomain in response_json["subdomains"]:
-    #         full_subdomain = f"{subdomain}.{target}"
-    #         subdomains.add(full_subdomain)
-    # else:
-    #     pass
-    
 def sanitize_input(target):
     
     os.system(f"cat Result/{target}/subdomain_{target}_* >> Result/{target}/subdomain_{target}.txt; rm Result/{target}/subdomain_{target}_*.txt ")
@@ -56,8 +43,8 @@ def sanitize_input(target):
     subprocess.run(command_httpx, stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)
 
     with open(f'Result/{target}/final_status_{target}.json', 'r') as f:
-            with open(f'Result/{target}/{target}_RESULT.json', 'w') as clgt:
-                contents = f.readlines()
+        contents = f.readlines()
+    with open(f'Result/{target}/{target}_RESULT.json', 'w') as clgt:
                 clgt.write('[\n')
                 for i in contents:
                     i=i.strip()

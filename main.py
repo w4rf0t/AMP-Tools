@@ -3,10 +3,10 @@ import subprocess
 from threading import Thread
 from AutoRecon.subfolder_recon import *
 from AutoRecon.subdomain_recon import *
-# from AutoRecon.ip_recon import *
-# from AutoRecon.find_sensitive import *
+from AutoRecon.ip_recon import *
+from AutoRecon.find_sensitive import *
 import os
-# from VulnScan.scanvuln import checkvuln
+from VulnScan.scanvuln import checkvuln
 
 
 def menu():
@@ -27,14 +27,14 @@ def menu():
 
 def main(target):
     canlam2(target)
-    # t1 = Thread(target=js_recon, args=[target])
-    # t2 = Thread(target=canlam, args=[target])
-    # t1.start()
-    # t2.start()
-    # t1.join()
-    # t2.join()
-    # find_sensitive(target)
-    # checkvuln(target)
+    t1 = Thread(target=js_recon, args=[target])
+    t2 = Thread(target=canlam, args=[target])
+    t1.start()
+    t2.start()
+    t1.join()
+    t2.join()
+    find_sensitive(target)
+    checkvuln(target)
 
 
 
