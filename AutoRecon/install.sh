@@ -8,6 +8,7 @@ make
 make install
 rm -rf ../massdns
 pip3 install censys
+
 cd ~
 export GOROOT=/usr/lib/go
 export GOPATH=$HOME/go
