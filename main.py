@@ -3,10 +3,10 @@ import subprocess
 from threading import Thread
 from AutoRecon.subfolder_recon import *
 from AutoRecon.subdomain_recon import *
-from AutoRecon.ip_recon import *
-from AutoRecon.find_sensitive import *
+# from AutoRecon.ip_recon import *
+# from AutoRecon.find_sensitive import *
 import os
-from VulnScan.scanvuln import checkvuln
+# from VulnScan.scanvuln import checkvuln
 
 
 def menu():

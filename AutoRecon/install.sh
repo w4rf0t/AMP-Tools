@@ -20,7 +20,7 @@ go install github.com/tomnomnom/waybackurls@latest
 go install github.com/projectdiscovery/katana/cmd/katana@latest
 go install github.com/d3mondev/puredns/v2@latest
 go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
-
+go install github.com/tomnomnom/httprobe@latest
 mkdir .gf
 go install github.com/tomnomnom/qsreplace@latest
 git clone https://github.com/tomnomnom/gf
