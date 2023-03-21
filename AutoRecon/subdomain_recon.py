@@ -56,6 +56,7 @@ def sanitize_input(target):
         datas = json.load(f)
     finaldata = []
     for data in datas:
+        host = data['host']
         port = data['port']
         scheme = data['scheme']
         tech = data['tech']
@@ -63,7 +64,7 @@ def sanitize_input(target):
             title = data['title']
         except:
             title = None
-        object = { data['url'].split("//")[1] : { 'port': port, 'scheme': scheme, 'tech': tech, 'title': title } }
+        object = { data['url'].split("//")[1] : {'host': host, 'port': port, 'scheme': scheme, 'tech': tech, 'title': title } }
         finaldata.append(object)
     with open(f'Result/{target}/final_status_{target}.json', 'w',encoding='utf-8') as f:
         json.dump(finaldata, f, indent=4,ensure_ascii=False)
