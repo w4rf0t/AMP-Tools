@@ -6,7 +6,7 @@ from AutoRecon.subdomain_recon import *
 from AutoRecon.ip_recon import *
 from AutoRecon.find_sensitive import *
 import os
-from VulnScan.scanvuln import checkvuln
+# from VulnScan.scanvuln import checkvuln
 
 
 def menu():
@@ -34,7 +34,7 @@ def main(target):
     t1.join()
     t2.join()
     find_sensitive(target)
-    checkvuln(target)
+    # checkvuln(target)
 
 
 

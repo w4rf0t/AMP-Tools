@@ -59,7 +59,10 @@ def sanitize_input(target):
         host = data['host']
         port = data['port']
         scheme = data['scheme']
-        tech = data['tech']
+        try:
+            tech = data['tech']
+        except:
+            tech = None
         try:
             title = data['title']
         except:
