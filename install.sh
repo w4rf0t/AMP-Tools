@@ -16,8 +16,6 @@ export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 go install github.com/lc/subjs@latest
-go install github.com/tomnomnom/waybackurls@latest
-go install github.com/projectdiscovery/katana/cmd/katana@latest
 go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 go install github.com/tomnomnom/httprobe@latest
 go install github.com/bp0lr/gauplus@latest
