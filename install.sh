@@ -30,3 +30,4 @@ mv Gf-Patterns/*.json ~/.gf
 rm -rf gf
 rm -rf Gf-Patterns
 
+pip3 install pytenable
