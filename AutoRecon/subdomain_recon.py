@@ -51,7 +51,7 @@ def sanitize_input(target):
                         clgt.write(i + ',\n') 
                     clgt.seek(clgt.tell()-2,os.SEEK_SET)
                     clgt.write('\n]')
-    subprocess.run('rm -rf Result/{target}/final_subdomain_{target}.txt', stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)
+    subprocess.run('rm -f Result/{target}/final_subdomain_{target}.txt', stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)
     with open(f'Result/{target}/{target}_RESULT.json', 'r') as f:
         datas = json.load(f)
     finaldata = []
@@ -71,7 +71,7 @@ def sanitize_input(target):
         finaldata.append(object)
     with open(f'Result/{target}/final_status_{target}.json', 'w',encoding='utf-8') as f:
         json.dump(finaldata, f, indent=4,ensure_ascii=False)
-    subprocess.run('rm -rf Result/{target}/{target}_RESULT.json', stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)
+    subprocess.run('rm -f Result/{target}/{target}_RESULT.json', stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)
 def canlam2(target):
     try:
         if not(os.path.exists(f'Result/{target}')):

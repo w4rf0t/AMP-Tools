@@ -21,6 +21,7 @@ go install github.com/tomnomnom/waybackurls@latest
 go install github.com/projectdiscovery/katana/cmd/katana@latest
 go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 go install github.com/tomnomnom/httprobe@latest
+go install github.com/bp0lr/gauplus@latest
 mkdir .gf
 go install github.com/tomnomnom/qsreplace@latest
 git clone https://github.com/tomnomnom/gf
