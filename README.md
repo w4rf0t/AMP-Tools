@@ -20,4 +20,6 @@
   ```
 để cài các requirements cần thiết cho chương trình
 
-- Sau đấy chỉ cần ``python3 main.py`` và enjoy cái moment này :>
+- Sau day ```censys config``` roi nhap thong tin vao.
+
+- Cuoi cung chỉ cần ``python3 main.py`` và enjoy cái moment này :>
