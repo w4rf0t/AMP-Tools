@@ -12,14 +12,14 @@ def js_recon(target):
         pass
     print('Directory enumeration')
 
-    sub_available_file = f"Result/{target}/sub_available_{target}.txt"
+    all_subdomains = f"Result/{target}/final_subdomain_{target}.txt"
+    
+    crawled_file = f"Result/{target}/{target}_url/crawl_urls.txt"
+    js_crawled_file = f"Result/{target}/{target}_url/js_crawl_urls.txt"
 
-    crawl_output_file = f"Result/{target}/{target}_url/crawl_urls.txt"
+    os.system(f"cat {all_subdomains} | ~/go/bin/gauplus -random-agent -b ttf,woff,svg,png,jpg | sort -u | uniq >> {crawled_file}")
+    os.system(f"cat {crawled_file}| grep '.js' | grep -ivE '\.json'>> {js_crawled_file}")
 
-    os.system(f"~/go/bin/katana -list Result/{target}/sub_available_{target}.txt -d 4 -jc -ef css,png,svg,ico,woff,gif >> {crawl_output_file}")
-    os.system(f"cat Result/{target}/{target}_url/crawl_urls.txt | grep '.js$' >> Result/{target}/{target}_url/js_urls.txt")
+    os.system(f"for i in `~/go/bin/gf -list`;do cat {crawled_file}| gf $i | ~/go/bin/httpx -mc 200 -silent  >> Result/{target}/{target}_url/$i_potential.txt ; done")
 
-    os.system(f"for i in `~/go/bin/gf -list`;do cat Result/{target}/{target}_url/crawl_urls.txt | ~/go/bin/gf $i | ~/go/bin/qsreplace -a | ~/go/bin/httpx -mc 200 -silent  >> Result/{target}/{target}_url/$i.txt ; done")
-
-    # os.system(f"cat Result/{target}/sub_available_{target}.txt | while read url; do dirsearch.py -u $url >> Result/{target}/{target}_url/$url-dirsearch.txt; done")
-
+    os.system(f"cat Result/{target}/{target}_live.txt;while read url; do dirsearch.py -u $url --random-agent --follow-redirects --deep-recursive -x 500 -o Result/{target}/{target}_url/$url-dirsearch.txt; done")
