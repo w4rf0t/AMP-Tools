@@ -20,7 +20,7 @@
   ```
 để cài các requirements cần thiết cho chương trình
 
-- Sau đấy ```censys config``` rồi nhập thông tin vào. Thông tin config bao gồm ```API Key``` và ```Secret Key``` như hình dưới. ![Lấy ở đây](https://search.censys.io/account/api)
+- Sau đấy ```censys config``` rồi nhập thông tin vào. Thông tin config bao gồm ```API Key``` và ```Secret Key``` như hình dưới. [**Lấy ở đây**](https://search.censys.io/account/api)
  
 ![image](https://user-images.githubusercontent.com/61643034/226777100-bcb50737-d0b3-44d2-a155-63f55f5d86ca.png)
 
