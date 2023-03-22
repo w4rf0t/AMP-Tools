@@ -28559,6 +28559,14 @@
         "documentation": {}
     },
     {
+        "label": "InsecureRequestWarning",
+        "importPath": "urllib3.exceptions",
+        "description": "urllib3.exceptions",
+        "isExtraImport": true,
+        "detail": "urllib3.exceptions",
+        "documentation": {}
+    },
+    {
         "label": "filterChecker",
         "importPath": "core.filterChecker",
         "description": "core.filterChecker",
@@ -50533,6 +50541,24 @@
         "description": "VulnScan.modules.socks",
         "peekOfCode": "wrapmodule = wrap_module\ndef create_connection(\n    dest_pair,\n    proxy_type=None,\n    proxy_addr=None,\n    proxy_port=None,\n    proxy_rdns=True,\n    proxy_username=None,\n    proxy_password=None,\n    timeout=None,",
         "detail": "VulnScan.modules.socks",
+        "documentation": {}
+    },
+    {
+        "label": "getToken",
+        "kind": 2,
+        "importPath": "VulnScan.nessus",
+        "description": "VulnScan.nessus",
+        "peekOfCode": "def getToken():\n    url = \"https://localhost:8834/session\"\n    data = {\"username\": \"admin\", \"password\": \"kali\"}\n    try:\n        respone = requests.post(url, data=data, verify=False)\n        token = respone.json()['token']\n        return str(token)\n    except:\n        return str(None)\ndef NessusScan(target):",
+        "detail": "VulnScan.nessus",
+        "documentation": {}
+    },
+    {
+        "label": "NessusScan",
+        "kind": 2,
+        "importPath": "VulnScan.nessus",
+        "description": "VulnScan.nessus",
+        "peekOfCode": "def NessusScan(target):\n    url = \"https://localhost:8834/scans\"\n    token = getToken()\n    headers = {\n    \"X-Api-Token\": \"0968773D-72BB-4594-B1A4-0D311FE5EA57\",\n    \"X-Cookie\": \"token=\" + token + \"\",\n    \"Content-Type\": \"application/json\",\n    \"Content-Length\": \"295\"\n    }\n    data = {",
+        "detail": "VulnScan.nessus",
         "documentation": {}
     },
     {

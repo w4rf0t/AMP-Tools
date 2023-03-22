@@ -67,7 +67,7 @@ def sanitize_input(target):
             title = data['title']
         except:
             title = None
-        object = { data['url'].split("//")[1] : {'host': host, 'port': port, 'scheme': scheme, 'tech': tech, 'title': title } }
+        object = { data['url'].split("//")[1].split(":")[0] : {'host': host, 'port': port, 'scheme': scheme, 'tech': tech, 'title': title } }
         finaldata.append(object)
     with open(f'Result/{target}/final_status_{target}.json', 'w',encoding='utf-8') as f:
         json.dump(finaldata, f, indent=4,ensure_ascii=False)
