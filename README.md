@@ -16,7 +16,7 @@
 
 - Đầu tiên, bạn cần sử dụng lệnh
   ```bash
-  git clone https://github.com/w4rf0t/AMP-Tools.git ; cd AMP-Tools ; chmod +x install.sh; ./install.sh
+  git clone https://github.com/w4rf0t/AMP-Tools.git ; cd AMP-Tools ; chmod +x install.sh; sudo ./install.sh
   ```
 để cài các requirements cần thiết cho chương trình
 
