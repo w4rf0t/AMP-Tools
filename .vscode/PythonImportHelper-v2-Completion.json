@@ -92,6 +92,32 @@
         "documentation": {}
     },
     {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "PIPE",
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "isExtraImport": true,
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
         "label": "threading",
         "kind": 6,
         "isExtraImport": true,
@@ -125,38 +151,12 @@
         "documentation": {}
     },
     {
-        "label": "subprocess",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "subprocess",
-        "description": "subprocess",
-        "detail": "subprocess",
-        "documentation": {}
-    },
-    {
-        "label": "PIPE",
-        "importPath": "subprocess",
-        "description": "subprocess",
-        "isExtraImport": true,
-        "detail": "subprocess",
-        "documentation": {}
-    },
-    {
         "label": "csv",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "csv",
         "description": "csv",
         "detail": "csv",
-        "documentation": {}
-    },
-    {
-        "label": "json",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "json",
-        "description": "json",
-        "detail": "json",
         "documentation": {}
     },
     {
@@ -28967,20 +28967,11 @@
         "documentation": {}
     },
     {
-        "label": "remove_line_regex",
-        "kind": 2,
-        "importPath": "AutoRecon.ip_recon",
-        "description": "AutoRecon.ip_recon",
-        "peekOfCode": "def remove_line_regex(file_name, regex_list, ):\n    lines = open(file_name).readlines()\n    lines = [line for line in lines if not any(re.search(regex, line) for regex in regex_list)]\n    open(file_name, 'w').writelines(lines)\ndef get_ip_nmap(target):\n    with open(f'Result/{target}/ip_available_{target}.txt',\"r\") as file1:\n        with open(f\"Result/{target}/{target}_ip/nmap_{target}.txt\",\"a\") as file2:\n            for line in file1:\n                ip = line.strip()\n                file2.write(\"--------------------------------------------------\\n\")",
-        "detail": "AutoRecon.ip_recon",
-        "documentation": {}
-    },
-    {
         "label": "get_ip_nmap",
         "kind": 2,
         "importPath": "AutoRecon.ip_recon",
         "description": "AutoRecon.ip_recon",
-        "peekOfCode": "def get_ip_nmap(target):\n    with open(f'Result/{target}/ip_available_{target}.txt',\"r\") as file1:\n        with open(f\"Result/{target}/{target}_ip/nmap_{target}.txt\",\"a\") as file2:\n            for line in file1:\n                ip = line.strip()\n                file2.write(\"--------------------------------------------------\\n\")\n                file2.write(f\"IP scan: {ip} \\n\")\n                file2.flush()\n                t=threading.Thread(target=os.system(f\"nmap -sT -sV --top-ports 1000  {ip} >> Result/{target}/{target}_ip/nmap_{target}.txt\"))\n# def get_ip_censys(target):",
+        "peekOfCode": "def get_ip_nmap(target):\n    print(\"Nmap scan...\",end=\"\\r\")\n    with open(f'Result/{target}/final_status_{target}.json',\"r\") as file1:\n            datas = json.load(file1)\n    IPs = []\n    for data in datas:\n        for key in data:\n            if data[key]['host'] not in IPs:            # unique IP\n                IPs.append(data[key]['host'])\n    threads = []",
         "detail": "AutoRecon.ip_recon",
         "documentation": {}
     },
@@ -28989,7 +28980,7 @@
         "kind": 2,
         "importPath": "AutoRecon.ip_recon",
         "description": "AutoRecon.ip_recon",
-        "peekOfCode": "def canlam(target):\n    try:\n        os.makedirs(f'Result/{target}/{target}_ip', exist_ok=True)\n    except FileExistsError:\n        pass\n    # get_ip_censys(target)\n    # remove_line_regex(f\"Result/{target}/{target}_ip/censys_{target}.txt\", [\"transport\"])\n    get_ip_nmap(target)\n    remove_line_regex(f\"Result/{target}/{target}_ip/nmap_{target}.txt\", [\"Nmap\",\"Service\",\"Running\",\"Host\",\"EtherFast\",\"exact\", \"Network error\",\"Linux\",\"up\",\"exceed\"])",
+        "peekOfCode": "def canlam(target):\n    try:\n        os.makedirs(f'Result/{target}/{target}_ip', exist_ok=True)\n    except FileExistsError:\n        pass\n    # get_ip_censys(target)\n    # remove_line_regex(f\"Result/{target}/{target}_ip/censys_{target}.txt\", [\"transport\"])\n    get_ip_nmap(target)\n    # remove_line_regex(f\"Result/{target}/{target}_ip/nmap_{target}.txt\", [\"Nmap\",\"Service\",\"Running\",\"Host\",\"EtherFast\",\"exact\", \"Network error\",\"Linux\",\"up\",\"exceed\"])",
         "detail": "AutoRecon.ip_recon",
         "documentation": {}
     },
