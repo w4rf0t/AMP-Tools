@@ -7,7 +7,6 @@ cd massdns
 make
 make install
 rm -rf ../massdns
-sudo apt install python3-censys
 go get github.com/michenriksen/gitrob
 cd ~
 export GOROOT=/usr/lib/go
