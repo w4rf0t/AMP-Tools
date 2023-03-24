@@ -103,7 +103,7 @@ def f_menu(target):
     print(" [5] LFI Scan")
     print(" [6] Nessus Scan <It will take a long time | Membership ONLY "+R+"💗"+G+" >")
     print(" [0] Exit\n")
-    chce = input(B+"Your choice: ")
+    chce = input(B+" Your choice: ")
     if chce == "1":
         subprocess.call("clear", shell=True)
         print(G+"====SQL Injecion From List====")

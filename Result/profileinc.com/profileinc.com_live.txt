@@ -1,6 +1,6 @@
+http://box.profileinc.com
 http://www.profileinc.com
 http://portal.profileinc.com
-http://box.profileinc.com
-https://www.profileinc.com
 https://box.profileinc.com
+https://www.profileinc.com
 https://portal.profileinc.com
