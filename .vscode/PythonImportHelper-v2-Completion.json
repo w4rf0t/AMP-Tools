@@ -151,15 +151,6 @@
         "documentation": {}
     },
     {
-        "label": "csv",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "csv",
-        "description": "csv",
-        "detail": "csv",
-        "documentation": {}
-    },
-    {
         "label": "wave",
         "kind": 6,
         "isExtraImport": true,
@@ -28979,7 +28970,7 @@
         "kind": 2,
         "importPath": "AutoRecon.ip_recon",
         "description": "AutoRecon.ip_recon",
-        "peekOfCode": "def get_ip_nmap(target):\n    print(\"Nmap scan...\",end=\"\\r\")\n    with open(f'Result/{target}/final_status_{target}.json',\"r\") as file1:\n            datas = json.load(file1)\n    IPs = []\n    for data in datas:\n        for key in data:\n            if data[key]['host'] not in IPs:            # unique IP\n                IPs.append(data[key]['host'])\n    threads = []",
+        "peekOfCode": "def get_ip_nmap(target):\n    print(B,\"Nmap scan...\",end=\"\\r\")\n    with open(f'Result/{target}/final_status_{target}.json',\"r\") as file1:\n            datas = json.load(file1)\n    IPs = []\n    for data in datas:\n        for key in data:\n            if data[key]['host'] not in IPs:            # unique IP\n                IPs.append(data[key]['host'])\n    threads = []",
         "detail": "AutoRecon.ip_recon",
         "documentation": {}
     },
@@ -28988,7 +28979,7 @@
         "kind": 2,
         "importPath": "AutoRecon.ip_recon",
         "description": "AutoRecon.ip_recon",
-        "peekOfCode": "def scan_input_IP(target):\n    print(\"Nmap scan...\",end=\"\\r\")\n    os.system(f\"nmap -sT -sV {target} >> Result/{target}/{target}_ip/nmap_{target}.txt\")\n    print(\"Nmap scan done !!!\")\n    pattern = r'(\\d+)\\/(\\w+)\\s+(\\w+)\\s+([\\w\\.\\-\\s]+?)\\s*(?:\\n|$)'\n    regex = re.compile(pattern)\n    data = []\n    list_WebIP = []\n    with open(f\"Result/{target}/{target}_ip/nmap_{target}.txt\",\"r\") as file3:\n        text_data = file3.read()",
+        "peekOfCode": "def scan_input_IP(target):\n    print(B,\"Nmap scaning...\",end=\"\\r\")\n    os.system(f\"nmap -sT -sV {target} >> Result/{target}/{target}_ip/nmap_{target}.txt\")\n    print(G,\"Nmap scan done !!!\")\n    pattern = r'(\\d+)\\/(\\w+)\\s+(\\w+)\\s+([\\w\\.\\-\\s]+?)\\s*(?:\\n|$)'\n    regex = re.compile(pattern)\n    data = []\n    list_WebIP = []\n    with open(f\"Result/{target}/{target}_ip/nmap_{target}.txt\",\"r\") as file3:\n        text_data = file3.read()",
         "detail": "AutoRecon.ip_recon",
         "documentation": {}
     },
@@ -29002,11 +28993,56 @@
         "documentation": {}
     },
     {
+        "label": "W",
+        "kind": 5,
+        "importPath": "AutoRecon.ip_recon",
+        "description": "AutoRecon.ip_recon",
+        "peekOfCode": "W = \"\\033[0m\"\nR = \"\\033[31m\"\nG = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef get_ip_nmap(target):\n    print(B,\"Nmap scan...\",end=\"\\r\")\n    with open(f'Result/{target}/final_status_{target}.json',\"r\") as file1:\n            datas = json.load(file1)\n    IPs = []",
+        "detail": "AutoRecon.ip_recon",
+        "documentation": {}
+    },
+    {
+        "label": "R",
+        "kind": 5,
+        "importPath": "AutoRecon.ip_recon",
+        "description": "AutoRecon.ip_recon",
+        "peekOfCode": "R = \"\\033[31m\"\nG = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef get_ip_nmap(target):\n    print(B,\"Nmap scan...\",end=\"\\r\")\n    with open(f'Result/{target}/final_status_{target}.json',\"r\") as file1:\n            datas = json.load(file1)\n    IPs = []\n    for data in datas:",
+        "detail": "AutoRecon.ip_recon",
+        "documentation": {}
+    },
+    {
+        "label": "G",
+        "kind": 5,
+        "importPath": "AutoRecon.ip_recon",
+        "description": "AutoRecon.ip_recon",
+        "peekOfCode": "G = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef get_ip_nmap(target):\n    print(B,\"Nmap scan...\",end=\"\\r\")\n    with open(f'Result/{target}/final_status_{target}.json',\"r\") as file1:\n            datas = json.load(file1)\n    IPs = []\n    for data in datas:\n        for key in data:",
+        "detail": "AutoRecon.ip_recon",
+        "documentation": {}
+    },
+    {
+        "label": "O",
+        "kind": 5,
+        "importPath": "AutoRecon.ip_recon",
+        "description": "AutoRecon.ip_recon",
+        "peekOfCode": "O = \"\\033[33m\"\nB = \"\\033[34m\"\ndef get_ip_nmap(target):\n    print(B,\"Nmap scan...\",end=\"\\r\")\n    with open(f'Result/{target}/final_status_{target}.json',\"r\") as file1:\n            datas = json.load(file1)\n    IPs = []\n    for data in datas:\n        for key in data:\n            if data[key]['host'] not in IPs:            # unique IP",
+        "detail": "AutoRecon.ip_recon",
+        "documentation": {}
+    },
+    {
+        "label": "B",
+        "kind": 5,
+        "importPath": "AutoRecon.ip_recon",
+        "description": "AutoRecon.ip_recon",
+        "peekOfCode": "B = \"\\033[34m\"\ndef get_ip_nmap(target):\n    print(B,\"Nmap scan...\",end=\"\\r\")\n    with open(f'Result/{target}/final_status_{target}.json',\"r\") as file1:\n            datas = json.load(file1)\n    IPs = []\n    for data in datas:\n        for key in data:\n            if data[key]['host'] not in IPs:            # unique IP\n                IPs.append(data[key]['host'])",
+        "detail": "AutoRecon.ip_recon",
+        "documentation": {}
+    },
+    {
         "label": "call_subfinder",
         "kind": 2,
         "importPath": "AutoRecon.subdomain_recon",
         "description": "AutoRecon.subdomain_recon",
-        "peekOfCode": "def call_subfinder(target):\n    print('Enumerating subdomain...',\"\\r\")\n    #Passive\n    os.system(f\"~/go/bin/subfinder -d {target} -silent -all -o Result/{target}/subdomain_{target}_subfinder.txt 2>&1 >/dev/null\")\n    proxies= {\n        'http': 'http://209.9.37.60:8087'\n    }\n    url = f\"https://api.securitytrails.com/v1/domain/{target}/subdomains\"\n    headers = {\n        \"APIKEY\": 'Tkoxcj2BbGXLwCZyFjpYyOJGaJd9XokP'",
+        "peekOfCode": "def call_subfinder(target):\n    print(B,'Enumerating subdomain...',\"\\r\")\n    #Passive\n    os.system(f\"~/go/bin/subfinder -d {target} -silent -all -o Result/{target}/subdomain_{target}_subfinder.txt 2>&1 >/dev/null\")\n    proxies= {\n        'http': 'http://209.9.37.60:8087'\n    }\n    url = f\"https://api.securitytrails.com/v1/domain/{target}/subdomains\"\n    headers = {\n        \"APIKEY\": 'Tkoxcj2BbGXLwCZyFjpYyOJGaJd9XokP'",
         "detail": "AutoRecon.subdomain_recon",
         "documentation": {}
     },
@@ -29024,7 +29060,52 @@
         "kind": 2,
         "importPath": "AutoRecon.subdomain_recon",
         "description": "AutoRecon.subdomain_recon",
-        "peekOfCode": "def sub_Recon(target):\n    try:\n        if not(os.path.exists(f'Result/{target}')):\n            os.system(f\"mkdir Result/{target} | chmod 777 Result/{target} \")\n    except Exception as e:\n        pass\n    call_subfinder(target)\n    sanitize_input(target)\n    print(\"Enumerating subdomain done !!!\")",
+        "peekOfCode": "def sub_Recon(target):\n    try:\n        if not(os.path.exists(f'Result/{target}')):\n            os.system(f\"mkdir Result/{target} | chmod 777 Result/{target} \")\n    except Exception as e:\n        pass\n    call_subfinder(target)\n    sanitize_input(target)\n    print(G,\"Enumerating subdomain done !\")",
+        "detail": "AutoRecon.subdomain_recon",
+        "documentation": {}
+    },
+    {
+        "label": "W",
+        "kind": 5,
+        "importPath": "AutoRecon.subdomain_recon",
+        "description": "AutoRecon.subdomain_recon",
+        "peekOfCode": "W = \"\\033[0m\"\nR = \"\\033[31m\"\nG = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef call_subfinder(target):\n    print(B,'Enumerating subdomain...',\"\\r\")\n    #Passive\n    os.system(f\"~/go/bin/subfinder -d {target} -silent -all -o Result/{target}/subdomain_{target}_subfinder.txt 2>&1 >/dev/null\")\n    proxies= {",
+        "detail": "AutoRecon.subdomain_recon",
+        "documentation": {}
+    },
+    {
+        "label": "R",
+        "kind": 5,
+        "importPath": "AutoRecon.subdomain_recon",
+        "description": "AutoRecon.subdomain_recon",
+        "peekOfCode": "R = \"\\033[31m\"\nG = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef call_subfinder(target):\n    print(B,'Enumerating subdomain...',\"\\r\")\n    #Passive\n    os.system(f\"~/go/bin/subfinder -d {target} -silent -all -o Result/{target}/subdomain_{target}_subfinder.txt 2>&1 >/dev/null\")\n    proxies= {\n        'http': 'http://209.9.37.60:8087'",
+        "detail": "AutoRecon.subdomain_recon",
+        "documentation": {}
+    },
+    {
+        "label": "G",
+        "kind": 5,
+        "importPath": "AutoRecon.subdomain_recon",
+        "description": "AutoRecon.subdomain_recon",
+        "peekOfCode": "G = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef call_subfinder(target):\n    print(B,'Enumerating subdomain...',\"\\r\")\n    #Passive\n    os.system(f\"~/go/bin/subfinder -d {target} -silent -all -o Result/{target}/subdomain_{target}_subfinder.txt 2>&1 >/dev/null\")\n    proxies= {\n        'http': 'http://209.9.37.60:8087'\n    }",
+        "detail": "AutoRecon.subdomain_recon",
+        "documentation": {}
+    },
+    {
+        "label": "O",
+        "kind": 5,
+        "importPath": "AutoRecon.subdomain_recon",
+        "description": "AutoRecon.subdomain_recon",
+        "peekOfCode": "O = \"\\033[33m\"\nB = \"\\033[34m\"\ndef call_subfinder(target):\n    print(B,'Enumerating subdomain...',\"\\r\")\n    #Passive\n    os.system(f\"~/go/bin/subfinder -d {target} -silent -all -o Result/{target}/subdomain_{target}_subfinder.txt 2>&1 >/dev/null\")\n    proxies= {\n        'http': 'http://209.9.37.60:8087'\n    }\n    url = f\"https://api.securitytrails.com/v1/domain/{target}/subdomains\"",
+        "detail": "AutoRecon.subdomain_recon",
+        "documentation": {}
+    },
+    {
+        "label": "B",
+        "kind": 5,
+        "importPath": "AutoRecon.subdomain_recon",
+        "description": "AutoRecon.subdomain_recon",
+        "peekOfCode": "B = \"\\033[34m\"\ndef call_subfinder(target):\n    print(B,'Enumerating subdomain...',\"\\r\")\n    #Passive\n    os.system(f\"~/go/bin/subfinder -d {target} -silent -all -o Result/{target}/subdomain_{target}_subfinder.txt 2>&1 >/dev/null\")\n    proxies= {\n        'http': 'http://209.9.37.60:8087'\n    }\n    url = f\"https://api.securitytrails.com/v1/domain/{target}/subdomains\"\n    headers = {",
         "detail": "AutoRecon.subdomain_recon",
         "documentation": {}
     },
@@ -29033,7 +29114,7 @@
         "kind": 2,
         "importPath": "AutoRecon.subfolder_recon",
         "description": "AutoRecon.subfolder_recon",
-        "peekOfCode": "def run_command(command):\n    os.system(command)\ndef js_recon(target):\n    try:\n        os.makedirs(f\"Result/{target}/{target}_url\", exist_ok=True)\n    except FileExistsError:\n        pass\n    print('Directory enumeration')\n    crawled_file = f\"Result/{target}/{target}_url/crawl_urls.txt\"\n    js_crawled_file = f\"Result/{target}/{target}_url/js_crawl_urls.txt\"",
+        "peekOfCode": "def run_command(command):\n    os.system(command)\ndef js_recon(target):\n    try:\n        os.makedirs(f\"Result/{target}/{target}_url\", exist_ok=True)\n    except FileExistsError:\n        pass\n    print(B,'Directory enumerating...',end='\\r')\n    crawled_file = f\"Result/{target}/{target}_url/crawl_urls.txt\"\n    js_crawled_file = f\"Result/{target}/{target}_url/js_crawl_urls.txt\"",
         "detail": "AutoRecon.subfolder_recon",
         "documentation": {}
     },
@@ -29042,7 +29123,52 @@
         "kind": 2,
         "importPath": "AutoRecon.subfolder_recon",
         "description": "AutoRecon.subfolder_recon",
-        "peekOfCode": "def js_recon(target):\n    try:\n        os.makedirs(f\"Result/{target}/{target}_url\", exist_ok=True)\n    except FileExistsError:\n        pass\n    print('Directory enumeration')\n    crawled_file = f\"Result/{target}/{target}_url/crawl_urls.txt\"\n    js_crawled_file = f\"Result/{target}/{target}_url/js_crawl_urls.txt\"\n    IP_regex = re.compile(r\"^(?:[0-9]{1,3}\\.){3}[0-9]{1,3}$\")\n    if not IP_regex.match(target):",
+        "peekOfCode": "def js_recon(target):\n    try:\n        os.makedirs(f\"Result/{target}/{target}_url\", exist_ok=True)\n    except FileExistsError:\n        pass\n    print(B,'Directory enumerating...',end='\\r')\n    crawled_file = f\"Result/{target}/{target}_url/crawl_urls.txt\"\n    js_crawled_file = f\"Result/{target}/{target}_url/js_crawl_urls.txt\"\n    IP_regex = re.compile(r\"^(?:[0-9]{1,3}\\.){3}[0-9]{1,3}$\")\n    if not IP_regex.match(target):",
+        "detail": "AutoRecon.subfolder_recon",
+        "documentation": {}
+    },
+    {
+        "label": "W",
+        "kind": 5,
+        "importPath": "AutoRecon.subfolder_recon",
+        "description": "AutoRecon.subfolder_recon",
+        "peekOfCode": "W = \"\\033[0m\"\nR = \"\\033[31m\"\nG = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef run_command(command):\n    os.system(command)\ndef js_recon(target):\n    try:\n        os.makedirs(f\"Result/{target}/{target}_url\", exist_ok=True)",
+        "detail": "AutoRecon.subfolder_recon",
+        "documentation": {}
+    },
+    {
+        "label": "R",
+        "kind": 5,
+        "importPath": "AutoRecon.subfolder_recon",
+        "description": "AutoRecon.subfolder_recon",
+        "peekOfCode": "R = \"\\033[31m\"\nG = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef run_command(command):\n    os.system(command)\ndef js_recon(target):\n    try:\n        os.makedirs(f\"Result/{target}/{target}_url\", exist_ok=True)\n    except FileExistsError:",
+        "detail": "AutoRecon.subfolder_recon",
+        "documentation": {}
+    },
+    {
+        "label": "G",
+        "kind": 5,
+        "importPath": "AutoRecon.subfolder_recon",
+        "description": "AutoRecon.subfolder_recon",
+        "peekOfCode": "G = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef run_command(command):\n    os.system(command)\ndef js_recon(target):\n    try:\n        os.makedirs(f\"Result/{target}/{target}_url\", exist_ok=True)\n    except FileExistsError:\n        pass",
+        "detail": "AutoRecon.subfolder_recon",
+        "documentation": {}
+    },
+    {
+        "label": "O",
+        "kind": 5,
+        "importPath": "AutoRecon.subfolder_recon",
+        "description": "AutoRecon.subfolder_recon",
+        "peekOfCode": "O = \"\\033[33m\"\nB = \"\\033[34m\"\ndef run_command(command):\n    os.system(command)\ndef js_recon(target):\n    try:\n        os.makedirs(f\"Result/{target}/{target}_url\", exist_ok=True)\n    except FileExistsError:\n        pass\n    print(B,'Directory enumerating...',end='\\r')",
+        "detail": "AutoRecon.subfolder_recon",
+        "documentation": {}
+    },
+    {
+        "label": "B",
+        "kind": 5,
+        "importPath": "AutoRecon.subfolder_recon",
+        "description": "AutoRecon.subfolder_recon",
+        "peekOfCode": "B = \"\\033[34m\"\ndef run_command(command):\n    os.system(command)\ndef js_recon(target):\n    try:\n        os.makedirs(f\"Result/{target}/{target}_url\", exist_ok=True)\n    except FileExistsError:\n        pass\n    print(B,'Directory enumerating...',end='\\r')\n    crawled_file = f\"Result/{target}/{target}_url/crawl_urls.txt\"",
         "detail": "AutoRecon.subfolder_recon",
         "documentation": {}
     },

@@ -1,13 +1,16 @@
 import subprocess
 import os
-import csv
 import json
 import requests
-import re
 
+W = "\033[0m"
+R = "\033[31m"
+G = "\033[32m"
+O = "\033[33m"
+B = "\033[34m"
 
 def call_subfinder(target):
-    print('Enumerating subdomain...',"\r")
+    print(B,'Enumerating subdomain...',"\r")
     #Passive
     os.system(f"~/go/bin/subfinder -d {target} -silent -all -o Result/{target}/subdomain_{target}_subfinder.txt 2>&1 >/dev/null")
 
@@ -80,4 +83,4 @@ def sub_Recon(target):
         pass
     call_subfinder(target)
     sanitize_input(target)
-    print("Enumerating subdomain done !!!")
+    print(G,"Enumerating subdomain done !")

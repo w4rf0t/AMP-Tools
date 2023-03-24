@@ -4,8 +4,14 @@ import json
 import re
 import threading
 
+W = "\033[0m"
+R = "\033[31m"
+G = "\033[32m"
+O = "\033[33m"
+B = "\033[34m"
+
 def get_ip_nmap(target):
-    print("Nmap scan...",end="\r")
+    print(B,"Nmap scan...",end="\r")
     with open(f'Result/{target}/final_status_{target}.json',"r") as file1:
             datas = json.load(file1)
     IPs = []
@@ -34,12 +40,12 @@ def get_ip_nmap(target):
     with open(f"Result/{target}/{target}_ip/nmap_{target}.json","a") as file4:
         json.dump(data,file4,indent=4)
     subprocess.run(f"rm -rf Result/{target}/{target}_ip/nmap_*.txt",shell=True)
-    print("Nmap scan done !!!")
+    print(G,"Nmap scan done !!!")
 
 def scan_input_IP(target):
-    print("Nmap scan...",end="\r")
+    print(B,"Nmap scaning...",end="\r")
     os.system(f"nmap -sT -sV {target} >> Result/{target}/{target}_ip/nmap_{target}.txt")
-    print("Nmap scan done !!!")
+    print(G,"Nmap scan done !!!")
     
     pattern = r'(\d+)\/(\w+)\s+(\w+)\s+([\w\.\-\s]+?)\s*(?:\n|$)'
     regex = re.compile(pattern)
@@ -59,12 +65,12 @@ def scan_input_IP(target):
     with open(f"Result/{target}/final_subdomain_{target}.txt","w") as file5:
         for ip in list_WebIP:
             file5.write(ip+"\n")
-    print("Generating IP web service...","\r")
+    print(B,"Generating IP web service...","\r")
     command_probe = [f"cat Result/{target}/final_subdomain_{target}.txt | ~/go/bin/httprobe >>  Result/{target}/{target}_live.txt"]
     subprocess.run(command_probe, stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)
     command_httpx = [f"cat Result/{target}/{target}_live.txt | ~/go/bin/httpx -sc -td -ip -server -nc -json -o Result/{target}/final_status_{target}.json"]
     subprocess.run(command_httpx, stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)    
-    print("Generating IP web service done !!!")
+    print(G,"Generating IP web service done !")
 def ip_Recon(target):
     try:
         os.makedirs(f'Result/{target}/{target}_ip', exist_ok=True)
