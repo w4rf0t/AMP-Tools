@@ -7,7 +7,7 @@
 **2. Giao diện:**
 
 - Giao diện thân thiện, chạy trong terminal với kernel là Linux
-
+- Trong tương lai sẽ phát triển GUI để thân thiện hơn nữa với người dùng
 - Dưới đây là hình ảnh demo của tool
 
 ![image](https://user-images.githubusercontent.com/61643034/220074840-4e54c363-7040-443b-b240-e47b2b0dcc6a.png)
