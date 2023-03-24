@@ -1,4 +1,3 @@
-import core.colors
 import json
 import os
 import re
@@ -7,7 +6,11 @@ import requests
 from urllib3.exceptions import InsecureRequestWarning
 import warnings
 warnings.simplefilter('ignore', InsecureRequestWarning)
-
+W = "\033[0m"
+R = "\033[31m"
+G = "\033[32m"
+O = "\033[33m"
+B = "\033[34m"
 
 def get_X_API_Token():
     url = "https://localhost:8834/nessus6.js"
@@ -108,22 +111,21 @@ def exportFile(target,idscan):
 def NessusScan(target):
     token = getToken()
     x_api_token = get_X_API_Token()
-    idscan = "131"
-    # idscan = Scan(target,x_api_token,token)
+    idscan = Scan(target,x_api_token,token) # idscan = "131"
     scanProgress = checkStatus(idscan,x_api_token,token)
     if scanProgress == 100:
-        print("Done Scaning Nessus !!!")
+        print(G,"Done Scaning Nessus !!!")
     else:
         while scanProgress <= 100:
             scanProgress = checkStatus(idscan,x_api_token,token)
             for char in ["|", "/", "-", "\\"]:
-                print(f"Nessus scaning {scanProgress}%...{char}", end="\r")
+                print(B,f"Nessus scaning {scanProgress}%...{char}", end="\r")
                 time.sleep(0.1)
-        print("Done Scaning Nessus !!!")
+        print(G,"Done Scaning Nessus !!!")
     try:
         os.system(f"mkdir Result/{target}/NessusScan")
     except:
         pass
-    print("Generating report...")
+    print(B,"Generating report...",end='\r')
     exportFile(target,idscan)
-    
+    print(G,"Done Generating report...")

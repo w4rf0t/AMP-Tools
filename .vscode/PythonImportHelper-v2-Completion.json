@@ -27460,15 +27460,6 @@
         "documentation": {}
     },
     {
-        "label": "core.colors",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "core.colors",
-        "description": "core.colors",
-        "detail": "core.colors",
-        "documentation": {}
-    },
-    {
         "label": "green",
         "importPath": "core.colors",
         "description": "core.colors",
@@ -50619,7 +50610,52 @@
         "kind": 2,
         "importPath": "VulnScan.nessus",
         "description": "VulnScan.nessus",
-        "peekOfCode": "def NessusScan(target):\n    token = getToken()\n    x_api_token = get_X_API_Token()\n    idscan = \"131\"\n    # idscan = Scan(target,x_api_token,token)\n    scanProgress = checkStatus(idscan,x_api_token,token)\n    if scanProgress == 100:\n        print(\"Done Scaning Nessus !!!\")\n    else:\n        while scanProgress <= 100:",
+        "peekOfCode": "def NessusScan(target):\n    token = getToken()\n    x_api_token = get_X_API_Token()\n    idscan = Scan(target,x_api_token,token) # idscan = \"131\"\n    scanProgress = checkStatus(idscan,x_api_token,token)\n    if scanProgress == 100:\n        print(G,\"Done Scaning Nessus !!!\")\n    else:\n        while scanProgress <= 100:\n            scanProgress = checkStatus(idscan,x_api_token,token)",
+        "detail": "VulnScan.nessus",
+        "documentation": {}
+    },
+    {
+        "label": "W",
+        "kind": 5,
+        "importPath": "VulnScan.nessus",
+        "description": "VulnScan.nessus",
+        "peekOfCode": "W = \"\\033[0m\"\nR = \"\\033[31m\"\nG = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef get_X_API_Token():\n    url = \"https://localhost:8834/nessus6.js\"\n    response = requests.get(url, verify=False).text\n    pattern = r\"return\\\"(\\w{8}-\\w{4}-\\w{4}-\\w{4}-\\w{12})\\\"\"\n    matches = re.findall(pattern, response)",
+        "detail": "VulnScan.nessus",
+        "documentation": {}
+    },
+    {
+        "label": "R",
+        "kind": 5,
+        "importPath": "VulnScan.nessus",
+        "description": "VulnScan.nessus",
+        "peekOfCode": "R = \"\\033[31m\"\nG = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef get_X_API_Token():\n    url = \"https://localhost:8834/nessus6.js\"\n    response = requests.get(url, verify=False).text\n    pattern = r\"return\\\"(\\w{8}-\\w{4}-\\w{4}-\\w{4}-\\w{12})\\\"\"\n    matches = re.findall(pattern, response)\n    return matches[1]",
+        "detail": "VulnScan.nessus",
+        "documentation": {}
+    },
+    {
+        "label": "G",
+        "kind": 5,
+        "importPath": "VulnScan.nessus",
+        "description": "VulnScan.nessus",
+        "peekOfCode": "G = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef get_X_API_Token():\n    url = \"https://localhost:8834/nessus6.js\"\n    response = requests.get(url, verify=False).text\n    pattern = r\"return\\\"(\\w{8}-\\w{4}-\\w{4}-\\w{4}-\\w{12})\\\"\"\n    matches = re.findall(pattern, response)\n    return matches[1]\ndef getToken():",
+        "detail": "VulnScan.nessus",
+        "documentation": {}
+    },
+    {
+        "label": "O",
+        "kind": 5,
+        "importPath": "VulnScan.nessus",
+        "description": "VulnScan.nessus",
+        "peekOfCode": "O = \"\\033[33m\"\nB = \"\\033[34m\"\ndef get_X_API_Token():\n    url = \"https://localhost:8834/nessus6.js\"\n    response = requests.get(url, verify=False).text\n    pattern = r\"return\\\"(\\w{8}-\\w{4}-\\w{4}-\\w{4}-\\w{12})\\\"\"\n    matches = re.findall(pattern, response)\n    return matches[1]\ndef getToken():\n    url = \"https://localhost:8834/session\"",
+        "detail": "VulnScan.nessus",
+        "documentation": {}
+    },
+    {
+        "label": "B",
+        "kind": 5,
+        "importPath": "VulnScan.nessus",
+        "description": "VulnScan.nessus",
+        "peekOfCode": "B = \"\\033[34m\"\ndef get_X_API_Token():\n    url = \"https://localhost:8834/nessus6.js\"\n    response = requests.get(url, verify=False).text\n    pattern = r\"return\\\"(\\w{8}-\\w{4}-\\w{4}-\\w{4}-\\w{12})\\\"\"\n    matches = re.findall(pattern, response)\n    return matches[1]\ndef getToken():\n    url = \"https://localhost:8834/session\"\n    data = {\"username\": \"admin\", \"password\": \"kali\"}",
         "detail": "VulnScan.nessus",
         "documentation": {}
     },
