@@ -24524,15 +24524,6 @@
         "documentation": {}
     },
     {
-        "label": "xml.etree.ElementTree",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "xml.etree.ElementTree",
-        "description": "xml.etree.ElementTree",
-        "detail": "xml.etree.ElementTree",
-        "documentation": {}
-    },
-    {
         "label": "ElementTree",
         "importPath": "xml.etree.ElementTree",
         "description": "xml.etree.ElementTree",
@@ -50553,11 +50544,56 @@
         "documentation": {}
     },
     {
+        "label": "get_X_API_Token",
+        "kind": 2,
+        "importPath": "VulnScan.nessus",
+        "description": "VulnScan.nessus",
+        "peekOfCode": "def get_X_API_Token():\n    url = \"https://localhost:8834/nessus6.js\"\n    response = requests.get(url, verify=False).text\n    pattern = r\"return\\\"(\\w{8}-\\w{4}-\\w{4}-\\w{4}-\\w{12})\\\"\"\n    matches = re.findall(pattern, response)\n    return matches[1]\ndef getToken():\n    url = \"https://localhost:8834/session\"\n    data = {\"username\": \"admin\", \"password\": \"kali\"}\n    try:",
+        "detail": "VulnScan.nessus",
+        "documentation": {}
+    },
+    {
         "label": "getToken",
         "kind": 2,
         "importPath": "VulnScan.nessus",
         "description": "VulnScan.nessus",
-        "peekOfCode": "def getToken():\n    url = \"https://localhost:8834/session\"\n    data = {\"username\": \"admin\", \"password\": \"kali\"}\n    try:\n        respone = requests.post(url, data=data, verify=False)\n        token = respone.json()['token']\n        return str(token)\n    except:\n        return str(None)\ndef NessusScan(target):",
+        "peekOfCode": "def getToken():\n    url = \"https://localhost:8834/session\"\n    data = {\"username\": \"admin\", \"password\": \"kali\"}\n    try:\n        respone = requests.post(url, data=data, verify=False)\n        token = respone.json()['token']\n        return str(token)\n    except:\n        return str(None)\ndef Scan(target,x_api_token,token):",
+        "detail": "VulnScan.nessus",
+        "documentation": {}
+    },
+    {
+        "label": "Scan",
+        "kind": 2,
+        "importPath": "VulnScan.nessus",
+        "description": "VulnScan.nessus",
+        "peekOfCode": "def Scan(target,x_api_token,token):\n    url = \"https://localhost:8834/scans\"\n    headers = {\n        \"X-Api-Token\": x_api_token,\n        \"X-Cookie\": \"token=\" + token + \"\",\n        \"Content-Type\": \"application/json\",\n        \"Content-Length\": \"295\"\n    }\n    data = {\n        \"uuid\": \"ab4bacd2-05f6-425c-9d79-3ba3940ad1c24e51e1f403febe40\",",
+        "detail": "VulnScan.nessus",
+        "documentation": {}
+    },
+    {
+        "label": "checkStatus",
+        "kind": 2,
+        "importPath": "VulnScan.nessus",
+        "description": "VulnScan.nessus",
+        "peekOfCode": "def checkStatus(idscan,x_api_token,token):\n    url = f\"https://localhost:8834/scans/{idscan}?limit=2500&includeHostDetailsForHostDiscovery=true\"\n    headers = {\n        \"X-Api-Token\": x_api_token,\n        \"X-Cookie\": \"token=\" + token + \"\",\n        \"Content-Type\": \"application/json\",\n        \"Content-Length\": \"295\"\n    }\n    try:\n        respone = requests.get(url, headers=headers, verify=False)",
+        "detail": "VulnScan.nessus",
+        "documentation": {}
+    },
+    {
+        "label": "getFileToken",
+        "kind": 2,
+        "importPath": "VulnScan.nessus",
+        "description": "VulnScan.nessus",
+        "peekOfCode": "def getFileToken(idscan,x_api_token,token):\n    url = \"https://localhost:8834/scans/\" + str(idscan) + \"/export?limit=2500\"\n    headers = {\n        \"X-Api-Token\": x_api_token,\n        \"X-Cookie\": \"token=\" + token + \"\",\n        \"Content-Type\": \"application/json\",\n        \"Content-Length\": \"295\"\n    }\n    data ={\"format\":\"pdf\",\"template_id\":1156,\"csvColumns\":{},\"formattingOptions\":{\"page_breaks\":\"false\"},\"extraFilters\":{\"host_ids\":[],\"plugin_ids\":[]}}\n    try:",
+        "detail": "VulnScan.nessus",
+        "documentation": {}
+    },
+    {
+        "label": "exportFile",
+        "kind": 2,
+        "importPath": "VulnScan.nessus",
+        "description": "VulnScan.nessus",
+        "peekOfCode": "def exportFile(target,idscan):\n    token = getToken()\n    x_api_token = get_X_API_Token()\n    fileToken=getFileToken(idscan,x_api_token,token)\n    time.sleep(5)\n    print(\"File token: \" +fileToken)\n    url = f'https://localhost:8834/tokens/{fileToken}/download'\n    headers = {\n            \"X-Api-Token\": x_api_token,\n            \"X-Cookie\": \"token=\" + token + \"\",",
         "detail": "VulnScan.nessus",
         "documentation": {}
     },
@@ -50566,7 +50602,7 @@
         "kind": 2,
         "importPath": "VulnScan.nessus",
         "description": "VulnScan.nessus",
-        "peekOfCode": "def NessusScan(target):\n    url = \"https://localhost:8834/scans\"\n    token = getToken()\n    headers = {\n    \"X-Api-Token\": \"0968773D-72BB-4594-B1A4-0D311FE5EA57\",\n    \"X-Cookie\": \"token=\" + token + \"\",\n    \"Content-Type\": \"application/json\",\n    \"Content-Length\": \"295\"\n    }\n    data = {",
+        "peekOfCode": "def NessusScan(target):\n    token = getToken()\n    x_api_token = get_X_API_Token()\n    idscan = \"131\"\n    # idscan = Scan(target,x_api_token,token)\n    scanProgress = checkStatus(idscan,x_api_token,token)\n    if scanProgress == 100:\n        print(\"Done Scaning Nessus !!!\")\n    else:\n        while scanProgress <= 100:",
         "detail": "VulnScan.nessus",
         "documentation": {}
     },
@@ -51117,132 +51153,6 @@
         "description": "main",
         "peekOfCode": "def main(target):\n    IP_regex = re.compile(r\"^(?:[0-9]{1,3}\\.){3}[0-9]{1,3}$\")\n    if not IP_regex.match(target):\n        sub_Recon(target)\n        t1 = Thread(target=ip_Recon, args=[target])\n        t2 = Thread(target=js_recon, args=[target])\n        t1.start()\n        t2.start()\n        t1.join()\n        t2.join()",
         "detail": "main",
-        "documentation": {}
-    },
-    {
-        "label": "smart_str",
-        "kind": 2,
-        "importPath": "testNessus",
-        "description": "testNessus",
-        "peekOfCode": "def smart_str(x):\n    if isinstance(x, unicode):\n        return unicode(x).encode(\"utf-8\")\n    elif isinstance(x, int) or isinstance(x, float):\n        return str(x)\n    return x\ndef build_url(resource):\n    nessus_url = \"https://\"+args.url+\":8834\"\n    return '{0}{1}'.format(nessus_url, resource)\ndef connect(method, resource, data=None):",
-        "detail": "testNessus",
-        "documentation": {}
-    },
-    {
-        "label": "build_url",
-        "kind": 2,
-        "importPath": "testNessus",
-        "description": "testNessus",
-        "peekOfCode": "def build_url(resource):\n    nessus_url = \"https://\"+args.url+\":8834\"\n    return '{0}{1}'.format(nessus_url, resource)\ndef connect(method, resource, data=None):\n    \"\"\"\n    Send a request\n    Send a request to Nessus based on the specified data. If the session token\n    is available add it to the request. Specify the content type as JSON and\n    convert the data to JSON format.\n    \"\"\"",
-        "detail": "testNessus",
-        "documentation": {}
-    },
-    {
-        "label": "connect",
-        "kind": 2,
-        "importPath": "testNessus",
-        "description": "testNessus",
-        "peekOfCode": "def connect(method, resource, data=None):\n    \"\"\"\n    Send a request\n    Send a request to Nessus based on the specified data. If the session token\n    is available add it to the request. Specify the content type as JSON and\n    convert the data to JSON format.\n    \"\"\"\n    headers = {'X-Cookie': 'token={0}'.format(token),\n               'content-type': 'application/json'}\n    data = json.dumps(data)",
-        "detail": "testNessus",
-        "documentation": {}
-    },
-    {
-        "label": "login",
-        "kind": 2,
-        "importPath": "testNessus",
-        "description": "testNessus",
-        "peekOfCode": "def login(usr, pwd):\n    \"\"\"\n    Login to nessus.\n    \"\"\"\n    login = {'username': usr, 'password': pwd}\n    data = connect('POST', '/session', data=login)\n    print (data['token'])\n    return data['token']\ndef logout():\n    \"\"\"",
-        "detail": "testNessus",
-        "documentation": {}
-    },
-    {
-        "label": "logout",
-        "kind": 2,
-        "importPath": "testNessus",
-        "description": "testNessus",
-        "peekOfCode": "def logout():\n    \"\"\"\n    Logout of nessus.\n    \"\"\"\n    connect('DELETE', '/session')\ndef get_format():\n    # TODO: Add support for more formats if needed\n    return args.format   \ndef get_scans():\n    \"\"\"",
-        "detail": "testNessus",
-        "documentation": {}
-    },
-    {
-        "label": "get_format",
-        "kind": 2,
-        "importPath": "testNessus",
-        "description": "testNessus",
-        "peekOfCode": "def get_format():\n    # TODO: Add support for more formats if needed\n    return args.format   \ndef get_scans():\n    \"\"\"\n    Get Scans from JSON data\n    \"\"\"\n    scans_to_export = {}\n    data = connect('GET', '/scans')\n    all_scans = data['scans']",
-        "detail": "testNessus",
-        "documentation": {}
-    },
-    {
-        "label": "get_scans",
-        "kind": 2,
-        "importPath": "testNessus",
-        "description": "testNessus",
-        "peekOfCode": "def get_scans():\n    \"\"\"\n    Get Scans from JSON data\n    \"\"\"\n    scans_to_export = {}\n    data = connect('GET', '/scans')\n    all_scans = data['scans']\n    # Create dictionary mapping scanid:scan_name (This case scan_name = host ip)\n    folder = args.folder\n    for scans in all_scans:",
-        "detail": "testNessus",
-        "documentation": {}
-    },
-    {
-        "label": "export_status",
-        "kind": 2,
-        "importPath": "testNessus",
-        "description": "testNessus",
-        "peekOfCode": "def export_status(sid, fid):\n    \"\"\"\n    Check export status\n    Check to see if the export is ready for download.\n    \"\"\"\n    data = connect('GET', '/scans/{0}/export/{1}/status'.format(sid, fid))\n    return data['status'] == 'ready'\ndef export(scans):\n    \"\"\"\n    Make an export request",
-        "detail": "testNessus",
-        "documentation": {}
-    },
-    {
-        "label": "export",
-        "kind": 2,
-        "importPath": "testNessus",
-        "description": "testNessus",
-        "peekOfCode": "def export(scans):\n    \"\"\"\n    Make an export request\n    Request an export of the scan results for the specified scan and\n    historical run. In this case the format is hard coded as nessus but the\n    format can be any one of nessus, html, pdf, csv, or db. Once the request\n    is made, we have to wait for the export to be ready.\n    \"\"\"\n    # get format for export and handle POST params\n    export_format = get_format()",
-        "detail": "testNessus",
-        "documentation": {}
-    },
-    {
-        "label": "merge",
-        "kind": 2,
-        "importPath": "testNessus",
-        "description": "testNessus",
-        "peekOfCode": "def merge():\n    first = 1\n    for fileName in os.listdir(args.output):\n        fileName = os.path.join(args.output, fileName)\n        if \".nessus\" in fileName:\n            print(\":: Parsing\", fileName)\n            if first:\n                mainTree = etree.parse(fileName)\n                report = mainTree.find('Report')\n                report.attrib['name'] = 'Merged Report'",
-        "detail": "testNessus",
-        "documentation": {}
-    },
-    {
-        "label": "verify",
-        "kind": 5,
-        "importPath": "testNessus",
-        "description": "testNessus",
-        "peekOfCode": "verify = False\ntoken = '9262069938b05ee5e80da2af905c647e4e99a27e269b7cab'\nparser = argparse.ArgumentParser(description='Download Nesuss results in bulk / Merge Nessus files')\nparser.add_argument('--url', '-u', type=str, default='localhost', help=\"url to nessus instance! This or --merge must be specified\")\nparser.add_argument('--format','-F', type=str, default=\"html\", choices=['nessus', 'html'], help='Format of nesuss output, defaults to html')\nparser.add_argument('-o', '--output', type=str, default=os.getcwd(), help='Output directory')\nparser.add_argument('-m', '--merge', action='store_true', help='Merge all .nessus files in output directory')\nparser.add_argument('-e', '--export', action='store_true', help='Export files')\nparser.add_argument('--folder','-f', type=str, help='Scan Folder from which to download', default=0)\nargs = parser.parse_args()",
-        "detail": "testNessus",
-        "documentation": {}
-    },
-    {
-        "label": "token",
-        "kind": 5,
-        "importPath": "testNessus",
-        "description": "testNessus",
-        "peekOfCode": "token = '9262069938b05ee5e80da2af905c647e4e99a27e269b7cab'\nparser = argparse.ArgumentParser(description='Download Nesuss results in bulk / Merge Nessus files')\nparser.add_argument('--url', '-u', type=str, default='localhost', help=\"url to nessus instance! This or --merge must be specified\")\nparser.add_argument('--format','-F', type=str, default=\"html\", choices=['nessus', 'html'], help='Format of nesuss output, defaults to html')\nparser.add_argument('-o', '--output', type=str, default=os.getcwd(), help='Output directory')\nparser.add_argument('-m', '--merge', action='store_true', help='Merge all .nessus files in output directory')\nparser.add_argument('-e', '--export', action='store_true', help='Export files')\nparser.add_argument('--folder','-f', type=str, help='Scan Folder from which to download', default=0)\nargs = parser.parse_args()\ndef smart_str(x):",
-        "detail": "testNessus",
-        "documentation": {}
-    },
-    {
-        "label": "parser",
-        "kind": 5,
-        "importPath": "testNessus",
-        "description": "testNessus",
-        "peekOfCode": "parser = argparse.ArgumentParser(description='Download Nesuss results in bulk / Merge Nessus files')\nparser.add_argument('--url', '-u', type=str, default='localhost', help=\"url to nessus instance! This or --merge must be specified\")\nparser.add_argument('--format','-F', type=str, default=\"html\", choices=['nessus', 'html'], help='Format of nesuss output, defaults to html')\nparser.add_argument('-o', '--output', type=str, default=os.getcwd(), help='Output directory')\nparser.add_argument('-m', '--merge', action='store_true', help='Merge all .nessus files in output directory')\nparser.add_argument('-e', '--export', action='store_true', help='Export files')\nparser.add_argument('--folder','-f', type=str, help='Scan Folder from which to download', default=0)\nargs = parser.parse_args()\ndef smart_str(x):\n    if isinstance(x, unicode):",
-        "detail": "testNessus",
-        "documentation": {}
-    },
-    {
-        "label": "args",
-        "kind": 5,
-        "importPath": "testNessus",
-        "description": "testNessus",
-        "peekOfCode": "args = parser.parse_args()\ndef smart_str(x):\n    if isinstance(x, unicode):\n        return unicode(x).encode(\"utf-8\")\n    elif isinstance(x, int) or isinstance(x, float):\n        return str(x)\n    return x\ndef build_url(resource):\n    nessus_url = \"https://\"+args.url+\":8834\"\n    return '{0}{1}'.format(nessus_url, resource)",
-        "detail": "testNessus",
         "documentation": {}
     }
 ]

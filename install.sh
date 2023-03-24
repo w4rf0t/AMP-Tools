@@ -18,14 +18,11 @@ go install github.com/lc/subjs@latest
 go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 go install github.com/tomnomnom/httprobe@latest
 go install github.com/bp0lr/gauplus@latest
-# mkdir .gf
+mkdir .gf
 go install github.com/tomnomnom/qsreplace@latest
-# git clone https://github.com/tomnomnom/gf
 go install github.com/tomnomnom/gf@latest
 git clone https://github.com/1ndianl33t/Gf-Patterns
-# mv gf/examples/* .gf
 mv Gf-Patterns/*.json ~/.gf
-# rm -rf gf
 rm -rf Gf-Patterns
 
 pip3 install pytenable
