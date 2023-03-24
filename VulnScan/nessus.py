@@ -116,7 +116,7 @@ def NessusScan(target):
         while scanProgress <= 100:
             scanProgress = checkStatus(idscan,x_api_token,token)
             for char in ["|", "/", "-", "\\"]:
-                print(f"Nessus scaning {scanProgress}%...{char}", end="\r") #, end="\r"
+                print(f"Nessus scaning {scanProgress}%...{char}", end="\r")
                 time.sleep(0.1)
         print("Done Scaning Nessus !!!")
     try:
@@ -126,4 +126,3 @@ def NessusScan(target):
     print("Generating report...")
     exportFile(target,idscan)
     
-NessusScan("etc.vn")

@@ -28890,6 +28890,14 @@
         "documentation": {}
     },
     {
+        "label": "NessusScan",
+        "importPath": "VulnScan.nessus",
+        "description": "VulnScan.nessus",
+        "isExtraImport": true,
+        "detail": "VulnScan.nessus",
+        "documentation": {}
+    },
+    {
         "label": "re,",
         "kind": 6,
         "isExtraImport": true,

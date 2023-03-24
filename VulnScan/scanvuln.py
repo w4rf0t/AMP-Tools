@@ -16,6 +16,8 @@ from datetime import *
 import urllib3
 from sys import stdout
 
+from VulnScan.nessus import NessusScan
+
 class Printer:
     def __init__(self, data):
         stdout.write("\r\x1b[K" + data.__str__())
@@ -99,6 +101,7 @@ def f_menu(target):
     print(" [3] Brute Force Login Page From List")
     print(" [4] XSS Scan")
     print(" [5] LFI Scan")
+    print(" [6] Nessus Scan <It will take a long time | Membership ONLY "+R+"💗"+G+" >")
     print(" [0] Exit\n")
     chce = input(B+"Your choice: ")
     if chce == "1":
@@ -164,6 +167,9 @@ def f_menu(target):
             "python " "VulnScan/modules/lfisuite.py ", shell=True)
         lfisuite.communicate()
         subprocess._cleanup()
+    elif chce == "6":
+        subprocess.call("clear", shell=True)
+        NessusScan(target)
     elif chce == "0":
         print(R + "\n Exiting cleanly..")
         print(W)
