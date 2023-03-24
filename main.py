@@ -26,13 +26,18 @@ def menu():
 
 
 def main(target):
-    canlam2(target)
-    t1 = Thread(target=js_recon, args=[target])
-    t2 = Thread(target=canlam, args=[target])
-    t1.start()
-    t2.start()
-    t1.join()
-    t2.join()
+    IP_regex = re.compile(r"^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$")
+    if not IP_regex.match(target):
+        sub_Recon(target)
+        t1 = Thread(target=ip_Recon, args=[target])
+        t2 = Thread(target=js_recon, args=[target])
+        t1.start()
+        t2.start()
+        t1.join()
+        t2.join()
+    else:
+        ip_Recon(target)
+        js_recon(target)
     find_sensitive(target)
     # checkvuln(target)
 

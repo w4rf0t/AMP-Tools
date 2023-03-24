@@ -21,7 +21,7 @@ def get_ip_nmap(target):
     for thread in threads:
         thread.join()
     
-    pattern = r'(\d+)\/(\w+)\s+(\w+)\s+([\w\.\-\s]+)'
+    pattern = r'(\d+)\/(\w+)\s+(\w+)\s+([\w\.\-\s]+?)\s*(?:\n|$)'
     regex = re.compile(pattern)
     data = []
     for ip in IPs:
@@ -36,11 +36,42 @@ def get_ip_nmap(target):
     subprocess.run(f"rm -rf Result/{target}/{target}_ip/nmap_*.txt",shell=True)
     print("Nmap scan done !!!")
 
-def canlam(target):
+def scan_input_IP(target):
+    print("Nmap scan...",end="\r")
+    os.system(f"nmap -sT -sV {target} >> Result/{target}/{target}_ip/nmap_{target}.txt")
+    print("Nmap scan done !!!")
+    
+    pattern = r'(\d+)\/(\w+)\s+(\w+)\s+([\w\.\-\s]+?)\s*(?:\n|$)'
+    regex = re.compile(pattern)
+    data = []
+    list_WebIP = []
+    with open(f"Result/{target}/{target}_ip/nmap_{target}.txt","r") as file3:
+        text_data = file3.read()
+    matches = regex.findall(text_data)
+    for match in matches:
+        object = { target : { "port" : match[0], "protocol" : match[1], "service" : match[2], "version" : match[3] } }    
+        data.append(object)
+        list_WebIP.append(str(target+':'+match[0]))
+    print(data)
+    print(list_WebIP)
+    with open(f"Result/{target}/{target}_ip/nmap_{target}.json","w") as file4:
+        json.dump(data,file4)
+    with open(f"Result/{target}/final_subdomain_{target}.txt","w") as file5:
+        for ip in list_WebIP:
+            file5.write(ip+"\n")
+    print("Generating IP web service...","\r")
+    command_probe = [f"cat Result/{target}/final_subdomain_{target}.txt | ~/go/bin/httprobe >>  Result/{target}/{target}_live.txt"]
+    subprocess.run(command_probe, stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)
+    command_httpx = [f"cat Result/{target}/{target}_live.txt | ~/go/bin/httpx -sc -td -ip -server -nc -json -o Result/{target}/final_status_{target}.json"]
+    subprocess.run(command_httpx, stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)    
+    print("Generating IP web service done !!!")
+def ip_Recon(target):
     try:
         os.makedirs(f'Result/{target}/{target}_ip', exist_ok=True)
     except FileExistsError:
         pass
-    get_ip_nmap(target)
-
-
+    IP_regex = re.compile(r"^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$")
+    if not IP_regex.match(target):
+        get_ip_nmap(target)
+    else:
+        scan_input_IP(target)

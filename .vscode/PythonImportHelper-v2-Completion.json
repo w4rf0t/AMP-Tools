@@ -28985,11 +28985,20 @@
         "documentation": {}
     },
     {
-        "label": "canlam",
+        "label": "scan_input_IP",
         "kind": 2,
         "importPath": "AutoRecon.ip_recon",
         "description": "AutoRecon.ip_recon",
-        "peekOfCode": "def canlam(target):\n    try:\n        os.makedirs(f'Result/{target}/{target}_ip', exist_ok=True)\n    except FileExistsError:\n        pass\n    get_ip_nmap(target)",
+        "peekOfCode": "def scan_input_IP(target):\n    print(\"Nmap scan...\",end=\"\\r\")\n    os.system(f\"nmap -sT -sV {target} >> Result/{target}/{target}_ip/nmap_{target}.txt\")\n    print(\"Nmap scan done !!!\")\n    pattern = r'(\\d+)\\/(\\w+)\\s+(\\w+)\\s+([\\w\\.\\-\\s]+?)\\s*(?:\\n|$)'\n    regex = re.compile(pattern)\n    data = []\n    list_WebIP = []\n    with open(f\"Result/{target}/{target}_ip/nmap_{target}.txt\",\"r\") as file3:\n        text_data = file3.read()",
+        "detail": "AutoRecon.ip_recon",
+        "documentation": {}
+    },
+    {
+        "label": "ip_Recon",
+        "kind": 2,
+        "importPath": "AutoRecon.ip_recon",
+        "description": "AutoRecon.ip_recon",
+        "peekOfCode": "def ip_Recon(target):\n    try:\n        os.makedirs(f'Result/{target}/{target}_ip', exist_ok=True)\n    except FileExistsError:\n        pass\n    IP_regex = re.compile(r\"^(?:[0-9]{1,3}\\.){3}[0-9]{1,3}$\")\n    if not IP_regex.match(target):\n        get_ip_nmap(target)\n    else:\n        scan_input_IP(target)",
         "detail": "AutoRecon.ip_recon",
         "documentation": {}
     },
@@ -29012,11 +29021,11 @@
         "documentation": {}
     },
     {
-        "label": "canlam2",
+        "label": "sub_Recon",
         "kind": 2,
         "importPath": "AutoRecon.subdomain_recon",
         "description": "AutoRecon.subdomain_recon",
-        "peekOfCode": "def canlam2(target):\n    try:\n        if not(os.path.exists(f'Result/{target}')):\n            os.system(f\"mkdir Result/{target} | chmod 777 Result/{target} \")\n    except Exception as e:\n        pass\n    call_subfinder(target)\n    sanitize_input(target)\n    print(\"Enumerating subdomain done !!!\")",
+        "peekOfCode": "def sub_Recon(target):\n    try:\n        if not(os.path.exists(f'Result/{target}')):\n            os.system(f\"mkdir Result/{target} | chmod 777 Result/{target} \")\n    except Exception as e:\n        pass\n    call_subfinder(target)\n    sanitize_input(target)\n    print(\"Enumerating subdomain done !!!\")",
         "detail": "AutoRecon.subdomain_recon",
         "documentation": {}
     },
@@ -29025,7 +29034,7 @@
         "kind": 2,
         "importPath": "AutoRecon.subfolder_recon",
         "description": "AutoRecon.subfolder_recon",
-        "peekOfCode": "def run_command(command):\n    os.system(command)\ndef js_recon(target):\n    try:\n        os.makedirs(f\"Result/{target}/{target}_url\", exist_ok=True)\n    except FileExistsError:\n        pass\n    print('Directory enumeration')\n    all_subdomains = f\"Result/{target}/final_subdomain_{target}.txt\"\n    crawled_file = f\"Result/{target}/{target}_url/crawl_urls.txt\"",
+        "peekOfCode": "def run_command(command):\n    os.system(command)\ndef js_recon(target):\n    try:\n        os.makedirs(f\"Result/{target}/{target}_url\", exist_ok=True)\n    except FileExistsError:\n        pass\n    print('Directory enumeration')\n    crawled_file = f\"Result/{target}/{target}_url/crawl_urls.txt\"\n    js_crawled_file = f\"Result/{target}/{target}_url/js_crawl_urls.txt\"",
         "detail": "AutoRecon.subfolder_recon",
         "documentation": {}
     },
@@ -29034,7 +29043,7 @@
         "kind": 2,
         "importPath": "AutoRecon.subfolder_recon",
         "description": "AutoRecon.subfolder_recon",
-        "peekOfCode": "def js_recon(target):\n    try:\n        os.makedirs(f\"Result/{target}/{target}_url\", exist_ok=True)\n    except FileExistsError:\n        pass\n    print('Directory enumeration')\n    all_subdomains = f\"Result/{target}/final_subdomain_{target}.txt\"\n    crawled_file = f\"Result/{target}/{target}_url/crawl_urls.txt\"\n    js_crawled_file = f\"Result/{target}/{target}_url/js_crawl_urls.txt\"\n    os.system(f\"cat {all_subdomains} | ~/go/bin/gauplus -random-agent -b ttf,woff,svg,png,jpg | sort -u | uniq >> {crawled_file}\")",
+        "peekOfCode": "def js_recon(target):\n    try:\n        os.makedirs(f\"Result/{target}/{target}_url\", exist_ok=True)\n    except FileExistsError:\n        pass\n    print('Directory enumeration')\n    crawled_file = f\"Result/{target}/{target}_url/crawl_urls.txt\"\n    js_crawled_file = f\"Result/{target}/{target}_url/js_crawl_urls.txt\"\n    IP_regex = re.compile(r\"^(?:[0-9]{1,3}\\.){3}[0-9]{1,3}$\")\n    if not IP_regex.match(target):",
         "detail": "AutoRecon.subfolder_recon",
         "documentation": {}
     },
@@ -51106,7 +51115,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def main(target):\n    canlam2(target)\n    t1 = Thread(target=js_recon, args=[target])\n    t2 = Thread(target=canlam, args=[target])\n    t1.start()\n    t2.start()\n    t1.join()\n    t2.join()\n    find_sensitive(target)\n    # checkvuln(target)",
+        "peekOfCode": "def main(target):\n    IP_regex = re.compile(r\"^(?:[0-9]{1,3}\\.){3}[0-9]{1,3}$\")\n    if not IP_regex.match(target):\n        sub_Recon(target)\n        t1 = Thread(target=ip_Recon, args=[target])\n        t2 = Thread(target=js_recon, args=[target])\n        t1.start()\n        t2.start()\n        t1.join()\n        t2.join()",
         "detail": "main",
         "documentation": {}
     },

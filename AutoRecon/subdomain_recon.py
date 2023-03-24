@@ -72,7 +72,7 @@ def sanitize_input(target):
     with open(f'Result/{target}/final_status_{target}.json', 'w',encoding='utf-8') as f:
         json.dump(finaldata, f, indent=4,ensure_ascii=False)
     subprocess.call(f'rm -f Result/{target}/{target}_RESULT.json', stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)
-def canlam2(target):
+def sub_Recon(target):
     try:
         if not(os.path.exists(f'Result/{target}')):
             os.system(f"mkdir Result/{target} | chmod 777 Result/{target} ")
