@@ -1,3 +1,4 @@
+import core.colors
 import json
 import os
 import re
@@ -101,7 +102,7 @@ def exportFile(target,idscan):
             "X-Cookie": "token=" + token + "",
         }
     response = requests.get(url, headers=headers ,verify=False)
-    with open(f'Result/{target}/NessusScan/{target}.pdf', 'wb') as f:
+    with open(f'Result/{target}/NessusScan/{target}.pdf', 'wb',encoding='utf-8') as f:
         f.write(response.content)
     
 def NessusScan(target):

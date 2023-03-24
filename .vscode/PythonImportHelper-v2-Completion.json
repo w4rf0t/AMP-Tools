@@ -27460,6 +27460,15 @@
         "documentation": {}
     },
     {
+        "label": "core.colors",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "core.colors",
+        "description": "core.colors",
+        "detail": "core.colors",
+        "documentation": {}
+    },
+    {
         "label": "green",
         "importPath": "core.colors",
         "description": "core.colors",
