@@ -1,0 +1,82 @@
+[
+    {
+        "box.profileinc.com": {
+            "host": "159.203.9.65",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Apache HTTP Server:2.4.41",
+                "Font Awesome",
+                "HSTS",
+                "Ubuntu"
+            ],
+            "title": "Profile | Delivering screening, investigations and security systems for over 30 years"
+        }
+    },
+    {
+        "box.profileinc.com": {
+            "host": "159.203.9.65",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Apache HTTP Server:2.4.41",
+                "Font Awesome",
+                "HSTS",
+                "Ubuntu"
+            ],
+            "title": "Profile | Delivering screening, investigations and security systems for over 30 years"
+        }
+    },
+    {
+        "www.profileinc.com": {
+            "host": "159.203.9.65",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Apache HTTP Server:2.4.41",
+                "Font Awesome",
+                "HSTS",
+                "Ubuntu"
+            ],
+            "title": "Profile | Delivering screening, investigations and security systems for over 30 years"
+        }
+    },
+    {
+        "www.profileinc.com": {
+            "host": "159.203.9.65",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Apache HTTP Server:2.4.41",
+                "Font Awesome",
+                "HSTS",
+                "Ubuntu"
+            ],
+            "title": "Profile | Delivering screening, investigations and security systems for over 30 years"
+        }
+    },
+    {
+        "portal.profileinc.com": {
+            "host": "20.48.171.6",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Apache HTTP Server",
+                "HSTS"
+            ],
+            "title": "Redirecting to http://profileinc.com"
+        }
+    },
+    {
+        "portal.profileinc.com": {
+            "host": "20.48.171.6",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Apache HTTP Server",
+                "HSTS"
+            ],
+            "title": "Redirecting to http://profileinc.com"
+        }
+    }
+]
