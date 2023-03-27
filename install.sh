@@ -9,7 +9,7 @@ make install
 rm -rf ../massdns
 go get github.com/michenriksen/gitrob
 cd ~
-export GOROOT=/usr/lib/go
+export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
