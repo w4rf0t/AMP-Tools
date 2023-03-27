@@ -33,7 +33,18 @@ def call_subfinder(target):
     with open(f"Result/{target}/subdomain_{target}_securitytraials.txt", "a") as f:
         for subdomain in subdomains:
             f.write("%s\n" % subdomain)
+def get_from_cert(target):
+    command_1 = [f"python3 AutoRecon/module/crtsh_enum_psql.py {target} >> Result/{target}/subdomain_{target}_cert.txt"]
+    subprocess.run(command_1, stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)
 
+    command_2 = [f"python3 AutoRecon/module/crtsh_enum_web.py {target} >> Result/{target}/subdomain_{target}_cert.txt"]
+    subprocess.run(command_2, stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)
+
+    command_3 = [f"python3 AutoRecon/module/san_subdomain_enum.py {target} >> Result/{target}/subdomain_{target}_cert.txt"]
+    subprocess.run(command_3, stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)
+
+    command_4 = [f"sh AutoRecon/module/crtsh_enum_psql.sh {target} >> Result/{target}/subdomain_{target}_cert.txt"]
+    subprocess.run(command_4, stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)
 def sanitize_input(target):
     
     os.system(f"cat Result/{target}/subdomain_{target}_* >> Result/{target}/subdomain_{target}.txt; rm Result/{target}/subdomain_{target}_*.txt ")
@@ -82,5 +93,6 @@ def sub_Recon(target):
     except Exception as e:
         pass
     call_subfinder(target)
+    get_from_cert(target)
     sanitize_input(target)
     print(G,"Enumerating subdomain done !")
