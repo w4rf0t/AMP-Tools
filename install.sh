@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo apt install golang-go -y
-
+pip3 install py-altdns==1.0.2
 git clone https://github.com/blechschmidt/massdns.git
 cd massdns
 make
