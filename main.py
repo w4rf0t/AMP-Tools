@@ -5,6 +5,7 @@ from AutoRecon.subfolder_recon import *
 from AutoRecon.subdomain_recon import *
 from AutoRecon.ip_recon import *
 from AutoRecon.find_sensitive import *
+from AutoRecon.detectwaf import *
 import os
 from VulnScan.scanvuln import checkvuln
 
@@ -30,14 +31,18 @@ def main(target):
     if not IP_regex.match(target):
         sub_Recon(target)
         t1 = Thread(target=ip_Recon, args=[target])
-        # t2 = Thread(target=js_recon, args=[target])
+        # t2 = Thread(target=js_Recon, args=[target])
+        t3 = Thread(target=waf_Recon, args=[target])
         t1.start()
         # t2.start()
+        t3.start()
         t1.join()
         # t2.join()
+        t3.join()
     else:
         ip_Recon(target)
-        js_recon(target)
+        waf_Recon(target)
+        js_Recon(target)
     # find_sensitive(target)
     checkvuln(target)
 

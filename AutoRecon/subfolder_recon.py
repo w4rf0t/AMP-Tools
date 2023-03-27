@@ -10,7 +10,7 @@ B = "\033[34m"
 def run_command(command):
     os.system(command)
 
-def js_recon(target):
+def js_Recon(target):
     try:
         os.makedirs(f"Result/{target}/{target}_url", exist_ok=True)
     except FileExistsError:
