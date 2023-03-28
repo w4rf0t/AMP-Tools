@@ -3,7 +3,9 @@ import os
 import sys
 import requests
 import re
-target='tinder.com'
+from urllib3 import disable_warnings
+disable_warnings()
+
 sensitive_data=[]
 patterns = {
     'google_api'     : r'AIza[0-9A-Za-z-_]{35}',
@@ -70,18 +72,17 @@ patterns = {
     'Google API Key': r'AIza[0-9A-Za-z_-]{35}',
 
 }
-def find_sensitive(target):
-    with open(f'Result/{target}/status_of_function.json', 'r') as f:
-        data=json.load(f)
-    data['find_sensitive']['find_sensitive'] = 0 
+def find_sensitive(target,status_data):
+    print("Start find sensitive")
+    status_data['find_sensitive']['find_sensitive'] = "0"
     with open(f"Result/{target}/status_of_function.json","w") as f:
-        json.dump(data, f, indent=4)     
+        json.dump(status_data, f, indent=4)     
         
     with open(f'Result/{target}/temp.txt', 'w') as f:
-        with open(f'Result/{target}/{target}_url/js_urls.txt',"r") as file1:
+        with open(f'Result/{target}/{target}_url/js_crawl_urls.txt',"r") as file1:
             list_urls = file1.readlines()
             for url in list_urls:
-                response = requests.get(url)
+                response = requests.get(url,verify=False)
                 contents = response.text
                 for key, values in patterns.items():
                     matches = re.findall(values, contents)
@@ -89,9 +90,9 @@ def find_sensitive(target):
                         f.write(f'Find {key}: {matches} \n')
                         print(f'Find {key}:  {matches}')
     
-    data['find_sensitive']['find_sensitive'] = 1
+    status_data['find_sensitive']['find_sensitive'] = "1"
     with open(f"Result/{target}/status_of_function.json","w") as f:
-        json.dump(data, f, indent=4)  
+        json.dump(status_data, f, indent=4)  
         
-    os.system(f'cat Result/{target}/temp.txt | -sort -u | uniq >> Result/{target}/sensitive_data.txt; rm Result/{target}/temp.txt')
-
+    os.system(f'cat Result/{target}/temp.txt | uniq >> Result/{target}/sensitive_data.txt; rm Result/{target}/temp.txt')
+    print("Finish find sensitive")

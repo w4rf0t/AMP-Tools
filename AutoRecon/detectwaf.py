@@ -17,19 +17,18 @@ def wafwoof(target):
                 line = line.strip()
                 temp_filename = f'Result/{target}/{str(uuid.uuid4())}.json'
                 with open(temp_filename, 'w') as temp_file:
-                    subprocess.run(['wafw00f', line, '-o', temp_filename],
-                                   stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
+                    subprocess.run(['wafw00f', line, '-o', temp_filename],stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
                 with open(temp_filename, 'r') as temp_file:
                     data = json.load(temp_file)
                     json.dump(data, file2, indent=4)
                 os.remove(temp_filename)
-def waf_Recon(target):
-    with open(f'Result/{target}/status_of_function.json', 'r') as f:
-        data=json.load(f)
-    data['waf_Recon']['wafwoof'] = 0 
+def waf_Recon(target,status_data):
+    status_data['waf_Recon']['wafwoof'] = "0"
     with open(f"Result/{target}/status_of_function.json","w") as f:
-        json.dump(data, f, indent=4)
+        json.dump(status_data, f, indent=4)
     wafwoof(target)
-    data['waf_Recon']['wafwoof'] = 1
+    status_data['waf_Recon']['wafwoof'] = "1"
     with open(f"Result/{target}/status_of_function.json","w") as f:
-        json.dump(data, f, indent=4)
+        json.dump(status_data, f, indent=4)
+    print(G, 'WAF Detection Completed')
+    

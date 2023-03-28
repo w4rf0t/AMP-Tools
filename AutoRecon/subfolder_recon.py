@@ -3,6 +3,7 @@ import os
 import re
 import subprocess
 import threading
+import time
 
 W = "\033[0m"
 R = "\033[31m"
@@ -10,16 +11,14 @@ G = "\033[32m"
 O = "\033[33m"
 B = "\033[34m"
 
-def js_Recon(target):
-    with open(f'Result/{target}/status_of_function.json', 'r') as f:
-        data=json.load(f)
-    data['js_Recon']['js_Recon'] = 0
+def js_Recon(target,status_data):
+    print(B,'Directory enumerating...')
+    status_data['js_Recon']['js_Recon'] = "0"
     with open(f"Result/{target}/status_of_function.json","w") as f:
-        json.dump(data,f,indent=4)
+        json.dump(status_data,f,indent=4)
         
     if not os.path.exists(f"Result/{target}/{target}_url"):
-        os.system(f"mkdir Result/{target}/{target}_url | chmod 777 Result/{target}/{target}_url")
-    print(B,'Directory enumerating...')
+        os.makedirs(f"Result/{target}/{target}_url")
     crawled_file = f"Result/{target}/{target}_url/crawl_urls.txt"
     js_crawled_file = f"Result/{target}/{target}_url/js_crawl_urls.txt"
     IP_regex = re.compile(r"^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$")
@@ -41,7 +40,8 @@ def js_Recon(target):
     for thread in threads_gf:
         thread.join()
     # os.system(f"cat Result/{target}/{target}_live.txt;while read url; do ~/.local/dirsearch -u $url --random-agent --follow-redirects --deep-recursive -x 500 -o Result/{target}/{target}_url/$url-dirsearch.txt; done")
-    data['js_Recon']['js_Recon'] = 1
+    status_data['js_Recon']['js_Recon'] = "1"
     with open(f"Result/{target}/status_of_function.json","w") as f:
-        json.dump(data,f,indent=4)
+        json.dump(status_data,f,indent=4)
     print(G,'Directory enumerating done !')
+    

@@ -10,14 +10,12 @@ G = "\033[32m"
 O = "\033[33m"
 B = "\033[34m"
 
-def get_ip_nmap(target):
-    with open(f'Result/{target}/status_of_function.json', 'r') as f:
-        data=json.load(f)
-    data["ip_Recon"]["get_ip_nmap"]=0
+def get_ip_nmap(target,status_data):
+    status_data["ip_Recon"]["get_ip_nmap"]="0"
     with open(f"Result/{target}/status_of_function.json","w") as f:
-        json.dump(data, f, indent=4)
+        json.dump(status_data, f, indent=4)
 
-    print(B,"Generating IP ports service...","\r")
+    print(B,"Generating IP ports service...")
     with open(f'Result/{target}/final_status_{target}.json',"r") as file1:
             datas = json.load(file1)
     IPs = []
@@ -41,25 +39,23 @@ def get_ip_nmap(target):
             text_data = file3.read()
             matches = regex.findall(text_data)
             for match in matches:
-                object = { ip : { "port" : match[0], "protocol" : match[1], "service" : match[2], "version" : match[3] } }
+                object = { ip : { "port" : match[0], "protocol" : match[1], "status" : match[2], "service" : match[3] } }
                 data.append(object)
     with open(f"Result/{target}/{target}_ip/nmap_{target}.json","a") as file4:
         json.dump(data,file4,indent=4)
     subprocess.run(f"rm -rf Result/{target}/{target}_ip/nmap_*.txt",shell=True)
 
-    data["ip_Recon"]["get_ip_nmap"]=1
+    status_data["ip_Recon"]["get_ip_nmap"]="1"
     with open(f"Result/{target}/status_of_function.json","w") as f:
-        json.dump(data, f, indent=4)
+        json.dump(status_data, f, indent=4)
         
     print(G,"Generating IP ports service done !")
 
-def scan_input_IP(target):
-    with open(f'Result/{target}/status_of_function.json', 'r') as f:
-        dataf=json.load(f)
-    dataf["ip_Recon"]["scan_input_IP"] = 0
+def scan_input_IP(target,status_data):
+    status_data["ip_Recon"]["scan_input_IP"] = "0"
     with open(f"Result/{target}/status_of_function.json","w") as f:
-        json.dump(dataf, f, indent=4)
-    print(B,"Generating IP ports service...","\r")
+        json.dump(status_data, f, indent=4)
+    print(B,"Generating IP ports service...")
     os.system(f"nmap -sT -sV {target} >> Result/{target}/{target}_ip/nmap_{target}.txt")
     
     pattern = r'(\d+)\/(\w+)\s+(\w+)\s+([\w\.\-\s]+?)\s*(?:\n|$)'
@@ -84,18 +80,15 @@ def scan_input_IP(target):
     command_httpx = [f"cat Result/{target}/{target}_live.txt | ~/go/bin/httpx -sc -td -ip -server -nc -json -o Result/{target}/final_status_{target}.json"]
     subprocess.run(command_httpx, stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)    
 
-    dataf["ip_Recon"]["scan_input_IP"] = 1
+    status_data["ip_Recon"]["scan_input_IP"] = "1"
     with open(f"Result/{target}/status_of_function.json","w") as f:
-        json.dump(dataf, f, indent=4)
+        json.dump(status_data, f, indent=4)
     print(G,"Generating IP ports service done !")
-def ip_Recon(target):
-
-    try:
-        os.makedirs(f'Result/{target}/{target}_ip', exist_ok=True)
-    except FileExistsError:
-        pass
+def ip_Recon(target,status_data):
+    if not os.path.exists(f"Result/{target}/{target}_ip"):
+        os.mkdir(f"Result/{target}/{target}_ip")
     IP_regex = re.compile(r"^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$")
     if not IP_regex.match(target):
-        get_ip_nmap(target)
+        get_ip_nmap(target,status_data)
     else:
-        scan_input_IP(target)
+        scan_input_IP(target,status_data)

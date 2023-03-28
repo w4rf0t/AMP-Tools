@@ -7,6 +7,7 @@ from AutoRecon.ip_recon import *
 from AutoRecon.find_sensitive import *
 from AutoRecon.detectwaf import *
 import os
+import time
 # from VulnScan.scanvuln import checkvuln
 
 
@@ -29,39 +30,39 @@ def menu():
 def main(target):
     status_data_json_subdomain = {
     "Sub_Recon": {
-        "call_subfinder": -1,
-        "get_from_cert" :-1,
-        "sanitize_input" :-1
+        "call_subfinder": "-1",
+        "get_from_cert" :"-1",
+        "sanitize_input" :"-1"
     },
     "ip_Recon":{
-        "get_ip_nmap":-1
+        "get_ip_nmap":"-1"
     },
     "js_Recon":{
-        "js_Recon":-1
+        "js_Recon":"-1"
     },
     "waf_Recon":{
-        "wafwoof":-1
+        "wafwoof":"-1"
     },
     "find_sensitive":{
-        "find_sensitive":-1
+        "find_sensitive":"-1"
     }}
     
     status_data_json_ip = {
     "ip_Recon":{
-        "scan_input_IP":-1
+        "scan_input_IP":"-1"
     },
     "js_Recon":{
-        "js_Recon":-1
+        "js_Recon":"-1"
     },
     "waf_Recon":{
-        "wafwoof":-1
+        "wafwoof":"-1"
     },
     "find_sensitive":{
-        "find_sensitive":-1
+        "find_sensitive":"-1"
     }}
     try:
         if not(os.path.exists(f'Result/{target}')):
-            os.system(f"mkdir Result/{target} | chmod 777 Result/{target} ")
+            os.makedirs(f'Result/{target}')
     except Exception as e:
         pass
     IP_regex = re.compile(r"^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$")
@@ -69,9 +70,11 @@ def main(target):
         with open(f"Result/{target}/status_of_function.json", "w") as f:
             json.dump(status_data_json_subdomain, f, indent=4)
         sub_Recon(target)
-        t1 = Thread(target=ip_Recon, args=[target])
-        t2 = Thread(target=js_Recon, args=[target])
-        t3 = Thread(target=waf_Recon, args=[target])
+        with open(f"Result/{target}/status_of_function.json", "r") as f:
+            status_data=json.load(f)
+        t1 = Thread(target=ip_Recon, args=[target,status_data])
+        t2 = Thread(target=js_Recon, args=[target,status_data])
+        t3 = Thread(target=waf_Recon, args=[target,status_data])
         t1.start()
         t2.start()
         t3.start()
@@ -80,14 +83,19 @@ def main(target):
         t3.join()
     else:
         with open(f"Result/{target}/status_of_function.json", "w") as f:
-            f.write(json.dumps(status_data_json_ip, indent=4))
-        ip_Recon(target)
-        t1 = Thread(target=waf_Recon, args=[target])
-        t2 = Thread(target=js_Recon, args=[target])
+            json.dump(status_data_json_ip,f, indent=4)
+        with open(f"Result/{target}/status_of_function.json", "r") as f:
+            status_data=json.load(f)
+        ip_Recon(target,status_data)
+        with open(f"Result/{target}/status_of_function.json", "r") as f:
+            status_data=json.load(f)
+        t1 = Thread(target=waf_Recon, args=[target,status_data])
+        t2 = Thread(target=js_Recon, args=[target,status_data])
         t1.start()
         t2.start()
         t1.join()
         t2.join()
+    find_sensitive(target,status_data)
     # checkvuln(target)
 
 
