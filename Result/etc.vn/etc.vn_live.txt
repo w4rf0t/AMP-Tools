@@ -1,7 +1,0 @@
-http://etc.vn
-http://www.etc.vn
-https://access.etc.vn
-https://tfs.cs.etc.vn
-https://git.cs.etc.vn
-https://etc.vn
-https://www.etc.vn

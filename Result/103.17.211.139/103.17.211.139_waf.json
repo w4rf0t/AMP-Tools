@@ -1,0 +1,15 @@
+[
+    {
+        "url": "http://103.17.211.139:8080",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://103.17.211.139:80",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+]

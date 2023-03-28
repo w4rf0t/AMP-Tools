@@ -1,3 +1,4 @@
+import json
 import os
 import sys
 import requests
@@ -70,6 +71,12 @@ patterns = {
 
 }
 def find_sensitive(target):
+    with open(f'Result/{target}/status_of_function.json', 'r') as f:
+        data=json.load(f)
+    data['find_sensitive']['find_sensitive'] = 0 
+    with open(f"Result/{target}/status_of_function.json","w") as f:
+        json.dump(data, f, indent=4)     
+        
     with open(f'Result/{target}/temp.txt', 'w') as f:
         with open(f'Result/{target}/{target}_url/js_urls.txt',"r") as file1:
             list_urls = file1.readlines()
@@ -81,7 +88,10 @@ def find_sensitive(target):
                     if(matches):
                         f.write(f'Find {key}: {matches} \n')
                         print(f'Find {key}:  {matches}')
-
+    
+    data['find_sensitive']['find_sensitive'] = 1
+    with open(f"Result/{target}/status_of_function.json","w") as f:
+        json.dump(data, f, indent=4)  
+        
     os.system(f'cat Result/{target}/temp.txt | -sort -u | uniq >> Result/{target}/sensitive_data.txt; rm Result/{target}/temp.txt')
-            
 

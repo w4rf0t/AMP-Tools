@@ -10,8 +10,11 @@ O = "\033[33m"
 B = "\033[34m"
 
 
-def call_subfinder(target):
+def call_subfinder(target,data):
     print(B,'Enumerating subdomain...',"\r")
+    data["Sub_Recon"]["call_subfinder"] = 0
+    with open(f"Result/{target}/status_of_function.json","w") as f:
+        json.dump(data, f, indent=4)
     #Passive
     os.system(f"~/go/bin/subfinder -d {target} -silent -all -o Result/{target}/subdomain_{target}_subfinder.txt 2>&1 >/dev/null")
 
@@ -34,7 +37,13 @@ def call_subfinder(target):
     with open(f"Result/{target}/subdomain_{target}_securitytraials.txt", "a") as f:
         for subdomain in subdomains:
             f.write("%s\n" % subdomain)
-def get_from_cert(target):
+    data["Sub_Recon"]["call_subfinder"] = 1
+    with open(f"Result/{target}/status_of_function.json","w") as f:
+        json.dump(data, f, indent=4)
+def get_from_cert(target,data):
+    data["Sub_Recon"]["get_from_cert"] = 0
+    with open(f"Result/{target}/status_of_function.json","w") as f:
+        json.dump(data, f, indent=4)
     command_1 = [f"python3 AutoRecon/module/crtsh_enum_psql.py {target} >> Result/{target}/subdomain_{target}_cert.txt"]
     subprocess.run(command_1, stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)
 
@@ -46,8 +55,11 @@ def get_from_cert(target):
 
     command_4 = [f"sh AutoRecon/module/crtsh_enum_psql.sh {target} >> Result/{target}/subdomain_{target}_cert.txt"]
     subprocess.run(command_4, stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)
-def sanitize_input(target):
     
+    data["Sub_Recon"]["get_from_cert"] = 1
+    with open(f"Result/{target}/status_of_function.json","w") as f:
+        json.dump(data, f, indent=4)
+def sanitize_input(target):  
     os.system(f"cat Result/{target}/subdomain_{target}_* >> Result/{target}/subdomain_{target}.txt; rm Result/{target}/subdomain_{target}_*.txt ")
     os.system(f"awk '!seen[$0]++' Result/{target}/subdomain_{target}.txt > Result/{target}/final_subdomain_{target}.txt; rm Result/{target}/subdomain_{target}.txt ")
 
@@ -87,8 +99,21 @@ def sanitize_input(target):
     with open(f'Result/{target}/final_status_{target}.json', 'w',encoding='utf-8') as f:
         json.dump(finaldata, f, indent=4,ensure_ascii=False)
     subprocess.call(f'rm -f Result/{target}/{target}_RESULT.json', stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)
+    
+
 def sub_Recon(target):
-    call_subfinder(target)
-    get_from_cert(target)
+    with open(f'Result/{target}/status_of_function.json', 'r') as f:
+        data=json.load(f)
+    call_subfinder(target,data)
+    get_from_cert(target,data)
+    
+    data["Sub_Recon"]["sanitize_input"] = 0
+    with open(f"Result/{target}/status_of_function.json","w") as f:
+        json.dump(data, f, indent=4)
+        
     sanitize_input(target)
+    
+    data["Sub_Recon"]["sanitize_input"] = 1
+    with open(f"Result/{target}/status_of_function.json","w") as f:
+        json.dump(data, f, indent=4)
     print(G,"Enumerating subdomain done !")

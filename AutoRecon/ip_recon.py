@@ -11,6 +11,12 @@ O = "\033[33m"
 B = "\033[34m"
 
 def get_ip_nmap(target):
+    with open(f'Result/{target}/status_of_function.json', 'r') as f:
+        data=json.load(f)
+    data["ip_Recon"]["get_ip_nmap"]=0
+    with open(f"Result/{target}/status_of_function.json","w") as f:
+        json.dump(data, f, indent=4)
+
     print(B,"Generating IP ports service...","\r")
     with open(f'Result/{target}/final_status_{target}.json',"r") as file1:
             datas = json.load(file1)
@@ -40,9 +46,19 @@ def get_ip_nmap(target):
     with open(f"Result/{target}/{target}_ip/nmap_{target}.json","a") as file4:
         json.dump(data,file4,indent=4)
     subprocess.run(f"rm -rf Result/{target}/{target}_ip/nmap_*.txt",shell=True)
+
+    data["ip_Recon"]["get_ip_nmap"]=1
+    with open(f"Result/{target}/status_of_function.json","w") as f:
+        json.dump(data, f, indent=4)
+        
     print(G,"Generating IP ports service done !")
 
 def scan_input_IP(target):
+    with open(f'Result/{target}/status_of_function.json', 'r') as f:
+        dataf=json.load(f)
+    dataf["ip_Recon"]["scan_input_IP"] = 0
+    with open(f"Result/{target}/status_of_function.json","w") as f:
+        json.dump(dataf, f, indent=4)
     print(B,"Generating IP ports service...","\r")
     os.system(f"nmap -sT -sV {target} >> Result/{target}/{target}_ip/nmap_{target}.txt")
     
@@ -57,8 +73,6 @@ def scan_input_IP(target):
         object = { target : { "port" : match[0], "protocol" : match[1], "status" : match[2], "service" : match[3] } }    
         data.append(object)
         list_WebIP.append(str(target+':'+match[0]))
-    print(data)
-    print(list_WebIP)
     with open(f"Result/{target}/{target}_ip/nmap_{target}.json","w") as file4:
         json.dump(data,file4)
     with open(f"Result/{target}/final_subdomain_{target}.txt","w") as file5:
@@ -69,8 +83,13 @@ def scan_input_IP(target):
     subprocess.run(command_probe, stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)
     command_httpx = [f"cat Result/{target}/{target}_live.txt | ~/go/bin/httpx -sc -td -ip -server -nc -json -o Result/{target}/final_status_{target}.json"]
     subprocess.run(command_httpx, stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)    
+
+    dataf["ip_Recon"]["scan_input_IP"] = 1
+    with open(f"Result/{target}/status_of_function.json","w") as f:
+        json.dump(dataf, f, indent=4)
     print(G,"Generating IP ports service done !")
 def ip_Recon(target):
+
     try:
         os.makedirs(f'Result/{target}/{target}_ip', exist_ok=True)
     except FileExistsError:

@@ -7,7 +7,7 @@ from AutoRecon.ip_recon import *
 from AutoRecon.find_sensitive import *
 from AutoRecon.detectwaf import *
 import os
-from VulnScan.scanvuln import checkvuln
+# from VulnScan.scanvuln import checkvuln
 
 
 def menu():
@@ -67,7 +67,7 @@ def main(target):
     IP_regex = re.compile(r"^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$")
     if not IP_regex.match(target):
         with open(f"Result/{target}/status_of_function.json", "w") as f:
-            f.write(json.dumps(status_data_json_subdomain, indent=4))
+            json.dump(status_data_json_subdomain, f, indent=4)
         sub_Recon(target)
         t1 = Thread(target=ip_Recon, args=[target])
         t2 = Thread(target=js_Recon, args=[target])
@@ -88,7 +88,7 @@ def main(target):
         t2.start()
         t1.join()
         t2.join()
-    checkvuln(target)
+    # checkvuln(target)
 
 
 
