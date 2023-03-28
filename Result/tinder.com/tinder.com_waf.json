@@ -1,0 +1,211 @@
+[
+    {
+        "url": "http://lite.tinder.com",
+        "detected": true,
+        "firewall": "AWS Elastic Load Balancer",
+        "manufacturer": "Amazon"
+    }
+][
+    {
+        "url": "http://swipelife.tinder.com",
+        "detected": true,
+        "firewall": "AWS Elastic Load Balancer",
+        "manufacturer": "Amazon"
+    }
+][][
+    {
+        "url": "http://staging.tinder.com",
+        "detected": true,
+        "firewall": "AWS Elastic Load Balancer",
+        "manufacturer": "Amazon"
+    }
+][
+    {
+        "url": "http://www.tinder.com",
+        "detected": true,
+        "firewall": "AWS Elastic Load Balancer",
+        "manufacturer": "Amazon"
+    }
+][][
+    {
+        "url": "http://www.help.tinder.com",
+        "detected": true,
+        "firewall": "Cloudflare",
+        "manufacturer": "Cloudflare Inc."
+    }
+][][
+    {
+        "url": "http://emoji.tinder.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "https://www.help.tinder.com",
+        "detected": true,
+        "firewall": "Cloudflare",
+        "manufacturer": "Cloudflare Inc."
+    }
+][
+    {
+        "url": "https://swipelife.tinder.com",
+        "detected": true,
+        "firewall": "AWS Elastic Load Balancer",
+        "manufacturer": "Amazon"
+    }
+][
+    {
+        "url": "http://party.tinder.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://swipenight.tinder.com",
+        "detected": true,
+        "firewall": "AWS Elastic Load Balancer",
+        "manufacturer": "Amazon"
+    }
+][
+    {
+        "url": "http://matchmaker.tinder.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "https://emoji.tinder.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://tinder.com",
+        "detected": true,
+        "firewall": "AWS Elastic Load Balancer",
+        "manufacturer": "Amazon"
+    }
+][
+    {
+        "url": "http://go.tinder.com",
+        "detected": true,
+        "firewall": "AWS Elastic Load Balancer",
+        "manufacturer": "Amazon"
+    }
+][
+    {
+        "url": "https://www.tinder.com",
+        "detected": true,
+        "firewall": "AWS Elastic Load Balancer",
+        "manufacturer": "Amazon"
+    }
+][
+    {
+        "url": "http://www.swipenight.tinder.com",
+        "detected": true,
+        "firewall": "AWS Elastic Load Balancer",
+        "manufacturer": "Amazon"
+    }
+][
+    {
+        "url": "https://lite.tinder.com",
+        "detected": true,
+        "firewall": "AWS Elastic Load Balancer",
+        "manufacturer": "Amazon"
+    }
+][
+    {
+        "url": "https://go.tinder.com",
+        "detected": true,
+        "firewall": "AWS Elastic Load Balancer",
+        "manufacturer": "Amazon"
+    }
+][
+    {
+        "url": "http://open.tinder.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://invite.tinder.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "https://staging.tinder.com",
+        "detected": true,
+        "firewall": "AWS Elastic Load Balancer",
+        "manufacturer": "Amazon"
+    }
+][
+    {
+        "url": "https://party.tinder.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "https://matchmaker.tinder.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "https://swipenight.tinder.com",
+        "detected": true,
+        "firewall": "AWS Elastic Load Balancer",
+        "manufacturer": "Amazon"
+    }
+][
+    {
+        "url": "https://policies.tinder.com",
+        "detected": true,
+        "firewall": "AWS Elastic Load Balancer",
+        "manufacturer": "Amazon"
+    }
+][
+    {
+        "url": "https://www.swipenight.tinder.com",
+        "detected": true,
+        "firewall": "AWS Elastic Load Balancer",
+        "manufacturer": "Amazon"
+    }
+][
+    {
+        "url": "https://invite.tinder.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "https://open.tinder.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "https://polls.tinder.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "https://tinder.com",
+        "detected": true,
+        "firewall": "AWS Elastic Load Balancer",
+        "manufacturer": "Amazon"
+    }
+]

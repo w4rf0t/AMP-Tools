@@ -1,0 +1,15 @@
+git.etc.vn
+www.git.etc.vn
+www.etc.vn
+*.etc.vn
+*.cs.etc.vn
+meet.cs.etc.vn
+cs.etc.vn
+access.etc.vn
+git.cs.etc.vn
+tfs.cs.etc.vn
+etc.vn
+www.access.etc.vn
+giadinh.etc.vn
+mail.etc.vn
+tuyendung.etc.vn

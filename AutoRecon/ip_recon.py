@@ -54,7 +54,7 @@ def scan_input_IP(target):
         text_data = file3.read()
     matches = regex.findall(text_data)
     for match in matches:
-        object = { target : { "port" : match[0], "protocol" : match[1], "service" : match[2], "version" : match[3] } }    
+        object = { target : { "port" : match[0], "protocol" : match[1], "status" : match[2], "service" : match[3] } }    
         data.append(object)
         list_WebIP.append(str(target+':'+match[0]))
     print(data)

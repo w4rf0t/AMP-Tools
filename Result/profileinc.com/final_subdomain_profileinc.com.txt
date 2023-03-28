@@ -1,7 +1,0 @@
-ftp.profileinc.com
-mail.portal.profileinc.com
-www.portal.profileinc.com
-www.profileinc.com
-mail.profileinc.com
-portal.profileinc.com
-box.profileinc.com

@@ -1,0 +1,421 @@
+[
+    {
+        "www.swipenight.tinder.com": {
+            "host": "13.226.122.24",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Amazon Cloudfront",
+                "Amazon Web Services"
+            ],
+            "title": null
+        }
+    },
+    {
+        "swipelife.tinder.com": {
+            "host": "13.224.167.118",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Amazon Cloudfront",
+                "Amazon Web Services"
+            ],
+            "title": null
+        }
+    },
+    {
+        "www.swipenight.tinder.com": {
+            "host": "13.226.122.24",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Amazon Cloudfront",
+                "Amazon Web Services"
+            ],
+            "title": null
+        }
+    },
+    {
+        "tech.tinder.com": {
+            "host": "13.224.167.93",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Amazon Cloudfront",
+                "Amazon Web Services"
+            ],
+            "title": null
+        }
+    },
+    {
+        "tech.tinder.com": {
+            "host": "13.224.167.93",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Amazon Cloudfront",
+                "Amazon Web Services"
+            ],
+            "title": null
+        }
+    },
+    {
+        "swipelife.tinder.com": {
+            "host": "13.225.103.13",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Amazon Cloudfront",
+                "Amazon Web Services"
+            ],
+            "title": null
+        }
+    },
+    {
+        "swipenight.tinder.com": {
+            "host": "13.226.58.5",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Amazon Cloudfront",
+                "Amazon Web Services"
+            ],
+            "title": null
+        }
+    },
+    {
+        "www.help.tinder.com": {
+            "host": "104.16.53.111",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Cloudflare",
+                "HSTS",
+                "Zendesk"
+            ],
+            "title": null
+        }
+    },
+    {
+        "emoji.tinder.com": {
+            "host": "13.228.49.19",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Gatsby:3.0.2",
+                "HSTS",
+                "Netlify",
+                "React",
+                "Webpack"
+            ],
+            "title": "Tinder | Interracial Couple Emoji Project"
+        }
+    },
+    {
+        "www.help.tinder.com": {
+            "host": "104.16.53.111",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Cloudflare",
+                "HSTS",
+                "Zendesk"
+            ],
+            "title": null
+        }
+    },
+    {
+        "go.tinder.com": {
+            "host": "52.8.209.201",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "HSTS",
+                "Nginx",
+                "OpenResty"
+            ],
+            "title": null
+        }
+    },
+    {
+        "go.tinder.com": {
+            "host": "52.8.209.201",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "HSTS",
+                "Nginx",
+                "OpenResty"
+            ],
+            "title": null
+        }
+    },
+    {
+        "www.tinder.com": {
+            "host": "52.84.150.55",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Amazon ALB",
+                "Amazon Cloudfront",
+                "Amazon Web Services",
+                "HSTS",
+                "Nginx"
+            ],
+            "title": null
+        }
+    },
+    {
+        "www.tinder.com": {
+            "host": "52.84.150.55",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Amazon ALB",
+                "Amazon Cloudfront",
+                "Amazon Web Services",
+                "HSTS",
+                "Nginx"
+            ],
+            "title": null
+        }
+    },
+    {
+        "swipenight.tinder.com": {
+            "host": "18.165.183.126",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Amazon Cloudfront",
+                "Amazon Web Services"
+            ],
+            "title": null
+        }
+    },
+    {
+        "invite.tinder.com": {
+            "host": "52.209.121.193",
+            "port": "443",
+            "scheme": "https",
+            "tech": null,
+            "title": null
+        }
+    },
+    {
+        "party.tinder.com": {
+            "host": "99.80.227.4",
+            "port": "443",
+            "scheme": "https",
+            "tech": null,
+            "title": null
+        }
+    },
+    {
+        "party.tinder.com": {
+            "host": "99.80.227.4",
+            "port": "443",
+            "scheme": "https",
+            "tech": null,
+            "title": null
+        }
+    },
+    {
+        "invite.tinder.com": {
+            "host": "52.209.121.193",
+            "port": "443",
+            "scheme": "https",
+            "tech": null,
+            "title": null
+        }
+    },
+    {
+        "open.tinder.com": {
+            "host": "34.246.127.31",
+            "port": "443",
+            "scheme": "https",
+            "tech": null,
+            "title": null
+        }
+    },
+    {
+        "polls.tinder.com": {
+            "host": "54.86.74.33",
+            "port": "443",
+            "scheme": "https",
+            "tech": null,
+            "title": null
+        }
+    },
+    {
+        "tinder.com": {
+            "host": "52.84.150.54",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Amazon ALB",
+                "Amazon Cloudfront",
+                "Amazon Web Services",
+                "HSTS",
+                "Nginx",
+                "React"
+            ],
+            "title": "Tinder | Dating, Make Friends & Meet New People"
+        }
+    },
+    {
+        "tinder.com": {
+            "host": "52.84.150.54",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Amazon ALB",
+                "Amazon Cloudfront",
+                "Amazon Web Services",
+                "HSTS",
+                "Nginx",
+                "React"
+            ],
+            "title": "Tinder | Dating, Make Friends & Meet New People"
+        }
+    },
+    {
+        "policies.tinder.com": {
+            "host": "54.192.18.103",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Amazon Cloudfront",
+                "Amazon S3",
+                "Amazon Web Services",
+                "Gatsby:2.32.12",
+                "HSTS",
+                "React",
+                "Webpack"
+            ],
+            "title": "Tinder Policy Pages | Tinder | Match. Chat. Meet. Modern Dating."
+        }
+    },
+    {
+        "policies.tinder.com": {
+            "host": "54.192.18.103",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Amazon Cloudfront",
+                "Amazon S3",
+                "Amazon Web Services",
+                "Gatsby:2.32.12",
+                "HSTS",
+                "React",
+                "Webpack"
+            ],
+            "title": "Tinder Policy Pages | Tinder | Match. Chat. Meet. Modern Dating."
+        }
+    },
+    {
+        "emoji.tinder.com": {
+            "host": "52.78.13.169",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Gatsby:3.0.2",
+                "HSTS",
+                "Netlify",
+                "React",
+                "Webpack"
+            ],
+            "title": "Tinder | Interracial Couple Emoji Project"
+        }
+    },
+    {
+        "lite.tinder.com": {
+            "host": "13.224.167.12",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Amazon ALB",
+                "Amazon Cloudfront",
+                "Amazon Web Services",
+                "HSTS",
+                "Nginx",
+                "React"
+            ],
+            "title": "Tinder | Dating, Make Friends & Meet New People"
+        }
+    },
+    {
+        "lite.tinder.com": {
+            "host": "13.224.167.12",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Amazon ALB",
+                "Amazon Cloudfront",
+                "Amazon Web Services",
+                "HSTS",
+                "Nginx",
+                "React"
+            ],
+            "title": "Tinder | Dating, Make Friends & Meet New People"
+        }
+    },
+    {
+        "matchmaker.tinder.com": {
+            "host": "99.80.227.4",
+            "port": "443",
+            "scheme": "https",
+            "tech": null,
+            "title": null
+        }
+    },
+    {
+        "open.tinder.com": {
+            "host": "34.246.127.31",
+            "port": "443",
+            "scheme": "https",
+            "tech": null,
+            "title": null
+        }
+    },
+    {
+        "matchmaker.tinder.com": {
+            "host": "99.80.227.4",
+            "port": "443",
+            "scheme": "https",
+            "tech": null,
+            "title": null
+        }
+    },
+    {
+        "staging.tinder.com": {
+            "host": "54.192.18.29",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Amazon ALB",
+                "Amazon Cloudfront",
+                "Amazon Web Services",
+                "HSTS",
+                "Nginx",
+                "React"
+            ],
+            "title": "Tinder | Dating, Make Friends & Meet New People"
+        }
+    },
+    {
+        "staging.tinder.com": {
+            "host": "54.192.18.29",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Amazon ALB",
+                "Amazon Cloudfront",
+                "Amazon Web Services",
+                "HSTS",
+                "Nginx",
+                "React"
+            ],
+            "title": "Tinder | Dating, Make Friends & Meet New People"
+        }
+    }
+]

@@ -1,17 +1,8 @@
 #!/bin/bash
 
-sudo apt install golang-go -y
-pip3 install py-altdns==1.0.2
-git clone https://github.com/blechschmidt/massdns.git
-cd massdns
-make
-make install
-rm -rf ../massdns
-go get github.com/michenriksen/gitrob
 cd ~
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/go
-export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+export GOPATH=~/go
+export PATH=$GOPATH/bin:$(which go)/bin:$PATH
 
 go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 go install github.com/lc/subjs@latest

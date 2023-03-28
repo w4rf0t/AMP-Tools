@@ -27,23 +27,67 @@ def menu():
 
 
 def main(target):
+    status_data_json_subdomain = {
+    "Sub_Recon": {
+        "call_subfinder": -1,
+        "get_from_cert" :-1,
+        "sanitize_input" :-1
+    },
+    "ip_Recon":{
+        "get_ip_nmap":-1
+    },
+    "js_Recon":{
+        "js_Recon":-1
+    },
+    "waf_Recon":{
+        "wafwoof":-1
+    },
+    "find_sensitive":{
+        "find_sensitive":-1
+    }}
+    
+    status_data_json_ip = {
+    "ip_Recon":{
+        "scan_input_IP":-1
+    },
+    "js_Recon":{
+        "js_Recon":-1
+    },
+    "waf_Recon":{
+        "wafwoof":-1
+    },
+    "find_sensitive":{
+        "find_sensitive":-1
+    }}
+    try:
+        if not(os.path.exists(f'Result/{target}')):
+            os.system(f"mkdir Result/{target} | chmod 777 Result/{target} ")
+    except Exception as e:
+        pass
     IP_regex = re.compile(r"^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$")
     if not IP_regex.match(target):
+        with open(f"Result/{target}/status_of_function.json", "w") as f:
+            f.write(json.dumps(status_data_json_subdomain, indent=4))
         sub_Recon(target)
         t1 = Thread(target=ip_Recon, args=[target])
-        # t2 = Thread(target=js_Recon, args=[target])
+        t2 = Thread(target=js_Recon, args=[target])
         t3 = Thread(target=waf_Recon, args=[target])
         t1.start()
-        # t2.start()
+        t2.start()
         t3.start()
         t1.join()
-        # t2.join()
+        t2.join()
         t3.join()
     else:
+        with open(f"Result/{target}/status_of_function.json", "w") as f:
+            f.write(json.dumps(status_data_json_ip, indent=4))
         ip_Recon(target)
-        waf_Recon(target)
-        js_Recon(target)
-    # find_sensitive(target)
+        t1 = Thread(target=waf_Recon, args=[target])
+        t2 = Thread(target=js_Recon, args=[target])
+        t1.start()
+        t2.start()
+        t1.join()
+        t2.join()
     checkvuln(target)
 
 

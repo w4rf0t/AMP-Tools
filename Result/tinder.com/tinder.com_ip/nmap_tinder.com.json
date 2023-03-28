@@ -1,0 +1,178 @@
+[
+    {
+        "13.226.122.24": {
+            "port": "80",
+            "protocol": "tcp",
+            "service": "open",
+            "version": "http      Amazon CloudFront httpd"
+        }
+    },
+    {
+        "13.224.167.118": {
+            "port": "80",
+            "protocol": "tcp",
+            "service": "open",
+            "version": "http      Amazon CloudFront httpd"
+        }
+    },
+    {
+        "13.224.167.93": {
+            "port": "80",
+            "protocol": "tcp",
+            "service": "open",
+            "version": "http      Amazon CloudFront httpd"
+        }
+    },
+    {
+        "13.225.103.13": {
+            "port": "80",
+            "protocol": "tcp",
+            "service": "open",
+            "version": "http      Amazon CloudFront httpd"
+        }
+    },
+    {
+        "13.226.58.5": {
+            "port": "80",
+            "protocol": "tcp",
+            "service": "open",
+            "version": "http      Amazon CloudFront httpd"
+        }
+    },
+    {
+        "104.16.53.111": {
+            "port": "80",
+            "protocol": "tcp",
+            "service": "open",
+            "version": "http          Cloudflare http proxy"
+        }
+    },
+    {
+        "104.16.53.111": {
+            "port": "8080",
+            "protocol": "tcp",
+            "service": "open",
+            "version": "http          Cloudflare http proxy"
+        }
+    },
+    {
+        "13.228.49.19": {
+            "port": "80",
+            "protocol": "tcp",
+            "service": "open",
+            "version": "http      Netlify"
+        }
+    },
+    {
+        "52.8.209.201": {
+            "port": "80",
+            "protocol": "tcp",
+            "service": "open",
+            "version": "http     OpenResty web app server"
+        }
+    },
+    {
+        "52.84.150.55": {
+            "port": "80",
+            "protocol": "tcp",
+            "service": "open",
+            "version": "http      Amazon CloudFront httpd"
+        }
+    },
+    {
+        "18.165.183.126": {
+            "port": "80",
+            "protocol": "tcp",
+            "service": "open",
+            "version": "http      Amazon CloudFront httpd"
+        }
+    },
+    {
+        "52.209.121.193": {
+            "port": "80",
+            "protocol": "tcp",
+            "service": "open",
+            "version": "http"
+        }
+    },
+    {
+        "99.80.227.4": {
+            "port": "80",
+            "protocol": "tcp",
+            "service": "open",
+            "version": "http"
+        }
+    },
+    {
+        "34.246.127.31": {
+            "port": "80",
+            "protocol": "tcp",
+            "service": "open",
+            "version": "http"
+        }
+    },
+    {
+        "52.84.150.54": {
+            "port": "80",
+            "protocol": "tcp",
+            "service": "open",
+            "version": "http      Amazon CloudFront httpd"
+        }
+    },
+    {
+        "54.192.18.103": {
+            "port": "80",
+            "protocol": "tcp",
+            "service": "open",
+            "version": "http      Amazon CloudFront httpd"
+        }
+    },
+    {
+        "52.78.13.169": {
+            "port": "80",
+            "protocol": "tcp",
+            "service": "open",
+            "version": "tcpwrapped"
+        }
+    },
+    {
+        "52.78.13.169": {
+            "port": "443",
+            "protocol": "tcp",
+            "service": "open",
+            "version": "tcpwrapped"
+        }
+    },
+    {
+        "13.224.167.12": {
+            "port": "80",
+            "protocol": "tcp",
+            "service": "open",
+            "version": "tcpwrapped"
+        }
+    },
+    {
+        "13.224.167.12": {
+            "port": "443",
+            "protocol": "tcp",
+            "service": "open",
+            "version": "tcpwrapped"
+        }
+    },
+    {
+        "54.192.18.29": {
+            "port": "80",
+            "protocol": "tcp",
+            "service": "open",
+            "version": "tcpwrapped"
+        }
+    },
+    {
+        "54.192.18.29": {
+            "port": "443",
+            "protocol": "tcp",
+            "service": "open",
+            "version": "tcpwrapped"
+        }
+    }
+]

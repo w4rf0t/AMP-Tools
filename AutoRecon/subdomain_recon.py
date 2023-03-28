@@ -9,6 +9,7 @@ G = "\033[32m"
 O = "\033[33m"
 B = "\033[34m"
 
+
 def call_subfinder(target):
     print(B,'Enumerating subdomain...',"\r")
     #Passive
@@ -87,11 +88,6 @@ def sanitize_input(target):
         json.dump(finaldata, f, indent=4,ensure_ascii=False)
     subprocess.call(f'rm -f Result/{target}/{target}_RESULT.json', stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)
 def sub_Recon(target):
-    try:
-        if not(os.path.exists(f'Result/{target}')):
-            os.system(f"mkdir Result/{target} | chmod 777 Result/{target} ")
-    except Exception as e:
-        pass
     call_subfinder(target)
     get_from_cert(target)
     sanitize_input(target)
