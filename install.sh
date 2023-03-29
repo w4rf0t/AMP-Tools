@@ -15,5 +15,4 @@ go install github.com/tomnomnom/gf@latest
 git clone https://github.com/1ndianl33t/Gf-Patterns
 mv Gf-Patterns/*.json ~/.gf
 rm -rf Gf-Patterns
-
 pip3 install pytenable
