@@ -11,6 +11,7 @@ import os
 import time
 from VulnScan.scanvuln import checkvuln
 from termcolor import colored
+from export import *
 
 def menu():
     subprocess.call("clear", shell=True)
@@ -20,7 +21,7 @@ def menu():
  ██╔══██╗████╗ ████║██╔══██╗
  ███████║██╔████╔██║██████╔╝         /-version 1.0-/
  ██╔══██║██║╚██╔╝██║██╔═══╝         /this tool is for educational purposes only/
- ██║  ██║██║ ╚═╝ ██║██║
+ ██║  ██║██║ ╚═╝ ██║██║             /Power by ETC Technology Systems JSC
  ╚═╝  ╚═╝╚═╝     ╚═╝╚═╝
 ''' 
     colors = [ 'green','white']
@@ -84,21 +85,23 @@ def main(target):
         pass
     IP_regex = re.compile(r"^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$")
     if not IP_regex.match(target):
-        # with open(f"Result/{target}/status_of_function.json", "w") as f:
-        #     json.dump(status_data_json_subdomain, f, indent=4)
-        # sub_Recon(target)
+        with open(f"Result/{target}/status_of_function.json", "w") as f:
+            json.dump(status_data_json_subdomain, f, indent=4)
+        sub_Recon(target)
         with open(f"Result/{target}/status_of_function.json", "r") as f:
             status_data=json.load(f)
-        # t1 = Thread(target=ip_Recon, args=[target,status_data])
-        # t2 = Thread(target=js_Recon, args=[target,status_data])
-        # t3 = Thread(target=waf_Recon, args=[target,status_data])
-        # t1.start()
-        # t2.start()
-        # t3.start()
-        # t1.join()
-        # t2.join()
-        # t3.join()
-        # find_sensitive(target,status_data)
+        t1 = Thread(target=ip_Recon, args=[target,status_data])
+        t2 = Thread(target=js_Recon, args=[target,status_data])
+        t3 = Thread(target=waf_Recon, args=[target,status_data])
+        t1.start()
+        t2.start()
+        t3.start()
+        t1.join()
+        t2.join()
+        t3.join()
+        find_sensitive(target,status_data)
+        exportation_subdomain(target)
+
     else:
         with open(f"Result/{target}/status_of_function.json", "w") as f:
             json.dump(status_data_json_ip,f, indent=4)
@@ -117,6 +120,7 @@ def main(target):
         t2.join()
         t3.join()
         find_sensitive(target,status_data)
+        exportation_ip(target)
     checkvuln(target)
 
 

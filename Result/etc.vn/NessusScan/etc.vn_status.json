@@ -1,0 +1,492 @@
+{
+    "info": {
+        "acls": [
+            {
+                "permissions": 0,
+                "owner": null,
+                "display_name": null,
+                "name": null,
+                "id": null,
+                "type": "default"
+            },
+            {
+                "permissions": 128,
+                "owner": 1,
+                "display_name": "admin",
+                "name": "admin",
+                "id": 2,
+                "type": "user"
+            }
+        ],
+        "edit_allowed": true,
+        "alt_targets_used": false,
+        "status": "running",
+        "scanner_start": 1680498300,
+        "policy": "amp-web",
+        "scan_group": null,
+        "pci-can-upload": false,
+        "severity_base_selections": [
+            {
+                "display": "CVSS v2.0",
+                "value": "cvss_v2"
+            },
+            {
+                "display": "CVSS v3.0",
+                "value": "cvss_v3"
+            },
+            {
+                "display": "Default (CVSS v3.0)",
+                "value": "system_default"
+            }
+        ],
+        "hasaudittrail": true,
+        "scan_start": 1680498299,
+        "user_permissions": 128,
+        "folder_id": 3,
+        "node_name": null,
+        "no_target": false,
+        "node_host": null,
+        "node_id": null,
+        "targets": "etc.vn",
+        "control": true,
+        "timestamp": 1680498299,
+        "offline": false,
+        "object_id": 99,
+        "scanner_name": "Local Scanner",
+        "uuid": "6188f0d1-25b0-85a0-8c80-dbb04c68fe74a051b6f93816d80e",
+        "haskb": false,
+        "policy_template_uuid": "c3cbcd46-329f-a9ed-1077-554f8c2af33d0d44f09d736969bf",
+        "hostcount": 1,
+        "scan_type": "local",
+        "license_info": {
+            "trimmed": null,
+            "limit": 32
+        },
+        "current_severity_base_display": "CVSS v3.0",
+        "current_severity_base": "cvss_v3",
+        "migrated": 0,
+        "selected_severity_base": "system_default",
+        "name": "Scan Policy of AMP for etc.vn"
+    },
+    "compliance": [],
+    "filters": [
+        {
+            "operators": [
+                "eq",
+                "neq",
+                "match",
+                "nmatch"
+            ],
+            "control": {
+                "readable_regex": "TEXT",
+                "prefix": "filter",
+                "type": "entry",
+                "regex": ".*"
+            },
+            "name": "hostname",
+            "readable_name": "Hostname"
+        },
+        {
+            "operators": [
+                "match",
+                "nmatch"
+            ],
+            "control": {
+                "readable_regex": "TEXT",
+                "prefix": "filter",
+                "type": "entry",
+                "regex": ".*"
+            },
+            "name": "description",
+            "readable_name": "Plugin Description"
+        },
+        {
+            "operators": [
+                "eq",
+                "neq"
+            ],
+            "control": {
+                "prefix": "filter",
+                "type": "dropdown",
+                "list": [
+                    "AIX Local Security Checks",
+                    "Alma Linux Local Security Checks",
+                    "Amazon Linux Local Security Checks",
+                    "Backdoors",
+                    "Brute force attacks",
+                    "CGI abuses",
+                    "CGI abuses : XSS",
+                    "CISCO",
+                    "CentOS Local Security Checks",
+                    "DNS",
+                    "Databases",
+                    "Debian Local Security Checks",
+                    "Default Unix Accounts",
+                    "Denial of Service",
+                    "F5 Networks Local Security Checks",
+                    "FTP",
+                    "Fedora Local Security Checks",
+                    "Firewalls",
+                    "FreeBSD Local Security Checks",
+                    "Gain a shell remotely",
+                    "General",
+                    "Gentoo Local Security Checks",
+                    "HP-UX Local Security Checks",
+                    "Huawei Local Security Checks",
+                    "Junos Local Security Checks",
+                    "MacOS X Local Security Checks",
+                    "Mandriva Local Security Checks",
+                    "MarinerOS Local Security Checks",
+                    "Misc.",
+                    "Mobile Devices",
+                    "Netware",
+                    "NewStart CGSL Local Security Checks",
+                    "Oracle Linux Local Security Checks",
+                    "OracleVM Local Security Checks",
+                    "Palo Alto Local Security Checks",
+                    "Peer-To-Peer File Sharing",
+                    "PhotonOS Local Security Checks",
+                    "Policy Compliance",
+                    "Port scanners",
+                    "RPC",
+                    "Red Hat Local Security Checks",
+                    "Rocky Linux Local Security Checks",
+                    "SCADA",
+                    "SMTP problems",
+                    "SNMP",
+                    "Scientific Linux Local Security Checks",
+                    "Service detection",
+                    "Settings",
+                    "Slackware Local Security Checks",
+                    "Solaris Local Security Checks",
+                    "SuSE Local Security Checks",
+                    "Tenable.ot",
+                    "Ubuntu Local Security Checks",
+                    "VMware ESX Local Security Checks",
+                    "Virtuozzo Local Security Checks",
+                    "Web Servers",
+                    "Windows",
+                    "Windows : Microsoft Bulletins",
+                    "Windows : User management"
+                ]
+            },
+            "name": "plugin_family",
+            "readable_name": "Plugin Family"
+        },
+        {
+            "operators": [
+                "eq",
+                "neq",
+                "match",
+                "nmatch"
+            ],
+            "control": {
+                "readable_regex": "NUMBER",
+                "prefix": "filter",
+                "type": "entry",
+                "regex": "^[0-9, ]+$"
+            },
+            "name": "plugin_id",
+            "readable_name": "Plugin ID"
+        },
+        {
+            "operators": [
+                "date-lt",
+                "date-gt",
+                "date-eq",
+                "date-neq",
+                "match",
+                "nmatch"
+            ],
+            "control": {
+                "readable_regex": "YYYY-MM-DD",
+                "prefix": "filter",
+                "type": "datefield",
+                "regex": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+            },
+            "name": "plugin_modification_date",
+            "readable_name": "Plugin Modification Date"
+        },
+        {
+            "operators": [
+                "eq",
+                "neq",
+                "match",
+                "nmatch"
+            ],
+            "control": {
+                "readable_regex": "TEXT",
+                "prefix": "filter",
+                "type": "entry",
+                "regex": ".*"
+            },
+            "name": "plugin_name",
+            "readable_name": "Plugin Name"
+        },
+        {
+            "operators": [
+                "eq",
+                "neq",
+                "match",
+                "nmatch"
+            ],
+            "control": {
+                "readable_regex": "TEXT",
+                "prefix": "filter",
+                "type": "entry",
+                "regex": ".*"
+            },
+            "name": "plugin_output",
+            "readable_name": "Plugin Output"
+        },
+        {
+            "operators": [
+                "date-lt",
+                "date-gt",
+                "date-eq",
+                "date-neq",
+                "match",
+                "nmatch"
+            ],
+            "control": {
+                "readable_regex": "YYYY-MM-DD",
+                "prefix": "filter",
+                "type": "datefield",
+                "regex": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+            },
+            "name": "plugin_publication_date",
+            "readable_name": "Plugin Publication Date"
+        },
+        {
+            "operators": [
+                "eq",
+                "neq"
+            ],
+            "control": {
+                "prefix": "filter",
+                "type": "dropdown",
+                "list": [
+                    "local",
+                    "remote"
+                ]
+            },
+            "name": "plugin_type",
+            "readable_name": "Plugin Type"
+        },
+        {
+            "operators": [
+                "eq",
+                "neq",
+                "match",
+                "nmatch"
+            ],
+            "control": {
+                "readable_regex": "80",
+                "prefix": "filter",
+                "type": "entry",
+                "regex": "^[0-9]+$"
+            },
+            "name": "port",
+            "readable_name": "Port"
+        },
+        {
+            "operators": [
+                "eq",
+                "neq"
+            ],
+            "control": {
+                "prefix": "filter",
+                "type": "dropdown",
+                "list": [
+                    "tcp",
+                    "udp",
+                    "icmp"
+                ]
+            },
+            "name": "protocol",
+            "readable_name": "Protocol"
+        },
+        {
+            "operators": [
+                "eq",
+                "neq"
+            ],
+            "control": {
+                "prefix": "filter",
+                "type": "dropdown",
+                "list": [
+                    "None",
+                    "Low",
+                    "Medium",
+                    "High",
+                    "Critical"
+                ]
+            },
+            "name": "risk_factor",
+            "readable_name": "Risk Factor"
+        },
+        {
+            "operators": [
+                "eq",
+                "neq",
+                "match",
+                "nmatch"
+            ],
+            "control": {
+                "readable_regex": "TEXT",
+                "prefix": "filter",
+                "type": "entry",
+                "regex": ".*"
+            },
+            "name": "see_also",
+            "readable_name": "See Also"
+        },
+        {
+            "operators": [
+                "match",
+                "nmatch"
+            ],
+            "control": {
+                "readable_regex": "TEXT",
+                "prefix": "filter",
+                "type": "entry",
+                "regex": ".*"
+            },
+            "name": "solution",
+            "readable_name": "Solution"
+        },
+        {
+            "operators": [
+                "match",
+                "nmatch"
+            ],
+            "control": {
+                "readable_regex": "TEXT",
+                "prefix": "filter",
+                "type": "entry",
+                "regex": ".*"
+            },
+            "name": "synopsis",
+            "readable_name": "Synopsis"
+        }
+    ],
+    "comphosts": [],
+    "history": [
+        {
+            "alt_targets_used": false,
+            "scheduler": 0,
+            "node_name": null,
+            "node_host": null,
+            "scan_group": null,
+            "node_id": null,
+            "schedule_type": "manual",
+            "status": "running",
+            "type": "local",
+            "uuid": "6188f0d1-25b0-85a0-8c80-dbb04c68fe74a051b6f93816d80e",
+            "last_modification_date": 1680498810,
+            "creation_date": 1680498299,
+            "owner_id": 2,
+            "history_id": 100
+        }
+    ],
+    "saved_filters": [],
+    "notes": null,
+    "hosts": [
+        {
+            "totalchecksconsidered": 7813,
+            "numchecksconsidered": 932,
+            "scanprogresstotal": 100,
+            "scanprogresscurrent": 11,
+            "host_index": 0,
+            "score": 4,
+            "severitycount": {
+                "item": [
+                    {
+                        "count": 4,
+                        "severitylevel": 0
+                    },
+                    {
+                        "count": 0,
+                        "severitylevel": 1
+                    },
+                    {
+                        "count": 0,
+                        "severitylevel": 2
+                    },
+                    {
+                        "count": 0,
+                        "severitylevel": 3
+                    },
+                    {
+                        "count": 0,
+                        "severitylevel": 4
+                    },
+                    {
+                        "count": 0,
+                        "severitylevel": 5
+                    },
+                    {
+                        "count": 0,
+                        "severitylevel": 6
+                    },
+                    {
+                        "count": 0,
+                        "severitylevel": 7
+                    },
+                    {
+                        "count": 0,
+                        "severitylevel": 8
+                    },
+                    {
+                        "count": 0,
+                        "severitylevel": 9
+                    }
+                ]
+            },
+            "progress": "11-100/932-7813",
+            "offline_critical": 0,
+            "offline_high": 0,
+            "offline_medium": 0,
+            "offline_low": 0,
+            "offline_info": 0,
+            "critical": 0,
+            "high": 0,
+            "medium": 0,
+            "low": 0,
+            "info": 4,
+            "severity": 4,
+            "host_id": 2,
+            "hostname": "etc.vn"
+        }
+    ],
+    "vulnerabilities": [
+        {
+            "count": 1,
+            "score": null,
+            "vuln_index": 3,
+            "plugin_name": "Web Server Directory Enumeration",
+            "severity": 0,
+            "vpr_score": null,
+            "plugin_id": 11032,
+            "severity_index": 0,
+            "cpe": null,
+            "offline": false,
+            "plugin_family": "Web Servers",
+            "snoozed": 0
+        },
+        {
+            "count": 3,
+            "score": null,
+            "vuln_index": 2,
+            "plugin_name": "Nessus SYN scanner",
+            "severity": 0,
+            "vpr_score": null,
+            "plugin_id": 11219,
+            "severity_index": 1,
+            "cpe": null,
+            "offline": false,
+            "plugin_family": "Port scanners",
+            "snoozed": 0
+        }
+    ]
+}

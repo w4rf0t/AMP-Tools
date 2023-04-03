@@ -626,6 +626,14 @@
         "documentation": {}
     },
     {
+        "label": "colored",
+        "importPath": "termcolor",
+        "description": "termcolor",
+        "isExtraImport": true,
+        "detail": "termcolor",
+        "documentation": {}
+    },
+    {
         "label": "ssl",
         "kind": 6,
         "isExtraImport": true,
@@ -29012,6 +29020,15 @@
         "documentation": {}
     },
     {
+        "label": "openpyxl",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "openpyxl",
+        "description": "openpyxl",
+        "detail": "openpyxl",
+        "documentation": {}
+    },
+    {
         "label": "*",
         "importPath": "AutoRecon.subfolder_recon",
         "description": "AutoRecon.subfolder_recon",
@@ -29065,6 +29082,14 @@
         "description": "VulnScan.scanvuln",
         "isExtraImport": true,
         "detail": "VulnScan.scanvuln",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "export",
+        "description": "export",
+        "isExtraImport": true,
+        "detail": "export",
         "documentation": {}
     },
     {
@@ -51221,11 +51246,20 @@
         "documentation": {}
     },
     {
+        "label": "logo",
+        "kind": 2,
+        "importPath": "VulnScan.nessus",
+        "description": "VulnScan.nessus",
+        "peekOfCode": "def logo():\n    os.system(\"clear\")\n    print(colored('''\n╔╗╔┌─┐┌─┐┌─┐┬ ┬┌─┐  ╔═╗┌─┐┌─┐┌┐┌\n║║║├┤ └─┐└─┐│ │└─┐  ╚═╗│  ├─┤│││\n╝╚╝└─┘└─┘└─┘└─┘└─┘  ╚═╝└─┘┴ ┴┘└┘''',\"red\"))\ndef get_X_API_Token():\n    url = \"https://127.0.0.1:8834/nessus6.js\"\n    response = requests.get(url, verify=False).text\n    pattern = r\"return\\\"(\\w{8}-\\w{4}-\\w{4}-\\w{4}-\\w{12})\\\"\"",
+        "detail": "VulnScan.nessus",
+        "documentation": {}
+    },
+    {
         "label": "get_X_API_Token",
         "kind": 2,
         "importPath": "VulnScan.nessus",
         "description": "VulnScan.nessus",
-        "peekOfCode": "def get_X_API_Token():\n    url = \"https://localhost:8834/nessus6.js\"\n    response = requests.get(url, verify=False).text\n    pattern = r\"return\\\"(\\w{8}-\\w{4}-\\w{4}-\\w{4}-\\w{12})\\\"\"\n    matches = re.findall(pattern, response)\n    return matches[1]\ndef getToken():\n    url = \"https://localhost:8834/session\"\n    data = {\"username\": \"admin\", \"password\": \"kali\"}\n    try:",
+        "peekOfCode": "def get_X_API_Token():\n    url = \"https://127.0.0.1:8834/nessus6.js\"\n    response = requests.get(url, verify=False).text\n    pattern = r\"return\\\"(\\w{8}-\\w{4}-\\w{4}-\\w{4}-\\w{12})\\\"\"\n    matches = re.findall(pattern, response)\n    return matches[1]\ndef getToken():\n    url = \"https://127.0.0.1:8834/session\"\n    data = {\"username\": \"admin\", \"password\": \"kali\"}\n    try:",
         "detail": "VulnScan.nessus",
         "documentation": {}
     },
@@ -51234,7 +51268,7 @@
         "kind": 2,
         "importPath": "VulnScan.nessus",
         "description": "VulnScan.nessus",
-        "peekOfCode": "def getToken():\n    url = \"https://localhost:8834/session\"\n    data = {\"username\": \"admin\", \"password\": \"kali\"}\n    try:\n        respone = requests.post(url, data=data, verify=False)\n        token = respone.json()['token']\n        return str(token)\n    except:\n        return str(None)\ndef Scan(target,x_api_token,token):",
+        "peekOfCode": "def getToken():\n    url = \"https://127.0.0.1:8834/session\"\n    data = {\"username\": \"admin\", \"password\": \"kali\"}\n    try:\n        respone = requests.post(url, data=data, verify=False)\n        token = respone.json()['token']\n        return str(token)\n    except:\n        return str(None)\ndef Scan(target,x_api_token,token):",
         "detail": "VulnScan.nessus",
         "documentation": {}
     },
@@ -51243,7 +51277,7 @@
         "kind": 2,
         "importPath": "VulnScan.nessus",
         "description": "VulnScan.nessus",
-        "peekOfCode": "def Scan(target,x_api_token,token):\n    url = \"https://localhost:8834/scans\"\n    headers = {\n        \"X-Api-Token\": x_api_token,\n        \"X-Cookie\": \"token=\" + token + \"\",\n        \"Content-Type\": \"application/json\",\n        \"Content-Length\": \"295\"\n    }\n    data = {\n        \"uuid\": \"ab4bacd2-05f6-425c-9d79-3ba3940ad1c24e51e1f403febe40\",",
+        "peekOfCode": "def Scan(target,x_api_token,token):\n    url = \"https://127.0.0.1:8834/scans\"\n    headers = {\n        \"X-Api-Token\": x_api_token,\n        \"X-Cookie\": \"token=\" + token + \"\",\n        \"Content-Type\": \"application/json\",\n        \"Content-Length\": \"295\"\n    }\n    data = {\n        \"uuid\": \"ab4bacd2-05f6-425c-9d79-3ba3940ad1c24e51e1f403febe40\",",
         "detail": "VulnScan.nessus",
         "documentation": {}
     },
@@ -51252,7 +51286,7 @@
         "kind": 2,
         "importPath": "VulnScan.nessus",
         "description": "VulnScan.nessus",
-        "peekOfCode": "def checkStatus(idscan,x_api_token,token):\n    url = f\"https://localhost:8834/scans/{idscan}?limit=2500&includeHostDetailsForHostDiscovery=true\"\n    headers = {\n        \"X-Api-Token\": x_api_token,\n        \"X-Cookie\": \"token=\" + token + \"\",\n        \"Content-Type\": \"application/json\",\n        \"Content-Length\": \"295\"\n    }\n    try:\n        respone = requests.get(url, headers=headers, verify=False)",
+        "peekOfCode": "def checkStatus(target,idscan,x_api_token,token):\n    url = f\"https://127.0.0.1:8834/scans/{idscan}?limit=2500&includeHostDetailsForHostDiscovery=true\"\n    headers = {\n        \"X-Api-Token\": x_api_token,\n        \"X-Cookie\": \"token=\" + token + \"\",\n        \"Content-Type\": \"application/json\"\n    }\n    try:\n        respone = requests.get(url, headers=headers, verify=False)\n        res = json.loads(respone.content)",
         "detail": "VulnScan.nessus",
         "documentation": {}
     },
@@ -51261,7 +51295,7 @@
         "kind": 2,
         "importPath": "VulnScan.nessus",
         "description": "VulnScan.nessus",
-        "peekOfCode": "def getFileToken(idscan,x_api_token,token):\n    url = \"https://localhost:8834/scans/\" + str(idscan) + \"/export?limit=2500\"\n    headers = {\n        \"X-Api-Token\": x_api_token,\n        \"X-Cookie\": \"token=\" + token + \"\",\n        \"Content-Type\": \"application/json\",\n        \"Content-Length\": \"295\"\n    }\n    data ={\"format\":\"pdf\",\"template_id\":1156,\"csvColumns\":{},\"formattingOptions\":{\"page_breaks\":\"false\"},\"extraFilters\":{\"host_ids\":[],\"plugin_ids\":[]}}\n    try:",
+        "peekOfCode": "def getFileToken(idscan,x_api_token,token):\n    url = \"https://127.0.0.1:8834/scans/\" + str(idscan) + \"/export?limit=2500\"\n    headers = {\n        \"X-Api-Token\": x_api_token,\n        \"X-Cookie\": \"token=\" + token + \"\",\n        \"Content-Type\": \"application/json\",\n        \"Content-Length\": \"295\"\n    }\n    data ={\"format\":\"pdf\",\"template_id\":46,\"csvColumns\":{},\"formattingOptions\":{\"page_breaks\":\"false\"},\"extraFilters\":{\"host_ids\":[],\"plugin_ids\":[]}}\n    try:",
         "detail": "VulnScan.nessus",
         "documentation": {}
     },
@@ -51270,7 +51304,7 @@
         "kind": 2,
         "importPath": "VulnScan.nessus",
         "description": "VulnScan.nessus",
-        "peekOfCode": "def exportFile(target,idscan):\n    token = getToken()\n    x_api_token = get_X_API_Token()\n    fileToken=getFileToken(idscan,x_api_token,token)\n    time.sleep(5)\n    print(\"File token: \" +fileToken)\n    url = f'https://localhost:8834/tokens/{fileToken}/download'\n    headers = {\n            \"X-Api-Token\": x_api_token,\n            \"X-Cookie\": \"token=\" + token + \"\",",
+        "peekOfCode": "def exportFile(target,idscan):\n    token = getToken()\n    x_api_token = get_X_API_Token()\n    fileToken=getFileToken(idscan,x_api_token,token)\n    time.sleep(5)\n    print(\"File token: \" +fileToken)\n    url = f'https://127.0.0.1:8834/tokens/{fileToken}/download'\n    headers = {\n            \"X-Api-Token\": x_api_token,\n            \"X-Cookie\": \"token=\" + token + \"\",",
         "detail": "VulnScan.nessus",
         "documentation": {}
     },
@@ -51279,7 +51313,7 @@
         "kind": 2,
         "importPath": "VulnScan.nessus",
         "description": "VulnScan.nessus",
-        "peekOfCode": "def NessusScan(target):\n    token = getToken()\n    x_api_token = get_X_API_Token()\n    idscan = Scan(target,x_api_token,token) # idscan = \"131\"\n    scanProgress = checkStatus(idscan,x_api_token,token)\n    if scanProgress == 100:\n        print(G,\"Done Scaning Nessus !!!\")\n    else:\n        while scanProgress <= 100:\n            scanProgress = checkStatus(idscan,x_api_token,token)",
+        "peekOfCode": "def NessusScan(target):\n    logo()\n    startTime = time.time()\n    token = getToken()\n    x_api_token = get_X_API_Token()\n    idscan = int(Scan(target,x_api_token,token)) # idscan = \"131\"\n    scanProgress,status = checkStatus(target,idscan,x_api_token,token)\n    if status == \"completed\":\n        print(G,\"Done Scaning Nessus !!!\")\n    else:",
         "detail": "VulnScan.nessus",
         "documentation": {}
     },
@@ -51288,7 +51322,7 @@
         "kind": 5,
         "importPath": "VulnScan.nessus",
         "description": "VulnScan.nessus",
-        "peekOfCode": "W = \"\\033[0m\"\nR = \"\\033[31m\"\nG = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef get_X_API_Token():\n    url = \"https://localhost:8834/nessus6.js\"\n    response = requests.get(url, verify=False).text\n    pattern = r\"return\\\"(\\w{8}-\\w{4}-\\w{4}-\\w{4}-\\w{12})\\\"\"\n    matches = re.findall(pattern, response)",
+        "peekOfCode": "W = \"\\033[0m\"\nR = \"\\033[31m\"\nG = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef logo():\n    os.system(\"clear\")\n    print(colored('''\n╔╗╔┌─┐┌─┐┌─┐┬ ┬┌─┐  ╔═╗┌─┐┌─┐┌┐┌\n║║║├┤ └─┐└─┐│ │└─┐  ╚═╗│  ├─┤│││",
         "detail": "VulnScan.nessus",
         "documentation": {}
     },
@@ -51297,7 +51331,7 @@
         "kind": 5,
         "importPath": "VulnScan.nessus",
         "description": "VulnScan.nessus",
-        "peekOfCode": "R = \"\\033[31m\"\nG = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef get_X_API_Token():\n    url = \"https://localhost:8834/nessus6.js\"\n    response = requests.get(url, verify=False).text\n    pattern = r\"return\\\"(\\w{8}-\\w{4}-\\w{4}-\\w{4}-\\w{12})\\\"\"\n    matches = re.findall(pattern, response)\n    return matches[1]",
+        "peekOfCode": "R = \"\\033[31m\"\nG = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef logo():\n    os.system(\"clear\")\n    print(colored('''\n╔╗╔┌─┐┌─┐┌─┐┬ ┬┌─┐  ╔═╗┌─┐┌─┐┌┐┌\n║║║├┤ └─┐└─┐│ │└─┐  ╚═╗│  ├─┤│││\n╝╚╝└─┘└─┘└─┘└─┘└─┘  ╚═╝└─┘┴ ┴┘└┘''',\"red\"))",
         "detail": "VulnScan.nessus",
         "documentation": {}
     },
@@ -51306,7 +51340,7 @@
         "kind": 5,
         "importPath": "VulnScan.nessus",
         "description": "VulnScan.nessus",
-        "peekOfCode": "G = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef get_X_API_Token():\n    url = \"https://localhost:8834/nessus6.js\"\n    response = requests.get(url, verify=False).text\n    pattern = r\"return\\\"(\\w{8}-\\w{4}-\\w{4}-\\w{4}-\\w{12})\\\"\"\n    matches = re.findall(pattern, response)\n    return matches[1]\ndef getToken():",
+        "peekOfCode": "G = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef logo():\n    os.system(\"clear\")\n    print(colored('''\n╔╗╔┌─┐┌─┐┌─┐┬ ┬┌─┐  ╔═╗┌─┐┌─┐┌┐┌\n║║║├┤ └─┐└─┐│ │└─┐  ╚═╗│  ├─┤│││\n╝╚╝└─┘└─┘└─┘└─┘└─┘  ╚═╝└─┘┴ ┴┘└┘''',\"red\"))\ndef get_X_API_Token():",
         "detail": "VulnScan.nessus",
         "documentation": {}
     },
@@ -51315,7 +51349,7 @@
         "kind": 5,
         "importPath": "VulnScan.nessus",
         "description": "VulnScan.nessus",
-        "peekOfCode": "O = \"\\033[33m\"\nB = \"\\033[34m\"\ndef get_X_API_Token():\n    url = \"https://localhost:8834/nessus6.js\"\n    response = requests.get(url, verify=False).text\n    pattern = r\"return\\\"(\\w{8}-\\w{4}-\\w{4}-\\w{4}-\\w{12})\\\"\"\n    matches = re.findall(pattern, response)\n    return matches[1]\ndef getToken():\n    url = \"https://localhost:8834/session\"",
+        "peekOfCode": "O = \"\\033[33m\"\nB = \"\\033[34m\"\ndef logo():\n    os.system(\"clear\")\n    print(colored('''\n╔╗╔┌─┐┌─┐┌─┐┬ ┬┌─┐  ╔═╗┌─┐┌─┐┌┐┌\n║║║├┤ └─┐└─┐│ │└─┐  ╚═╗│  ├─┤│││\n╝╚╝└─┘└─┘└─┘└─┘└─┘  ╚═╝└─┘┴ ┴┘└┘''',\"red\"))\ndef get_X_API_Token():\n    url = \"https://127.0.0.1:8834/nessus6.js\"",
         "detail": "VulnScan.nessus",
         "documentation": {}
     },
@@ -51324,7 +51358,7 @@
         "kind": 5,
         "importPath": "VulnScan.nessus",
         "description": "VulnScan.nessus",
-        "peekOfCode": "B = \"\\033[34m\"\ndef get_X_API_Token():\n    url = \"https://localhost:8834/nessus6.js\"\n    response = requests.get(url, verify=False).text\n    pattern = r\"return\\\"(\\w{8}-\\w{4}-\\w{4}-\\w{4}-\\w{12})\\\"\"\n    matches = re.findall(pattern, response)\n    return matches[1]\ndef getToken():\n    url = \"https://localhost:8834/session\"\n    data = {\"username\": \"admin\", \"password\": \"kali\"}",
+        "peekOfCode": "B = \"\\033[34m\"\ndef logo():\n    os.system(\"clear\")\n    print(colored('''\n╔╗╔┌─┐┌─┐┌─┐┬ ┬┌─┐  ╔═╗┌─┐┌─┐┌┐┌\n║║║├┤ └─┐└─┐│ │└─┐  ╚═╗│  ├─┤│││\n╝╚╝└─┘└─┘└─┘└─┘└─┘  ╚═╝└─┘┴ ┴┘└┘''',\"red\"))\ndef get_X_API_Token():\n    url = \"https://127.0.0.1:8834/nessus6.js\"\n    response = requests.get(url, verify=False).text",
         "detail": "VulnScan.nessus",
         "documentation": {}
     },
@@ -51860,11 +51894,128 @@
         "documentation": {}
     },
     {
+        "label": "nmap",
+        "kind": 2,
+        "importPath": "export",
+        "description": "export",
+        "peekOfCode": "def nmap(target,workbook):\n    with open(f'Result/{target}/recon/{target}_ip/nmap_{target}.json', 'r') as f:\n        data = json.load(f)\n    ip_ports = {}\n    for item in data:\n        ip = list(item.keys())[0]\n        if ip not in ip_ports:\n            ip_ports[ip] = []\n        ip_ports[ip].append(item[ip])\n    worksheet1 = workbook.active",
+        "detail": "export",
+        "documentation": {}
+    },
+    {
+        "label": "waf",
+        "kind": 2,
+        "importPath": "export",
+        "description": "export",
+        "peekOfCode": "def waf(target,workbook):\n    worksheet2 = workbook.create_sheet(title=\"Firewalls\")\n    worksheet2.append(('URL', 'Detected', 'Firewall', 'Manufacturer'))\n    for cell in worksheet2[1]:\n        cell.font = openpyxl.styles.Font(bold=True)\n    with open(f'Result/{target}/recon/{target}_waf.json', 'r') as f:\n        text = f.read()\n        records = text.split('\\n][')\n        for i, record in enumerate(records, 2): \n            fields = json.loads(record.strip('[]\\n'))",
+        "detail": "export",
+        "documentation": {}
+    },
+    {
+        "label": "hosting",
+        "kind": 2,
+        "importPath": "export",
+        "description": "export",
+        "peekOfCode": "def hosting(target,workbook):      \n    worksheet3 = workbook.create_sheet(title=\"Hosting\")\n    worksheet3.append(('IP', 'Domain'))\n    for cell in worksheet3[1]:\n        cell.font = openpyxl.styles.Font(bold=True)\n    with open(f'Result/{target}/recon/ip_to_domain_{target}.json', 'r') as f:\n        data = json.load(f)\n        ip = data['ip']\n        domains = data['domain'].split('\\n')\n        for domain in domains:",
+        "detail": "export",
+        "documentation": {}
+    },
+    {
+        "label": "final",
+        "kind": 2,
+        "importPath": "export",
+        "description": "export",
+        "peekOfCode": "def final(target,workbook):\n    with open(f'Result/{target}/recon/final_status_{target}.json', 'r') as f:\n        data = json.load(f)\n    worksheet4 = workbook.create_sheet(title=\"Status\")\n    worksheet4.append(('Website', 'Host', 'Port', 'Scheme', 'Title', 'Tech'))\n    for cell in worksheet4[1]:\n        cell.font = openpyxl.styles.Font(bold=True)\n    for item in data:\n        website = list(item.keys())[0]\n        host = item[website]['host']",
+        "detail": "export",
+        "documentation": {}
+    },
+    {
+        "label": "subdomains",
+        "kind": 2,
+        "importPath": "export",
+        "description": "export",
+        "peekOfCode": "def subdomains(target,workbook):   \n    with open(f'Result/{target}/recon/final_subdomain_{target}.txt', 'r') as f:\n        text = f.read().splitlines()\n    worksheet5 =workbook.create_sheet(title=\"Final Subdomains\")\n    worksheet5.append(('Subdomain',))\n    for cell in worksheet5[1]:\n        cell.font = openpyxl.styles.Font(bold=True)\n    for domain in text:\n        worksheet5.append((domain,))\ndef live(target,workbook):",
+        "detail": "export",
+        "documentation": {}
+    },
+    {
+        "label": "live",
+        "kind": 2,
+        "importPath": "export",
+        "description": "export",
+        "peekOfCode": "def live(target,workbook):\n    with open(f'Result/{target}/recon/{target}_live.txt', 'r') as f:\n        text = f.read().splitlines()\n    worksheet6 =workbook.create_sheet(title=\"Live Domains\")\n    worksheet6.append(('Live Domain',))\n    for cell in worksheet6[1]:\n        cell.font = openpyxl.styles.Font(bold=True)\n    for live_domain in text:\n        worksheet6.append((live_domain,))\ndef exportation_subdomain(target):",
+        "detail": "export",
+        "documentation": {}
+    },
+    {
+        "label": "exportation_subdomain",
+        "kind": 2,
+        "importPath": "export",
+        "description": "export",
+        "peekOfCode": "def exportation_subdomain(target):\n    print(W, 'RExporting Report...')\n    workbook = openpyxl.Workbook()\n    nmap(target,workbook)\n    waf(target,workbook)\n    final(target,workbook)\n    subdomains(target,workbook)\n    live(target,workbook)\n    workbook.save(f'Result/{target}/recon/Result.xlsx')\n    os.remove(f'Result/{target}/recon/{target}_ip/nmap_{target}.json')",
+        "detail": "export",
+        "documentation": {}
+    },
+    {
+        "label": "exportation_ip",
+        "kind": 2,
+        "importPath": "export",
+        "description": "export",
+        "peekOfCode": "def exportation_ip(target):\n    print(W, 'Exporting Report...')\n    workbook = openpyxl.Workbook()\n    nmap(target,workbook)\n    waf(target,workbook)\n    hosting(target,workbook)\n    workbook.save(f'Result/{target}/recon/Result.xlsx')\n    os.remove(f'Result/{target}/recon/{target}_ip/nmap_{target}.json')\n    os.remove(f'Result/{target}/recon/{target}_waf.json')\n    os.remove(f'Result/{target}/recon/ip_to_domain_{target}.json')",
+        "detail": "export",
+        "documentation": {}
+    },
+    {
+        "label": "W",
+        "kind": 5,
+        "importPath": "export",
+        "description": "export",
+        "peekOfCode": "W = \"\\033[0m\"\nR = \"\\033[31m\"\nG = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef nmap(target,workbook):\n    with open(f'Result/{target}/recon/{target}_ip/nmap_{target}.json', 'r') as f:\n        data = json.load(f)\n    ip_ports = {}\n    for item in data:",
+        "detail": "export",
+        "documentation": {}
+    },
+    {
+        "label": "R",
+        "kind": 5,
+        "importPath": "export",
+        "description": "export",
+        "peekOfCode": "R = \"\\033[31m\"\nG = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef nmap(target,workbook):\n    with open(f'Result/{target}/recon/{target}_ip/nmap_{target}.json', 'r') as f:\n        data = json.load(f)\n    ip_ports = {}\n    for item in data:\n        ip = list(item.keys())[0]",
+        "detail": "export",
+        "documentation": {}
+    },
+    {
+        "label": "G",
+        "kind": 5,
+        "importPath": "export",
+        "description": "export",
+        "peekOfCode": "G = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef nmap(target,workbook):\n    with open(f'Result/{target}/recon/{target}_ip/nmap_{target}.json', 'r') as f:\n        data = json.load(f)\n    ip_ports = {}\n    for item in data:\n        ip = list(item.keys())[0]\n        if ip not in ip_ports:",
+        "detail": "export",
+        "documentation": {}
+    },
+    {
+        "label": "O",
+        "kind": 5,
+        "importPath": "export",
+        "description": "export",
+        "peekOfCode": "O = \"\\033[33m\"\nB = \"\\033[34m\"\ndef nmap(target,workbook):\n    with open(f'Result/{target}/recon/{target}_ip/nmap_{target}.json', 'r') as f:\n        data = json.load(f)\n    ip_ports = {}\n    for item in data:\n        ip = list(item.keys())[0]\n        if ip not in ip_ports:\n            ip_ports[ip] = []",
+        "detail": "export",
+        "documentation": {}
+    },
+    {
+        "label": "B",
+        "kind": 5,
+        "importPath": "export",
+        "description": "export",
+        "peekOfCode": "B = \"\\033[34m\"\ndef nmap(target,workbook):\n    with open(f'Result/{target}/recon/{target}_ip/nmap_{target}.json', 'r') as f:\n        data = json.load(f)\n    ip_ports = {}\n    for item in data:\n        ip = list(item.keys())[0]\n        if ip not in ip_ports:\n            ip_ports[ip] = []\n        ip_ports[ip].append(item[ip])",
+        "detail": "export",
+        "documentation": {}
+    },
+    {
         "label": "menu",
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def menu():\n    subprocess.call(\"clear\", shell=True)\n    text= '''\n  █████╗ ███╗   ███╗██████╗\n ██╔══██╗████╗ ████║██╔══██╗\n ███████║██╔████╔██║██████╔╝         /-version 1.0-/\n ██╔══██║██║╚██╔╝██║██╔═══╝         /this tool is for educational purposes only/\n ██║  ██║██║ ╚═╝ ██║██║\n ╚═╝  ╚═╝╚═╝     ╚═╝╚═╝\n''' ",
+        "peekOfCode": "def menu():\n    subprocess.call(\"clear\", shell=True)\n    text= '''\n  █████╗ ███╗   ███╗██████╗\n ██╔══██╗████╗ ████║██╔══██╗\n ███████║██╔████╔██║██████╔╝         /-version 1.0-/\n ██╔══██║██║╚██╔╝██║██╔═══╝         /this tool is for educational purposes only/\n ██║  ██║██║ ╚═╝ ██║██║             /Power by ETC Technology Systems JSC\n ╚═╝  ╚═╝╚═╝     ╚═╝╚═╝\n''' ",
         "detail": "main",
         "documentation": {}
     },

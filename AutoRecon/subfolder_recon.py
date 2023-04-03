@@ -29,11 +29,7 @@ def js_Recon(target,status_data):
         all_subdomains = f"Result/{target}/recon/{target}_live.txt"
         os.system(f'cat {all_subdomains} | ~/go/bin/gauplus | sort -u | uniq >> {crawled_file}')
     os.system(f"cat {crawled_file}| grep '.js$' | grep -ivE '\.json'>> {js_crawled_file}")
-<<<<<<< HEAD
     cmd = f"for i in ~/go/bin/gf -list;do cat {crawled_file}| ~/go/bin/gf $i | ~/go/bin/httpx -mc 200 -silent  >> Result/{target}/recon/{target}_url/$i_potential.txt ; done"
-=======
-    cmd = f"for i in ~/go/bin/gf -list;do cat {crawled_file}| ~/go/bin/gf $i | ~/go/bin/httpx -mc 200 -silent  >> Result/{target}/{target}_url/$i_potential.txt ; done"
->>>>>>> 6edc68feb79e6858a524e6ec1048458724c971d3
     subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
     gf_list =  ['debug_logic','idor','img-traversal','interestingEXT','interestingparams','interestingsubs','jsvar','lfi','rce','redirect','sqli','ssrf','xss','ssti']
     threads_gf = []
