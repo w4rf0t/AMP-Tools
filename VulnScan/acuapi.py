@@ -10,6 +10,7 @@ import warnings
 warnings.simplefilter('ignore', InsecureRequestWarning)
 
 
+
 def menu():
     subprocess.call('clear', shell=True)
     colors = ['red', 'yellow', 'green', 'cyan', 'blue', 'magenta']
@@ -75,7 +76,7 @@ def get_session_id(url_acunetix,scan_id,x_auth):
     except:
         pass
     
-def show_scan_status(url_acunetix,scan_id,session_id,x_auth):
+def show_scan_status(url_acunetix,scan_id,session_id,x_auth,folder_name):
     headers = {"X-Auth": x_auth,"content-type": "application/json"}
     url=url_acunetix + "scans/{}/results/{}/statistics".format(scan_id,session_id)
     res = requests.get(url, headers=headers,timeout=30, verify=False)
@@ -85,7 +86,7 @@ def show_scan_status(url_acunetix,scan_id,session_id,x_auth):
     status = json.loads(res.content)['status']
     return progress,status
 
-def get_vuln_info(url_acunetix,scan_id,session_id,x_auth):
+def get_vuln_info(url_acunetix,scan_id,session_id,x_auth,folder_name):
     headers = {"X-Auth": x_auth,"content-type": "application/json"}
     url=url_acunetix + "scans/{}/results/{}/vulnerabilities".format(scan_id,session_id)
     res = requests.get(url, headers=headers,timeout=30, verify=False)
@@ -99,7 +100,7 @@ def get_reportID(url_acunetix,session_id,x_auth):
     res = requests.post(url, headers=headers, data=json.dumps(data),timeout=30, verify=False)
     return json.loads(res.content)["report_id"]
 
-def export_report(url_acunetix,report_id,x_auth):
+def export_report(url_acunetix,report_id,x_auth,folder_name):
     download_link = str(None)
     while download_link == str(None):
         try:
@@ -118,7 +119,7 @@ def export_report(url_acunetix,report_id,x_auth):
         res = requests.get(url, headers=headers,timeout=30, verify=False)
         f.write(res.content)    
     
-def Acunetix(url_acunetix,x_auth,target,scan_profile_id,scan_speed):
+def main(url_acunetix,x_auth,target,scan_profile_id,scan_speed,folder_name):
     # x_auth = get_X_Auth()
     # while x_auth == "None":
     #     x_auth = get_X_Auth()
@@ -127,15 +128,15 @@ def Acunetix(url_acunetix,x_auth,target,scan_profile_id,scan_speed):
     startTime = time.time()
     session_id = get_session_id(url_acunetix,scan_id,x_auth)
     time.sleep(1)
-    progress, status = show_scan_status(url_acunetix,scan_id,session_id,x_auth)
+    progress, status = show_scan_status(url_acunetix,scan_id,session_id,x_auth,folder_name)
     colors = ['red', 'yellow', 'green', 'cyan', 'blue', 'magenta']
     while True:
         running_time = round(time.time() - startTime)
         if running_time%500==0:
             session_id = get_session_id(url_acunetix,scan_id,x_auth)
         if running_time%5==0:
-            progress, status = show_scan_status(url_acunetix,scan_id,session_id,x_auth)
-            get_vuln_info(url_acunetix,scan_id,session_id,x_auth)
+            progress, status = show_scan_status(url_acunetix,scan_id,session_id,x_auth,folder_name)
+            get_vuln_info(url_acunetix,scan_id,session_id,x_auth,folder_name)
             if status != "processing":
                 break
         for char in ["\\", "|", "/", "-"]:
@@ -149,13 +150,14 @@ def Acunetix(url_acunetix,x_auth,target,scan_profile_id,scan_speed):
     
 
     
-if __name__ == "__main__":
+def Acunetix(target):
     try:
         menu()
-        print(colored("Input target URL in (http://example.com) format: ","blue"),end="")
-        target = input()
-        # target = "http://testaspnet.vulnweb.com"
-        url_acunetix = "https://192.168.44.129:3443/api/v1/"
+        # create "result/target/vuln/acuapi" folder
+        folder_name = "Result/" + target+"/AcuaPi"
+        if not os.path.exists(folder_name):
+            os.makedirs(folder_name)
+        url_acunetix = "https://192.168.44.143:3443/api/v1/"
         x_auth = "1986ad8c0a5b3df4d7028d5f3c06e936ce6e15aafcc9144aeaa02df4c5b481b4b"
         scan_speed_list = {1:"sequential",2:"slow",3:"moderate",4:"fast"}
         scan_profile_list = {1:["11111111-1111-1111-1111-111111111111","Full Scan"],2:["11111111-1111-1111-1111-111111111112","High Risk Vulnerabilities"],3:["11111111-1111-1111-1111-111111111113","SQL Injection Vulnerabilities"],4:["11111111-1111-1111-1111-111111111114",'Continuous_full'],5:["11111111-1111-1111-1111-111111111115","Weak Passwords"],6:["11111111-1111-1111-1111-111111111116","Cross-site Scripting Vulnerabilities"],7:["11111111-1111-1111-1111-111111111117","Crawl Only"],8:["11111111-1111-1111-1111-111111111118","Continuous_quick"]}
@@ -167,12 +169,6 @@ if __name__ == "__main__":
             print(colored("{}. {}".format(i,scan_profile_list[i][1]),"white"))
         print(colored("Input scan profile (1-8): ","blue"),end="")
         scan_profile_id = scan_profile_list[int(input())][0]
-        # create "result/target" folder
-        if not os.path.exists("result"):
-            os.mkdir("result")
-        folder_name = "result/" + target.split("//")[1]
-        if not os.path.exists(folder_name):
-            os.mkdir(folder_name)
-        Acunetix(url_acunetix,x_auth,target,scan_profile_id,scan_speed)
+        main(url_acunetix,x_auth,target,scan_profile_id,scan_speed,folder_name)
     except KeyboardInterrupt:
         print(colored("KeyboardInterrupt","red"))

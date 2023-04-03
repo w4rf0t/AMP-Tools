@@ -1,1 +1,0 @@
-[{"103.17.211.139": {"port": "80", "protocol": "tcp", "status": "open", "service": "tcpwrapped"}}, {"103.17.211.139": {"port": "8080", "protocol": "tcp", "status": "open", "service": "tcpwrapped"}}]

@@ -1,1 +1,0 @@
-https://www.help.tinder.com/hc/en-us/requests/new?ticket_form_id=360000234472 (GET)  # VulnScan/modules/sqlmap/sqlmap.py -m Result/tinder.com/sqli.txt -dbs --output-dir VulnScan/results/sqli-test --dump-file VulnScan/results/sqli-test/result --answer=Y --threads 10 --random-agent

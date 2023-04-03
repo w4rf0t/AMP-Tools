@@ -1,0 +1,42 @@
+[
+    {
+        "180.235.148.219": {
+            "port": "53",
+            "protocol": "tcp",
+            "status": "open",
+            "service": "domain   PowerDNS Authoritative Server 4.4.3"
+        }
+    },
+    {
+        "180.235.148.219": {
+            "port": "80",
+            "protocol": "tcp",
+            "status": "open",
+            "service": "http     Apache httpd"
+        }
+    },
+    {
+        "180.235.148.219": {
+            "port": "110",
+            "protocol": "tcp",
+            "status": "open",
+            "service": "pop3     Dovecot pop3d"
+        }
+    },
+    {
+        "180.235.148.219": {
+            "port": "143",
+            "protocol": "tcp",
+            "status": "open",
+            "service": "imap     Dovecot imapd"
+        }
+    },
+    {
+        "180.235.148.219": {
+            "port": "587",
+            "protocol": "tcp",
+            "status": "open",
+            "service": "smtp     Exim smtpd 4.96"
+        }
+    }
+]

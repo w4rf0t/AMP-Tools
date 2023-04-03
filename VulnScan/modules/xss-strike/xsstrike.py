@@ -84,7 +84,7 @@ parser.add_argument('--console-log-level', help='Console logging level',
 parser.add_argument('--file-log-level', help='File logging level', dest='file_log_level',
                     choices=core.log.log_config.keys(), default=None)
 parser.add_argument('--log-file', help='Name of the file to log', dest='log_file',
-                    default=core.log.log_file)
+                    default='log_file')
 args = parser.parse_args()
 
 # Pull all parameter values of dict from argparse namespace into local variables of name == key

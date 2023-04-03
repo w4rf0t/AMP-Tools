@@ -1,0 +1,2 @@
+mail.polomilano.com/cpanel/
+mail.polomilano.com/controlpanel/

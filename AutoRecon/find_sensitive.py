@@ -3,8 +3,9 @@ import os
 import sys
 import requests
 import re
-from urllib3 import disable_warnings
-disable_warnings()
+from urllib3.exceptions import InsecureRequestWarning
+import warnings
+warnings.simplefilter('ignore',InsecureRequestWarning)
 
 sensitive_data=[]
 patterns = {
@@ -73,16 +74,16 @@ patterns = {
 
 }
 def find_sensitive(target,status_data):
-    print("Start find sensitive")
+    print(" Start find sensitive...")
     status_data['find_sensitive']['find_sensitive'] = "0"
     with open(f"Result/{target}/status_of_function.json","w") as f:
         json.dump(status_data, f, indent=4)     
         
-    with open(f'Result/{target}/temp.txt', 'w') as f:
-        with open(f'Result/{target}/{target}_url/js_crawl_urls.txt',"r") as file1:
+    with open(f'Result/{target}/recon/temp.txt', 'w') as f:
+        with open(f'Result/{target}/recon/{target}_url/js_crawl_urls.txt',"r") as file1:
             list_urls = file1.readlines()
             for url in list_urls:
-                response = requests.get(url,verify=False)
+                response = requests.get(url,timeout=4,verify=False)
                 contents = response.text
                 for key, values in patterns.items():
                     matches = re.findall(values, contents)
@@ -94,5 +95,5 @@ def find_sensitive(target,status_data):
     with open(f"Result/{target}/status_of_function.json","w") as f:
         json.dump(status_data, f, indent=4)  
         
-    os.system(f'cat Result/{target}/temp.txt | uniq >> Result/{target}/sensitive_data.txt; rm Result/{target}/temp.txt')
+    os.system(f'cat Result/{target}/recon/temp.txt | uniq >> Result/{target}/recon/sensitive_data.txt; rm Result/{target}/recon/temp.txt')
     print("Finish find sensitive")

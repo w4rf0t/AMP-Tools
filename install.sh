@@ -12,6 +12,7 @@ go install github.com/bp0lr/gauplus@latest
 mkdir .gf
 go install github.com/tomnomnom/qsreplace@latest
 go install github.com/tomnomnom/gf@latest
+go install github.com/0xsha/GoLinkFinder@latest
 git clone https://github.com/1ndianl33t/Gf-Patterns
 mv Gf-Patterns/*.json ~/.gf
 rm -rf Gf-Patterns

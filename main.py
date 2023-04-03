@@ -6,14 +6,15 @@ from AutoRecon.subdomain_recon import *
 from AutoRecon.ip_recon import *
 from AutoRecon.find_sensitive import *
 from AutoRecon.detectwaf import *
+from AutoRecon.ip_to_domain import ip_To_Domain
 import os
 import time
-# from VulnScan.scanvuln import checkvuln
-
+from VulnScan.scanvuln import checkvuln
+from termcolor import colored
 
 def menu():
     subprocess.call("clear", shell=True)
-    print(R+'''
+    text= '''
 
   █████╗ ███╗   ███╗██████╗
  ██╔══██╗████╗ ████║██╔══██╗
@@ -21,9 +22,22 @@ def menu():
  ██╔══██║██║╚██╔╝██║██╔═══╝         /this tool is for educational purposes only/
  ██║  ██║██║ ╚═╝ ██║██║
  ╚═╝  ╚═╝╚═╝     ╚═╝╚═╝
-''' + W + '''
+''' 
+    colors = [ 'green','white']
+    color_index = 0
+
+    for line in text.split('\n'):
+        colored_line = ''
+        for char in line:
+            if char != ' ':
+                colored_line += colored(char, colors[color_index % len(colors)])
+                color_index += 1
+            else:
+                colored_line += ' '
+        print(colored_line)
+    print(colored('''
     [*]   use -h or --help for help
-    [*]   example:''' + G + ''' python3 main.py example.com''', end='\n'+B)
+    [*]   example: python3 main.py example.com''',"white"))
 
 
 
@@ -49,7 +63,8 @@ def main(target):
     
     status_data_json_ip = {
     "ip_Recon":{
-        "scan_input_IP":"-1"
+        "scan_input_IP":"-1",
+        "ip_to_domain":"-1",
     },
     "js_Recon":{
         "js_Recon":"-1"
@@ -63,24 +78,27 @@ def main(target):
     try:
         if not(os.path.exists(f'Result/{target}')):
             os.makedirs(f'Result/{target}')
+            os.makedirs(f'Result/{target}/recon')
+            os.makedirs(f'Result/{target}/recon/vuln')
     except Exception as e:
         pass
     IP_regex = re.compile(r"^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$")
     if not IP_regex.match(target):
-        with open(f"Result/{target}/status_of_function.json", "w") as f:
-            json.dump(status_data_json_subdomain, f, indent=4)
-        sub_Recon(target)
+        # with open(f"Result/{target}/status_of_function.json", "w") as f:
+        #     json.dump(status_data_json_subdomain, f, indent=4)
+        # sub_Recon(target)
         with open(f"Result/{target}/status_of_function.json", "r") as f:
             status_data=json.load(f)
-        t1 = Thread(target=ip_Recon, args=[target,status_data])
-        t2 = Thread(target=js_Recon, args=[target,status_data])
-        t3 = Thread(target=waf_Recon, args=[target,status_data])
-        t1.start()
-        t2.start()
-        t3.start()
-        t1.join()
-        t2.join()
-        t3.join()
+        # t1 = Thread(target=ip_Recon, args=[target,status_data])
+        # t2 = Thread(target=js_Recon, args=[target,status_data])
+        # t3 = Thread(target=waf_Recon, args=[target,status_data])
+        # t1.start()
+        # t2.start()
+        # t3.start()
+        # t1.join()
+        # t2.join()
+        # t3.join()
+        # find_sensitive(target,status_data)
     else:
         with open(f"Result/{target}/status_of_function.json", "w") as f:
             json.dump(status_data_json_ip,f, indent=4)
@@ -91,12 +109,15 @@ def main(target):
             status_data=json.load(f)
         t1 = Thread(target=waf_Recon, args=[target,status_data])
         t2 = Thread(target=js_Recon, args=[target,status_data])
+        t3 = Thread(target=ip_To_Domain, args=[target,status_data])
         t1.start()
         t2.start()
+        t3.start()
         t1.join()
         t2.join()
-    find_sensitive(target,status_data)
-    # checkvuln(target)
+        t3.join()
+        find_sensitive(target,status_data)
+    checkvuln(target)
 
 
 
@@ -106,13 +127,13 @@ if __name__ == "__main__":
     G = "\033[32m"
     O = "\033[33m"
     B = "\033[34m"
+    menu()
     try:
         target = sys.argv[1]
         if (target == '-h' or target == '--help'):
             raise Exception
     except:
-        menu()
-        target = input(B + " Enter a target: ")
+        target = input(colored(" Enter a target: ","blue"))
         while (target == '' or target == None):
             menu()
             target = input("Enter a target: ")

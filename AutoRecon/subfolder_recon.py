@@ -17,29 +17,29 @@ def js_Recon(target,status_data):
     with open(f"Result/{target}/status_of_function.json","w") as f:
         json.dump(status_data,f,indent=4)
         
-    if not os.path.exists(f"Result/{target}/{target}_url"):
-        os.makedirs(f"Result/{target}/{target}_url")
-    crawled_file = f"Result/{target}/{target}_url/crawl_urls.txt"
-    js_crawled_file = f"Result/{target}/{target}_url/js_crawl_urls.txt"
+    if not os.path.exists(f"Result/{target}/recon/{target}_url"):
+        os.makedirs(f"Result/{target}/recon/{target}_url")
+    crawled_file = f"Result/{target}/recon/{target}_url/crawl_urls.txt"
+    js_crawled_file = f"Result/{target}/recon/{target}_url/js_crawl_urls.txt"
     IP_regex = re.compile(r"^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$")
     if not IP_regex.match(target):
-        all_subdomains = f"Result/{target}/final_subdomain_{target}.txt"
+        all_subdomains = f"Result/{target}/recon/final_subdomain_{target}.txt"
         os.system(f"cat {all_subdomains} | ~/go/bin/gauplus -random-agent | sort -u | uniq >> {crawled_file}")
     else:
-        all_subdomains = f"Result/{target}/{target}_live.txt"
+        all_subdomains = f"Result/{target}/recon/{target}_live.txt"
         os.system(f'cat {all_subdomains} | ~/go/bin/gauplus | sort -u | uniq >> {crawled_file}')
-    os.system(f"cat {crawled_file}| grep '.js' | grep -ivE '\.json'>> {js_crawled_file}")
-    cmd = f"for i in ~/go/bin/gf -list;do cat {crawled_file}| ~/go/bin/gf $i | ~/go/bin/httpx -mc 200 -silent  >> Result/{target}/{target}_url/$i_potential.txt ; done"
+    os.system(f"cat {crawled_file}| grep '.js$' | grep -ivE '\.json'>> {js_crawled_file}")
+    cmd = f"for i in ~/go/bin/gf -list;do cat {crawled_file}| ~/go/bin/gf $i | ~/go/bin/httpx -mc 200 -silent  >> Result/{target}/recon/{target}_url/$i_potential.txt ; done"
     subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
     gf_list =  ['debug_logic','idor','img-traversal','interestingEXT','interestingparams','interestingsubs','jsvar','lfi','rce','redirect','sqli','ssrf','xss','ssti']
     threads_gf = []
     for i in gf_list:
-        threads_gf.append(threading.Thread(target=os.system, args=(f"cat {crawled_file}| ~/go/bin/gf {i} | ~/go/bin/httpx -mc 200 -silent  >> Result/{target}/{target}_url/{i}_potential.txt",)))
+        threads_gf.append(threading.Thread(target=os.system, args=(f"cat {crawled_file}| ~/go/bin/gf {i} | ~/go/bin/httpx -mc 200 -silent  >> Result/{target}/recon/{target}_url/{i}_potential.txt",)))
     for thread in threads_gf:
         thread.start()
     for thread in threads_gf:
         thread.join()
-    # os.system(f"cat Result/{target}/{target}_live.txt;while read url; do ~/.local/dirsearch -u $url --random-agent --follow-redirects --deep-recursive -x 500 -o Result/{target}/{target}_url/$url-dirsearch.txt; done")
+    # os.system(f"cat Result/{target}/recon/{target}_live.txt;while read url; do ~/.local/dirsearch -u $url --random-agent --follow-redirects --deep-recursive -x 500 -o Result/{target}/recon/{target}_url/$url-dirsearch.txt; done")
     status_data['js_Recon']['js_Recon'] = "1"
     with open(f"Result/{target}/status_of_function.json","w") as f:
         json.dump(status_data,f,indent=4)

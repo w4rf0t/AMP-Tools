@@ -1,0 +1,218 @@
+[
+    {
+        "url": "http://cpcontacts.cedarindonesia.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://webmail.polomilano.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://cedarindonesia.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://mail.polomilano.com",
+        "detected": true,
+        "firewall": "Generic",
+        "manufacturer": "Unknown"
+    }
+][
+    {
+        "url": "https://cpcontacts.cedarindonesia.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "https://mail.polomilano.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://webdisk.polomilano.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://cpanel.polomilano.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "https://webmail.polomilano.com",
+        "detected": true,
+        "firewall": "Generic",
+        "manufacturer": "Unknown"
+    }
+][
+    {
+        "url": "https://cedarindonesia.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "https://webdisk.polomilano.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://webdisk.cedarindonesia.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "https://cpanel.polomilano.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "https://webdisk.cedarindonesia.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://mail.cedarindonesia.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://cpcalendars.cedarindonesia.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "https://mail.cedarindonesia.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "https://cpcalendars.cedarindonesia.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://ftp.polomilano.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://cpcontacts.polomilano.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][][
+    {
+        "url": "https://ftp.polomilano.com",
+        "detected": true,
+        "firewall": "Generic",
+        "manufacturer": "Unknown"
+    }
+][][
+    {
+        "url": "http://polomilano.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://webmail.cedarindonesia.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "https://www.cedarindonesia.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://cpcalendars.polomilano.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "https://webmail.cedarindonesia.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "https://cpcalendars.polomilano.com",
+        "detected": true,
+        "firewall": "Generic",
+        "manufacturer": "Unknown"
+    }
+][][][][
+    {
+        "url": "https://www.polomilano.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://cpanel.cedarindonesia.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "https://cpanel.cedarindonesia.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "https://whm.polomilano.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+]

@@ -48,7 +48,7 @@ class Timer:
         if minutes > 0:
             if hours > 0:
                 print(
-                    " [*] Time elapsed "
+                    "[*] Time elapsed "
                     + str(hours)
                     + " hours, "
                     + str(minutes)
@@ -60,7 +60,7 @@ class Timer:
                 )
             else:
                 print(
-                    " [*] Time elapsed "
+                    "[*] Time elapsed "
                     + str(minutes)
                     + " minutes and "
                     + str(seconds)
@@ -79,9 +79,9 @@ class Timer:
         maked = "rm -rf .cache_httplib"
         process = subprocess.Popen(maked.split(), stdout=subprocess.PIPE)
         poutput = process.communicate()[0]
-        interact = input("Press any key to exit...")
-        if interact:
-            exit()
+        # interact = input("Press any key to exit...")
+        # if interact:
+        exit()
 
 
 class Printer:
@@ -128,7 +128,7 @@ def getresponse(threadName, q):
                         print(str(reporturl) + str(reportcode) + " OK")
                         found.append(response.status)
                         subprocess.run(['echo', str(url) + "/" + str(data.strip())], stdout=open(
-                            'results/adminfinder/'+domain+'.txt', 'a'))
+                            'Result/'+out+'/vuln/adminfinder/'+domain+'.txt', 'a'))
                     elif 300 <= response.status < 400 and args.follow:
                         reso = httplib2.Http(".cache_httplib")
                         reso.follow_all_redirects = True
@@ -159,6 +159,7 @@ def killpid(signum=0, frame=0):
 
 
 parser = ArgumentParser(prog="adminfinder", usage="adminfinder [options]")
+parser.add_argument("-o", "--output", type=str, help="output file")
 parser.add_argument("-u", "--url", type=str, help="url eg. target.com")
 parser.add_argument("-w", "--wordlist", type=str, help="wordlist")
 parser.add_argument("-t", "--threads", type=int, help="number of threads")
@@ -185,7 +186,7 @@ threads = []
 exitFlag = 0
 threadID = 1
 maxthreads = 40
-
+out = args.output
 if args.threads:
     maxthreads = args.threads
 

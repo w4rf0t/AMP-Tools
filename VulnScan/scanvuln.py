@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-# phudepchai
 
 import random
 import urllib.request
@@ -13,10 +12,12 @@ import zipfile
 from pathlib import Path
 from socket import *
 from datetime import *
-import urllib3
 from sys import stdout
-
+from VulnScan.acuapi import Acunetix
 from VulnScan.nessus import NessusScan
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
 
 class Printer:
     def __init__(self, data):
@@ -89,11 +90,12 @@ def f_menu(target):
     G = "\033[32m"
     O = "\033[33m"
     B = "\033[34m"
+    subprocess.call("clear", shell=True)
     global vuln_scan_count
     global vuln
     vuln_scan_count = []
     vuln = []
-    logo()
+    # logo()
     print(
         G + "===========Vuln Scanner=============\n")
     print(" [1] SQL Injecion From List")
@@ -102,39 +104,44 @@ def f_menu(target):
     print(" [4] XSS Scan")
     print(" [5] LFI Scan")
     print(" [6] Nessus Scan <It will take a long time | Membership ONLY "+R+"💗"+G+" >")
+    print(" [7] Acunetix Scan <It will take a long time | Membership ONLY "+R+"💗"+G+" >")
     print(" [0] Exit\n")
     chce = input(B+" Your choice: ")
     if chce == "1":
         subprocess.call("clear", shell=True)
         print(G+"====SQL Injecion From List====")
         print(B)
-        urls = 'Result/' + target + '/sqli.txt'
+        urls = 'Result/' + target + '/recon/'+target+'_url/sqli_potential.txt'
         print("SQL Injection Scanning..")
         sql = subprocess.Popen(
-            'python VulnScan/modules/sqlmap/sqlmap.py -m "'
+            'python3 VulnScan/modules/sqlmap/sqlmap.py -m "'
             + urls
-            + '" -dbs --output-dir VulnScan/results/sqli-test --dump-file VulnScan/results/sqli-test/result --answer=Y --threads 10 --random-agent', shell=True)
+            + '" -dbs --output-dir Result/{}/vuln/sqli-test --dump-file Result/{}/vuln/sqli-test/result --answer=Y --threads 10 --random-agent'.format(target,target), shell=True)
         sql.communicate()
-        print("SQL Injection Scan Completed, results saved in /VulnScan/results/sqli-test")
+        print(f"SQL Injection Scan Completed, results saved in /Result/{target}/vuln/sqli-test")
         subprocess._cleanup()
     elif chce == "2":
         subprocess.call("clear", shell=True)
         print(G+"====Admin page finder====")
-        # print(B)
-        # afsite = input("Enter the site eg target.com: ")
-        with open('Result/' + target + '/final_subdomain_'+target+'.txt', 'r') as f:
+        print(B)
+        with open(f'Result/' + target + '/recon/final_subdomain_'+target+'.txt', 'r') as f:
             print("Admin page finder scanning..")
             for line in f:
                 afsite = line.strip()
-                print(W+"Scanning: " + afsite)
-                print(O)
+                print(W+"Scanning: " + afsite + O)
                 pwd = os.path.dirname(str(os.path.realpath(__file__)))
-                os.system("rm -rf VulnScan/results/adminfinder/"+afsite+".txt")
+                if os.path.exists(f"Result/{target}/vuln/adminfinder/"+afsite+".txt"):
+                    os.system(f"rm -rf Result/{target}/vuln/adminfinder/"+afsite+".txt")
+                else:
+                    try:
+                        os.makedirs(f"Result/{target}/vuln/adminfinder")
+                    except:
+                        pass
                 findadmin = subprocess.Popen(
                     "python3 "
                     + pwd
                     + "/modules/adminfinder.py -w "+pwd+"/lists/adminlist.txt -u "
-                    + str(afsite),
+                    + str(afsite)+" -o {}".format(target),
                     shell=True,
                 )
                 findadmin.communicate()
@@ -151,10 +158,10 @@ def f_menu(target):
         username = input("Enter the id of tag contains: ")
         passwd = input("Enter the id of tag contains password: ")
         print("Brute Force Started...")
-        bruteforce = subprocess.Popen('wfuzz -f VulnScan/results/loginform-test/result.json,json -z file,VulnScan/lists/passwords.txt -z file,VulnScan/lists/passwords.txt -d "' +
+        bruteforce = subprocess.Popen(f'wfuzz -f Result/{target}/vuln/loginform-test/result.json,json -z file,VulnScan/lists/passwords.txt -z file,VulnScan/lists/passwords.txt -d "' +
                                       username + '=FUZZ & ' + passwd + '=FUZ2Z"  --hc 302 404 '+domain+action, shell=True)
         bruteforce.communicate()
-        print("results saved in /VulnScan/results/loginform-test/result.json")
+        print(f"results saved in /Result/{target}/vuln/loginform-test/result.json")
         subprocess._cleanup()
     elif chce == "4":
         subprocess.call("clear", shell=True)
@@ -163,13 +170,15 @@ def f_menu(target):
         xssTest(target)
     elif chce == "5":
         subprocess.call("clear", shell=True)
-        lfisuite = subprocess.Popen(
-            "python " "VulnScan/modules/lfisuite.py ", shell=True)
+        lfisuite = subprocess.Popen("python3 "+ "VulnScan/modules/lfisuite.py ", shell=True)
         lfisuite.communicate()
         subprocess._cleanup()
     elif chce == "6":
         subprocess.call("clear", shell=True)
         NessusScan(target)
+    elif chce == "7":
+        subprocess.call("clear", shell=True)
+        Acunetix(target)
     elif chce == "0":
         print(R + "\n Exiting cleanly..")
         print(W)
@@ -179,32 +188,49 @@ def f_menu(target):
 
 
 def xssTest(target):
-    XssList = 'Result/'+target+'/xss.txt'
+    XssList = f'Result/{target}/recon/{target}_url/xss_potential.txt'
     list1 = [
         line.strip()
         for line in open(XssList, "r", errors="ignore", encoding="utf-8")
     ]
     try:
-        os.system("rm VulnScan/results/xss-test/xss-log")
+        if not os.path.exists(f"Result/{target}/vuln/xss-test"):
+            os.makedirs(f"Result/{target}/vuln/xss-test")
+        else:
+            os.system(f"rm -f Result/{target}/vuln/xss-test/*")
     except:
         pass
     print("Starting Scan...")
     for line in list1:
-        subprocess.run(['echo', 'Testing ' + line],
-                       stdout=open('VulnScan/results/xss-test/xss-log', 'a'))
+        line=line.strip()
+        subprocess.run(['echo', 'Testing ' + line],stdout=open(f'Result/{target}/vuln/xss-test/xss.log', 'a'))
         xss = subprocess.Popen(
-            "python "
-            + "VulnScan/modules/xss-strike/xsstrike.py -u '"
+            "python3 VulnScan/modules/xss-strike/xsstrike.py -u '"
             + line
-            + "' --file-log-level INFO  >> VulnScan/results/xss-test/xss-log",
-            shell=True)
+            + "' -t 20 --timeout=4 >> Result/{}/vuln/xss-test/xss.log".format(target),shell=True)
         xss.communicate()
         subprocess._cleanup()
-    print("Finished Check /VulnScan/results/xss-test/xss-log")
-    with open('../../results/xss-test/xss-log', 'r') as f:
-        content = f.read()
-        content = content.replace("*", "")
-
+    print(f"Finished result is saved in Result/{target}/vuln/xss-test/xss.log")
+    try:
+        #for each target, combine payloads and targets into one
+        with open(f'Result/{target}/vuln/xss-test/xss.txt', 'w') as file1:
+            with open(f'Result/{target}/vuln/xss-test/xss.log', 'r') as file:
+                    content = file.read()
+                    content = content.replace("*", "")
+                    lines = content.splitlines()
+                    list_payloads = []
+                    for lineNume in range(len(lines)-1):
+                        if lines[lineNume].startswith("Testing"):
+                            print(lines[lineNume])
+                            for lineNume2 in range(lineNume+1, len(lines)):
+                                if lines[lineNume2].startswith(" Payload: "):
+                                    list_payloads.append(lines[lineNume].replace(
+                                    "Testing ", "")+lines[lineNume2].replace(" Payload: ", ""))
+            for payload in list_payloads:
+                    file1.write(payload+"\n")      
+        os.remove(f'Result/{target}/vuln/xss-test/xss.log')
+    except:
+        pass
 #    Declare a global, read counter files, and if nonzero display their values.
 
 
@@ -230,7 +256,7 @@ def cache_Check():
 # This is the counter section, to displays found SQLi, LFI, XSS vulns, etc.
 # Declare global count for each saved value, display value to stderr above f_menu().
 #
-def sql_list_counter():
+def sql_list_counter(target):
     global sql_count
     try:
         f = open("results/sqlmap/v3n0m-sqli.txt", encoding="utf-8")
@@ -272,7 +298,6 @@ def rce_list_counter():
 
 def checkvuln(target):
 
-    urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
     downloads = [
         ["https://www.cloudflare.com/ips-v4", "ips-v4", progressBar],
@@ -293,5 +318,8 @@ def checkvuln(target):
     menu = True
     current_version = str("433  ")
     subprocess.call("clear", shell=True)
+    folder_name = "Result/" + target+"/vuln"
+    if not os.path.exists(folder_name):
+        os.makedirs(folder_name)
     while True:
         f_menu(target)

@@ -1,11 +1,10 @@
 import logging
 from .colors import *
-
 __all__ = ["setup_logger", "console_log_level", "file_log_level", "log_file"]
 
 console_log_level = "INFO"
 file_log_level = None
-log_file = "VulnScan/results/xss-test/xss.log"
+log_file = None #"Result/"+target+"/vuln/xss-test/xss.log"
 
 """
 Default Logging Levels

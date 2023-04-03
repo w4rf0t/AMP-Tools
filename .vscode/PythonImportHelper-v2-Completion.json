@@ -503,29 +503,53 @@
         "documentation": {}
     },
     {
-        "label": "ssl",
+        "label": "requests",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "ssl",
-        "description": "ssl",
-        "detail": "ssl",
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
         "documentation": {}
     },
     {
-        "label": "subprocess",
-        "kind": 6,
+        "label": "get",
+        "importPath": "requests",
+        "description": "requests",
         "isExtraImport": true,
-        "importPath": "subprocess",
-        "description": "subprocess",
-        "detail": "subprocess",
+        "detail": "requests",
         "documentation": {}
     },
     {
-        "label": "PIPE",
-        "importPath": "subprocess",
-        "description": "subprocess",
+        "label": "argparse",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "subprocess",
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "ArgumentParser",
+        "importPath": "argparse",
+        "description": "argparse",
+        "isExtraImport": true,
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "socket",
+        "importPath": "gevent",
+        "description": "gevent",
+        "isExtraImport": true,
+        "detail": "gevent",
+        "documentation": {}
+    },
+    {
+        "label": "Pool",
+        "importPath": "gevent.pool",
+        "description": "gevent.pool",
+        "isExtraImport": true,
+        "detail": "gevent.pool",
         "documentation": {}
     },
     {
@@ -562,6 +586,72 @@
         "documentation": {}
     },
     {
+        "label": "colored",
+        "importPath": "termcolor",
+        "description": "termcolor",
+        "isExtraImport": true,
+        "detail": "termcolor",
+        "documentation": {}
+    },
+    {
+        "label": "colored",
+        "importPath": "termcolor",
+        "description": "termcolor",
+        "isExtraImport": true,
+        "detail": "termcolor",
+        "documentation": {}
+    },
+    {
+        "label": "colored",
+        "importPath": "termcolor",
+        "description": "termcolor",
+        "isExtraImport": true,
+        "detail": "termcolor",
+        "documentation": {}
+    },
+    {
+        "label": "colored",
+        "importPath": "termcolor",
+        "description": "termcolor",
+        "isExtraImport": true,
+        "detail": "termcolor",
+        "documentation": {}
+    },
+    {
+        "label": "colored",
+        "importPath": "termcolor",
+        "description": "termcolor",
+        "isExtraImport": true,
+        "detail": "termcolor",
+        "documentation": {}
+    },
+    {
+        "label": "ssl",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "ssl",
+        "description": "ssl",
+        "detail": "ssl",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "PIPE",
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "isExtraImport": true,
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
         "label": "uuid",
         "kind": 6,
         "isExtraImport": true,
@@ -571,20 +661,44 @@
         "documentation": {}
     },
     {
-        "label": "requests",
-        "kind": 6,
+        "label": "InsecureRequestWarning",
+        "importPath": "urllib3.exceptions",
+        "description": "urllib3.exceptions",
         "isExtraImport": true,
-        "importPath": "requests",
-        "description": "requests",
-        "detail": "requests",
+        "detail": "urllib3.exceptions",
         "documentation": {}
     },
     {
-        "label": "get",
-        "importPath": "requests",
-        "description": "requests",
+        "label": "ProtocolError",
+        "importPath": "urllib3.exceptions",
+        "description": "urllib3.exceptions",
         "isExtraImport": true,
-        "detail": "requests",
+        "detail": "urllib3.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "InsecureRequestWarning",
+        "importPath": "urllib3.exceptions",
+        "description": "urllib3.exceptions",
+        "isExtraImport": true,
+        "detail": "urllib3.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "InsecureRequestWarning",
+        "importPath": "urllib3.exceptions",
+        "description": "urllib3.exceptions",
+        "isExtraImport": true,
+        "detail": "urllib3.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "warnings",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "warnings",
+        "description": "warnings",
+        "detail": "warnings",
         "documentation": {}
     },
     {
@@ -618,6 +732,31 @@
         "description": "threading",
         "isExtraImport": true,
         "detail": "threading",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "sleep",
+        "importPath": "time",
+        "description": "time",
+        "isExtraImport": true,
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "sleep",
+        "importPath": "time",
+        "description": "time",
+        "isExtraImport": true,
+        "detail": "time",
         "documentation": {}
     },
     {
@@ -19497,31 +19636,6 @@
         "documentation": {}
     },
     {
-        "label": "time",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "time",
-        "description": "time",
-        "detail": "time",
-        "documentation": {}
-    },
-    {
-        "label": "sleep",
-        "importPath": "time",
-        "description": "time",
-        "isExtraImport": true,
-        "detail": "time",
-        "documentation": {}
-    },
-    {
-        "label": "sleep",
-        "importPath": "time",
-        "description": "time",
-        "isExtraImport": true,
-        "detail": "time",
-        "documentation": {}
-    },
-    {
         "label": "beep",
         "importPath": "extra.beep.beep",
         "description": "extra.beep.beep",
@@ -25862,15 +25976,6 @@
         "documentation": {}
     },
     {
-        "label": "warnings",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "warnings",
-        "description": "warnings",
-        "detail": "warnings",
-        "documentation": {}
-    },
-    {
         "label": "Connector",
         "importPath": "plugins.generic.connector",
         "description": "plugins.generic.connector",
@@ -28575,22 +28680,6 @@
         "documentation": {}
     },
     {
-        "label": "ProtocolError",
-        "importPath": "urllib3.exceptions",
-        "description": "urllib3.exceptions",
-        "isExtraImport": true,
-        "detail": "urllib3.exceptions",
-        "documentation": {}
-    },
-    {
-        "label": "InsecureRequestWarning",
-        "importPath": "urllib3.exceptions",
-        "description": "urllib3.exceptions",
-        "isExtraImport": true,
-        "detail": "urllib3.exceptions",
-        "documentation": {}
-    },
-    {
         "label": "filterChecker",
         "importPath": "core.filterChecker",
         "description": "core.filterChecker",
@@ -28727,23 +28816,6 @@
         "documentation": {}
     },
     {
-        "label": "argparse",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "argparse",
-        "description": "argparse",
-        "detail": "argparse",
-        "documentation": {}
-    },
-    {
-        "label": "ArgumentParser",
-        "importPath": "argparse",
-        "description": "argparse",
-        "isExtraImport": true,
-        "detail": "argparse",
-        "documentation": {}
-    },
-    {
         "label": "HTMLParser",
         "importPath": "html.parser",
         "description": "html.parser",
@@ -28864,14 +28936,6 @@
         "documentation": {}
     },
     {
-        "label": "colored",
-        "importPath": "termcolor",
-        "description": "termcolor",
-        "isExtraImport": true,
-        "detail": "termcolor",
-        "documentation": {}
-    },
-    {
         "label": "Callable",
         "importPath": "collections",
         "description": "collections",
@@ -28896,12 +28960,11 @@
         "documentation": {}
     },
     {
-        "label": "urllib3",
-        "kind": 6,
+        "label": "Acunetix",
+        "importPath": "VulnScan.acuapi",
+        "description": "VulnScan.acuapi",
         "isExtraImport": true,
-        "importPath": "urllib3",
-        "description": "urllib3",
-        "detail": "urllib3",
+        "detail": "VulnScan.acuapi",
         "documentation": {}
     },
     {
@@ -28910,6 +28973,15 @@
         "description": "VulnScan.nessus",
         "isExtraImport": true,
         "detail": "VulnScan.nessus",
+        "documentation": {}
+    },
+    {
+        "label": "urllib3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "urllib3",
+        "description": "urllib3",
+        "detail": "urllib3",
         "documentation": {}
     },
     {
@@ -28977,6 +29049,14 @@
         "description": "AutoRecon.detectwaf",
         "isExtraImport": true,
         "detail": "AutoRecon.detectwaf",
+        "documentation": {}
+    },
+    {
+        "label": "ip_To_Domain",
+        "importPath": "AutoRecon.ip_to_domain",
+        "description": "AutoRecon.ip_to_domain",
+        "isExtraImport": true,
+        "detail": "AutoRecon.ip_to_domain",
         "documentation": {}
     },
     {
@@ -29114,6 +29194,60 @@
         "documentation": {}
     },
     {
+        "label": "main",
+        "kind": 2,
+        "importPath": "AutoRecon.module.ct-exposer",
+        "description": "AutoRecon.module.ct-exposer",
+        "peekOfCode": "def main(domain):\n    domainsNotFound = {}\n    response = collectResponse(domain)\n    domains = collectDomains(response)\n    if len(domains) == 0:\n        exit(1)\n    pool = Pool(15)\n    greenlets = [pool.spawn(resolve, domain) for domain in domains]\n    pool.join(timeout=1)\n    for greenlet in greenlets:",
+        "detail": "AutoRecon.module.ct-exposer",
+        "documentation": {}
+    },
+    {
+        "label": "resolve",
+        "kind": 2,
+        "importPath": "AutoRecon.module.ct-exposer",
+        "description": "AutoRecon.module.ct-exposer",
+        "peekOfCode": "def resolve(domain):\n    try:\n        return({domain: socket.gethostbyname(domain)})\n    except:\n        return({domain: \"none\"})\ndef collectResponse(domain):\n    url = 'https://crt.sh/?q=' + domain + '&output=json'\n    try:\n        response = requests.get(url, verify=False)\n    except:",
+        "detail": "AutoRecon.module.ct-exposer",
+        "documentation": {}
+    },
+    {
+        "label": "collectResponse",
+        "kind": 2,
+        "importPath": "AutoRecon.module.ct-exposer",
+        "description": "AutoRecon.module.ct-exposer",
+        "peekOfCode": "def collectResponse(domain):\n    url = 'https://crt.sh/?q=' + domain + '&output=json'\n    try:\n        response = requests.get(url, verify=False)\n    except:\n        exit(1)\n    try:\n        domains = response.json()\n        return domains\n    except:",
+        "detail": "AutoRecon.module.ct-exposer",
+        "documentation": {}
+    },
+    {
+        "label": "collectDomains",
+        "kind": 2,
+        "importPath": "AutoRecon.module.ct-exposer",
+        "description": "AutoRecon.module.ct-exposer",
+        "peekOfCode": "def collectDomains(response):\n    domains = set()\n    for domain in response:\n        domains.add(domain['common_name'])\n        if '\\n' in domain['name_value']:\n            domlist = domain['name_value'].split()\n            for dom in domlist:\n                domains.add(dom)\n        else:\n            domains.add(domain['name_value'])",
+        "detail": "AutoRecon.module.ct-exposer",
+        "documentation": {}
+    },
+    {
+        "label": "read_config",
+        "kind": 2,
+        "importPath": "AutoRecon.module.letwork",
+        "description": "AutoRecon.module.letwork",
+        "peekOfCode": "def read_config():\n    parser = argparse.ArgumentParser(description=\"Scan IP address to find associated domains\")\n    parser.add_argument(\"-i\", \"--ip\", help=\"IP address to scan\", required=True)\n    parser.add_argument(\"-ht\", \"--hackertarget\", help=\"API key for HackerTarget\")\n    parser.add_argument(\"-c\", \"--create-config\", help=\"Create a configuration file for storing API keys\", action=\"store_true\")\n    parser.add_argument(\"-o\", \"--output\", help=\"Save output to JSON file\")\n    args = parser.parse_args()\n    ip = args.ip\n    api_keys = {}\n    output_file = args.output",
+        "detail": "AutoRecon.module.letwork",
+        "documentation": {}
+    },
+    {
+        "label": "reverse_ip_lookup_hackertarget",
+        "kind": 2,
+        "importPath": "AutoRecon.module.letwork",
+        "description": "AutoRecon.module.letwork",
+        "peekOfCode": "def reverse_ip_lookup_hackertarget(ip, api_key):\n    url = f\"https://api.hackertarget.com/reverseiplookup/?q={ip}\"\n    if api_key.get(\"hackertarget\"):\n        url += f\"&apikey={api_key['hackertarget']}\"\n    response = requests.get(url)\n    return response.text.strip()\nif __name__ == \"__main__\":\n    ip, api_keys,output_file = read_config()\n    ht_output = reverse_ip_lookup_hackertarget(ip, api_keys)\n    if output_file:",
+        "detail": "AutoRecon.module.letwork",
+        "documentation": {}
+    },
+    {
         "label": "get_domain_name",
         "kind": 2,
         "importPath": "AutoRecon.module.san_subdomain_enum",
@@ -29181,7 +29315,7 @@
         "kind": 2,
         "importPath": "AutoRecon.detectwaf",
         "description": "AutoRecon.detectwaf",
-        "peekOfCode": "def wafwoof(target):\n    print(B, 'Detecting WAF...\\n')\n    with open(f'Result/{target}/{target}_live.txt', \"r\") as file1:\n        with open(f'Result/{target}/{target}_waf.json', \"a+\") as file2:\n            for line in file1:\n                line = line.strip()\n                temp_filename = f'Result/{target}/{str(uuid.uuid4())}.json'\n                with open(temp_filename, 'w') as temp_file:\n                    subprocess.run(['wafw00f', line, '-o', temp_filename],\n                                   stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)",
+        "peekOfCode": "def wafwoof(target):\n    print(B, 'Detecting WAF...')   \n    with open(f'Result/{target}/recon/{target}_live.txt', \"r\") as file1:\n        with open(f'Result/{target}/recon/{target}_waf.json', \"a\") as file2:\n            for line in file1:\n                line = line.strip()\n                temp_filename = f'Result/{target}/recon/{str(uuid.uuid4())}.json'\n                with open(temp_filename, 'w') as temp_file:\n                    subprocess.run(['wafw00f', line, '-o', temp_filename],stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)\n                with open(temp_filename, 'r') as temp_file:",
         "detail": "AutoRecon.detectwaf",
         "documentation": {}
     },
@@ -29190,7 +29324,7 @@
         "kind": 2,
         "importPath": "AutoRecon.detectwaf",
         "description": "AutoRecon.detectwaf",
-        "peekOfCode": "def waf_Recon(target):\n    wafwoof(target)",
+        "peekOfCode": "def waf_Recon(target,status_data):\n    status_data['waf_Recon']['wafwoof'] = \"0\"\n    with open(f\"Result/{target}/status_of_function.json\",\"w\") as f:\n        json.dump(status_data, f, indent=4)\n    wafwoof(target)\n    status_data['waf_Recon']['wafwoof'] = \"1\"\n    with open(f\"Result/{target}/status_of_function.json\",\"w\") as f:\n        json.dump(status_data, f, indent=4)\n    print(G, 'WAF Detection Completed')",
         "detail": "AutoRecon.detectwaf",
         "documentation": {}
     },
@@ -29199,7 +29333,7 @@
         "kind": 5,
         "importPath": "AutoRecon.detectwaf",
         "description": "AutoRecon.detectwaf",
-        "peekOfCode": "W = \"\\033[0m\"\nR = \"\\033[31m\"\nG = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef wafwoof(target):\n    print(B, 'Detecting WAF...\\n')\n    with open(f'Result/{target}/{target}_live.txt', \"r\") as file1:\n        with open(f'Result/{target}/{target}_waf.json', \"a+\") as file2:\n            for line in file1:",
+        "peekOfCode": "W = \"\\033[0m\"\nR = \"\\033[31m\"\nG = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef wafwoof(target):\n    print(B, 'Detecting WAF...')   \n    with open(f'Result/{target}/recon/{target}_live.txt', \"r\") as file1:\n        with open(f'Result/{target}/recon/{target}_waf.json', \"a\") as file2:\n            for line in file1:",
         "detail": "AutoRecon.detectwaf",
         "documentation": {}
     },
@@ -29208,7 +29342,7 @@
         "kind": 5,
         "importPath": "AutoRecon.detectwaf",
         "description": "AutoRecon.detectwaf",
-        "peekOfCode": "R = \"\\033[31m\"\nG = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef wafwoof(target):\n    print(B, 'Detecting WAF...\\n')\n    with open(f'Result/{target}/{target}_live.txt', \"r\") as file1:\n        with open(f'Result/{target}/{target}_waf.json', \"a+\") as file2:\n            for line in file1:\n                line = line.strip()",
+        "peekOfCode": "R = \"\\033[31m\"\nG = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef wafwoof(target):\n    print(B, 'Detecting WAF...')   \n    with open(f'Result/{target}/recon/{target}_live.txt', \"r\") as file1:\n        with open(f'Result/{target}/recon/{target}_waf.json', \"a\") as file2:\n            for line in file1:\n                line = line.strip()",
         "detail": "AutoRecon.detectwaf",
         "documentation": {}
     },
@@ -29217,7 +29351,7 @@
         "kind": 5,
         "importPath": "AutoRecon.detectwaf",
         "description": "AutoRecon.detectwaf",
-        "peekOfCode": "G = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef wafwoof(target):\n    print(B, 'Detecting WAF...\\n')\n    with open(f'Result/{target}/{target}_live.txt', \"r\") as file1:\n        with open(f'Result/{target}/{target}_waf.json', \"a+\") as file2:\n            for line in file1:\n                line = line.strip()\n                temp_filename = f'Result/{target}/{str(uuid.uuid4())}.json'",
+        "peekOfCode": "G = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef wafwoof(target):\n    print(B, 'Detecting WAF...')   \n    with open(f'Result/{target}/recon/{target}_live.txt', \"r\") as file1:\n        with open(f'Result/{target}/recon/{target}_waf.json', \"a\") as file2:\n            for line in file1:\n                line = line.strip()\n                temp_filename = f'Result/{target}/recon/{str(uuid.uuid4())}.json'",
         "detail": "AutoRecon.detectwaf",
         "documentation": {}
     },
@@ -29226,7 +29360,7 @@
         "kind": 5,
         "importPath": "AutoRecon.detectwaf",
         "description": "AutoRecon.detectwaf",
-        "peekOfCode": "O = \"\\033[33m\"\nB = \"\\033[34m\"\ndef wafwoof(target):\n    print(B, 'Detecting WAF...\\n')\n    with open(f'Result/{target}/{target}_live.txt', \"r\") as file1:\n        with open(f'Result/{target}/{target}_waf.json', \"a+\") as file2:\n            for line in file1:\n                line = line.strip()\n                temp_filename = f'Result/{target}/{str(uuid.uuid4())}.json'\n                with open(temp_filename, 'w') as temp_file:",
+        "peekOfCode": "O = \"\\033[33m\"\nB = \"\\033[34m\"\ndef wafwoof(target):\n    print(B, 'Detecting WAF...')   \n    with open(f'Result/{target}/recon/{target}_live.txt', \"r\") as file1:\n        with open(f'Result/{target}/recon/{target}_waf.json', \"a\") as file2:\n            for line in file1:\n                line = line.strip()\n                temp_filename = f'Result/{target}/recon/{str(uuid.uuid4())}.json'\n                with open(temp_filename, 'w') as temp_file:",
         "detail": "AutoRecon.detectwaf",
         "documentation": {}
     },
@@ -29235,7 +29369,7 @@
         "kind": 5,
         "importPath": "AutoRecon.detectwaf",
         "description": "AutoRecon.detectwaf",
-        "peekOfCode": "B = \"\\033[34m\"\ndef wafwoof(target):\n    print(B, 'Detecting WAF...\\n')\n    with open(f'Result/{target}/{target}_live.txt', \"r\") as file1:\n        with open(f'Result/{target}/{target}_waf.json', \"a+\") as file2:\n            for line in file1:\n                line = line.strip()\n                temp_filename = f'Result/{target}/{str(uuid.uuid4())}.json'\n                with open(temp_filename, 'w') as temp_file:\n                    subprocess.run(['wafw00f', line, '-o', temp_filename],",
+        "peekOfCode": "B = \"\\033[34m\"\ndef wafwoof(target):\n    print(B, 'Detecting WAF...')   \n    with open(f'Result/{target}/recon/{target}_live.txt', \"r\") as file1:\n        with open(f'Result/{target}/recon/{target}_waf.json', \"a\") as file2:\n            for line in file1:\n                line = line.strip()\n                temp_filename = f'Result/{target}/recon/{str(uuid.uuid4())}.json'\n                with open(temp_filename, 'w') as temp_file:\n                    subprocess.run(['wafw00f', line, '-o', temp_filename],stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)",
         "detail": "AutoRecon.detectwaf",
         "documentation": {}
     },
@@ -29244,7 +29378,7 @@
         "kind": 2,
         "importPath": "AutoRecon.find_sensitive",
         "description": "AutoRecon.find_sensitive",
-        "peekOfCode": "def find_sensitive(target):\n    with open(f'Result/{target}/temp.txt', 'w') as f:\n        with open(f'Result/{target}/{target}_url/js_urls.txt',\"r\") as file1:\n            list_urls = file1.readlines()\n            for url in list_urls:\n                response = requests.get(url)\n                contents = response.text\n                for key, values in patterns.items():\n                    matches = re.findall(values, contents)\n                    if(matches):",
+        "peekOfCode": "def find_sensitive(target,status_data):\n    print(\" Start find sensitive...\")\n    status_data['find_sensitive']['find_sensitive'] = \"0\"\n    with open(f\"Result/{target}/status_of_function.json\",\"w\") as f:\n        json.dump(status_data, f, indent=4)     \n    with open(f'Result/{target}/recon/temp.txt', 'w') as f:\n        with open(f'Result/{target}/recon/{target}_url/js_crawl_urls.txt',\"r\") as file1:\n            list_urls = file1.readlines()\n            for url in list_urls:\n                response = requests.get(url,timeout=4,verify=False)",
         "detail": "AutoRecon.find_sensitive",
         "documentation": {}
     },
@@ -29262,7 +29396,7 @@
         "kind": 2,
         "importPath": "AutoRecon.ip_recon",
         "description": "AutoRecon.ip_recon",
-        "peekOfCode": "def get_ip_nmap(target):\n    print(B,\"Generating IP ports service...\",\"\\r\")\n    with open(f'Result/{target}/final_status_{target}.json',\"r\") as file1:\n            datas = json.load(file1)\n    IPs = []\n    for data in datas:\n        for key in data:\n            if data[key]['host'] not in IPs:            # unique IP\n                IPs.append(data[key]['host'])\n    threads = []",
+        "peekOfCode": "def get_ip_nmap(target,status_data):\n    status_data[\"ip_Recon\"][\"get_ip_nmap\"]=\"0\"\n    with open(f\"Result/{target}/status_of_function.json\",\"w\") as f:\n        json.dump(status_data, f, indent=4)\n    print(B,\"Generating IP ports service...\")\n    with open(f'Result/{target}/recon/final_status_{target}.json',\"r\") as file1:\n            datas = json.load(file1)\n    IPs = []\n    for data in datas:\n        for key in data:",
         "detail": "AutoRecon.ip_recon",
         "documentation": {}
     },
@@ -29271,7 +29405,7 @@
         "kind": 2,
         "importPath": "AutoRecon.ip_recon",
         "description": "AutoRecon.ip_recon",
-        "peekOfCode": "def scan_input_IP(target):\n    print(B,\"Generating IP ports service...\",\"\\r\")\n    os.system(f\"nmap -sT -sV {target} >> Result/{target}/{target}_ip/nmap_{target}.txt\")\n    pattern = r'(\\d+)\\/(\\w+)\\s+(\\w+)\\s+([\\w\\.\\-\\s]+?)\\s*(?:\\n|$)'\n    regex = re.compile(pattern)\n    data = []\n    list_WebIP = []\n    with open(f\"Result/{target}/{target}_ip/nmap_{target}.txt\",\"r\") as file3:\n        text_data = file3.read()\n    matches = regex.findall(text_data)",
+        "peekOfCode": "def scan_input_IP(target,status_data):\n    status_data[\"ip_Recon\"][\"scan_input_IP\"] = \"0\"\n    with open(f\"Result/{target}/status_of_function.json\",\"w\") as f:\n        json.dump(status_data, f, indent=4)\n    print(B,\"Generating IP ports service...\")\n    os.system(f\"nmap -sT -sV {target} >> Result/{target}/recon/{target}_ip/nmap_{target}.txt\")\n    pattern = r'(\\d+)\\/(\\w+)\\s+(\\w+)\\s+([\\w\\.\\-\\s]+?)\\s*(?:\\n|$)'\n    regex = re.compile(pattern)\n    data = []\n    list_WebIP = []",
         "detail": "AutoRecon.ip_recon",
         "documentation": {}
     },
@@ -29280,7 +29414,7 @@
         "kind": 2,
         "importPath": "AutoRecon.ip_recon",
         "description": "AutoRecon.ip_recon",
-        "peekOfCode": "def ip_Recon(target):\n    try:\n        os.makedirs(f'Result/{target}/{target}_ip', exist_ok=True)\n    except FileExistsError:\n        pass\n    IP_regex = re.compile(r\"^(?:[0-9]{1,3}\\.){3}[0-9]{1,3}$\")\n    if not IP_regex.match(target):\n        get_ip_nmap(target)\n    else:\n        scan_input_IP(target)",
+        "peekOfCode": "def ip_Recon(target,status_data):\n    if not os.path.exists(f\"Result/{target}/recon/{target}_ip\"):\n        os.makedirs(f\"Result/{target}/recon/{target}_ip\")\n    IP_regex = re.compile(r\"^(?:[0-9]{1,3}\\.){3}[0-9]{1,3}$\")\n    if not IP_regex.match(target):\n        get_ip_nmap(target,status_data)\n    else:\n        scan_input_IP(target,status_data)",
         "detail": "AutoRecon.ip_recon",
         "documentation": {}
     },
@@ -29289,7 +29423,7 @@
         "kind": 5,
         "importPath": "AutoRecon.ip_recon",
         "description": "AutoRecon.ip_recon",
-        "peekOfCode": "W = \"\\033[0m\"\nR = \"\\033[31m\"\nG = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef get_ip_nmap(target):\n    print(B,\"Generating IP ports service...\",\"\\r\")\n    with open(f'Result/{target}/final_status_{target}.json',\"r\") as file1:\n            datas = json.load(file1)\n    IPs = []",
+        "peekOfCode": "W = \"\\033[0m\"\nR = \"\\033[31m\"\nG = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef get_ip_nmap(target,status_data):\n    status_data[\"ip_Recon\"][\"get_ip_nmap\"]=\"0\"\n    with open(f\"Result/{target}/status_of_function.json\",\"w\") as f:\n        json.dump(status_data, f, indent=4)\n    print(B,\"Generating IP ports service...\")",
         "detail": "AutoRecon.ip_recon",
         "documentation": {}
     },
@@ -29298,7 +29432,7 @@
         "kind": 5,
         "importPath": "AutoRecon.ip_recon",
         "description": "AutoRecon.ip_recon",
-        "peekOfCode": "R = \"\\033[31m\"\nG = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef get_ip_nmap(target):\n    print(B,\"Generating IP ports service...\",\"\\r\")\n    with open(f'Result/{target}/final_status_{target}.json',\"r\") as file1:\n            datas = json.load(file1)\n    IPs = []\n    for data in datas:",
+        "peekOfCode": "R = \"\\033[31m\"\nG = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef get_ip_nmap(target,status_data):\n    status_data[\"ip_Recon\"][\"get_ip_nmap\"]=\"0\"\n    with open(f\"Result/{target}/status_of_function.json\",\"w\") as f:\n        json.dump(status_data, f, indent=4)\n    print(B,\"Generating IP ports service...\")\n    with open(f'Result/{target}/recon/final_status_{target}.json',\"r\") as file1:",
         "detail": "AutoRecon.ip_recon",
         "documentation": {}
     },
@@ -29307,7 +29441,7 @@
         "kind": 5,
         "importPath": "AutoRecon.ip_recon",
         "description": "AutoRecon.ip_recon",
-        "peekOfCode": "G = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef get_ip_nmap(target):\n    print(B,\"Generating IP ports service...\",\"\\r\")\n    with open(f'Result/{target}/final_status_{target}.json',\"r\") as file1:\n            datas = json.load(file1)\n    IPs = []\n    for data in datas:\n        for key in data:",
+        "peekOfCode": "G = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef get_ip_nmap(target,status_data):\n    status_data[\"ip_Recon\"][\"get_ip_nmap\"]=\"0\"\n    with open(f\"Result/{target}/status_of_function.json\",\"w\") as f:\n        json.dump(status_data, f, indent=4)\n    print(B,\"Generating IP ports service...\")\n    with open(f'Result/{target}/recon/final_status_{target}.json',\"r\") as file1:\n            datas = json.load(file1)",
         "detail": "AutoRecon.ip_recon",
         "documentation": {}
     },
@@ -29316,7 +29450,7 @@
         "kind": 5,
         "importPath": "AutoRecon.ip_recon",
         "description": "AutoRecon.ip_recon",
-        "peekOfCode": "O = \"\\033[33m\"\nB = \"\\033[34m\"\ndef get_ip_nmap(target):\n    print(B,\"Generating IP ports service...\",\"\\r\")\n    with open(f'Result/{target}/final_status_{target}.json',\"r\") as file1:\n            datas = json.load(file1)\n    IPs = []\n    for data in datas:\n        for key in data:\n            if data[key]['host'] not in IPs:            # unique IP",
+        "peekOfCode": "O = \"\\033[33m\"\nB = \"\\033[34m\"\ndef get_ip_nmap(target,status_data):\n    status_data[\"ip_Recon\"][\"get_ip_nmap\"]=\"0\"\n    with open(f\"Result/{target}/status_of_function.json\",\"w\") as f:\n        json.dump(status_data, f, indent=4)\n    print(B,\"Generating IP ports service...\")\n    with open(f'Result/{target}/recon/final_status_{target}.json',\"r\") as file1:\n            datas = json.load(file1)\n    IPs = []",
         "detail": "AutoRecon.ip_recon",
         "documentation": {}
     },
@@ -29325,8 +29459,17 @@
         "kind": 5,
         "importPath": "AutoRecon.ip_recon",
         "description": "AutoRecon.ip_recon",
-        "peekOfCode": "B = \"\\033[34m\"\ndef get_ip_nmap(target):\n    print(B,\"Generating IP ports service...\",\"\\r\")\n    with open(f'Result/{target}/final_status_{target}.json',\"r\") as file1:\n            datas = json.load(file1)\n    IPs = []\n    for data in datas:\n        for key in data:\n            if data[key]['host'] not in IPs:            # unique IP\n                IPs.append(data[key]['host'])",
+        "peekOfCode": "B = \"\\033[34m\"\ndef get_ip_nmap(target,status_data):\n    status_data[\"ip_Recon\"][\"get_ip_nmap\"]=\"0\"\n    with open(f\"Result/{target}/status_of_function.json\",\"w\") as f:\n        json.dump(status_data, f, indent=4)\n    print(B,\"Generating IP ports service...\")\n    with open(f'Result/{target}/recon/final_status_{target}.json',\"r\") as file1:\n            datas = json.load(file1)\n    IPs = []\n    for data in datas:",
         "detail": "AutoRecon.ip_recon",
+        "documentation": {}
+    },
+    {
+        "label": "ip_To_Domain",
+        "kind": 2,
+        "importPath": "AutoRecon.ip_to_domain",
+        "description": "AutoRecon.ip_to_domain",
+        "peekOfCode": "def ip_To_Domain(target,status_data):\n    print(colored(\"Reversing IP to domain...\",\"blue\"))\n    status_data[\"ip_Recon\"][\"ip_to_domain\"] = \"0\"\n    with open(f\"Result/{target}/status_of_function.json\",\"w\") as f:\n        json.dump(status_data, f, indent=4)\n    subprocess.call(f\"$(which python3) AutoRecon/module/letwork.py -i {target} -o Result/{target}/recon/ip_to_domain.json\", shell=True)\n    status_data[\"ip_Recon\"][\"ip_to_domain\"] = \"1\"\n    with open(f\"Result/{target}/status_of_function.json\",\"w\") as f:\n        json.dump(status_data, f, indent=4)\n    print(colored(\" Reversing IP to domain done \",\"green\"))",
+        "detail": "AutoRecon.ip_to_domain",
         "documentation": {}
     },
     {
@@ -29334,7 +29477,7 @@
         "kind": 2,
         "importPath": "AutoRecon.subdomain_recon",
         "description": "AutoRecon.subdomain_recon",
-        "peekOfCode": "def call_subfinder(target):\n    print(B,'Enumerating subdomain...',\"\\r\")\n    #Passive\n    os.system(f\"~/go/bin/subfinder -d {target} -silent -all -o Result/{target}/subdomain_{target}_subfinder.txt 2>&1 >/dev/null\")\n    proxies= {\n        'http': 'http://209.9.37.60:8087'\n    }\n    url = f\"https://api.securitytrails.com/v1/domain/{target}/subdomains\"\n    headers = {\n        \"APIKEY\": 'Tkoxcj2BbGXLwCZyFjpYyOJGaJd9XokP'",
+        "peekOfCode": "def call_subfinder(target,dataf):\n    print(B,'Enumerating subdomain...',\"\\r\")\n    dataf[\"Sub_Recon\"][\"call_subfinder\"] = \"0\"\n    with open(f\"Result/{target}/status_of_function.json\",\"w\") as f:\n        json.dump(dataf, f, indent=4)\n    #Passive\n    os.system(f\"~/go/bin/subfinder -d {target} -silent -all -o Result/{target}/recon/subdomain_{target}_subfinder.txt 2>&1 >/dev/null\")\n    proxies= {\n        'http': 'http://209.9.37.60:8087'\n    }",
         "detail": "AutoRecon.subdomain_recon",
         "documentation": {}
     },
@@ -29343,7 +29486,7 @@
         "kind": 2,
         "importPath": "AutoRecon.subdomain_recon",
         "description": "AutoRecon.subdomain_recon",
-        "peekOfCode": "def get_from_cert(target):\n    command_1 = [f\"python3 AutoRecon/module/crtsh_enum_psql.py {target} >> Result/{target}/subdomain_{target}_cert.txt\"]\n    subprocess.run(command_1, stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)\n    command_2 = [f\"python3 AutoRecon/module/crtsh_enum_web.py {target} >> Result/{target}/subdomain_{target}_cert.txt\"]\n    subprocess.run(command_2, stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)\n    command_3 = [f\"python3 AutoRecon/module/san_subdomain_enum.py {target} >> Result/{target}/subdomain_{target}_cert.txt\"]\n    subprocess.run(command_3, stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)\n    command_4 = [f\"sh AutoRecon/module/crtsh_enum_psql.sh {target} >> Result/{target}/subdomain_{target}_cert.txt\"]\n    subprocess.run(command_4, stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)\ndef sanitize_input(target):",
+        "peekOfCode": "def get_from_cert(target,dataf):\n    dataf[\"Sub_Recon\"][\"get_from_cert\"] = \"0\"\n    with open(f\"Result/{target}/status_of_function.json\",\"w\") as f:\n        json.dump(dataf, f, indent=4)\n    command_1 = [f\"python3 AutoRecon/module/crtsh_enum_psql.py {target} >> Result/{target}/recon/subdomain_{target}_cert.txt\"]\n    subprocess.run(command_1, stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)\n    command_2 = [f\"python3 AutoRecon/module/crtsh_enum_web.py {target} >> Result/{target}/recon/subdomain_{target}_cert.txt\"]\n    subprocess.run(command_2, stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)\n    command_3 = [f\"python3 AutoRecon/module/san_subdomain_enum.py {target} >> Result/{target}/recon/subdomain_{target}_cert.txt\"]\n    subprocess.run(command_3, stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)",
         "detail": "AutoRecon.subdomain_recon",
         "documentation": {}
     },
@@ -29352,7 +29495,7 @@
         "kind": 2,
         "importPath": "AutoRecon.subdomain_recon",
         "description": "AutoRecon.subdomain_recon",
-        "peekOfCode": "def sanitize_input(target):\n    os.system(f\"cat Result/{target}/subdomain_{target}_* >> Result/{target}/subdomain_{target}.txt; rm Result/{target}/subdomain_{target}_*.txt \")\n    os.system(f\"awk '!seen[$0]++' Result/{target}/subdomain_{target}.txt > Result/{target}/final_subdomain_{target}.txt; rm Result/{target}/subdomain_{target}.txt \")\n    command_probe = [f\"cat Result/{target}/final_subdomain_{target}.txt | ~/go/bin/httprobe >>  Result/{target}/{target}_live.txt\"]\n    subprocess.run(command_probe, stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)\n    command_httpx = [f\"cat Result/{target}/{target}_live.txt | ~/go/bin/httpx -sc -td -ip -server -nc -json -o Result/{target}/final_status_{target}.json\"]\n    subprocess.run(command_httpx, stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)\n    with open(f'Result/{target}/final_status_{target}.json', 'r') as f:\n            contents = f.readlines()\n    with open(f'Result/{target}/{target}_RESULT.json', 'w') as clgt:",
+        "peekOfCode": "def sanitize_input(target):  \n    os.system(f\"cat Result/{target}/recon/subdomain_{target}_* >> Result/{target}/recon/subdomain_{target}.txt; rm Result/{target}/recon/subdomain_{target}_*.txt \")\n    os.system(f\"awk '!seen[$0]++' Result/{target}/recon/subdomain_{target}.txt > Result/{target}/recon/final_subdomain_{target}.txt; rm Result/{target}/recon/subdomain_{target}.txt \")\n    command_probe = [f\"cat Result/{target}/recon/final_subdomain_{target}.txt | ~/go/bin/httprobe >>  Result/{target}/recon/{target}_live.txt\"]\n    subprocess.run(command_probe, stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)\n    command_httpx = [f\"cat Result/{target}/recon/{target}_live.txt | ~/go/bin/httpx -sc -td -ip -server -nc -json -o Result/{target}/recon/final_status_{target}.json\"]\n    subprocess.run(command_httpx, stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)\n    with open(f'Result/{target}/recon/final_status_{target}.json', 'r') as f:\n            contents = f.readlines()\n    with open(f'Result/{target}/recon/{target}_RESULT.json', 'w') as clgt:",
         "detail": "AutoRecon.subdomain_recon",
         "documentation": {}
     },
@@ -29361,7 +29504,7 @@
         "kind": 2,
         "importPath": "AutoRecon.subdomain_recon",
         "description": "AutoRecon.subdomain_recon",
-        "peekOfCode": "def sub_Recon(target):\n    call_subfinder(target)\n    get_from_cert(target)\n    sanitize_input(target)\n    print(G,\"Enumerating subdomain done !\")",
+        "peekOfCode": "def sub_Recon(target):\n    with open(f'Result/{target}/status_of_function.json', 'r') as f:\n        dataf=json.load(f)\n        call_subfinder(target,dataf)\n        get_from_cert(target,dataf)\n    dataf[\"Sub_Recon\"][\"sanitize_input\"] = \"0\"\n    with open(f\"Result/{target}/status_of_function.json\",\"w\") as f:\n        json.dump(dataf, f, indent=4)\n    sanitize_input(target)\n    dataf[\"Sub_Recon\"][\"sanitize_input\"] = \"1\"",
         "detail": "AutoRecon.subdomain_recon",
         "documentation": {}
     },
@@ -29370,7 +29513,7 @@
         "kind": 5,
         "importPath": "AutoRecon.subdomain_recon",
         "description": "AutoRecon.subdomain_recon",
-        "peekOfCode": "W = \"\\033[0m\"\nR = \"\\033[31m\"\nG = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef call_subfinder(target):\n    print(B,'Enumerating subdomain...',\"\\r\")\n    #Passive\n    os.system(f\"~/go/bin/subfinder -d {target} -silent -all -o Result/{target}/subdomain_{target}_subfinder.txt 2>&1 >/dev/null\")\n    proxies= {",
+        "peekOfCode": "W = \"\\033[0m\"\nR = \"\\033[31m\"\nG = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef call_subfinder(target,dataf):\n    print(B,'Enumerating subdomain...',\"\\r\")\n    dataf[\"Sub_Recon\"][\"call_subfinder\"] = \"0\"\n    with open(f\"Result/{target}/status_of_function.json\",\"w\") as f:\n        json.dump(dataf, f, indent=4)",
         "detail": "AutoRecon.subdomain_recon",
         "documentation": {}
     },
@@ -29379,7 +29522,7 @@
         "kind": 5,
         "importPath": "AutoRecon.subdomain_recon",
         "description": "AutoRecon.subdomain_recon",
-        "peekOfCode": "R = \"\\033[31m\"\nG = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef call_subfinder(target):\n    print(B,'Enumerating subdomain...',\"\\r\")\n    #Passive\n    os.system(f\"~/go/bin/subfinder -d {target} -silent -all -o Result/{target}/subdomain_{target}_subfinder.txt 2>&1 >/dev/null\")\n    proxies= {\n        'http': 'http://209.9.37.60:8087'",
+        "peekOfCode": "R = \"\\033[31m\"\nG = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef call_subfinder(target,dataf):\n    print(B,'Enumerating subdomain...',\"\\r\")\n    dataf[\"Sub_Recon\"][\"call_subfinder\"] = \"0\"\n    with open(f\"Result/{target}/status_of_function.json\",\"w\") as f:\n        json.dump(dataf, f, indent=4)\n    #Passive",
         "detail": "AutoRecon.subdomain_recon",
         "documentation": {}
     },
@@ -29388,7 +29531,7 @@
         "kind": 5,
         "importPath": "AutoRecon.subdomain_recon",
         "description": "AutoRecon.subdomain_recon",
-        "peekOfCode": "G = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef call_subfinder(target):\n    print(B,'Enumerating subdomain...',\"\\r\")\n    #Passive\n    os.system(f\"~/go/bin/subfinder -d {target} -silent -all -o Result/{target}/subdomain_{target}_subfinder.txt 2>&1 >/dev/null\")\n    proxies= {\n        'http': 'http://209.9.37.60:8087'\n    }",
+        "peekOfCode": "G = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef call_subfinder(target,dataf):\n    print(B,'Enumerating subdomain...',\"\\r\")\n    dataf[\"Sub_Recon\"][\"call_subfinder\"] = \"0\"\n    with open(f\"Result/{target}/status_of_function.json\",\"w\") as f:\n        json.dump(dataf, f, indent=4)\n    #Passive\n    os.system(f\"~/go/bin/subfinder -d {target} -silent -all -o Result/{target}/recon/subdomain_{target}_subfinder.txt 2>&1 >/dev/null\")",
         "detail": "AutoRecon.subdomain_recon",
         "documentation": {}
     },
@@ -29397,7 +29540,7 @@
         "kind": 5,
         "importPath": "AutoRecon.subdomain_recon",
         "description": "AutoRecon.subdomain_recon",
-        "peekOfCode": "O = \"\\033[33m\"\nB = \"\\033[34m\"\ndef call_subfinder(target):\n    print(B,'Enumerating subdomain...',\"\\r\")\n    #Passive\n    os.system(f\"~/go/bin/subfinder -d {target} -silent -all -o Result/{target}/subdomain_{target}_subfinder.txt 2>&1 >/dev/null\")\n    proxies= {\n        'http': 'http://209.9.37.60:8087'\n    }\n    url = f\"https://api.securitytrails.com/v1/domain/{target}/subdomains\"",
+        "peekOfCode": "O = \"\\033[33m\"\nB = \"\\033[34m\"\ndef call_subfinder(target,dataf):\n    print(B,'Enumerating subdomain...',\"\\r\")\n    dataf[\"Sub_Recon\"][\"call_subfinder\"] = \"0\"\n    with open(f\"Result/{target}/status_of_function.json\",\"w\") as f:\n        json.dump(dataf, f, indent=4)\n    #Passive\n    os.system(f\"~/go/bin/subfinder -d {target} -silent -all -o Result/{target}/recon/subdomain_{target}_subfinder.txt 2>&1 >/dev/null\")\n    proxies= {",
         "detail": "AutoRecon.subdomain_recon",
         "documentation": {}
     },
@@ -29406,7 +29549,7 @@
         "kind": 5,
         "importPath": "AutoRecon.subdomain_recon",
         "description": "AutoRecon.subdomain_recon",
-        "peekOfCode": "B = \"\\033[34m\"\ndef call_subfinder(target):\n    print(B,'Enumerating subdomain...',\"\\r\")\n    #Passive\n    os.system(f\"~/go/bin/subfinder -d {target} -silent -all -o Result/{target}/subdomain_{target}_subfinder.txt 2>&1 >/dev/null\")\n    proxies= {\n        'http': 'http://209.9.37.60:8087'\n    }\n    url = f\"https://api.securitytrails.com/v1/domain/{target}/subdomains\"\n    headers = {",
+        "peekOfCode": "B = \"\\033[34m\"\ndef call_subfinder(target,dataf):\n    print(B,'Enumerating subdomain...',\"\\r\")\n    dataf[\"Sub_Recon\"][\"call_subfinder\"] = \"0\"\n    with open(f\"Result/{target}/status_of_function.json\",\"w\") as f:\n        json.dump(dataf, f, indent=4)\n    #Passive\n    os.system(f\"~/go/bin/subfinder -d {target} -silent -all -o Result/{target}/recon/subdomain_{target}_subfinder.txt 2>&1 >/dev/null\")\n    proxies= {\n        'http': 'http://209.9.37.60:8087'",
         "detail": "AutoRecon.subdomain_recon",
         "documentation": {}
     },
@@ -29415,7 +29558,7 @@
         "kind": 2,
         "importPath": "AutoRecon.subfolder_recon",
         "description": "AutoRecon.subfolder_recon",
-        "peekOfCode": "def js_Recon(target):\n    if not os.path.exists(f\"Result/{target}/{target}_url\"):\n        os.system(f\"mkdir Result/{target}/{target}_url | chmod 777 Result/{target}/{target}_url\")\n    print(B,'Directory enumerating...')\n    crawled_file = f\"Result/{target}/{target}_url/crawl_urls.txt\"\n    js_crawled_file = f\"Result/{target}/{target}_url/js_crawl_urls.txt\"\n    IP_regex = re.compile(r\"^(?:[0-9]{1,3}\\.){3}[0-9]{1,3}$\")\n    if not IP_regex.match(target):\n        all_subdomains = f\"Result/{target}/final_subdomain_{target}.txt\"\n        os.system(f\"cat {all_subdomains} | ~/go/bin/gauplus -random-agent | sort -u | uniq >> {crawled_file}\")",
+        "peekOfCode": "def js_Recon(target,status_data):\n    print(B,'Directory enumerating...')\n    status_data['js_Recon']['js_Recon'] = \"0\"\n    with open(f\"Result/{target}/status_of_function.json\",\"w\") as f:\n        json.dump(status_data,f,indent=4)\n    if not os.path.exists(f\"Result/{target}/recon/{target}_url\"):\n        os.makedirs(f\"Result/{target}/recon/{target}_url\")\n    crawled_file = f\"Result/{target}/recon/{target}_url/crawl_urls.txt\"\n    js_crawled_file = f\"Result/{target}/recon/{target}_url/js_crawl_urls.txt\"\n    IP_regex = re.compile(r\"^(?:[0-9]{1,3}\\.){3}[0-9]{1,3}$\")",
         "detail": "AutoRecon.subfolder_recon",
         "documentation": {}
     },
@@ -29424,7 +29567,7 @@
         "kind": 5,
         "importPath": "AutoRecon.subfolder_recon",
         "description": "AutoRecon.subfolder_recon",
-        "peekOfCode": "W = \"\\033[0m\"\nR = \"\\033[31m\"\nG = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef js_Recon(target):\n    if not os.path.exists(f\"Result/{target}/{target}_url\"):\n        os.system(f\"mkdir Result/{target}/{target}_url | chmod 777 Result/{target}/{target}_url\")\n    print(B,'Directory enumerating...')\n    crawled_file = f\"Result/{target}/{target}_url/crawl_urls.txt\"",
+        "peekOfCode": "W = \"\\033[0m\"\nR = \"\\033[31m\"\nG = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef js_Recon(target,status_data):\n    print(B,'Directory enumerating...')\n    status_data['js_Recon']['js_Recon'] = \"0\"\n    with open(f\"Result/{target}/status_of_function.json\",\"w\") as f:\n        json.dump(status_data,f,indent=4)",
         "detail": "AutoRecon.subfolder_recon",
         "documentation": {}
     },
@@ -29433,7 +29576,7 @@
         "kind": 5,
         "importPath": "AutoRecon.subfolder_recon",
         "description": "AutoRecon.subfolder_recon",
-        "peekOfCode": "R = \"\\033[31m\"\nG = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef js_Recon(target):\n    if not os.path.exists(f\"Result/{target}/{target}_url\"):\n        os.system(f\"mkdir Result/{target}/{target}_url | chmod 777 Result/{target}/{target}_url\")\n    print(B,'Directory enumerating...')\n    crawled_file = f\"Result/{target}/{target}_url/crawl_urls.txt\"\n    js_crawled_file = f\"Result/{target}/{target}_url/js_crawl_urls.txt\"",
+        "peekOfCode": "R = \"\\033[31m\"\nG = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef js_Recon(target,status_data):\n    print(B,'Directory enumerating...')\n    status_data['js_Recon']['js_Recon'] = \"0\"\n    with open(f\"Result/{target}/status_of_function.json\",\"w\") as f:\n        json.dump(status_data,f,indent=4)\n    if not os.path.exists(f\"Result/{target}/recon/{target}_url\"):",
         "detail": "AutoRecon.subfolder_recon",
         "documentation": {}
     },
@@ -29442,7 +29585,7 @@
         "kind": 5,
         "importPath": "AutoRecon.subfolder_recon",
         "description": "AutoRecon.subfolder_recon",
-        "peekOfCode": "G = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef js_Recon(target):\n    if not os.path.exists(f\"Result/{target}/{target}_url\"):\n        os.system(f\"mkdir Result/{target}/{target}_url | chmod 777 Result/{target}/{target}_url\")\n    print(B,'Directory enumerating...')\n    crawled_file = f\"Result/{target}/{target}_url/crawl_urls.txt\"\n    js_crawled_file = f\"Result/{target}/{target}_url/js_crawl_urls.txt\"\n    IP_regex = re.compile(r\"^(?:[0-9]{1,3}\\.){3}[0-9]{1,3}$\")",
+        "peekOfCode": "G = \"\\033[32m\"\nO = \"\\033[33m\"\nB = \"\\033[34m\"\ndef js_Recon(target,status_data):\n    print(B,'Directory enumerating...')\n    status_data['js_Recon']['js_Recon'] = \"0\"\n    with open(f\"Result/{target}/status_of_function.json\",\"w\") as f:\n        json.dump(status_data,f,indent=4)\n    if not os.path.exists(f\"Result/{target}/recon/{target}_url\"):\n        os.makedirs(f\"Result/{target}/recon/{target}_url\")",
         "detail": "AutoRecon.subfolder_recon",
         "documentation": {}
     },
@@ -29451,7 +29594,7 @@
         "kind": 5,
         "importPath": "AutoRecon.subfolder_recon",
         "description": "AutoRecon.subfolder_recon",
-        "peekOfCode": "O = \"\\033[33m\"\nB = \"\\033[34m\"\ndef js_Recon(target):\n    if not os.path.exists(f\"Result/{target}/{target}_url\"):\n        os.system(f\"mkdir Result/{target}/{target}_url | chmod 777 Result/{target}/{target}_url\")\n    print(B,'Directory enumerating...')\n    crawled_file = f\"Result/{target}/{target}_url/crawl_urls.txt\"\n    js_crawled_file = f\"Result/{target}/{target}_url/js_crawl_urls.txt\"\n    IP_regex = re.compile(r\"^(?:[0-9]{1,3}\\.){3}[0-9]{1,3}$\")\n    if not IP_regex.match(target):",
+        "peekOfCode": "O = \"\\033[33m\"\nB = \"\\033[34m\"\ndef js_Recon(target,status_data):\n    print(B,'Directory enumerating...')\n    status_data['js_Recon']['js_Recon'] = \"0\"\n    with open(f\"Result/{target}/status_of_function.json\",\"w\") as f:\n        json.dump(status_data,f,indent=4)\n    if not os.path.exists(f\"Result/{target}/recon/{target}_url\"):\n        os.makedirs(f\"Result/{target}/recon/{target}_url\")\n    crawled_file = f\"Result/{target}/recon/{target}_url/crawl_urls.txt\"",
         "detail": "AutoRecon.subfolder_recon",
         "documentation": {}
     },
@@ -29460,7 +29603,7 @@
         "kind": 5,
         "importPath": "AutoRecon.subfolder_recon",
         "description": "AutoRecon.subfolder_recon",
-        "peekOfCode": "B = \"\\033[34m\"\ndef js_Recon(target):\n    if not os.path.exists(f\"Result/{target}/{target}_url\"):\n        os.system(f\"mkdir Result/{target}/{target}_url | chmod 777 Result/{target}/{target}_url\")\n    print(B,'Directory enumerating...')\n    crawled_file = f\"Result/{target}/{target}_url/crawl_urls.txt\"\n    js_crawled_file = f\"Result/{target}/{target}_url/js_crawl_urls.txt\"\n    IP_regex = re.compile(r\"^(?:[0-9]{1,3}\\.){3}[0-9]{1,3}$\")\n    if not IP_regex.match(target):\n        all_subdomains = f\"Result/{target}/final_subdomain_{target}.txt\"",
+        "peekOfCode": "B = \"\\033[34m\"\ndef js_Recon(target,status_data):\n    print(B,'Directory enumerating...')\n    status_data['js_Recon']['js_Recon'] = \"0\"\n    with open(f\"Result/{target}/status_of_function.json\",\"w\") as f:\n        json.dump(status_data,f,indent=4)\n    if not os.path.exists(f\"Result/{target}/recon/{target}_url\"):\n        os.makedirs(f\"Result/{target}/recon/{target}_url\")\n    crawled_file = f\"Result/{target}/recon/{target}_url/crawl_urls.txt\"\n    js_crawled_file = f\"Result/{target}/recon/{target}_url/js_crawl_urls.txt\"",
         "detail": "AutoRecon.subfolder_recon",
         "documentation": {}
     },
@@ -48121,7 +48264,7 @@
         "kind": 5,
         "importPath": "VulnScan.modules.xss-strike.core.log",
         "description": "VulnScan.modules.xss-strike.core.log",
-        "peekOfCode": "__all__ = [\"setup_logger\", \"console_log_level\", \"file_log_level\", \"log_file\"]\nconsole_log_level = \"INFO\"\nfile_log_level = None\nlog_file = \"VulnScan/results/xss-test/xss.log\"\n\"\"\"\nDefault Logging Levels\nCRITICAL = 50\nERROR = 40\nWARNING = 30\nINFO = 20",
+        "peekOfCode": "__all__ = [\"setup_logger\", \"console_log_level\", \"file_log_level\", \"log_file\"]\nconsole_log_level = \"INFO\"\nfile_log_level = None\nlog_file = None #\"Result/\"+target+\"/vuln/xss-test/xss.log\"\n\"\"\"\nDefault Logging Levels\nCRITICAL = 50\nERROR = 40\nWARNING = 30\nINFO = 20",
         "detail": "VulnScan.modules.xss-strike.core.log",
         "documentation": {}
     },
@@ -48130,7 +48273,7 @@
         "kind": 5,
         "importPath": "VulnScan.modules.xss-strike.core.log",
         "description": "VulnScan.modules.xss-strike.core.log",
-        "peekOfCode": "console_log_level = \"INFO\"\nfile_log_level = None\nlog_file = \"VulnScan/results/xss-test/xss.log\"\n\"\"\"\nDefault Logging Levels\nCRITICAL = 50\nERROR = 40\nWARNING = 30\nINFO = 20\nDEBUG = 10",
+        "peekOfCode": "console_log_level = \"INFO\"\nfile_log_level = None\nlog_file = None #\"Result/\"+target+\"/vuln/xss-test/xss.log\"\n\"\"\"\nDefault Logging Levels\nCRITICAL = 50\nERROR = 40\nWARNING = 30\nINFO = 20\nDEBUG = 10",
         "detail": "VulnScan.modules.xss-strike.core.log",
         "documentation": {}
     },
@@ -48139,7 +48282,7 @@
         "kind": 5,
         "importPath": "VulnScan.modules.xss-strike.core.log",
         "description": "VulnScan.modules.xss-strike.core.log",
-        "peekOfCode": "file_log_level = None\nlog_file = \"VulnScan/results/xss-test/xss.log\"\n\"\"\"\nDefault Logging Levels\nCRITICAL = 50\nERROR = 40\nWARNING = 30\nINFO = 20\nDEBUG = 10\n\"\"\"",
+        "peekOfCode": "file_log_level = None\nlog_file = None #\"Result/\"+target+\"/vuln/xss-test/xss.log\"\n\"\"\"\nDefault Logging Levels\nCRITICAL = 50\nERROR = 40\nWARNING = 30\nINFO = 20\nDEBUG = 10\n\"\"\"",
         "detail": "VulnScan.modules.xss-strike.core.log",
         "documentation": {}
     },
@@ -48148,7 +48291,7 @@
         "kind": 5,
         "importPath": "VulnScan.modules.xss-strike.core.log",
         "description": "VulnScan.modules.xss-strike.core.log",
-        "peekOfCode": "log_file = \"VulnScan/results/xss-test/xss.log\"\n\"\"\"\nDefault Logging Levels\nCRITICAL = 50\nERROR = 40\nWARNING = 30\nINFO = 20\nDEBUG = 10\n\"\"\"\nVULN_LEVEL_NUM = 60",
+        "peekOfCode": "log_file = None #\"Result/\"+target+\"/vuln/xss-test/xss.log\"\n\"\"\"\nDefault Logging Levels\nCRITICAL = 50\nERROR = 40\nWARNING = 30\nINFO = 20\nDEBUG = 10\n\"\"\"\nVULN_LEVEL_NUM = 60",
         "detail": "VulnScan.modules.xss-strike.core.log",
         "documentation": {}
     },
@@ -49471,7 +49614,7 @@
         "kind": 2,
         "importPath": "VulnScan.modules.adminfinder",
         "description": "VulnScan.modules.adminfinder",
-        "peekOfCode": "def killpid(signum=0, frame=0):\n    print(\"\\r\\x1b[K\")\n    kill(getpid(), 9)\nparser = ArgumentParser(prog=\"adminfinder\", usage=\"adminfinder [options]\")\nparser.add_argument(\"-u\", \"--url\", type=str, help=\"url eg. target.com\")\nparser.add_argument(\"-w\", \"--wordlist\", type=str, help=\"wordlist\")\nparser.add_argument(\"-t\", \"--threads\", type=int, help=\"number of threads\")\nparser.add_argument(\n    \"-f\", \"--follow\", action=\"store_true\", help=\"follow and resolve redirects\"\n)",
+        "peekOfCode": "def killpid(signum=0, frame=0):\n    print(\"\\r\\x1b[K\")\n    kill(getpid(), 9)\nparser = ArgumentParser(prog=\"adminfinder\", usage=\"adminfinder [options]\")\nparser.add_argument(\"-o\", \"--output\", type=str, help=\"output file\")\nparser.add_argument(\"-u\", \"--url\", type=str, help=\"url eg. target.com\")\nparser.add_argument(\"-w\", \"--wordlist\", type=str, help=\"wordlist\")\nparser.add_argument(\"-t\", \"--threads\", type=int, help=\"number of threads\")\nparser.add_argument(\n    \"-f\", \"--follow\", action=\"store_true\", help=\"follow and resolve redirects\"",
         "detail": "VulnScan.modules.adminfinder",
         "documentation": {}
     },
@@ -49480,7 +49623,7 @@
         "kind": 5,
         "importPath": "VulnScan.modules.adminfinder",
         "description": "VulnScan.modules.adminfinder",
-        "peekOfCode": "parser = ArgumentParser(prog=\"adminfinder\", usage=\"adminfinder [options]\")\nparser.add_argument(\"-u\", \"--url\", type=str, help=\"url eg. target.com\")\nparser.add_argument(\"-w\", \"--wordlist\", type=str, help=\"wordlist\")\nparser.add_argument(\"-t\", \"--threads\", type=int, help=\"number of threads\")\nparser.add_argument(\n    \"-f\", \"--follow\", action=\"store_true\", help=\"follow and resolve redirects\"\n)\nparser.add_argument(\n    \"-b\", \"--forbidden\", action=\"store_true\", help=\"show forbidden pages\"\n)",
+        "peekOfCode": "parser = ArgumentParser(prog=\"adminfinder\", usage=\"adminfinder [options]\")\nparser.add_argument(\"-o\", \"--output\", type=str, help=\"output file\")\nparser.add_argument(\"-u\", \"--url\", type=str, help=\"url eg. target.com\")\nparser.add_argument(\"-w\", \"--wordlist\", type=str, help=\"wordlist\")\nparser.add_argument(\"-t\", \"--threads\", type=int, help=\"number of threads\")\nparser.add_argument(\n    \"-f\", \"--follow\", action=\"store_true\", help=\"follow and resolve redirects\"\n)\nparser.add_argument(\n    \"-b\", \"--forbidden\", action=\"store_true\", help=\"show forbidden pages\"",
         "detail": "VulnScan.modules.adminfinder",
         "documentation": {}
     },
@@ -49507,7 +49650,7 @@
         "kind": 5,
         "importPath": "VulnScan.modules.adminfinder",
         "description": "VulnScan.modules.adminfinder",
-        "peekOfCode": "url = str(domain.strip())\nadminlist = [line.strip() for line in open(args.wordlist, \"r\")]\nqueueLock = Lock()\nworkQueue = queue.Queue(len(adminlist))\nfound = []\nthreads = []\nexitFlag = 0\nthreadID = 1\nmaxthreads = 40\nif args.threads:",
+        "peekOfCode": "url = str(domain.strip())\nadminlist = [line.strip() for line in open(args.wordlist, \"r\")]\nqueueLock = Lock()\nworkQueue = queue.Queue(len(adminlist))\nfound = []\nthreads = []\nexitFlag = 0\nthreadID = 1\nmaxthreads = 40\nout = args.output",
         "detail": "VulnScan.modules.adminfinder",
         "documentation": {}
     },
@@ -49516,7 +49659,7 @@
         "kind": 5,
         "importPath": "VulnScan.modules.adminfinder",
         "description": "VulnScan.modules.adminfinder",
-        "peekOfCode": "adminlist = [line.strip() for line in open(args.wordlist, \"r\")]\nqueueLock = Lock()\nworkQueue = queue.Queue(len(adminlist))\nfound = []\nthreads = []\nexitFlag = 0\nthreadID = 1\nmaxthreads = 40\nif args.threads:\n    maxthreads = args.threads",
+        "peekOfCode": "adminlist = [line.strip() for line in open(args.wordlist, \"r\")]\nqueueLock = Lock()\nworkQueue = queue.Queue(len(adminlist))\nfound = []\nthreads = []\nexitFlag = 0\nthreadID = 1\nmaxthreads = 40\nout = args.output\nif args.threads:",
         "detail": "VulnScan.modules.adminfinder",
         "documentation": {}
     },
@@ -49525,7 +49668,7 @@
         "kind": 5,
         "importPath": "VulnScan.modules.adminfinder",
         "description": "VulnScan.modules.adminfinder",
-        "peekOfCode": "queueLock = Lock()\nworkQueue = queue.Queue(len(adminlist))\nfound = []\nthreads = []\nexitFlag = 0\nthreadID = 1\nmaxthreads = 40\nif args.threads:\n    maxthreads = args.threads\nqueueLock.acquire()",
+        "peekOfCode": "queueLock = Lock()\nworkQueue = queue.Queue(len(adminlist))\nfound = []\nthreads = []\nexitFlag = 0\nthreadID = 1\nmaxthreads = 40\nout = args.output\nif args.threads:\n    maxthreads = args.threads",
         "detail": "VulnScan.modules.adminfinder",
         "documentation": {}
     },
@@ -49534,7 +49677,7 @@
         "kind": 5,
         "importPath": "VulnScan.modules.adminfinder",
         "description": "VulnScan.modules.adminfinder",
-        "peekOfCode": "workQueue = queue.Queue(len(adminlist))\nfound = []\nthreads = []\nexitFlag = 0\nthreadID = 1\nmaxthreads = 40\nif args.threads:\n    maxthreads = args.threads\nqueueLock.acquire()\nfor word in adminlist:",
+        "peekOfCode": "workQueue = queue.Queue(len(adminlist))\nfound = []\nthreads = []\nexitFlag = 0\nthreadID = 1\nmaxthreads = 40\nout = args.output\nif args.threads:\n    maxthreads = args.threads\nqueueLock.acquire()",
         "detail": "VulnScan.modules.adminfinder",
         "documentation": {}
     },
@@ -49543,7 +49686,7 @@
         "kind": 5,
         "importPath": "VulnScan.modules.adminfinder",
         "description": "VulnScan.modules.adminfinder",
-        "peekOfCode": "found = []\nthreads = []\nexitFlag = 0\nthreadID = 1\nmaxthreads = 40\nif args.threads:\n    maxthreads = args.threads\nqueueLock.acquire()\nfor word in adminlist:\n    workQueue.put(word)",
+        "peekOfCode": "found = []\nthreads = []\nexitFlag = 0\nthreadID = 1\nmaxthreads = 40\nout = args.output\nif args.threads:\n    maxthreads = args.threads\nqueueLock.acquire()\nfor word in adminlist:",
         "detail": "VulnScan.modules.adminfinder",
         "documentation": {}
     },
@@ -49552,7 +49695,7 @@
         "kind": 5,
         "importPath": "VulnScan.modules.adminfinder",
         "description": "VulnScan.modules.adminfinder",
-        "peekOfCode": "threads = []\nexitFlag = 0\nthreadID = 1\nmaxthreads = 40\nif args.threads:\n    maxthreads = args.threads\nqueueLock.acquire()\nfor word in adminlist:\n    workQueue.put(word)\nqueueLock.release()",
+        "peekOfCode": "threads = []\nexitFlag = 0\nthreadID = 1\nmaxthreads = 40\nout = args.output\nif args.threads:\n    maxthreads = args.threads\nqueueLock.acquire()\nfor word in adminlist:\n    workQueue.put(word)",
         "detail": "VulnScan.modules.adminfinder",
         "documentation": {}
     },
@@ -49561,7 +49704,7 @@
         "kind": 5,
         "importPath": "VulnScan.modules.adminfinder",
         "description": "VulnScan.modules.adminfinder",
-        "peekOfCode": "exitFlag = 0\nthreadID = 1\nmaxthreads = 40\nif args.threads:\n    maxthreads = args.threads\nqueueLock.acquire()\nfor word in adminlist:\n    workQueue.put(word)\nqueueLock.release()\nwhile threadID <= maxthreads:",
+        "peekOfCode": "exitFlag = 0\nthreadID = 1\nmaxthreads = 40\nout = args.output\nif args.threads:\n    maxthreads = args.threads\nqueueLock.acquire()\nfor word in adminlist:\n    workQueue.put(word)\nqueueLock.release()",
         "detail": "VulnScan.modules.adminfinder",
         "documentation": {}
     },
@@ -49570,7 +49713,7 @@
         "kind": 5,
         "importPath": "VulnScan.modules.adminfinder",
         "description": "VulnScan.modules.adminfinder",
-        "peekOfCode": "threadID = 1\nmaxthreads = 40\nif args.threads:\n    maxthreads = args.threads\nqueueLock.acquire()\nfor word in adminlist:\n    workQueue.put(word)\nqueueLock.release()\nwhile threadID <= maxthreads:\n    tname = str(\"Thread-\") + str(threadID)",
+        "peekOfCode": "threadID = 1\nmaxthreads = 40\nout = args.output\nif args.threads:\n    maxthreads = args.threads\nqueueLock.acquire()\nfor word in adminlist:\n    workQueue.put(word)\nqueueLock.release()\nwhile threadID <= maxthreads:",
         "detail": "VulnScan.modules.adminfinder",
         "documentation": {}
     },
@@ -49579,7 +49722,16 @@
         "kind": 5,
         "importPath": "VulnScan.modules.adminfinder",
         "description": "VulnScan.modules.adminfinder",
-        "peekOfCode": "maxthreads = 40\nif args.threads:\n    maxthreads = args.threads\nqueueLock.acquire()\nfor word in adminlist:\n    workQueue.put(word)\nqueueLock.release()\nwhile threadID <= maxthreads:\n    tname = str(\"Thread-\") + str(threadID)\n    thread = myThread(threadID, tname, workQueue)",
+        "peekOfCode": "maxthreads = 40\nout = args.output\nif args.threads:\n    maxthreads = args.threads\nqueueLock.acquire()\nfor word in adminlist:\n    workQueue.put(word)\nqueueLock.release()\nwhile threadID <= maxthreads:\n    tname = str(\"Thread-\") + str(threadID)",
+        "detail": "VulnScan.modules.adminfinder",
+        "documentation": {}
+    },
+    {
+        "label": "out",
+        "kind": 5,
+        "importPath": "VulnScan.modules.adminfinder",
+        "description": "VulnScan.modules.adminfinder",
+        "peekOfCode": "out = args.output\nif args.threads:\n    maxthreads = args.threads\nqueueLock.acquire()\nfor word in adminlist:\n    workQueue.put(word)\nqueueLock.release()\nwhile threadID <= maxthreads:\n    tname = str(\"Thread-\") + str(threadID)\n    thread = myThread(threadID, tname, workQueue)",
         "detail": "VulnScan.modules.adminfinder",
         "documentation": {}
     },
@@ -50970,6 +51122,105 @@
         "documentation": {}
     },
     {
+        "label": "menu",
+        "kind": 2,
+        "importPath": "VulnScan.acuapi",
+        "description": "VulnScan.acuapi",
+        "peekOfCode": "def menu():\n    subprocess.call('clear', shell=True)\n    colors = ['red', 'yellow', 'green', 'cyan', 'blue', 'magenta']\n    color_index = 0\n    banner ='''\n    _                ___ _ \n   /_\\  __ _  _ __ _| _ (_)\n  / _ \\/ _| || / _` |  _/ |     AcuPi v1.0 from AMP Team ❤️\n /_/ \\_\\__|\\_,_\\__,_|_| |_|\n    '''",
+        "detail": "VulnScan.acuapi",
+        "documentation": {}
+    },
+    {
+        "label": "get_X_Auth",
+        "kind": 2,
+        "importPath": "VulnScan.acuapi",
+        "description": "VulnScan.acuapi",
+        "peekOfCode": "def get_X_Auth(url_acunetix):\n    url = url_acunetix + \"me/login\"\n    data = {\"email\": \"admin@gmail.com\", \"password\": \"b03ddf3ca2e714a6548e7495e2a03f5e824eaac9837cd7f159c67b90fb4b7342\", \"remember_me\": \"false\"}\n    try:\n        respone = requests.post(url, data=json.dumps(data), verify=False)\n        token = respone.headers['X-Auth']\n        return str(token)\n    except:\n        return str(None)\ndef get_target_id(url_acunetix,address,x_auth):",
+        "detail": "VulnScan.acuapi",
+        "documentation": {}
+    },
+    {
+        "label": "get_target_id",
+        "kind": 2,
+        "importPath": "VulnScan.acuapi",
+        "description": "VulnScan.acuapi",
+        "peekOfCode": "def get_target_id(url_acunetix,address,x_auth):\n    headers = {\"X-Auth\": x_auth,\"content-type\": \"application/json\"}\n    url= url_acunetix + \"targets/add\"\n    data = {\"targets\":[{\"address\":\"{}\".format(address),\"description\":\"AMP scan for {}\".format(address)}],\"groups\":[]}\n    try:\n        respone = requests.post(url, headers=headers, data=json.dumps(data), timeout=30, verify=False)\n        return str(json.loads(respone.content)['targets'][0]['target_id'])\n    except:\n        pass\ndef scan_target(url_acunetix,target_id,x_auth,scan_profile_id,scan_speed):",
+        "detail": "VulnScan.acuapi",
+        "documentation": {}
+    },
+    {
+        "label": "scan_target",
+        "kind": 2,
+        "importPath": "VulnScan.acuapi",
+        "description": "VulnScan.acuapi",
+        "peekOfCode": "def scan_target(url_acunetix,target_id,x_auth,scan_profile_id,scan_speed):\n    headers = {\"X-Auth\": x_auth,\"Content-Type\": \"application/json\",\"Cookie\": \"ui_session={}\".format(x_auth)}\n    url=url_acunetix + \"targets/{}/configuration\".format(target_id)\n    data = {\"scan_speed\":scan_speed,\"login\":{\"kind\":\"none\"},\"ssh_credentials\":{\"kind\":\"none\"},\"default_scanning_profile_id\":\"11111111-1111-1111-1111-111111111111\",\"sensor\":\"false\",\"case_sensitive\":\"no\",\"limit_crawler_scope\":\"true\",\"excluded_paths\":[],\"authentication\":{\"enabled\":\"false\"},\"proxy\":{\"enabled\":\"false\"},\"technologies\":[],\"custom_headers\":[],\"custom_cookies\":[],\"ad_blocker\":\"true\",\"debug\":\"false\",\"skip_login_form\":\"false\",\"restrict_scans_to_import_files\":\"false\",\"issue_tracker_id\":\"\",\"preseed_mode\":\"\"}\n    try:\n        res = requests.patch(url,data=json.dumps(data),headers=headers,timeout=30*4,verify=False)\n        data = {\"profile_id\":scan_profile_id,\"ui_session_id\":\"c9696e2eb2b52744bbc61e3f47dd20ec\",\"incremental\":\"false\",\"schedule\":{\"disable\":\"false\",\"time_sensitive\":\"false\"},\"report_template_id\":\"11111111-1111-1111-1111-111111111111\",\"target_id\":\"{}\".format(target_id)}\n        try:\n            response = requests.post(url_acunetix + \"scans\", headers=headers, data=json.dumps(data),timeout=30, verify=False)\n            return str(response.json()[\"scan_id\"])",
+        "detail": "VulnScan.acuapi",
+        "documentation": {}
+    },
+    {
+        "label": "get_session_id",
+        "kind": 2,
+        "importPath": "VulnScan.acuapi",
+        "description": "VulnScan.acuapi",
+        "peekOfCode": "def get_session_id(url_acunetix,scan_id,x_auth):\n    headers = {\"X-Auth\": x_auth,\"Cookie\": \"ui_session={}\".format(x_auth),\"Referer\": \"https://192.168.44.128:3443/\"}\n    url=url_acunetix + \"scans/{}\".format(scan_id)\n    try:\n        time.sleep(1)\n        response = requests.get(url, headers=headers,timeout=30, verify=False)\n        session_id = json.loads(response.content)[\"current_session\"][\"scan_session_id\"]\n        return str(session_id)\n    except:\n        pass",
+        "detail": "VulnScan.acuapi",
+        "documentation": {}
+    },
+    {
+        "label": "show_scan_status",
+        "kind": 2,
+        "importPath": "VulnScan.acuapi",
+        "description": "VulnScan.acuapi",
+        "peekOfCode": "def show_scan_status(url_acunetix,scan_id,session_id,x_auth,folder_name):\n    headers = {\"X-Auth\": x_auth,\"content-type\": \"application/json\"}\n    url=url_acunetix + \"scans/{}/results/{}/statistics\".format(scan_id,session_id)\n    res = requests.get(url, headers=headers,timeout=30, verify=False)\n    with open(folder_name+\"/scan_status.json\",\"w\") as f:\n        json.dump(json.loads(res.content),f,indent=4)\n    progress = json.loads(res.content)['scanning_app']['wvs']['main']['progress']\n    status = json.loads(res.content)['status']\n    return progress,status\ndef get_vuln_info(url_acunetix,scan_id,session_id,x_auth,folder_name):",
+        "detail": "VulnScan.acuapi",
+        "documentation": {}
+    },
+    {
+        "label": "get_vuln_info",
+        "kind": 2,
+        "importPath": "VulnScan.acuapi",
+        "description": "VulnScan.acuapi",
+        "peekOfCode": "def get_vuln_info(url_acunetix,scan_id,session_id,x_auth,folder_name):\n    headers = {\"X-Auth\": x_auth,\"content-type\": \"application/json\"}\n    url=url_acunetix + \"scans/{}/results/{}/vulnerabilities\".format(scan_id,session_id)\n    res = requests.get(url, headers=headers,timeout=30, verify=False)\n    with open(folder_name+\"/vuln_status.json\",\"w\") as f:\n        json.dump(json.loads(res.content),f,indent=4)\ndef get_reportID(url_acunetix,session_id,x_auth):\n    headers = {\"X-Auth\": x_auth,\"Content-Type\": \"application/json\",\"Cookie\": \"ui_session={}\".format(x_auth)}\n    url=url_acunetix + \"reports\"\n    data = {\"template_id\":\"11111111-1111-1111-1111-111111111111\",\"source\":{\"list_type\":\"scan_result\",\"id_list\":[\"{}\".format(session_id)]}}",
+        "detail": "VulnScan.acuapi",
+        "documentation": {}
+    },
+    {
+        "label": "get_reportID",
+        "kind": 2,
+        "importPath": "VulnScan.acuapi",
+        "description": "VulnScan.acuapi",
+        "peekOfCode": "def get_reportID(url_acunetix,session_id,x_auth):\n    headers = {\"X-Auth\": x_auth,\"Content-Type\": \"application/json\",\"Cookie\": \"ui_session={}\".format(x_auth)}\n    url=url_acunetix + \"reports\"\n    data = {\"template_id\":\"11111111-1111-1111-1111-111111111111\",\"source\":{\"list_type\":\"scan_result\",\"id_list\":[\"{}\".format(session_id)]}}\n    res = requests.post(url, headers=headers, data=json.dumps(data),timeout=30, verify=False)\n    return json.loads(res.content)[\"report_id\"]\ndef export_report(url_acunetix,report_id,x_auth,folder_name):\n    download_link = str(None)\n    while download_link == str(None):\n        try:",
+        "detail": "VulnScan.acuapi",
+        "documentation": {}
+    },
+    {
+        "label": "export_report",
+        "kind": 2,
+        "importPath": "VulnScan.acuapi",
+        "description": "VulnScan.acuapi",
+        "peekOfCode": "def export_report(url_acunetix,report_id,x_auth,folder_name):\n    download_link = str(None)\n    while download_link == str(None):\n        try:\n            headers = {\"X-Auth\": x_auth,\"Content-Type\": \"application/json\",\"Cookie\": \"ui_session={}\".format(x_auth)}\n            download_objects = json.loads(requests.get(url_acunetix+\"reports\",headers=headers,timeout=30, verify=False).content)['reports']\n            for i in range(len(download_objects)):\n                if download_objects[i][\"report_id\"] == report_id:\n                    download_link = download_objects[i]['download'][1]\n        except:",
+        "detail": "VulnScan.acuapi",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "VulnScan.acuapi",
+        "description": "VulnScan.acuapi",
+        "peekOfCode": "def main(url_acunetix,x_auth,target,scan_profile_id,scan_speed,folder_name):\n    # x_auth = get_X_Auth()\n    # while x_auth == \"None\":\n    #     x_auth = get_X_Auth()\n    target_id = get_target_id(url_acunetix,target,x_auth)\n    scan_id = scan_target(url_acunetix,target_id,x_auth,scan_profile_id,scan_speed)\n    startTime = time.time()\n    session_id = get_session_id(url_acunetix,scan_id,x_auth)\n    time.sleep(1)\n    progress, status = show_scan_status(url_acunetix,scan_id,session_id,x_auth,folder_name)",
+        "detail": "VulnScan.acuapi",
+        "documentation": {}
+    },
+    {
+        "label": "Acunetix",
+        "kind": 2,
+        "importPath": "VulnScan.acuapi",
+        "description": "VulnScan.acuapi",
+        "peekOfCode": "def Acunetix(target):\n    try:\n        menu()\n        # create \"result/target/vuln/acuapi\" folder\n        folder_name = \"Result/\" + target+\"/AcuaPi\"\n        if not os.path.exists(folder_name):\n            os.makedirs(folder_name)\n        url_acunetix = \"https://192.168.44.143:3443/api/v1/\"\n        x_auth = \"1986ad8c0a5b3df4d7028d5f3c06e936ce6e15aafcc9144aeaa02df4c5b481b4b\"\n        scan_speed_list = {1:\"sequential\",2:\"slow\",3:\"moderate\",4:\"fast\"}",
+        "detail": "VulnScan.acuapi",
+        "documentation": {}
+    },
+    {
         "label": "get_X_API_Token",
         "kind": 2,
         "importPath": "VulnScan.nessus",
@@ -51154,7 +51405,7 @@
         "kind": 2,
         "importPath": "VulnScan.scanvuln",
         "description": "VulnScan.scanvuln",
-        "peekOfCode": "def f_menu(target):\n    import time\n    W = \"\\033[0m\"\n    R = \"\\033[31m\"\n    G = \"\\033[32m\"\n    O = \"\\033[33m\"\n    B = \"\\033[34m\"\n    global vuln_scan_count\n    global vuln\n    vuln_scan_count = []",
+        "peekOfCode": "def f_menu(target):\n    import time\n    W = \"\\033[0m\"\n    R = \"\\033[31m\"\n    G = \"\\033[32m\"\n    O = \"\\033[33m\"\n    B = \"\\033[34m\"\n    subprocess.call(\"clear\", shell=True)\n    global vuln_scan_count\n    global vuln",
         "detail": "VulnScan.scanvuln",
         "documentation": {}
     },
@@ -51163,7 +51414,7 @@
         "kind": 2,
         "importPath": "VulnScan.scanvuln",
         "description": "VulnScan.scanvuln",
-        "peekOfCode": "def xssTest(target):\n    XssList = 'Result/'+target+'/xss.txt'\n    list1 = [\n        line.strip()\n        for line in open(XssList, \"r\", errors=\"ignore\", encoding=\"utf-8\")\n    ]\n    try:\n        os.system(\"rm VulnScan/results/xss-test/xss-log\")\n    except:\n        pass",
+        "peekOfCode": "def xssTest(target):\n    XssList = f'Result/{target}/recon/{target}_url/xss_potential.txt'\n    list1 = [\n        line.strip()\n        for line in open(XssList, \"r\", errors=\"ignore\", encoding=\"utf-8\")\n    ]\n    try:\n        if not os.path.exists(f\"Result/{target}/vuln/xss-test\"):\n            os.makedirs(f\"Result/{target}/vuln/xss-test\")\n        else:",
         "detail": "VulnScan.scanvuln",
         "documentation": {}
     },
@@ -51181,7 +51432,7 @@
         "kind": 2,
         "importPath": "VulnScan.scanvuln",
         "description": "VulnScan.scanvuln",
-        "peekOfCode": "def sql_list_counter():\n    global sql_count\n    try:\n        f = open(\"results/sqlmap/v3n0m-sqli.txt\", encoding=\"utf-8\")\n        l = [x for x in f.readlines() if x != \"\\n\"]\n        sql_count = len(l)\n    except FileNotFoundError:\n        sql_count = 0\ndef lfi_list_counter():\n    global lfi_count",
+        "peekOfCode": "def sql_list_counter(target):\n    global sql_count\n    try:\n        f = open(\"results/sqlmap/v3n0m-sqli.txt\", encoding=\"utf-8\")\n        l = [x for x in f.readlines() if x != \"\\n\"]\n        sql_count = len(l)\n    except FileNotFoundError:\n        sql_count = 0\ndef lfi_list_counter():\n    global lfi_count",
         "detail": "VulnScan.scanvuln",
         "documentation": {}
     },
@@ -51208,7 +51459,7 @@
         "kind": 2,
         "importPath": "VulnScan.scanvuln",
         "description": "VulnScan.scanvuln",
-        "peekOfCode": "def rce_list_counter():\n    global rce_count\n    try:\n        f = open(\"results/rce/v3n0m-rce.txt\", encoding=\"utf-8\")\n        l = [x for x in f.readlines() if x != \"\\n\"]\n        rce_count = len(l)\n    except FileNotFoundError:\n        rce_count = 0\ndef checkvuln(target):\n    urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)",
+        "peekOfCode": "def rce_list_counter():\n    global rce_count\n    try:\n        f = open(\"results/rce/v3n0m-rce.txt\", encoding=\"utf-8\")\n        l = [x for x in f.readlines() if x != \"\\n\"]\n        rce_count = len(l)\n    except FileNotFoundError:\n        rce_count = 0\ndef checkvuln(target):\n    downloads = [",
         "detail": "VulnScan.scanvuln",
         "documentation": {}
     },
@@ -51217,7 +51468,7 @@
         "kind": 2,
         "importPath": "VulnScan.scanvuln",
         "description": "VulnScan.scanvuln",
-        "peekOfCode": "def checkvuln(target):\n    urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)\n    downloads = [\n        [\"https://www.cloudflare.com/ips-v4\", \"ips-v4\", progressBar],\n        [\"https://www.cloudflare.com/ips-v6\", \"ips-v6\", progressBar],\n        [\"http://crimeflare.net:82/domains/ipout.zip\", \"ipout.zip\", progressBar],\n    ]\n    list_count = 0\n    lfi_count = 0\n    arg_end = \"--\"",
+        "peekOfCode": "def checkvuln(target):\n    downloads = [\n        [\"https://www.cloudflare.com/ips-v4\", \"ips-v4\", progressBar],\n        [\"https://www.cloudflare.com/ips-v6\", \"ips-v6\", progressBar],\n        [\"http://crimeflare.net:82/domains/ipout.zip\", \"ipout.zip\", progressBar],\n    ]\n    list_count = 0\n    lfi_count = 0\n    arg_end = \"--\"\n    arg_eva = \"+\"",
         "detail": "VulnScan.scanvuln",
         "documentation": {}
     },
@@ -51613,7 +51864,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def menu():\n    subprocess.call(\"clear\", shell=True)\n    print(R+'''\n  █████╗ ███╗   ███╗██████╗\n ██╔══██╗████╗ ████║██╔══██╗\n ███████║██╔████╔██║██████╔╝         /-version 1.0-/\n ██╔══██║██║╚██╔╝██║██╔═══╝         /this tool is for educational purposes only/\n ██║  ██║██║ ╚═╝ ██║██║\n ╚═╝  ╚═╝╚═╝     ╚═╝╚═╝\n''' + W + '''",
+        "peekOfCode": "def menu():\n    subprocess.call(\"clear\", shell=True)\n    text= '''\n  █████╗ ███╗   ███╗██████╗\n ██╔══██╗████╗ ████║██╔══██╗\n ███████║██╔████╔██║██████╔╝         /-version 1.0-/\n ██╔══██║██║╚██╔╝██║██╔═══╝         /this tool is for educational purposes only/\n ██║  ██║██║ ╚═╝ ██║██║\n ╚═╝  ╚═╝╚═╝     ╚═╝╚═╝\n''' ",
         "detail": "main",
         "documentation": {}
     },
@@ -51622,7 +51873,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def main(target):\n    status_data_json_subdomain = {\n    \"Sub_Recon\": {\n        \"call_subfinder\": -1,\n        \"get_from_cert\" :-1,\n        \"sanitize_input\" :-1\n    },\n    \"ip_Recon\":{\n        \"get_ip_nmap\":-1\n    },",
+        "peekOfCode": "def main(target):\n    status_data_json_subdomain = {\n    \"Sub_Recon\": {\n        \"call_subfinder\": \"-1\",\n        \"get_from_cert\" :\"-1\",\n        \"sanitize_input\" :\"-1\"\n    },\n    \"ip_Recon\":{\n        \"get_ip_nmap\":\"-1\"\n    },",
         "detail": "main",
         "documentation": {}
     }
