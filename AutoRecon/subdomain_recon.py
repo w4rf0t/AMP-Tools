@@ -56,9 +56,15 @@ def get_from_cert(target,dataf):
     command_4 = [f"sh AutoRecon/module/crtsh_enum_psql.sh {target} >> Result/{target}/recon/subdomain_{target}_cert.txt"]
     subprocess.run(command_4, stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)
     
+<<<<<<< HEAD
     command_5 = [f"python3 AutoRecon/module/ct-exposer.py -d {target} >> Result/{target}/recon/subdomain_{target}_noDNSrecord.txt"]
     subprocess.run(command_5, stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)
     
+=======
+    command_5 = [f"python3 AutoRecon/module/ct-exposer.py -d {target} >> Result/{target}/subdomain_{target}_noDNSrecord.txt"]
+    subprocess.run(command_5, stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL, shell=True)
+
+>>>>>>> 6edc68feb79e6858a524e6ec1048458724c971d3
     dataf["Sub_Recon"]["get_from_cert"] = "1"
     with open(f"Result/{target}/status_of_function.json","w") as f:
         json.dump(dataf, f, indent=4)
