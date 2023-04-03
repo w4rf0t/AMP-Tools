@@ -1,0 +1,18 @@
+[
+    {
+        "42.96.35.12": {
+            "port": "80",
+            "protocol": "tcp",
+            "status": "open",
+            "service": "http         Check Point NGX Firewall-1"
+        }
+    },
+    {
+        "42.96.35.12": {
+            "port": "264",
+            "protocol": "tcp",
+            "status": "open",
+            "service": "fw1-topology Check Point FireWall-1 Topology"
+        }
+    }
+]

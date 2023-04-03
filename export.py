@@ -52,7 +52,7 @@ def hosting(target,workbook):
     worksheet3.append(('IP', 'Domain'))
     for cell in worksheet3[1]:
         cell.font = openpyxl.styles.Font(bold=True)
-    with open(f'Result/{target}/recon/ip_to_domain_{target}.json', 'r') as f:
+    with open(f'Result/{target}/recon/ip_to_domain.json', 'r') as f:
         data = json.load(f)
         ip = data['ip']
         domains = data['domain'].split('\n')
@@ -105,11 +105,11 @@ def exportation_subdomain(target):
     subdomains(target,workbook)
     live(target,workbook)
     workbook.save(f'Result/{target}/recon/Result.xlsx')
-    os.remove(f'Result/{target}/recon/{target}_ip/nmap_{target}.json')
-    os.remove(f'Result/{target}/recon/{target}_waf.json')
-    os.remove(f'Result/{target}/recon/final_subdomain_{target}.txt')
-    os.remove(f'Result/{target}/recon/final_status_{target}.json')
-    os.remove(f'Result/{target}/recon/{target}_live.txt')
+    # os.remove(f'Result/{target}/recon/{target}_ip/nmap_{target}.json')
+    # os.remove(f'Result/{target}/recon/{target}_waf.json')
+    # os.remove(f'Result/{target}/recon/final_subdomain_{target}.txt')
+    # os.remove(f'Result/{target}/recon/final_status_{target}.json')
+    # os.remove(f'Result/{target}/recon/{target}_live.txt')
     print(G, 'Export Completed')
     
 def exportation_ip(target):
@@ -119,7 +119,7 @@ def exportation_ip(target):
     waf(target,workbook)
     hosting(target,workbook)
     workbook.save(f'Result/{target}/recon/Result.xlsx')
-    os.remove(f'Result/{target}/recon/{target}_ip/nmap_{target}.json')
-    os.remove(f'Result/{target}/recon/{target}_waf.json')
-    os.remove(f'Result/{target}/recon/ip_to_domain_{target}.json')
+    # os.remove(f'Result/{target}/recon/{target}_ip/nmap_{target}.json')
+    # os.remove(f'Result/{target}/recon/{target}_waf.json')
+    # os.remove(f'Result/{target}/recon/ip_to_domain_{target}.json')
     print(G, 'Export Completed')
