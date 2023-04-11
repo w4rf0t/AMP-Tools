@@ -1,0 +1,148 @@
+[
+    {
+        "url": "https://elearning.bidv.com.vn",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://scfbank.bidv.com.vn",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://bienniensu.bidv.com.vn",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://bidvcity.bidv.com.vn",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://phongtruyenthong.bidv.com.vn",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "https://prepaid.bidv.com.vn",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://giamsatxe.bidv.com.vn",
+        "detected": true,
+        "firewall": "Generic",
+        "manufacturer": "Unknown"
+    }
+][
+    {
+        "url": "https://giamsatxe.bidv.com.vn",
+        "detected": true,
+        "firewall": "RequestValidationMode",
+        "manufacturer": "Microsoft"
+    }
+][
+    {
+        "url": "http://wifi.bidv.com.vn",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://postest.bidv.com.vn",
+        "detected": true,
+        "firewall": "Generic",
+        "manufacturer": "Unknown"
+    }
+][
+    {
+        "url": "https://postest.bidv.com.vn",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://1.55.137.70:9300",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://27.71.231.18:80",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://27.71.231.18:443",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "https://1.55.137.70:10443",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://1.55.137.70:82",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "https://1.55.137.70:443",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://124.158.4.152:80",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://13.250.106.194:80",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "https://13.250.106.194:443",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://103.92.29.209:443",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+]

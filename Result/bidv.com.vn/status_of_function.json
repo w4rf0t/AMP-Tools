@@ -1,0 +1,19 @@
+{
+    "Sub_Recon": {
+        "call_subfinder": "-1",
+        "get_from_cert": "-1",
+        "sanitize_input": "-1"
+    },
+    "ip_Recon": {
+        "get_ip_nmap": "-1"
+    },
+    "js_Recon": {
+        "js_Recon": "-1"
+    },
+    "waf_Recon": {
+        "wafwoof": "-1"
+    },
+    "find_sensitive": {
+        "find_sensitive": "-1"
+    }
+}
