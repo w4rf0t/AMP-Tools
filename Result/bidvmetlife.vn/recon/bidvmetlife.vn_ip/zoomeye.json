@@ -1,0 +1,71 @@
+[
+    {
+        "ip": "113.23.119.152",
+        "port": 80,
+        "title": [
+            "Welcome to nginx for Windows!"
+        ],
+        "service": "https",
+        "app": "Apache httpd",
+        "extrainfo": "",
+        "version": ""
+    },
+    {
+        "ip": "113.23.119.152",
+        "port": 49152,
+        "title": null,
+        "service": "upnp",
+        "app": "Portable SDK for UPnP devices",
+        "extrainfo": "Linux 2.6.32.11; UPnP 1.0",
+        "version": "1.6.19"
+    },
+    {
+        "ip": "113.23.119.152",
+        "port": 7547,
+        "title": null,
+        "service": "http",
+        "app": "Huawei TR-069 remote access",
+        "extrainfo": "",
+        "version": ""
+    },
+    {
+        "ip": "14.238.36.20",
+        "port": 443,
+        "title": [
+            "Welcome to nginx for Windows!"
+        ],
+        "service": "https",
+        "app": "Apache httpd",
+        "extrainfo": "",
+        "version": ""
+    },
+    {
+        "ip": "14.238.36.20",
+        "port": 80,
+        "title": [
+            "Welcome to nginx for Windows!"
+        ],
+        "service": "https",
+        "app": "Apache httpd",
+        "extrainfo": "",
+        "version": ""
+    },
+    {
+        "ip": "52.98.70.136",
+        "port": 80,
+        "title": null,
+        "service": "http",
+        "app": "Microsoft IIS httpd",
+        "extrainfo": "",
+        "version": "10.0"
+    },
+    {
+        "ip": "52.98.70.136",
+        "port": 8889,
+        "title": null,
+        "service": "http",
+        "app": "",
+        "extrainfo": "",
+        "version": ""
+    }
+]

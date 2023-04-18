@@ -1,0 +1,55 @@
+[
+    {
+        "e.bidvmetlife.vn": {
+            "host": "113.23.119.152",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "HSTS"
+            ],
+            "title": null
+        }
+    },
+    {
+        "e.wip.bidvmetlife.vn": {
+            "host": "113.23.119.152",
+            "port": "443",
+            "scheme": "https",
+            "tech": null,
+            "title": "Welcome to nginx for Windows!"
+        }
+    },
+    {
+        "e.wip.bidvmetlife.vn": {
+            "host": "14.238.36.20",
+            "port": "443",
+            "scheme": "https",
+            "tech": null,
+            "title": "Welcome to nginx for Windows!"
+        }
+    },
+    {
+        "e.bidvmetlife.vn": {
+            "host": "14.238.36.20",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "HSTS"
+            ],
+            "title": null
+        }
+    },
+    {
+        "autodiscover.bidvmetlife.vn": {
+            "host": "52.98.70.136",
+            "port": "80",
+            "scheme": "http",
+            "tech": [
+                "IIS:10.0",
+                "Microsoft ASP.NET",
+                "Windows Server"
+            ],
+            "title": null
+        }
+    }
+]

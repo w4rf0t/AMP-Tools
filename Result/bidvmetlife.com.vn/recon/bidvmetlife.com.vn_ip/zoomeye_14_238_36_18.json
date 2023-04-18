@@ -1,0 +1,164 @@
+{
+    "code": 60000,
+    "total": 1,
+    "available": 1,
+    "matches": [
+        {
+            "rdns": "static.vnpt.vn",
+            "jarm": "",
+            "ico": {
+                "mmh3": "",
+                "md5": ""
+            },
+            "txtfile": {
+                "robotsmd5": "f71d20196d4caf35b6a670db8c70b03d",
+                "securitymd5": "",
+                "robots": "User-agent: *\nDisallow: /\n"
+            },
+            "ip": "14.238.36.18",
+            "portinfo": {
+                "hostname": "",
+                "os": "",
+                "port": 443,
+                "service": "https",
+                "title": null,
+                "version": "",
+                "device": "VPN server",
+                "extrainfo": "",
+                "rdns": "static.vnpt.vn",
+                "app": "Cisco ASA SSL VPN",
+                "banner": "HTTP/1.0 200 OK\r\nContent-Type: text/html; charset=utf-8\r\nCache-Control: no-store\r\nPragma: no-cache\r\nConnection: Close\r\nDate: Sun, 16 Apr 2023 14:27:02 GMT\r\nX-Frame-Options: SAMEORIGIN\r\nStrict-Transport-Security: max-age=31536000; includeSubDomains\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1\r\nContent-Security-Policy: default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob:; frame-ancestors 'self'\r\nSet-Cookie: webvpn=; expires=Thu, 01 Jan 1970 22:00:00 GMT; path=/; secure; HttpOnly\r\nSet-Cookie: webvpn_as=; expires=Thu, 01 Jan 1970 22:00:00 GMT; path=/; secure\r\nSet-Cookie: webvpnc=; expires=Thu, 01 Jan 1970 22:00:00 GMT; path=/; secure\r\nSet-Cookie: webvpn_portal=; expires=Thu, 01 Jan 1970 22:00:00 GMT; path=/; secure\r\nSet-Cookie: webvpnSharePoint=; expires=Thu, 01 Jan 1970 22:00:00 GMT; path=/; secure\r\nSet-Cookie: samlPreauthSessionHash=; expires=Thu, 01 Jan 1970 22:00:00 GMT; path=/; secure\r\nSet-Cookie: acSamlv2Token=; expires=Thu, 01 Jan 1970 22:00:00 GMT; path=/; secure; HttpOnly\r\nSet-Cookie: acSamlv2Error=; expires=Thu, 01 Jan 1970 22:00:00 GMT; path=/; secure\r\nSet-Cookie: webvpnlogin=1; path=/; secure\r\n\r\n\n    <html>\n        <script>\n            document.cookie = \"tg=; expires=Thu, 01 Jan 1970 22:00:00 GMT; path=/; secure\";\n            document.cookie = \"sdesktop=; expires=Thu, 01 Jan 1970 22:00:00 GMT; path=/; secure\";\n            document.location.replace(\"/+CSCOE+/logon.html\");\n        </script>\n    </html>\n    \n\nHttp response from 302 moved url https://14.238.36.18/+CSCOE+/logon.html:\nHTTP/1.0  404 Not Found\nX-Frame-Options: SAMEORIGIN\nX-Xss-Protection: 1\nContent-Security-Policy: default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob:; frame-ancestors 'self'\nPragma: no-cache\nConnection: Close\nDate: Sun, 16 Apr 2023 14:32:27 GMT\nStrict-Transport-Security: max-age=31536000; includeSubDomains\nX-Content-Type-Options: nosniff\nContent-Length: 9\nCache-Control: no-store\n\nNot Found"
+            },
+            "ssl": "SSL Certificate\nVersion: TLS 1.2\nCipherSuit: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384\nHandshake Message: x509: cannot validate certificate for 14.238.36.18 because it doesn't contain any IP SANs\nCertificate:\n    Data:\n        Version: 3 (0x2)\n        Serial Number: 8339120626963359542006116392421740607 (0x6460e63f1cd23d2ffa9bf0b20b2d03f)\n    Signature Algorithm: SHA256-RSA\n        Issuer: C=US,CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1,O=DigiCert Inc\n        Validity\n            Not Before: Jul 27 00:00:12 2022 UTC\n            Not After : Aug 18 23:59:11 2023 UTC\n        Subject: C=US,CN=vpn1.bidvmetlife.com.vn,L=Clarks Summit,O=Metlife, Inc.,ST=Pennsylvania\n        Subject Public Key Info:\n            Public Key Algorithm: RSA\n                Public-Key: (2048 bit)\n                Modulus:   \n                    b6:1b:ff:05:20:8c:7a:86:90:3d:a3:e8:99:3d:71:\n                    42:ac:1b:ce:51:bf:21:04:40:3a:8f:15:5b:a0:52:\n                    d9:68:96:04:05:ed:f7:4b:83:2c:95:45:f9:d1:af:\n                    b4:bc:35:b2:5f:87:18:98:61:67:d6:4d:1d:3f:84:\n                    1d:fb:ba:5a:70:1a:ce:50:73:8d:f3:57:c8:eb:60:\n                    54:a1:98:64:d7:bf:39:7d:90:f3:ab:4f:5f:e9:6b:\n                    95:5b:1c:8d:45:46:51:fb:ae:df:5f:6f:7a:f2:89:\n                    98:6a:dd:28:8d:bb:0d:e4:c3:b7:10:07:95:05:1f:\n                    7b:6a:81:fc:57:58:fd:4d:b9:5c:c4:ff:50:ea:c8:\n                    ff:d4:6c:c3:9d:a8:b4:a5:49:74:c8:21:01:1f:d2:\n                    92:a3:de:c4:fa:0e:5e:65:b6:c2:5a:4c:a2:02:e2:\n                    96:8e:a4:cf:9c:db:18:9c:a0:ed:eb:6a:47:a2:af:\n                    80:ac:0f:ae:4b:eb:70:19:a3:46:18:f6:1b:a1:ef:\n                    e9:0c:5c:42:1b:e6:40:87:da:53:45:2d:56:80:9f:\n                    d8:da:b9:4c:43:c6:b1:58:f1:7a:0c:47:28:a9:18:\n                    d1:62:e6:61:a0:55:7d:a7:f9:c3:9e:eb:1c:aa:42:\n                    8a:7b:7a:17:e4:d2:2b:fe:fc:96:d8:9e:fe:84:99:\n                    77\n                Exponent: 65537 (0x10001)\n        X509v3 extensions:\n            X509v3 Subject Alternative Name:\n                DNS:vpn1.bidvmetlife.com.vn\n            Authority Information Access:\n                OCSP - URI:http://ocsp.digicert.com\n                CA Issuers - URI:http://cacerts.digicert.com/DigiCertGlobalG2TLSRSASHA2562020CA1.crt\n\n            X509v3 CRL Distribution Points:\n\n                Full Name:\n                  URI:http://crl3.digicert.com/DigiCertGlobalG2TLSRSASHA2562020CA1-2.crl, URI:http://crl4.digicert.com/DigiCertGlobalG2TLSRSASHA2562020CA1-2.crl\n            X509v3 Authority Key Identifier:\n                keyid:74:85:80:C0:66:C7:DF:37:DE:CF:BD:29:37:AA:03:1D:BE:ED:CD:17\n            X509v3 Basic Constraints:\n                CA:False\n            X509v3 Key Usage: critical\n                Digital Signature, Key Encipherment\n            Unknown extension 1.3.6.1.4.1.11129.2.4.2\n            X509v3 Extended Key Usage:\n                TLS Web Server Authentication, TLS Web Client Authentication\n            X509v3 Certificate Policies:\n                Policy: 2.23.140.1.2.2\n            X509v3 Subject Key Identifier:\n                31:EF:CA:A5:A6:5C:C4:2E:E2:2F:0B:B4:57:DD:0C:CF:63:EB:2C:05\n\n    Signature Algorithm: SHA256-RSA\n         59:fb:28:b1:c9:b4:4c:54:70:ff:64:89:b4:af:99:7c:3f:17:\n         6c:a8:9f:52:dd:e2:7f:ba:48:65:f8:91:38:20:82:51:a4:51:\n         26:8b:a9:52:7c:5c:6b:02:98:50:c1:e6:ca:42:5a:06:b6:51:\n         08:33:5a:fd:3d:96:f2:a6:13:a4:39:2e:5a:0d:73:06:a0:3d:\n         74:9d:ea:2e:3e:8c:ed:66:56:74:da:f1:e7:01:22:3f:81:97:\n         fc:91:1f:8c:ba:8e:5c:d2:92:f0:47:03:0b:1d:41:70:a9:95:\n         f7:0b:e2:85:40:57:f5:81:d0:73:78:49:f0:f4:a1:3f:b0:5b:\n         64:42:59:c5:04:ec:25:cc:f5:e3:7e:09:de:65:61:7a:4b:55:\n         53:46:b2:3c:8b:50:19:6e:51:f4:cf:39:04:5a:12:bc:e4:f4:\n         f3:f9:92:d6:3d:ed:d7:11:7b:0d:78:5b:44:a7:37:2b:05:a8:\n         fb:0e:4a:3f:d7:ca:0f:01:1e:a1:67:c9:1b:77:1b:25:57:b4:\n         1e:b9:65:d9:ba:14:ff:05:a3:73:d6:8e:e1:d5:6e:02:63:fb:\n         0f:55:46:4e:08:c6:5d:3e:f1:d8:ad:37:9d:2d:fe:e8:df:6d:\n         5b:e6:fe:76:39:cf:7b:ec:d6:09:d9:18:ea:15:c3:e5:82:48:\n         ba:6a:b3:fb",
+            "timestamp": "2023-04-16T22:31:53",
+            "geoinfo": {
+                "continent": {
+                    "code": "AP",
+                    "names": {
+                        "en": "Asia",
+                        "zh-CN": "\u4e9a\u6d32"
+                    },
+                    "geoname_id": null
+                },
+                "country": {
+                    "code": "VN",
+                    "names": {
+                        "en": "Viet Nam",
+                        "zh-CN": "\u8d8a\u5357"
+                    },
+                    "geoname_id": null
+                },
+                "base_station": "",
+                "city": {
+                    "names": {
+                        "en": "",
+                        "zh-CN": ""
+                    },
+                    "geoname_id": null
+                },
+                "isp": "vnpt.vn",
+                "organization": "VNPT Corp",
+                "idc": "",
+                "location": {
+                    "lon": "107.867996",
+                    "lat": "15.9742"
+                },
+                "aso": null,
+                "asn": "45899",
+                "subdivisions": {
+                    "names": {
+                        "en": "Unknown",
+                        "zh-CN": "Unknown"
+                    },
+                    "geoname_id": null
+                },
+                "PoweredBy": "IPIP",
+                "scene": {
+                    "en": "Used",
+                    "cn": "\u5df2\u4f7f\u7528"
+                },
+                "organization_CN": null
+            },
+            "protocol": {
+                "application": "HTTPS",
+                "probe": "GetRequest",
+                "transport": "tcp"
+            },
+            "honeypot": 0,
+            "whois": {
+                "2018-01-25": {
+                    "admin_c": "PTH13-AP",
+                    "country": "VN",
+                    "descr": "Vietnam Posts and Telecommunications Group,No 57, Huynh Thuc Khang Street, Lang Ha ward, Dong Da district, Ha Noi City",
+                    "inetnum": "14.224.0.0 - 14.255.255.255",
+                    "ip_end": "14.255.255.255",
+                    "ip_start": "14.224.0.0",
+                    "irt": [
+                        {
+                            "abus_mailbox": "hm-changed@vnnic.vn",
+                            "address": "Ha Noi, VietNam",
+                            "admin_c": "NTTT1-AP",
+                            "auth": "# Filtered",
+                            "email": "hm-changed@vnnic.vn",
+                            "fax_no": "+84-24-37821462",
+                            "irt": "IRT-VNNIC-AP",
+                            "irt_nfy": "",
+                            "last_modified": "2017-11-08T09:40:06Z",
+                            "mnt_by": "MAINT-VN-VNNIC",
+                            "notify": "",
+                            "phone": "+84-24-35564944",
+                            "source": "APNIC",
+                            "tech_c": "NTTT1-AP"
+                        }
+                    ],
+                    "last_modified": "2018-01-25T03:55:18Z",
+                    "mnt_by": "MAINT-VN-VNNIC",
+                    "mnt_irt": "IRT-VNNIC-AP",
+                    "mnt_lower": "MAINT-VN-VNPT",
+                    "mnt_routes": "MAINT-VN-VNPT",
+                    "netname": "VNPT-VN",
+                    "notify": "",
+                    "organization": {
+                        "address": "",
+                        "admin_c": "",
+                        "country": "GB",
+                        "descr": "",
+                        "email": "",
+                        "fax_no": "",
+                        "last_modified": "",
+                        "mnt_by": "",
+                        "mnt_ref": "",
+                        "notify": "",
+                        "org": "",
+                        "org_name": "",
+                        "organization": "",
+                        "phone": "",
+                        "source": "LACNIC",
+                        "tech_c": "CLO7-RIPE"
+                    },
+                    "person": [
+                        {
+                            "abuse_mailbox": "",
+                            "address": "VNPT-VN",
+                            "country": "VN",
+                            "email": "huypt@vnpt.vn",
+                            "fax_no": "",
+                            "last_modified": "2017-11-19T07:06:20Z",
+                            "mnt_by": "MAINT-VN-VNPT",
+                            "nic_hdl": "PTH13-AP",
+                            "notify": "",
+                            "person": "Pham Tien Huy",
+                            "phone": "+84-24-37741604",
+                            "source": "APNIC"
+                        }
+                    ],
+                    "role": [],
+                    "source": "APNIC",
+                    "status": "ALLOCATED PORTABLE",
+                    "tech_c": "PTH13-AP"
+                }
+            }
+        }
+    ],
+    "facets": {}
+}

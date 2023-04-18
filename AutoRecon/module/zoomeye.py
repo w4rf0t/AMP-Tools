@@ -3,6 +3,7 @@ import json
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
+
 def zoomeye_login():
     login_url = "https://api.zoomeye.org/user/login"
     data = {
@@ -16,14 +17,48 @@ def zoomeye_login():
     except:
         return None
 
-def zoomeye(target,ip):
+
+def zoomeye_host(target):
+    jwt_token = zoomeye_login()
+    while jwt_token == None:
+        jwt_token = zoomeye_login()
+    host_domain = str(target.split('.')[0])
+    top_level_domain = str(target.split('.')[-1])
+    query = f'hostname:"*{host_domain}*.{top_level_domain}"'
+    with open(f"Result/{target}_hostname.txt", "w") as f:
+        search_url = 'https://api.zoomeye.org/web/search'
+        headers = {
+            "Authorization": f"JWT {jwt_token}"
+        }
+        page = 1
+        list_host = []
+        while True:
+            try:
+                response = requests.get(
+                    search_url, headers=headers, params={"query": query, "page": page, "pageSize": 20})
+                json_list = json.loads(response.text).get("matches")
+                for json_obj in json_list:
+                    site = str(json_obj["site"])
+                    site = site.split(".")
+                    site = ".".join(site[1:])
+                    if site not in list_host:
+                        list_host.append(site)
+                        f.write(site + "\n")
+                page += 1
+                if len(json_list) < 20:
+                    break
+            except:
+                pass
+
+
+def zoomeye_ip(target, ip):
     jwt_token = zoomeye_login()
     while jwt_token == None:
         jwt_token = zoomeye_login()
     search_url = "https://api.zoomeye.org/host/search?query={}".format(ip)
     headers = {
-            "Authorization": f"JWT {jwt_token}"
-        }
+        "Authorization": f"JWT {jwt_token}"
+    }
     try:
         response = requests.get(search_url, headers=headers)
         json_obj = json.loads(response.text)

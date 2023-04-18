@@ -1,0 +1,31 @@
+[
+    {
+        "ip": "52.220.117.207",
+        "port": 80,
+        "title": null,
+        "service": "http",
+        "app": "Apache httpd",
+        "extrainfo": "",
+        "version": ""
+    },
+    {
+        "ip": "52.220.117.207",
+        "port": 22,
+        "title": null,
+        "service": "ssh",
+        "app": "OpenSSH",
+        "extrainfo": "",
+        "version": "7.4"
+    },
+    {
+        "ip": "52.220.117.207",
+        "port": 443,
+        "title": [
+            "400 The plain HTTP request was sent to HTTPS port"
+        ],
+        "service": "https",
+        "app": "nginx",
+        "extrainfo": "",
+        "version": "1.18.0"
+    }
+]

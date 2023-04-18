@@ -1,0 +1,340 @@
+{
+    "code": 60000,
+    "total": 2,
+    "available": 2,
+    "matches": [
+        {
+            "rdns": "host-216-163-248-218.metlife.com",
+            "jarm": "",
+            "ico": {
+                "mmh3": "",
+                "md5": ""
+            },
+            "txtfile": {
+                "robotsmd5": "",
+                "securitymd5": ""
+            },
+            "ip": "216.163.248.218",
+            "portinfo": {
+                "hostname": "",
+                "os": "",
+                "port": 80,
+                "service": "http",
+                "title": null,
+                "version": "",
+                "device": "web application",
+                "extrainfo": "",
+                "rdns": "host-216-163-248-218.metlife.com",
+                "app": "Apache httpd",
+                "banner": "HTTP/1.1 301 Moved Permanently\r\nLocation: https://www.metlifeinvestors.com/\r\nConnection: close\r\n\r\n"
+            },
+            "timestamp": "2023-02-17T05:17:12",
+            "geoinfo": {
+                "continent": {
+                    "code": "NA",
+                    "names": {
+                        "en": "North American",
+                        "zh-CN": "\u5317\u7f8e\u6d32"
+                    },
+                    "geoname_id": null
+                },
+                "country": {
+                    "code": "US",
+                    "names": {
+                        "en": "United States",
+                        "zh-CN": "\u7f8e\u56fd"
+                    },
+                    "geoname_id": null
+                },
+                "base_station": "",
+                "city": {
+                    "names": {
+                        "en": "",
+                        "zh-CN": ""
+                    },
+                    "geoname_id": null
+                },
+                "isp": "",
+                "organization": "metlife.com",
+                "idc": "",
+                "location": {
+                    "lon": "-74.005941",
+                    "lat": "40.712784"
+                },
+                "aso": null,
+                "asn": "15048",
+                "subdivisions": {
+                    "names": {
+                        "en": "New York",
+                        "zh-CN": "\u7ebd\u7ea6\u5dde"
+                    },
+                    "geoname_id": null
+                },
+                "PoweredBy": "IPIP",
+                "scene": {
+                    "en": "Used",
+                    "cn": "\u5df2\u4f7f\u7528"
+                },
+                "organization_CN": null
+            },
+            "protocol": {
+                "application": "HTTP",
+                "probe": "GetRequestHost",
+                "transport": "tcp"
+            },
+            "honeypot": 0,
+            "whois": {
+                "2021-12-14": {
+                    "admin_c": "CASTR228-ARIN,CHENH7-ARIN,SENER1-ARIN,CASTR228-ARIN,CHENH7-ARIN,SENER1-ARIN",
+                    "country": "",
+                    "descr": "",
+                    "inetnum": "216.163.240.0 - 216.163.255.255",
+                    "ip_end": "216.163.255.255",
+                    "ip_start": "216.163.240.0",
+                    "irt": [],
+                    "last_modified": "2021-12-14",
+                    "mnt_by": "",
+                    "mnt_irt": "",
+                    "mnt_lower": "",
+                    "mnt_routes": "",
+                    "netname": "METLIFE-1BLK",
+                    "notify": "",
+                    "organization": {
+                        "address": "11101,27-01 Queens Plaza North,Long Island City,NY",
+                        "admin_c": "CHENH7-ARIN,CASTR228-ARIN,CHENH7-ARIN,SENER1-ARIN",
+                        "country": "US",
+                        "descr": "",
+                        "email": "",
+                        "fax_no": "",
+                        "last_modified": "2021-10-21",
+                        "mnt_by": "",
+                        "mnt_ref": "",
+                        "notify": "",
+                        "org": "",
+                        "org_name": "MetLife",
+                        "organization": "METLIF",
+                        "phone": "",
+                        "source": "ARIN",
+                        "tech_c": "SENER1-ARIN,CASTR228-ARIN,CHENH7-ARIN"
+                    },
+                    "person": [
+                        {
+                            "abuse_mailbox": "hchen@metlife.com",
+                            "address": "27513,101 MetLife Way,Cary,NC",
+                            "country": "US",
+                            "email": "",
+                            "fax_no": "",
+                            "last_modified": "2022-07-01",
+                            "mnt_by": "",
+                            "nic_hdl": "CHENH7-ARIN",
+                            "notify": "",
+                            "person": "Han Chen",
+                            "phone": "",
+                            "source": "ARIN"
+                        },
+                        {
+                            "abuse_mailbox": "msenerote@metlife.com",
+                            "address": "27513,101 MetLife Way,Cary,NC",
+                            "country": "US",
+                            "email": "",
+                            "fax_no": "",
+                            "last_modified": "2021-04-19",
+                            "mnt_by": "",
+                            "nic_hdl": "SENER1-ARIN",
+                            "notify": "",
+                            "person": "Mike Senerote",
+                            "phone": "+1-570-972-9428",
+                            "source": "ARIN"
+                        },
+                        {
+                            "abuse_mailbox": "juan.castro1@metlife.com",
+                            "address": "27513,101 MetLife Way,Cary,NC",
+                            "country": "US",
+                            "email": "",
+                            "fax_no": "",
+                            "last_modified": "2021-05-20",
+                            "mnt_by": "",
+                            "nic_hdl": "CASTR228-ARIN",
+                            "notify": "",
+                            "person": "Juan Castro",
+                            "phone": "",
+                            "source": "ARIN"
+                        }
+                    ],
+                    "role": [],
+                    "source": "ARIN",
+                    "status": "allocation",
+                    "tech_c": "CASTR228-ARIN,CHENH7-ARIN,SENER1-ARIN"
+                }
+            }
+        },
+        {
+            "rdns": "host-216-163-248-218.metlife.com",
+            "ico": {
+                "mmh3": "",
+                "md5": ""
+            },
+            "txtfile": {
+                "robotsmd5": "",
+                "securitymd5": ""
+            },
+            "ip": "216.163.248.218",
+            "portinfo": {
+                "hostname": "",
+                "os": "",
+                "port": 443,
+                "service": "https",
+                "title": [
+                    "MetLifePro"
+                ],
+                "version": "",
+                "device": "",
+                "extrainfo": "",
+                "rdns": "host-216-163-248-218.metlife.com",
+                "app": "Apache httpd",
+                "banner": "HTTP/1.1 301 Moved Permanently\r\nLocation: https://www.metlifeinvestors.com/\r\nConnection: close\r\n\r\n\n\nHttp response from 302 moved url https://metlifepro.metlife.com/public/:\nHTTP/1.1  200 OK\nAccept-Ranges: bytes\nX-Amz-Cf-Pop: EWR52-C2\nEtag: \"4ec8-5db9f09ad7f8e-gzip\"\nX-Permitted-Cross-Domain-Policies: none\nX-Frame-Options: SAMEORIGIN\nContent-Security-Policy: frame-ancestors 'self'\nReferrer-Policy: no-referrer-when-downgrade\nX-Amz-Cf-Id: TDOxjjl6b1SRFp2CQzy5PHGTe8rbWpgzBpyO5elbDswmd3bIyUxwRA==\nX-Vsite: metlifeholdings\nX-Vhost: ml-publish\nCache-Control: max-age=1200\nLast-Modified: Fri, 01 Apr 2022 22:09:52 GMT\nFeature-Policy: camera 'none'; fullscreen 'self'; geolocation *; microphone 'self'\nVary: Host,Accept-Encoding\nVia: 1.1 70afbe31994f2c69bf2f10f0b46f4736.cloudfront.net (CloudFront)\nContent-Type: text/html;charset=utf-8\nX-Content-Type-Options: nosniff\nExpect-Ct: enforce,max-age=31536000\"\nX-Xss-Protection: 1; mode=block\nAge: 675\nStrict-Transport-Security: max-age=31536000; includeSubDomains\nServer: Communique/4.3.2\nX-Dispatcher: dispatcher1useast1\nX-Menv: prod\nX-Cache: Miss from cloudfront\nDate: Fri, 01 Apr 2022 22:21:07 GMT\n\n\r\n\r\n<!DOCTYPE HTML>\r\n<html lang=\"en\">\r\n    \r\n\r\n<head dir=\"ltr\">\r\n    \r\n\r\n\r\n<meta charset=\"UTF-8\"/>\r\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0,user-scalable=no\"/>\r\n\r\n\r\n    <title>MetLifePro</title>\r\n    <meta name=\"title\" content=\"MetLifePro\"/>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n    \r\n        <meta name=\"robots\" content=\"index, follow\"/>\r\n    \r\n\r\n\r\n\r\n\r\n\r\n    <link rel=\"canonical\" href=\"https://mlholdings.metlife.com/public/\"/>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n<meta name=\"format-detection\" content=\"telephone=no\"/>\r\n<meta name=\"format-detection\" content=\"date=no\"/>\r\n<meta name=\"format-detection\" content=\"address=no\"/>\r\n<meta name=\"format-detection\" content=\"email=no\"/>\r\n\r\n\r\n\r\n\r\n\r\n    <link rel=\"shortcut icon\" href=\"/static/images/favicon.ico\" type=\"image/x-icon\"/>\r\n\r\n    \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n<link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,devanagari,greek,greek-ext,latin-ext,vietnamese\"/>\r\n\n    \n<link rel=\"stylesheet\" href=\"/etc.clientlibs/MetlifeMarketCore/clientlibs/clientlib-language/global.min.css\" type=\"text/css\">\n\n\n\r\n\r\n\r\n\n    \n<link rel=\"stylesheet\" href=\"/etc/clientlibs/application/site-vendor.min.css\" type=\"text/css\">\n\n\n\r\n\r\n\r\n\n    \n<link rel=\"stylesheet\" href=\"/etc/clientlibs/application/site-global.min.css\" type=\"text/css\">\n\n\n\r\n\r\n    \n    \n<link rel=\"stylesheet\" href=\"/etc/clientlibs/application/site-market/us/global.min.css\" type=\"text/css\">\n\n\n\r\n\r\n\r\n\r\n\n    \n<link rel=\"stylesheet\" href=\"/etc/clientlibs/application/site-component.min.css\" type=\"text/css\">\n\n\n\r\n\r\n    \n    \n<link rel=\"stylesheet\" href=\"/etc/clientlibs/application/site-market/us/component.min.css\" type=\"text/css\">\n\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n    \n<link rel=\"stylesheet\" href=\"/etc/clientlibs/metlifeHoldings/authoring.min.css\" type=\"text/css\">\n\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n    <style>.font-size-reduce{font-size:30px !important; line-height:40px !important;}\n.carousel-caption a{display:inline-block !important; color:#fff !important;}\n.helpmessage{font-weight:bold;padding-top:15px;padding-left:20px;}\n.greyborder{border:1px solid #f2f2f2;font-size:18px;}</style>\r\n\r\n\r\n    \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n<![if IE]>\r\n   <script type=\"text/javascript\">\r\n   //CustomEvent polyfill for IE compatibility\r\n\t     (function () {\r\n\t\r\n\t      if ( typeof window.CustomEvent === \"function\" ) return false;\r\n\t\r\n\t      function CustomEvent ( event, params ) {\r\n\t        params = params || { bubbles: false, cancelable: false, detail: undefined };\r\n\t        var evt = document.createEvent( 'CustomEvent' );\r\n\t        evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );\r\n\t        return evt;\r\n\t       }\r\n\t\r\n\t      CustomEvent.prototype = window.Event.prototype;\r\n\t\r\n\t      window.CustomEvent = CustomEvent;\r\n\t    })();\r\n   </script>\r\n<![endif]>\r\n\r\n<script>\r\n\tvar campaignID = '';\r\n    var queryParametersCampaign = location.search.substring(1) ? location.search.substring(1) : '';\r\n\r\n    function getQueryStringParams(name) {\r\n        var match = RegExp('[?&]' + name + '=([^&#]*)', 'i').exec(window.location.search);\r\n        var queryParam = match && match[1];\r\n        if(queryParam == null){\r\n\t\t\treturn \"\";\r\n        }\r\n        else{\r\n\t\t\treturn queryParam; \r\n        }\r\n    }\r\n    if (queryParametersCampaign != '') {\r\n        campaignID = getQueryStringParams('cid');\r\n        sessionStorage.setItem(\"digitialDataQueryParametersCampaign\", queryParametersCampaign);\r\n        if (campaignID != null && campaignID != \"\") {\r\n            sessionStorage.setItem(\"digitialDataCampaignID\", campaignID);\r\n        } else {\r\n        \tif(sessionStorage.getItem(\"digitialDataCampaignID\") != null && sessionStorage.getItem(\"digitialDataCampaignID\") != \"\" ){\r\n            \tcampaignID = sessionStorage.getItem(\"digitialDataCampaignID\"); \r\n            }\r\n        }\r\n    } else if (sessionStorage.getItem(\"digitialDataQueryParametersCampaign\") != null && sessionStorage.getItem(\"digitialDataQueryParametersCampaign\") != \"\") {\r\n        queryParametersCampaign = sessionStorage.getItem(\"digitialDataQueryParametersCampaign\");\r\n        campaignID = sessionStorage.getItem(\"digitialDataCampaignID\");\r\n    }\r\n</script>\r\n\r\n<script type=\"text/javascript\">\r\n\tvar accountTypeValue, statusValue;\t\r\n\tif (window.location.href.indexOf(\"underwriters\") > -1) {\r\n\t\taccountTypeValue = 'Underwriter';\r\n\t\tstatusValue = \"authenticated\";\r\n\t} else if (window.location.href.indexOf(\"homeoffice\") > -1) {\r\n\t\taccountTypeValue = 'Home office';\r\n\t\tstatusValue = \"authenticated\"\r\n\t} else if (window.location.href.indexOf(\"advisors\") > -1) {\r\n\t\taccountTypeValue = 'Advisor';\r\n\t\tstatusValue = \"authenticated\"\r\n\t} else {\r\n\t\tstatusValue = \"unauthenticated\"\r\n\t\taccountTypeValue = 'Public';\r\n\t}\r\n\r\n\twindow.digitalData = {\r\n\t\tpage : {\r\n\t\t\tpageInfo : {\r\n\t\t\t\tpageName : [ location.hostname, location.hash ].join(''),\r\n\t\t\t\tgeoRegion : 'americas',\r\n\t\t\t\tlanguage : 'english'\r\n\t\t\t},\r\n\t\t\tcategory : {\r\n\t\t\t\tprimaryCategory : 'MetLife Holding',\r\n\t\t\t\tsubCategory : ''\r\n\t\t\t},\r\n\t\t\tattributes : {\r\n\t\t\t\tcountry : 'americas',\r\n\t\t\t\tcategory : 'marketing',\r\n\t\t\t\taudience : 'consumers',\r\n\t\t\t\tcurrency : 'usd'\r\n\t\t\t},\r\n\t\t\tuser : {\r\n\t\t\t\tattributes : {\r\n\t\t\t\t\tstatus : statusValue,\r\n\t\t\t\t\taccountType : accountTypeValue\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t},\r\n\t\tevent : [],\r\n\t\teventTrack : function(cevt, eventDetail) {\r\n\t\t\tvar msg = 'The 1st argument (required) is a string defining the Javascript custom event name to trigger';\r\n\t\t\tif (typeof cevt !== 'string' || cevt.length < 1)\r\n\t\t\t\tthrow msg;\r\n\t\t\tif (typeof digitalData.event !== 'object')\r\n\t\t\t\tdigitalData.event = [];\r\n\t\t\tif (typeof eventDetail !== 'object')\r\n\t\t\t\teventDetail = {\r\n\t\t\t\t\teventName : cevt\r\n\t\t\t\t};\r\n\t\t\tdigitalData.event.push(eventDetail);\r\n\t\t\tvar ev = new CustomEvent(cevt, {\r\n\t\t\t\t'detail' : eventDetail\r\n\t\t\t});\r\n\t\t\tdocument.getElementsByTagName('body')[0].dispatchEvent(ev);\r\n\t\t\tconsole.log(accountTypeValue);\r\n\t\t},\r\n\t\tgetEventAttr : function() {\r\n\t\t\tvar ev = [], i;\r\n\t\t\ttry {\r\n\t\t\t\tev = digitalData.event\r\n\t\t\t} catch (e) {\r\n\t\t\t}\r\n\t\t\ti = ev.length - 1;\r\n\t\t\tif (i < 0)\r\n\t\t\t\tthrow 'event attributes not available';\r\n\t\t\treturn ev[i].attributes;\r\n\t\t},\r\n        campaign: {\r\n            id: campaignID,\r\n            queryStringParameters: queryParametersCampaign\r\n        }\r\n\t};\t\r\n</script>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\t\r\n\t\t<script src=\"//assets.adobedtm.com/launch-EN9af077367c0244eaa0941827fe2f1746.min.js\"></script>\r\n\t\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n    \n\n\n\n\n\n\n\n\r\n</head>\r\n     \r\n<body class=\"metlife-holdings\">\r\n\t \r\n\r\n\r\n\r\n\t \r\n\r\n\r\n\t\r\n\r\n\r\n\r\n\r\n\r\n    \r\n\r\n\r\n\r\n\r\n\r\n    <a href=\"#skiptomaincontent\" class=\"skip hidden-xs hidden-sm hidden-md\">Skip Navigation</a>\r\n    <span class=\"sr-only skip-devices\">Skip Navigation</span>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n<div class=\"row global-header\">\r\n    <div class=\"global-header__left\">\r\n        \r\n        \r\n            <div class=\"col home-trigger\" title=\"HOME\" data-target=\"home\">\r\n                <a href=\"/public/\" id=\"public__global-homeLink\" class=\"home-trigger__link\">\r\n                    <svg class=\"icon icon-homepage home-trigger__icon\">\r\n                        <title>Home</title>\r\n                        <use xlink:href=\"/static/images/icons-metlife.svg#icon-homepage\"></use>\r\n                    </svg>\r\n                    <span class=\"home-trigger__label\">Home</span>\r\n                </a>\r\n            </div>\r\n        \r\n        \r\n    </div>\r\n    \r\n        \r\n\r\n\r\n\r\n\r\n<div class=\"global-header__middle duallogo\">\r\n    \r\n    \r\n        <a href=\"/public/\" id=\"public__global-logoLink\">\r\n            <img src=\"/content/dam/metlifeHoldings/global/MetLife.png\" alt=\"MetLife\" class=\"global-header__logo img-responsive desktop\"/>\r\n            <img src=\"/content/dam/metlifeHoldings/global/MetLife.png\" alt=\"MetLife\" class=\"global-header__logo img-responsive mobile\"/>\r\n        </a>\r\n    \r\n</div>\r\n    \r\n    \r\n    <div class=\"global-header__right pull-right\">\r\n        <div class=\"pull-right\">\r\n            \r\n                \r\n            \r\n            \r\n            \r\n            \r\n            \r\n                <div class=\"col login-trigger linkOnly \" title=\"LOG IN\" data-target=\"login-container\">\r\n                    <a id=\"public__global-loginPagePath\" class=\"login-trigger__label\" href=\"/siteminderagent/forms/login.fcc\" target=\"_self\" aria-label=\"LOG IN\">\r\n                        <svg class=\"icon icon-profile2\" aria-hidden=\"true\">\r\n                            <use xlink:href=\"/static/images/icons-metlife.svg#icon-profile2\"></use>\r\n                        </svg>\r\n                        <span>LOG IN</span>\r\n                        <span></span>\r\n                    </a>\r\n                </div>\r\n            \r\n            \r\n                \r\n                    \r\n                        \r\n                            <div class=\"col contact-trigger \" title=\"Contact Us\" data-target=\"contact-container\">\r\n                                <a id=\"public_header_global-contactLabel\" class=\"contact-redirect contact-trigger__label\" href=\"/public/contactus/\" target=\"_self\" tabindex=\"0\">\r\n                                    \r\n                                        <svg class=\"icon icon-contact-us\" aria-hidden=\"true\">\r\n                                            <use xlink:href=\"/static/images/icons-metlife.svg#icon-contact-us\"></use>\r\n                                        </svg>\r\n                                    \r\n                                    \r\n                                    <span>Contact Us</span>\r\n                                </a>\r\n                            </div>\r\n                        \r\n                        \r\n                        \r\n                        \r\n                    \r\n                \r\n            \r\n            \r\n            \r\n            <!--/* China End* /-->\r\n            \r\n            \r\n            \r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n\r\n\r\n    \r\n\r\n\r\n\r\n\r\n    \r\n\r\n\r\n\r\n\r\n    \r\n        \r\n    \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\t\r\n\r\n\r\n<div class=\"home-subnav\">\r\n\r\n<div class=\"container\">\r\n    <div class=\"row homepage-nav hidden-xs\">\r\n        <ul class=\"homepage-nav__items\">\r\n            \r\n\t    \t\t<li class=\"homepage-nav__item\">\r\n\r\n<a href=\"/public/websitehelp/\" target=\"_self\" class=\"homepage-nav__link\" aria-label=\" Website Help\">\r\n    \r\n    Website Help\r\n</a>\r\n</li>\r\n\t    \t\r\n\t    \t\t<li class=\"homepage-nav__item\">\r\n\r\n<a href=\"https://pass.metlife.com/DPASWeb/FedRegister?newsess=true\" target=\"_blank\" class=\"homepage-nav__link\" aria-label=\" Portal Registration\">\r\n    \r\n    Portal Registration\r\n</a>\r\n</li>\r\n\t    \t\r\n        </ul>\r\n    </div>\r\n</div>\r\n</div>\r\n\r\n\r\n<div class=\"hero-carousel\">\r\n\r\n<div id=\"carouselHero\" class=\"carousel slide carousel--hero\" data-ride=\"carousel\">\r\n    <div class=\"ui-slide-control\">\r\n        <div class=\"ui-slide-autoControl\">\r\n            <button type=\"button\" class=\"ui-slide-play\" title=\"Play\">\r\n                <span>Play</span>\r\n            </button>\r\n            <button type=\"button\" class=\"ui-slide-stop\" title=\"Pause\">\r\n                <span>Pause</span>\r\n            </button>\r\n        </div>\r\n        <div class=\"ui-slide-indicator\">\r\n            <ol class=\"carousel-indicators\">\r\n                \r\n                    <li data-target=\"#carouselHero\" data-slide-to=\"0\" class=\"active\">\r\n                        <button><span>Button</span></button>\r\n                    </li>\r\n                \r\n            </ol>\r\n        </div>\r\n    </div>\r\n    \r\n        <div class=\"carousel-inner\" role=\"listbox\" tabindex=\"0\">\r\n           \r\n                <div class=\"item active\" data-img-src=\"https://metlifepro.metlife.com/public/\" data-img-target=\"_self\">\r\n                    <div id=\"public_hero-carousel_content-homeSliderLinks1\">\r\n\t\t\t\t\t\t<img src=\"/content/dam/metlifeHoldings/advisors/images/Banners/metlifepro-prelogin.png\" alt=\"MetLifePro.com\"/>\r\n                        <div class=\"carousel-caption color1 shadow-off\">\r\n                            <h2 class=\"carousel-caption--hero\" tabindex=\"0\" aria-label=\"clickable\">\r\n                                \r\n                                    <span class=\"line-items\">Thank you for visiting MetLife Pro. </span>\r\n                                \r\n                                \r\n                                \r\n                                    <span class=\"line-items\">This site should be used for MetLife business only. For Brighthouse Financial business you should visit www.brighthousefinancialpro.com.</span>\r\n                                \r\n                                \r\n                            </h2>\r\n                            \r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            \r\n        </div>\r\n    \r\n    <a class=\"left carousel-control hidden-xs\" href=\"#carouselHero\" role=\"button\" data-slide=\"prev\">\r\n        <svg class=\"icon icon-chevron-left\">\r\n            <use xlink:href=\"/static/images/icons-metlife.svg#icon-chevron-left\"></use>\r\n        </svg>\r\n        <span class=\"sr-only\">Prev</span>\r\n    </a>\r\n    <a class=\"right carousel-control hidden-xs\" href=\"#carouselHero\" role=\"button\" data-slide=\"next\">\r\n        <svg class=\"icon icon-chevron-right\">\r\n            <use xlink:href=\"/static/images/icons-metlife.svg#icon-chevron-right\"></use>\r\n        </svg>\r\n        <span class=\"sr-only\">Next</span>\r\n    </a>\r\n</div></div>\r\n\r\n\r\n<div class=\"scroll-for-more\">\r\n\r\n</div>\r\n\r\n\r\n<div class=\"content-parsys parsys\"><div class=\"rtf-general-content parbase section\">\r\n<div class=\"container rtf-general-content   bg-white htl-placeholder\" data-comp-id=\"rtf-general-content\" aria-label=\"News\">\r\n    <div class=\"row wrapper rich-text-component\">\r\n        <div class=\"width-80-authored\">\r\n        \t\r\n            <div></div>\r\n            \r\n        </div>\r\n    </div>\r\n</div></div>\n<div class=\"subcategory-tile-container parbase section\">\r\n\r\n<section class=\"container   \" data-comp-id=\"subcategory-tile-container\">\r\n    <div class=\"row wrapper product-module in_view\r\n     \r\n     \r\n     \r\n    \r\n    \">\r\n        \r\n\t    \t<div class=\"tile-0 subcategory-tile product-module__large flex-container bg-white\">\r\n\r\n\r\n\r\n\r\n<section role=\"region\" aria-label=\"Variable Funding Options\">\r\n    \r\n\t\r\n\t\r\n\t\r\n\t\t<div class=\"productmodule_section1 \">\r\n\t\t\t\r\n\t\t</div>\r\n\t\r\n\t\r\n\t\r\n\t<div class=\"productmodule_section2\">\r\n\t    <div class=\"product-module__top\">\r\n\t        <h3>Variable Funding Options</h3>\r\n\t        \r\n\t            <div class=\"product-module__list\"><p>Porfolio information for current annuity contract holders, including fund fact sheets and regulatory documents.</p>\n</div>\r\n\t        \r\n\t    </div>\r\n\t    <div class=\"product-module__bottom\">\r\n\t         \t\r\n\t            <div class=\"product-module__cta-button\">\r\n\t                <a href=\"https://www.metlife.com/variable-funds/\" class=\"btn-brand-2nd\" target=\"_blank\" id=\"Public_tile-0_content-buttonLink\" role=\"button\">GO\r\n                    </a>\r\n\t            </div>\r\n\t        \r\n\t        \r\n\t        \r\n\t        \r\n\t        \r\n\t    </div>\r\n\t</div>\r\n    </section>\r\n\r\n</div>\r\n\t    \r\n\t    \t<div class=\"tile-1 subcategory-tile product-module__large flex-container bg-white\">\r\n\r\n\r\n\r\n\r\n<section role=\"region\" aria-label=\"Product Info\">\r\n    \r\n\t\r\n\t\r\n\t\r\n\t\t<div class=\"productmodule_section1 \">\r\n\t\t\t\r\n\t\t</div>\r\n\t\r\n\t\r\n\t\r\n\t<div class=\"productmodule_section2\">\r\n\t    <div class=\"product-module__top\">\r\n\t        <h3>Product Info</h3>\r\n\t        \r\n\t            <div class=\"product-module__list\"><p>Performance reports and prospectuses for MetLife annuity and life products.</p>\n</div>\r\n\t        \r\n\t    </div>\r\n\t    <div class=\"product-module__bottom\">\r\n\t         \t\r\n\t            <div class=\"product-module__cta-button\">\r\n\t                <a href=\"https://www.metlife.com/variable-funds/product-performance-reports/metlife-products/\" class=\"btn-brand-2nd\" target=\"_blank\" id=\"Public_tile-1_content-buttonLink\" role=\"button\">GO\r\n                    </a>\r\n\t            </div>\r\n\t        \r\n\t        \r\n\t        \r\n\t        \r\n\t        \r\n\t    </div>\r\n\t</div>\r\n    </section>\r\n\r\n</div>\r\n\t    \r\n    </div>\r\n</section>\r\n</div>\n\r\n</div>\r\n\t\r\n\r\n\r\n\r\n\r\n\r\n\r\n    \r\n\r\n\r\n\r\n\r\n\t\r\n\r\n\r\n\r\n\r\n\r\n    \r\n\r\n\r\n\r\n<div class=\"container bg-gray-1st global-footer\">\r\n    <div class=\"wrapper\">\r\n    \r\n    \t\r\n\r\n        <div class=\"row footer-country-language-social\">\r\n            \r\n\r\n            \r\n\r\n            <div class=\"clearfix hidden-sm hidden-md hidden-lg\"></div>\r\n            \r\n                    <div class=\"col-xs-6 footer-logo\">\r\n                    <img class=\"img-responsive\" src=\"/content/dam/metlifeHoldings/global/MetLife.png\" alt=\"MetLife.com\"/>\r\n                </div>\r\n            \r\n\r\n            \r\n        </div>\r\n        \r\n\r\n\r\n\r\n<div class=\"row footer-legal\">\r\n\t\r\n        <div class=\"footer-legal__logo-container col-xs-12 col-sm-3 col-md-2\">\r\n            <a href=\"https://www.metlife.com\" class=\"hidden-xs footer-legal__logo\" id=\"public__global-footerImagePath\">\r\n                <img class=\"img-responsive\" src=\"/content/dam/metlifeHoldings/global/MetLife.png\" alt=\"MetLife.com\"/>\r\n            </a>\r\n\t\t\t\r\n        </div>\r\n\t\r\n    <div class=\"footer-legal__copy col-xs-12 col-sm-9 col-md-10\">\r\n        <div class=\"footer-legal__link\">\r\n\t\t\t\r\n\t\t\t\r\n        </div>\r\n        <div class=\"footer-legal__copyright\">\r\n\t\t\t<p>Not all marketing materials, products and/or product features are available at all firms or in all states. Please check with your individual broker/dealer for further details.</p>\n\r\n            <p class=\"footer-legal__doc-id\"> </p>\r\n\t\t\t<p><a href=\"https://www.metlife.com/about/terms-and-conditions/index.html\" target=\"_blank\">Legal Notices</a> \u00a0\u2022 <a href=\"https://www.metlife.com/about/privacy-policy/online-privacy-policy/index.html\" target=\"_blank\">Privacy Policy</a> \u00a0\u2022 \u00a9\u00a02022 MetLife Services and Solutions LLC, New York, NY 10166 - All Rights Reserved.</p>\n\r\n        </div>\r\n\t\t\r\n    </div>\r\n</div>\r\n\r\n\r\n    </div>\r\n</div>\r\n<div id=\"suggestionsbox\" class=\"suggestionsbox \">\r\n    <table class=\"ss-gac-table\" id=\"search_suggest_table\">\r\n        <tbody class=\"ss-gac-m\" id=\"search_suggest\" style=\"visibility: hidden;\"></tbody>\r\n    </table>\r\n</div>\r\n\r\n\r\n\r\n\r\n\t\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n    \n<script src=\"/etc/clientlibs/application/site-vendor.min.js\"></script>\n\n\n\r\n\r\n\r\n\n    \n<script src=\"/etc/clientlibs/application/site-global.min.js\"></script>\n\n\n\r\n\r\n    \n    \n<script src=\"/etc/clientlibs/application/site-market/us/global.min.js\"></script>\n\n\n\r\n\r\n\r\n\r\n\n    \n<script src=\"/etc/clientlibs/application/site-component.min.js\"></script>\n\n\n\r\n\r\n    \n    \n<script src=\"/etc/clientlibs/application/site-market/us/component.min.js\"></script>\n\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n    \n<script src=\"/etc/clientlibs/metlifeHoldings/authoring.min.js\"></script>\n\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n    <script type=\"text/javascript\">_satellite.pageBottom();\n\n$(\"img\").each(function(){\n\tvar src = $(this).attr(\"src\");\nif(src != null){\n\t$(this).attr(\"src\",decodeURIComponent(src));\n}else{\n\t$(this).remove();\n}\n\t\n});\n\n$('.login-type-password').find(\"input\").removeAttr('placeholder');</script>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n    <script type=\"text/javascript\">$(\".carousel-caption--hero > Span:eq(1)\").replaceWith(\"<span class='font-size-reduce'>This site should be used for MetLife business only. For Brighthouse Financial business you should visit <a href='https://www.brighthousefinancialpro.com/' title='Brighthouse Financial' target='_blank'>www.brighthousefinancialpro.com</a>.\");\n\n\n$( document ).ready(function() {\n    console.log( \"ready!\" );\n\nvar message = \"<div class='greyborder'><p class='helpmessage'>If you need assistance resetting your password or logging into the site <a href='https://metlifepro.metlife.com/public/websitehelp/' target='_blank'>click here.</a></p></div>\"\n\n$(\".home-subnav\").after(message);\n\n});</script>\r\n\r\n\r\n\r\n\r\n\r\n\t \r\n\r\n\r\n\r\n\t<!-- Google Analytics -->\r\n    <script>\r\n    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\r\n    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\r\n    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\r\n    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');\r\n\r\n    ga('create', 'UA-12345', 'auto');\r\n    ga('send', 'pageview');\r\n    </script>\r\n    <!-- End Google Analytics -->\r\n\r\n\r\n\t \r\n\r\n\r\n\r\n\r\n\t\r\n\r\n\r\n\r\n\t\r\n\r\n</body>\r\n</html>"
+            },
+            "ssl": "SSL Certificate\nVersion: TLS 1.3\nCipherSuit: TLS_AES_256_GCM_SHA384\nHandshake Message: x509: cannot validate certificate for 216.163.248.218 because it doesn't contain any IP SANs\nCertificate:\n    Data:\n        Version: 3 (0x2)\n        Serial Number: 15792352638831398663696312438874526173 (0xbe17f199261fab820810b7fc38951dd)\n    Signature Algorithm: SHA256-RSA\n        Issuer: C=US,CN=DigiCert TLS RSA SHA256 2020 CA1,O=DigiCert Inc\n        Validity\n            Not Before: May 28 00:00:12 2021 UTC\n            Not After : Jun 02 23:59:11 2022 UTC\n        Subject: C=US,CN=metlifeinvestors.com,L=Clarks Summit,O=Metlife, Inc.,ST=Pennsylvania\n        Subject Public Key Info:\n            Public Key Algorithm: RSA\n                Public-Key: (2048 bit)\n                Modulus:   \n                    91:71:89:47:01:94:3e:a5:1d:bd:ad:4f:e4:d1:ad:\n                    61:bd:88:cd:2b:49:b1:45:21:fb:1b:d3:dd:09:44:\n                    08:45:33:c3:1d:91:6c:67:03:dd:d8:9c:83:f4:54:\n                    20:7a:ec:13:f8:ed:16:3c:e3:55:f5:7a:9b:6c:cc:\n                    ec:ea:7e:1d:be:c7:99:01:50:fb:aa:77:95:71:2f:\n                    d0:9f:b6:2c:69:aa:9b:78:4f:dc:f2:90:ff:43:7f:\n                    1d:db:b9:09:a4:62:a2:40:54:e1:72:cc:90:27:86:\n                    c5:53:5f:a4:fb:24:c7:e2:1a:72:fa:5a:44:9a:e1:\n                    cd:53:d2:a4:93:a5:f5:cd:c5:10:5f:6d:29:eb:d5:\n                    07:b2:dc:17:31:74:0c:13:e5:e2:df:f2:ac:d4:d6:\n                    05:a6:05:82:6b:20:f8:fb:58:ed:4c:df:8d:bd:07:\n                    61:99:da:09:ac:38:17:1f:65:51:82:f3:83:9b:c2:\n                    13:65:3c:0c:02:a7:79:d5:3c:bf:e8:49:aa:7e:e5:\n                    75:3b:6d:51:99:13:46:dd:76:66:dc:6f:09:44:68:\n                    82:0e:81:82:16:17:82:d0:2f:3d:31:0b:dd:b6:2c:\n                    03:5d:44:14:fb:93:9f:a3:10:2a:5e:34:31:0e:57:\n                    18:ec:3a:21:ac:2c:0b:19:ea:fc:c5:52:70:c5:e2:\n                    bb\n                Exponent: 65537 (0x10001)\n        X509v3 extensions:\n            X509v3 Subject Alternative Name:\n                DNS:metlifeinvestors.com\n            Authority Information Access:\n                OCSP - URI:http://ocsp.digicert.com\n                CA Issuers - URI:http://cacerts.digicert.com/DigiCertTLSRSASHA2562020CA1.crt\n\n            X509v3 CRL Distribution Points:\n\n                Full Name:\n                  URI:http://crl3.digicert.com/DigiCertTLSRSASHA2562020CA1.crl, URI:http://crl4.digicert.com/DigiCertTLSRSASHA2562020CA1.crl\n            X509v3 Authority Key Identifier:\n                keyid:B7:6B:A2:EA:A8:AA:84:8C:79:EA:B4:DA:0F:98:B2:C5:95:76:B9:F4\n            X509v3 Basic Constraints: critical\n                CA:False\n            X509v3 Key Usage: critical\n                Digital Signature, Key Encipherment\n            Unknown extension 1.3.6.1.4.1.11129.2.4.2\n            X509v3 Extended Key Usage:\n                TLS Web Server Authentication, TLS Web Client Authentication\n            X509v3 Certificate Policies:\n                Policy: 2.23.140.1.2.2\n            X509v3 Subject Key Identifier:\n                43:21:9E:25:E5:54:F9:02:F6:3E:81:98:52:BB:7F:40:98:EA:A9:32\n\n    Signature Algorithm: SHA256-RSA\n         36:7d:f4:cf:5f:2e:56:86:f0:00:74:e5:fe:97:9d:d7:c8:1a:\n         4e:44:b4:e1:01:cc:f9:bb:2b:56:0e:60:59:21:49:e2:28:3e:\n         bd:6e:df:e2:8d:da:99:a9:fb:6c:41:d2:78:b2:bf:13:54:2c:\n         ad:7a:dd:77:5c:03:11:01:f4:46:b1:d4:93:e1:28:8a:4c:d7:\n         17:18:5b:69:3e:fd:84:18:3c:8f:37:f3:c8:f5:04:6c:aa:7e:\n         3d:00:b2:50:78:dd:0b:7e:4c:af:d9:f9:07:21:7b:96:1e:44:\n         a8:ac:86:85:17:af:4a:ba:5f:0d:d5:bc:ce:9d:65:52:ac:0f:\n         2c:a4:6a:31:d8:4d:55:04:0d:8b:61:e7:f9:7b:88:b6:14:8c:\n         0a:67:12:dd:e3:01:39:bf:3c:dc:2a:aa:7f:ea:82:b0:bf:19:\n         53:6e:00:57:97:8c:04:0b:5d:39:92:c8:3b:d4:d9:65:7b:dd:\n         ec:42:bf:b1:b0:c4:22:0f:5f:d2:9b:1d:af:50:3d:47:4f:01:\n         6d:6f:4d:9f:5c:30:92:f2:9f:f0:03:0d:d4:41:b2:b9:af:bc:\n         87:4c:25:1a:9c:2c:62:46:e0:5e:d6:86:e2:d8:9f:3b:9a:e1:\n         e4:2f:a5:a8:8b:f0:2d:9a:f2:2b:3e:bb:77:74:78:d1:45:e0:\n         b8:d1:4f:49\njarm:2ad2ad16d00000000042d42d00042d87438c105494837f8f2ce64c31dcbd83",
+            "timestamp": "2022-04-02T06:21:16",
+            "geoinfo": {
+                "continent": {
+                    "code": "NA",
+                    "names": {
+                        "en": "North American",
+                        "zh-CN": "\u5317\u7f8e\u6d32"
+                    },
+                    "geoname_id": null
+                },
+                "country": {
+                    "code": "US",
+                    "names": {
+                        "en": "United States",
+                        "zh-CN": "\u7f8e\u56fd"
+                    },
+                    "geoname_id": null
+                },
+                "base_station": "",
+                "city": {
+                    "names": {
+                        "en": "",
+                        "zh-CN": ""
+                    },
+                    "geoname_id": null
+                },
+                "isp": "",
+                "organization": "metlife.com",
+                "idc": "",
+                "location": {
+                    "lon": "-74.005941",
+                    "lat": "40.712784"
+                },
+                "aso": null,
+                "asn": "15048",
+                "subdivisions": {
+                    "names": {
+                        "en": "New York",
+                        "zh-CN": "\u7ebd\u7ea6\u5dde"
+                    },
+                    "geoname_id": null
+                },
+                "PoweredBy": "IPIP",
+                "scene": {
+                    "en": "Used",
+                    "cn": "\u5df2\u4f7f\u7528"
+                },
+                "organization_CN": null
+            },
+            "protocol": {
+                "application": "HTTPS",
+                "probe": "GetRequest",
+                "transport": "tcp"
+            },
+            "honeypot": 0,
+            "whois": {
+                "2021-12-14": {
+                    "admin_c": "CASTR228-ARIN,CHENH7-ARIN,SENER1-ARIN,CASTR228-ARIN,CHENH7-ARIN,SENER1-ARIN",
+                    "country": "",
+                    "descr": "",
+                    "inetnum": "216.163.240.0 - 216.163.255.255",
+                    "ip_end": "216.163.255.255",
+                    "ip_start": "216.163.240.0",
+                    "irt": [],
+                    "last_modified": "2021-12-14",
+                    "mnt_by": "",
+                    "mnt_irt": "",
+                    "mnt_lower": "",
+                    "mnt_routes": "",
+                    "netname": "METLIFE-1BLK",
+                    "notify": "",
+                    "organization": {
+                        "address": "11101,27-01 Queens Plaza North,Long Island City,NY",
+                        "admin_c": "CHENH7-ARIN,CASTR228-ARIN,CHENH7-ARIN,SENER1-ARIN",
+                        "country": "US",
+                        "descr": "",
+                        "email": "",
+                        "fax_no": "",
+                        "last_modified": "2021-10-21",
+                        "mnt_by": "",
+                        "mnt_ref": "",
+                        "notify": "",
+                        "org": "",
+                        "org_name": "MetLife",
+                        "organization": "METLIF",
+                        "phone": "",
+                        "source": "ARIN",
+                        "tech_c": "SENER1-ARIN,CASTR228-ARIN,CHENH7-ARIN"
+                    },
+                    "person": [
+                        {
+                            "abuse_mailbox": "hchen@metlife.com",
+                            "address": "27513,101 MetLife Way,Cary,NC",
+                            "country": "US",
+                            "email": "",
+                            "fax_no": "",
+                            "last_modified": "2022-07-01",
+                            "mnt_by": "",
+                            "nic_hdl": "CHENH7-ARIN",
+                            "notify": "",
+                            "person": "Han Chen",
+                            "phone": "",
+                            "source": "ARIN"
+                        },
+                        {
+                            "abuse_mailbox": "msenerote@metlife.com",
+                            "address": "27513,101 MetLife Way,Cary,NC",
+                            "country": "US",
+                            "email": "",
+                            "fax_no": "",
+                            "last_modified": "2021-04-19",
+                            "mnt_by": "",
+                            "nic_hdl": "SENER1-ARIN",
+                            "notify": "",
+                            "person": "Mike Senerote",
+                            "phone": "+1-570-972-9428",
+                            "source": "ARIN"
+                        },
+                        {
+                            "abuse_mailbox": "juan.castro1@metlife.com",
+                            "address": "27513,101 MetLife Way,Cary,NC",
+                            "country": "US",
+                            "email": "",
+                            "fax_no": "",
+                            "last_modified": "2021-05-20",
+                            "mnt_by": "",
+                            "nic_hdl": "CASTR228-ARIN",
+                            "notify": "",
+                            "person": "Juan Castro",
+                            "phone": "",
+                            "source": "ARIN"
+                        }
+                    ],
+                    "role": [],
+                    "source": "ARIN",
+                    "status": "allocation",
+                    "tech_c": "CASTR228-ARIN,CHENH7-ARIN,SENER1-ARIN"
+                }
+            }
+        }
+    ],
+    "facets": {}
+}

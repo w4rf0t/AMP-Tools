@@ -1,0 +1,164 @@
+{
+    "code": 60000,
+    "total": 1,
+    "available": 1,
+    "matches": [
+        {
+            "rdns": "static.vnpt.vn",
+            "ico": {
+                "mmh3": "",
+                "md5": ""
+            },
+            "txtfile": {
+                "robotsmd5": "",
+                "securitymd5": ""
+            },
+            "ip": "14.238.2.58",
+            "portinfo": {
+                "hostname": "",
+                "os": "",
+                "port": 443,
+                "service": "https",
+                "title": [
+                    "Welcome to nginx for Windows!"
+                ],
+                "version": "",
+                "device": "web application",
+                "extrainfo": "",
+                "rdns": "static.vnpt.vn",
+                "app": "Apache httpd",
+                "banner": "HTTP/1.1 200 OK\r\nDate: Sun, 09 Apr 2023 02:49:10 GMT\r\nContent-Type: text/html; charset=utf-8\r\nContent-Length: 873\r\nLast-Modified: Tue, 17 Aug 2021 14:17:44 GMT\r\nConnection: close\r\nETag: \"611bc508-369\"\r\nAccept-Ranges: bytes\r\n\r\n<!DOCTYPE html>\n<html>\n<head>\n<title>Welcome to nginx for Windows!</title>\n<style>\nhtml { color-scheme: light dark; }\nbody { width: 35em; margin: 0 auto;\nfont-family: Tahoma, Verdana, Arial, sans-serif; }\n</style>\n</head>\n<body>\n<h1>Welcome to nginx for Windows!</h1>\n<p>If you see this page, the nginx web server is successfully installed and\nworking. Further configuration is required.</p>\n\n<p>For online documentation and support please refer to\n<a href=\"http://nginx.org/\">nginx.org</a>.<br/>\nCommercial support is available at\n<a href=\"http://nginx.com/\">nginx.com</a>.</p>\nWindows documentation and support is available at\n<a href=\"http://nginx-win.ecsds.eu/\">nginx for Windows</a>.<br/>\nWindows commercial support is available at\n<a href=\"mailto:support@ecsystems.nl\">ITProjectPartner</a>.</p>\n\n<p><em>Thank you for using nginx for Windows.</em></p>\n</body>\n</html>\n"
+            },
+            "ssl": "SSL Certificate\nVersion: TLS 1.3\nCipherSuit: TLS_AES_128_GCM_SHA256\nHandshake Message: x509: cannot validate certificate for 14.238.2.58 because it doesn't contain any IP SANs\nCertificate:\n    Data:\n        Version: 3 (0x2)\n        Serial Number: 15563000092124843713967478115177263622 (0xbb553257336a7840d2c2314f17ef206)\n    Signature Algorithm: SHA256-RSA\n        Issuer: C=US,CN=DigiCert SHA2 Extended Validation Server CA,O=DigiCert Inc,OU=www.digicert.com\n        Validity\n            Not Before: May 26 00:00:12 2022 UTC\n            Not After : Jun 26 23:59:11 2023 UTC\n        Subject: C=VN,CN=e.bidvmetlife.com.vn,O=C\u00d4NG TY TNHH B\u1ea2O HI\u1ec2M NH\u00c2N TH\u1ecc BIDV METLIFE,ST=H\u00e0 N\u1ed9i,UnknownOID=1.3.6.1.4.1.311.60.2.1.3,UnknownOID=2.5.4.15,UnknownOID=2.5.4.5\n        Subject Public Key Info:\n            Public Key Algorithm: RSA\n                Public-Key: (2048 bit)\n                Modulus:   \n                    9c:d0:f9:1b:4a:0f:d9:5c:6d:84:6f:ed:2f:d1:84:\n                    80:83:0b:19:0d:fd:ab:5e:8b:f7:e3:e6:ef:07:09:\n                    a5:9b:a2:df:34:9e:fb:9b:f9:e1:68:43:07:6d:2c:\n                    df:06:d3:96:48:8e:92:35:dd:af:62:84:2d:6c:03:\n                    f9:96:4d:d7:b5:19:1b:59:cd:7a:51:56:20:86:03:\n                    f8:c3:bf:40:37:81:9c:c9:d8:a0:cf:09:02:3a:48:\n                    f0:97:89:c0:09:2b:e1:45:58:32:e4:df:b5:e7:e3:\n                    59:31:4c:bd:3e:46:84:b1:11:b4:fd:64:7e:da:90:\n                    94:a8:25:51:55:0b:e7:d2:db:08:96:ab:62:e3:c4:\n                    31:a1:74:fe:c8:c0:bf:52:85:2c:11:7c:a3:1a:30:\n                    f2:cf:b3:c8:74:85:0a:69:e7:8f:28:16:dd:16:f3:\n                    71:4c:8f:9f:60:4a:e0:6e:7e:be:ef:05:b0:40:73:\n                    b2:93:0d:e7:36:2f:0d:a7:ba:91:9d:e4:80:42:57:\n                    74:5e:ab:d5:b0:c4:b6:e5:6e:78:27:f2:cf:98:b0:\n                    98:78:c7:71:85:4b:45:fc:b4:33:1f:b8:f4:fa:d9:\n                    59:3b:2b:3f:0a:c4:16:69:8f:33:5a:a9:3c:6f:ca:\n                    c0:51:81:3c:58:6b:34:7d:12:95:75:d8:e6:fe:74:\n                    71\n                Exponent: 65537 (0x10001)\n        X509v3 extensions:\n            X509v3 Subject Alternative Name:\n                DNS:e.bidvmetlife.com.vn\n            Authority Information Access:\n                OCSP - URI:http://ocsp.digicert.com\n                CA Issuers - URI:http://cacerts.digicert.com/DigiCertSHA2ExtendedValidationServerCA.crt\n\n            X509v3 CRL Distribution Points:\n\n                Full Name:\n                  URI:http://crl3.digicert.com/sha2-ev-server-g3.crl, URI:http://crl4.digicert.com/sha2-ev-server-g3.crl\n            X509v3 Authority Key Identifier:\n                keyid:3D:D3:50:A5:D6:A0:AD:EE:F3:4A:60:0A:65:D3:21:D4:F8:F8:D6:0F\n            X509v3 Basic Constraints:\n                CA:False\n            X509v3 Key Usage: critical\n                Digital Signature, Key Encipherment\n            Unknown extension 1.3.6.1.4.1.11129.2.4.2\n            X509v3 Extended Key Usage:\n                TLS Web Server Authentication, TLS Web Client Authentication\n            X509v3 Certificate Policies:\n                Policy: 2.16.840.1.114412.2.1\n                Policy: 2.23.140.1.1\n            X509v3 Subject Key Identifier:\n                BC:7A:E2:B7:8A:36:1D:BF:3E:2A:F7:E5:BB:1A:C7:97:B8:81:67:A9\n\n    Signature Algorithm: SHA256-RSA\n         06:4f:a1:e4:8c:f5:9d:5b:e2:34:34:21:fa:c5:c0:d1:77:0f:\n         7c:f8:62:48:05:ca:0d:49:de:a2:2d:50:d6:1c:a8:ca:d2:b9:\n         57:c6:bd:aa:01:98:68:3e:91:7e:5e:55:eb:06:9e:6a:85:9f:\n         90:c5:eb:b0:11:e4:e2:10:31:d3:3c:bc:55:1b:6f:4c:d2:87:\n         99:ef:45:91:80:58:65:20:92:d4:01:2f:d8:3b:ea:8e:d2:0a:\n         a6:aa:93:b2:3d:34:94:e7:7f:4a:53:87:74:83:d5:3a:6d:47:\n         42:c2:67:69:8c:e0:65:53:f9:f0:4e:2b:13:2f:50:a9:32:85:\n         c9:84:43:30:44:d2:61:76:7f:b3:0c:38:98:93:69:99:4f:5e:\n         31:48:9b:8a:28:e1:a4:8f:33:0a:de:5b:a1:08:02:8a:d6:9d:\n         22:b8:05:6e:5b:c2:e6:58:c8:0c:81:01:03:f3:03:15:0e:f2:\n         36:07:7d:eb:e0:49:33:d3:77:b4:4c:e3:e1:89:76:85:d8:fc:\n         2e:9a:4c:11:5f:b4:2f:67:df:b3:a8:c0:37:8f:46:d3:fc:44:\n         e4:db:2f:af:48:8f:e8:1f:e5:b2:fc:94:08:eb:c9:21:c4:ed:\n         7e:c6:89:d3:40:d5:a1:b9:48:f1:d3:ec:b7:bd:54:84:56:af:\n         32:4d:9f:49\njarm:29d3fd00029d29d00042d43d00000023f2ae7180b8a0816654f2296c007d93",
+            "timestamp": "2023-04-09T10:49:13",
+            "geoinfo": {
+                "continent": {
+                    "code": "AP",
+                    "names": {
+                        "en": "Asia",
+                        "zh-CN": "\u4e9a\u6d32"
+                    },
+                    "geoname_id": null
+                },
+                "country": {
+                    "code": "VN",
+                    "names": {
+                        "en": "Viet Nam",
+                        "zh-CN": "\u8d8a\u5357"
+                    },
+                    "geoname_id": null
+                },
+                "base_station": "",
+                "city": {
+                    "names": {
+                        "en": "",
+                        "zh-CN": ""
+                    },
+                    "geoname_id": null
+                },
+                "isp": "vnpt.vn",
+                "organization": "VNPT Corp",
+                "idc": "",
+                "location": {
+                    "lon": "105.836964",
+                    "lat": "21.022697"
+                },
+                "aso": null,
+                "asn": "45899",
+                "subdivisions": {
+                    "names": {
+                        "en": "Hanoi",
+                        "zh-CN": "\u6cb3\u5185\u5e02"
+                    },
+                    "geoname_id": null
+                },
+                "PoweredBy": "IPIP",
+                "scene": {
+                    "en": "Used",
+                    "cn": "\u5df2\u4f7f\u7528"
+                },
+                "organization_CN": null
+            },
+            "protocol": {
+                "application": "HTTPS",
+                "probe": "GetRequest",
+                "transport": "tcp"
+            },
+            "honeypot": 0,
+            "whois": {
+                "2018-01-25": {
+                    "admin_c": "PTH13-AP",
+                    "country": "VN",
+                    "descr": "Vietnam Posts and Telecommunications Group,No 57, Huynh Thuc Khang Street, Lang Ha ward, Dong Da district, Ha Noi City",
+                    "inetnum": "14.224.0.0 - 14.255.255.255",
+                    "ip_end": "14.255.255.255",
+                    "ip_start": "14.224.0.0",
+                    "irt": [
+                        {
+                            "abus_mailbox": "hm-changed@vnnic.vn",
+                            "address": "Ha Noi, VietNam",
+                            "admin_c": "NTTT1-AP",
+                            "auth": "# Filtered",
+                            "email": "hm-changed@vnnic.vn",
+                            "fax_no": "+84-24-37821462",
+                            "irt": "IRT-VNNIC-AP",
+                            "irt_nfy": "",
+                            "last_modified": "2017-11-08T09:40:06Z",
+                            "mnt_by": "MAINT-VN-VNNIC",
+                            "notify": "",
+                            "phone": "+84-24-35564944",
+                            "source": "APNIC",
+                            "tech_c": "NTTT1-AP"
+                        }
+                    ],
+                    "last_modified": "2018-01-25T03:55:18Z",
+                    "mnt_by": "MAINT-VN-VNNIC",
+                    "mnt_irt": "IRT-VNNIC-AP",
+                    "mnt_lower": "MAINT-VN-VNPT",
+                    "mnt_routes": "MAINT-VN-VNPT",
+                    "netname": "VNPT-VN",
+                    "notify": "",
+                    "organization": {
+                        "address": "",
+                        "admin_c": "",
+                        "country": "GB",
+                        "descr": "",
+                        "email": "",
+                        "fax_no": "",
+                        "last_modified": "",
+                        "mnt_by": "",
+                        "mnt_ref": "",
+                        "notify": "",
+                        "org": "",
+                        "org_name": "",
+                        "organization": "",
+                        "phone": "",
+                        "source": "LACNIC",
+                        "tech_c": "CLO7-RIPE"
+                    },
+                    "person": [
+                        {
+                            "abuse_mailbox": "",
+                            "address": "VNPT-VN",
+                            "country": "VN",
+                            "email": "huypt@vnpt.vn",
+                            "fax_no": "",
+                            "last_modified": "2017-11-19T07:06:20Z",
+                            "mnt_by": "MAINT-VN-VNPT",
+                            "nic_hdl": "PTH13-AP",
+                            "notify": "",
+                            "person": "Pham Tien Huy",
+                            "phone": "+84-24-37741604",
+                            "source": "APNIC"
+                        }
+                    ],
+                    "role": [],
+                    "source": "APNIC",
+                    "status": "ALLOCATED PORTABLE",
+                    "tech_c": "PTH13-AP"
+                }
+            }
+        }
+    ],
+    "facets": {}
+}

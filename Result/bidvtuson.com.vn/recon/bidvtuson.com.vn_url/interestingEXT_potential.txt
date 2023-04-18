@@ -1,0 +1,2 @@
+https://fgomedia.com/wp-content/plugins/elementor-pro/modules/lottie/assets/animations/default.json
+https://fgomedia.com/wp-includes/wlwmanifest.xml

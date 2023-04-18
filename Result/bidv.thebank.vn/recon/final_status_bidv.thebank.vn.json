@@ -1,0 +1,79 @@
+[
+    {
+        "thebank.vn": {
+            "host": "125.212.225.224",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Nginx"
+            ],
+            "title": "302 Found"
+        }
+    },
+    {
+        "thebank.vn": {
+            "host": "125.212.225.224",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Nginx"
+            ],
+            "title": "302 Found"
+        }
+    },
+    {
+        "m.bidv.thebank.vn": {
+            "host": "125.212.225.224",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Nginx"
+            ],
+            "title": "302 Found"
+        }
+    },
+    {
+        "m.bidv.thebank.vn": {
+            "host": "125.212.225.224",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Nginx",
+                "PHP"
+            ],
+            "title": null
+        }
+    },
+    {
+        "m.thebank.vn": {
+            "host": "125.212.225.224",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Bootstrap",
+                "Font Awesome",
+                "Google Tag Manager",
+                "Nginx:1.18.0",
+                "PHP:7.4.30",
+                "Ubuntu"
+            ],
+            "title": "TheBank - Chuyên gia tài chính của bạn"
+        }
+    },
+    {
+        "m.thebank.vn": {
+            "host": "125.212.225.224",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Bootstrap",
+                "Font Awesome",
+                "Google Tag Manager",
+                "Nginx:1.18.0",
+                "PHP:7.4.30",
+                "Ubuntu"
+            ],
+            "title": "TheBank - Chuyên gia tài chính của bạn"
+        }
+    }
+]
