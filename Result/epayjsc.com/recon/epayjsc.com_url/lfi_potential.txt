@@ -1,0 +1,12 @@
+http://www.epayjsc.com/wp-json/oembed/1.0/embed?format=xml&url=http%3A%2F%2Fwww.epayjsc.com%2Fvi%2F
+http://www.epayjsc.com/wp-json/oembed/1.0/embed?url=http://www.epayjsc.com/en/
+https://sg3plcpnl0032.prod.sin3.secureserver.net:2083/cpsess7309192045/frontend/paper_lantern/filemanager/showfile.html?basedir&baseurl&charset&dir=%2Fhome%2Flukasindia%2Fwww.sdsadcp.co.in&dirop&file=Anti+Ragging.pdf&file_charset=utf-8&fileop
+https://sg3plcpnl0089.prod.sin3.secureserver.net:2083/cpsess8353972420/frontend/gl_paper_lantern/filemanager/showfile.html?basedir=%2Fhome%2Frasaalarabia%2Fpublic_html&baseurl=http%3A%2F%2Frasaalarabia.com&charset=utf-8&dir=%2Fhome%2Frasaalarabia%2Fpublic_html&dirop&file=logo3.png&file_charset&fileop
+http://sg3plcpnl0033.prod.sin3.secureserver.net:2095/unprotected/loader.html?_action=logout&goto_uri=/?_task=mail&random=ds85dCXHbepOd3kO
+http://sg3plcpnl0033.prod.sin3.secureserver.net:2095/unprotected/loader.html?_action=logout&goto_uri=/?_task=mail&random=XFLujcUxBEPWmteq
+http://sg3plcpnl0033.prod.sin3.secureserver.net:2095/unprotected/loader.html?_action=logout&goto_uri=/?_task=mail&random=x9qzVKDekraEzBem
+http://sg3plcpnl0033.prod.sin3.secureserver.net:2095/unprotected/loader.html?_action=logout&goto_uri=/?_task=mail&random=ezkefaibclPPtgV1
+http://sg3plcpnl0033.prod.sin3.secureserver.net:2095/unprotected/loader.html?_action=logout&goto_uri=/?_task=mail&random=LA7gPxjSikJ5_KUt
+http://sg3plcpnl0033.prod.sin3.secureserver.net:2095/unprotected/loader.html?_action=logout&goto_uri=/?_task=mail&random=dFrP4TSDJx0IXfZf
+http://sg3plcpnl0033.prod.sin3.secureserver.net:2095/unprotected/loader.html?_action=logout&goto_uri=/?_task=mail&random=mmd6qzoOUygEXalD
+http://www.epayjsc.com/wp-json/oembed/1.0/embed?format=xml&url=http://www.epayjsc.com/en/

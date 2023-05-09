@@ -1,3 +1,0 @@
-admin.bidvmetlife.everlearn.vn
-52.220.117.207:80
-52.220.117.207:443

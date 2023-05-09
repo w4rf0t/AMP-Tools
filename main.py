@@ -125,7 +125,7 @@ def main(target):
         t3.join()
         find_sensitive(target, status_data)
         exportation_ip(target)
-    # checkvuln(target)
+    checkvuln(target)
 
 
 if __name__ == "__main__":
@@ -155,7 +155,7 @@ if __name__ == "__main__":
     zoomeye_host(target)
     print(
         colored(f"[*] Generating wildcard host for {target} done !", "green"))
-    # main(target)
+    main(target)
     threads = []
     with open(f"Result/{target}_hostname.txt", "r") as f:
         for line in f:

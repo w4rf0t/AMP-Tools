@@ -1,7 +1,0 @@
-https://bidvtower.com.vn/robots.txt
-https://bidvtower.com.vn/sites/all/libraries/fancybox/lib/jquery.mousewheel-3.0.6.pack.js?ofyj5q
-https://bidvtower.com.vn/sites/all/libraries/fancybox/lib/jquery.mousewheel-3.0.6.pack.js?p15wad
-https://bidvtower.com.vn/sites/all/libraries/fancybox/source/jquery.fancybox.pack.js?pbl7th
-https://bidvtower.com.vn/sites/all/libraries/fancybox/source/jquery.fancybox.pack.js?p15wad
-https://bidvtower.com.vn/sites/default/files/e-brochure_-_ky_niem_10_nam.pdf
-https://bidvtower.com.vn/sites/default/files/e-_brochure_-_thong_tin_toa_thap_bidv.pdf

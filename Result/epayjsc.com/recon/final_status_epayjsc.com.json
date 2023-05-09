@@ -1,0 +1,204 @@
+[
+    {
+        "www.epayjsc.com": {
+            "host": "148.66.138.137",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Apache HTTP Server"
+            ],
+            "title": "Coming Soon"
+        }
+    },
+    {
+        "whm.epayjsc.com": {
+            "host": "148.66.138.137",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Apache HTTP Server"
+            ],
+            "title": "Coming Soon"
+        }
+    },
+    {
+        "www.epayjsc.com": {
+            "host": "148.66.138.137",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Apache HTTP Server"
+            ],
+            "title": "Coming Soon"
+        }
+    },
+    {
+        "admin.epayjsc.com": {
+            "host": "148.66.138.137",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Apache HTTP Server"
+            ],
+            "title": "Coming Soon"
+        }
+    },
+    {
+        "webdisk.epayjsc.com": {
+            "host": "148.66.138.137",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Apache HTTP Server"
+            ],
+            "title": "Coming Soon"
+        }
+    },
+    {
+        "mail.epayjsc.com": {
+            "host": "148.66.138.137",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Apache HTTP Server"
+            ],
+            "title": "Coming Soon"
+        }
+    },
+    {
+        "mail.epayjsc.com": {
+            "host": "148.66.138.137",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Apache HTTP Server"
+            ],
+            "title": "Coming Soon"
+        }
+    },
+    {
+        "www.admin.epayjsc.com": {
+            "host": "148.66.138.137",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Apache HTTP Server"
+            ],
+            "title": "Coming Soon"
+        }
+    },
+    {
+        "admin.epayjsc.com": {
+            "host": "148.66.138.137",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Apache HTTP Server"
+            ],
+            "title": "Coming Soon"
+        }
+    },
+    {
+        "cpanel.epayjsc.com": {
+            "host": "148.66.138.137",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Apache HTTP Server",
+                "cPanel"
+            ],
+            "title": "cPanel Login"
+        }
+    },
+    {
+        "webdisk.epayjsc.com": {
+            "host": "148.66.138.137",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Apache HTTP Server"
+            ],
+            "title": "Coming Soon"
+        }
+    },
+    {
+        "sip.epayjsc.com": {
+            "host": "52.113.64.78",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "HSTS"
+            ],
+            "title": null
+        }
+    },
+    {
+        "cpanel.epayjsc.com": {
+            "host": "148.66.138.137",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Apache HTTP Server",
+                "cPanel"
+            ],
+            "title": "cPanel Login"
+        }
+    },
+    {
+        "lyncdiscover.epayjsc.com": {
+            "host": "52.113.64.81",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Azure"
+            ],
+            "title": null
+        }
+    },
+    {
+        "whm.epayjsc.com": {
+            "host": "148.66.138.137",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Apache HTTP Server"
+            ],
+            "title": "Coming Soon"
+        }
+    },
+    {
+        "lyncdiscover.epayjsc.com": {
+            "host": "52.113.64.150",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Azure"
+            ],
+            "title": null
+        }
+    },
+    {
+        "www.admin.epayjsc.com": {
+            "host": "148.66.138.137",
+            "port": "443",
+            "scheme": "https",
+            "tech": [
+                "Apache HTTP Server"
+            ],
+            "title": "Coming Soon"
+        }
+    },
+    {
+        "autodiscover.epayjsc.com": {
+            "host": "52.98.84.104",
+            "port": "80",
+            "scheme": "http",
+            "tech": [
+                "IIS:10.0",
+                "Microsoft ASP.NET",
+                "Windows Server"
+            ],
+            "title": null
+        }
+    }
+]
