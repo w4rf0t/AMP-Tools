@@ -1,8 +1,9 @@
 #!/bin/bash
 
 cd ~
-export GOPATH=~/go
-export PATH=$GOPATH/bin:$(which go)/bin:$PATH
+export GOPATH=$HOME/go
+export GOROOT=$(which go)
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 go install github.com/lc/subjs@latest
