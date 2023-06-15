@@ -16,8 +16,9 @@ def call_subfinder(target, dataf):
     with open(f"Result/{target}/status_of_function.json", "w") as f:
         json.dump(dataf, f, indent=4)
     # Passive
-    os.system(
-        f"~/go/bin/subfinder -d {target} -silent -all -o Result/{target}/recon/subdomain_{target}_subfinder.txt 2>&1 >/dev/null")
+    call_sub = f"~/go/bin/subfinder -d {target} -silent -all -o Result/{target}/recon/subdomain_{target}_subfinder.txt 2>&1 >/dev/null"
+    subprocess.run(call_sub, stdout=subprocess.DEVNULL,
+                   stderr=subprocess.DEVNULL, shell=True)
 
     url = "https://api.securitytrails.com/v1/domain/{}/subdomains".format(
         target)
@@ -41,45 +42,9 @@ def call_subfinder(target, dataf):
         json.dump(dataf, f, indent=4)
 
 
-def get_from_cert(target, dataf):
-    dataf["Sub_Recon"]["get_from_cert"] = "0"
-    with open(f"Result/{target}/status_of_function.json", "w") as f:
-        json.dump(dataf, f, indent=4)
-    command_1 = [
-        f"python3 AutoRecon/module/crtsh_enum_psql.py {target} >> Result/{target}/recon/subdomain_{target}_cert.txt"]
-    subprocess.run(command_1, stdout=subprocess.DEVNULL,
-                   stderr=subprocess.DEVNULL, shell=True)
-
-    command_2 = [
-        f"python3 AutoRecon/module/crtsh_enum_web.py {target} >> Result/{target}/recon/subdomain_{target}_cert.txt"]
-    subprocess.run(command_2, stdout=subprocess.DEVNULL,
-                   stderr=subprocess.DEVNULL, shell=True)
-
-    command_3 = [
-        f"python3 AutoRecon/module/san_subdomain_enum.py {target} >> Result/{target}/recon/subdomain_{target}_cert.txt"]
-    subprocess.run(command_3, stdout=subprocess.DEVNULL,
-                   stderr=subprocess.DEVNULL, shell=True)
-
-    command_4 = [
-        f"sh AutoRecon/module/crtsh_enum_psql.sh {target} >> Result/{target}/recon/subdomain_{target}_cert.txt"]
-    subprocess.run(command_4, stdout=subprocess.DEVNULL,
-                   stderr=subprocess.DEVNULL, shell=True)
-
-    command_5 = [
-        f"python3 AutoRecon/module/ct-exposer.py -d {target} >> Result/{target}/recon/subdomain_{target}_noDNSrecord.txt"]
-    subprocess.run(command_5, stdout=subprocess.DEVNULL,
-                   stderr=subprocess.DEVNULL, shell=True)
-
-    dataf["Sub_Recon"]["get_from_cert"] = "1"
-    with open(f"Result/{target}/status_of_function.json", "w") as f:
-        json.dump(dataf, f, indent=4)
-
-
 def sanitize_input(target):
-    os.system(
-        f"cat Result/{target}/recon/subdomain_{target}_* >> Result/{target}/recon/subdomain_{target}.txt; rm Result/{target}/recon/subdomain_{target}_*.txt ")
-    os.system(
-        f"awk '!seen[$0]++' Result/{target}/recon/subdomain_{target}.txt > Result/{target}/recon/final_subdomain_{target}.txt; rm Result/{target}/recon/subdomain_{target}.txt ")
+    shell_1 = f"cat Result/{target}/recon/subdomain_{target}_* >> Result/{target}/recon/subdomain_{target}.txt; rm Result/{target}/recon/subdomain_{target}_*.txt ")
+    shell_2 = f"awk '!seen[$0]++' Result/{target}/recon/subdomain_{target}.txt > Result/{target}/recon/final_subdomain_{target}.txt; rm Result/{target}/recon/subdomain_{target}.txt ")
 
     command_probe = [
         f"cat Result/{target}/recon/final_subdomain_{target}.txt | ~/go/bin/httprobe >>  Result/{target}/recon/{target}_live.txt"]
@@ -125,12 +90,10 @@ def sanitize_input(target):
     subprocess.call(f'rm -f Result/{target}/recon/{target}_RESULT.json',
                     stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, shell=True)
 
-
 def sub_Recon(target):
     with open(f'Result/{target}/status_of_function.json', 'r') as f:
         dataf = json.load(f)
         call_subfinder(target, dataf)
-        get_from_cert(target, dataf)
     dataf["Sub_Recon"]["sanitize_input"] = "0"
     with open(f"Result/{target}/status_of_function.json", "w") as f:
         json.dump(dataf, f, indent=4)

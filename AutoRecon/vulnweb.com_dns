@@ -1,0 +1,119 @@
+[
+    {
+        "arguments": "/usr/bin/dnsrecon -d vulnweb.com -j vulnweb.com_dns",
+        "date": "2023-06-13 05:55:58.574795",
+        "type": "ScanInfo"
+    },
+    {
+        "address": "8.20.241.107",
+        "domain": "vulnweb.com",
+        "mname": "ns1.eurodns.com",
+        "type": "SOA"
+    },
+    {
+        "address": "2610:1c8:b002::107",
+        "domain": "vulnweb.com",
+        "mname": "ns1.eurodns.com",
+        "type": "SOA"
+    },
+    {
+        "Version": "",
+        "address": "8.20.241.107",
+        "domain": "vulnweb.com",
+        "recursive": "True",
+        "target": "ns1.eurodns.com",
+        "type": "NS"
+    },
+    {
+        "Version": "",
+        "address": "2610:1c8:b002::107",
+        "domain": "vulnweb.com",
+        "recursive": "False",
+        "target": "ns1.eurodns.com",
+        "type": "NS"
+    },
+    {
+        "Version": "",
+        "address": "8.20.243.107",
+        "domain": "vulnweb.com",
+        "recursive": "True",
+        "target": "ns2.eurodns.com",
+        "type": "NS"
+    },
+    {
+        "Version": "",
+        "address": "2610:1c8:b001::107",
+        "domain": "vulnweb.com",
+        "recursive": "False",
+        "target": "ns2.eurodns.com",
+        "type": "NS"
+    },
+    {
+        "Version": "",
+        "address": "8.20.241.108",
+        "domain": "vulnweb.com",
+        "recursive": "True",
+        "target": "ns3.eurodns.com",
+        "type": "NS"
+    },
+    {
+        "Version": "",
+        "address": "2610:1c8:b002::108",
+        "domain": "vulnweb.com",
+        "recursive": "False",
+        "target": "ns3.eurodns.com",
+        "type": "NS"
+    },
+    {
+        "Version": "",
+        "address": "8.20.243.108",
+        "domain": "vulnweb.com",
+        "recursive": "True",
+        "target": "ns4.eurodns.com",
+        "type": "NS"
+    },
+    {
+        "Version": "",
+        "address": "2610:1c8:b001::108",
+        "domain": "vulnweb.com",
+        "recursive": "False",
+        "target": "ns4.eurodns.com",
+        "type": "NS"
+    },
+    {
+        "address": "44.228.249.3",
+        "domain": "vulnweb.com",
+        "name": "vulnweb.com",
+        "type": "A"
+    },
+    {
+        "domain": "vulnweb.com",
+        "name": "vulnweb.com",
+        "strings": "v=spf1 -all",
+        "type": "TXT"
+    },
+    {
+        "domain": "vulnweb.com",
+        "name": "vulnweb.com",
+        "strings": "google-site-verification=4LQORV-lTi-d4GPxtBEQWmFnwff7UAazQc9gZvHukbw",
+        "type": "TXT"
+    },
+    {
+        "domain": "vulnweb.com",
+        "name": "_dmarc.vulnweb.com",
+        "strings": "v=spf1 -all",
+        "type": "TXT"
+    },
+    {
+        "domain": "vulnweb.com",
+        "name": "_domainkey.vulnweb.com",
+        "strings": "v=spf1 -all",
+        "type": "TXT"
+    },
+    {
+        "domain": "vulnweb.com",
+        "name": "_dmarc._domainkey.vulnweb.com",
+        "strings": "v=spf1 -all",
+        "type": "TXT"
+    }
+]
