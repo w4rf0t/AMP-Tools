@@ -19,3 +19,4 @@ pip3 install python-Levenshtein
 pip3 install aiohttp
 pip3 install asyncio
 pip3 install termcolor
+pip3 install openpyxl
