@@ -16,3 +16,6 @@ rm -rf gf
 rm -rf Gf-Patterns
 pip3 install pytenable
 pip3 install python-Levenshtein
+pip3 install aiohttp
+pip3 install asyncio
+pip3 install termcolor
