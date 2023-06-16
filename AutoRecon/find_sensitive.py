@@ -7,6 +7,8 @@ import re
 from urllib3.exceptions import InsecureRequestWarning
 import warnings
 warnings.simplefilter('ignore',InsecureRequestWarning)
+from .as_request import as_request
+
 
 sensitive_data=[]
 patterns = {
@@ -93,12 +95,12 @@ def consumer(queue, event):
     
     print("consumer existed")
 
-def producer(queue, event, batch_data, function_run):
+def producer(queue, event, batch_data, function_run, file_to_write):
     print("produder running")
     while not event.is_set():
         for item in batch_data:
             
-            data =  function_run(item)
+            data =  function_run(item, file_to_write)
             queue.put(data)
     print("producer existed")
 
@@ -119,32 +121,26 @@ def collect_url(url_list):
             pass
     return data
 
-def process_js_file(data):
+def process_js_file(data, file_to_write):
     for key, values in patterns.items():
         matches = re.findall(values, data)
         
         if(matches):
             print(f'Find {key}:  {matches}')
+            file_to_write.write(f'Find {key}:  {matches}\n')
 
 
-def main_find_sensitive(collected_data:dict):
+def main_find_sensitive(url_list_file, file_to_write):
+        collected_data = as_request(input_file=url_list_file)
         pipeline = queue.Queue(maxsize=-1)
         event = threading.Event()
         
         devided_data = split(collected_data, 3)
         with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
             for content in devided_data:
-                executor.submit(producer, pipeline, event, content, process_js_file)
+                executor.submit(producer, pipeline, event, content, process_js_file, file_to_write)
             executor.submit(consumer, pipeline, event)
             event.set()
-
-from as_request import as_request
-    
-t1 = timer()
-collected_data = as_request(input_file="happy_urls.txt")
-main_find_sensitive(collected_data)
-t2 = timer()
-print("time elapsed: ", t2-t1)
 
 
 def sensitives(url,f):
@@ -167,25 +163,10 @@ def find_sensitive(target,status_data):
         json.dump(status_data, f, indent=4)     
         
     with open(f'Result/{target}/recon/temp.txt', 'w') as f:
-        with open(f'Result/{target                }/recon/{target}_url/js_crawl_urls.txt',"r") as file1:
-            list_urls = file1.readlines()
-            threads = []
-            for url in list_urls:
-                threads.append                (Thread(target=sensitives, args=(url,f)))
-            for thread in threads:
-                thread.start()
-            for thread in threads:
-                thread.join()
-                # try:
-                #     response = requests.get(url,timeout=4,verify=False)
-                #     contents = response.text
-                #     for key, values in patterns.items():
-                #         matches = re.findall(values, contents)
-                #         if(matches):
-                #             f.write(f'Find {key}: {matches} \n')
-                #             print(f'Find {key}:  {matches}')
-                # except:
-                #     pass
+        '''
+        call find sensitive
+        '''
+        main_find_sensitive(url_list_file=f"Result/{target}/recon/{target}_url/js_crawl_urls.txt", file_to_write=f)
     status_data['find_sensitive']['find_sensitive'] = "1"
     with open(f"Result/{target}/status_of_function.json","w") as f:
         json.dump(status_data, f, indent=4)  
