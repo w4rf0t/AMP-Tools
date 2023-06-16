@@ -45,8 +45,8 @@ def get_ip_nmap(target, status_data):
             with open(f"Result/{target}/recon/{target}_ip/zoomeye_{ip1}.json") as file3:
                 data_json = json.load(file3)
                 for data in data_json['matches']:
-                    title = data['portinfo']['title']
                     try:
+                        title = data['portinfo']['title']
                         if title is not None and len(title) > 0:
                             title[0] = codecs.decode(
                                 title[0], 'unicode_escape')

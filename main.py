@@ -4,11 +4,12 @@ from threading import Thread
 from AutoRecon.subfolder_recon import *
 from AutoRecon.subdomain_recon import *
 from AutoRecon.ip_recon import *
-from AutoRecon.find_sensitive import *
+from AutoRecon.find_sensitive import find_sensitive
 from AutoRecon.detectwaf import *
 from AutoRecon.ip_to_domain import ip_To_Domain
 from AutoRecon.levenshtein import check_plagiarism_sub
 from AutoRecon.module.zoomeye import zoomeye_host
+from AutoRecon.dns_recon import dns_recon
 import os
 import time
 import asyncio
@@ -50,7 +51,7 @@ def main(target):
     status_data_json_subdomain = {
         "Sub_Recon": {
             "call_subfinder": "-1",
-            "get_from_cert": "-1",
+            "dns_recon": "-1",
             "sanitize_input": "-1"
         },
         "ip_Recon": {
@@ -81,27 +82,28 @@ def main(target):
             "find_sensitive": "-1"
         }}
     try:
-        if not (os.path.exists(f'Result/{target}')):
-            os.makedirs(f'Result/{target}')
-            os.makedirs(f'Result/{target}/recon')
-            os.makedirs(f'Result/{target}/recon/vuln')
+            os.makedirs(f'Result/{target}/recon/vuln', exist_ok=True)
     except Exception as e:
         pass
     IP_regex = re.compile(r"^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$")
     if not IP_regex.match(target):
         with open(f"Result/{target}/status_of_function.json", "w") as f:
-            json.dump(status_data_json_subdomain, f, indent=4)
+            json.dump(status_data_json_subdomain, f, indent=4)  
         sub_Recon(target)
+
         with open(f"Result/{target}/status_of_function.json", "r") as f:
             status_data = json.load(f)
         ip_Recon(target, status_data)
         asyncio.run(check_plagiarism_sub(target))
         t2 = Thread(target=js_Recon, args=[target, status_data])
         t3 = Thread(target=waf_Recon, args=[target, status_data])
+        t4 = Thread(target=dns_recon, args=[target, status_data])
         t2.start()
         t3.start()
+        t4.start()
         t2.join()
         t3.join()
+        t4.join()
         find_sensitive(target, status_data)
         exportation_subdomain(target)
 
@@ -125,7 +127,7 @@ def main(target):
         t3.join()
         find_sensitive(target, status_data)
         exportation_ip(target)
-    checkvuln(target)
+    # checkvuln(target)
 
 
 if __name__ == "__main__":

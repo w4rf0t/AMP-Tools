@@ -1,8 +1,0 @@
-http://cpanel.epayjsc.com
-http://lyncdiscover.epayjsc.com
-http://admin.epayjsc.com
-http://www.epayjsc.com
-https://www.admin.epayjsc.com
-http://148.66.138.137:2083
-http://148.66.138.137:2077
-https://52.113.64.150:443
