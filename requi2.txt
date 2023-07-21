@@ -1,0 +1,6 @@
+pytenable
+python-Levenshtein
+aiohttp
+asyncio
+termcolor
+openpyxl

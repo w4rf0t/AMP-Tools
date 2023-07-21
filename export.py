@@ -1,6 +1,8 @@
 import json
+import requests
 import openpyxl
 import os
+import time
 
 W = "\033[0m"
 R = "\033[31m"
@@ -8,6 +10,23 @@ G = "\033[32m"
 O = "\033[33m"
 B = "\033[34m"
 
+def send_file_to_telegram(file_path, file_path1, chat_id, bot_token,target):
+    url = f"https://api.telegram.org/bot{bot_token}/sendDocument"
+    url1 = f"https://api.telegram.org/bot{bot_token}/sendMessage"
+    s = time.time()
+    formatted_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(s))
+    data = {
+        "chat_id": chat_id,
+        "text": f"Kết quả scan {target} vào lúc {formatted_time}"
+    }
+    response0 = requests.post(url1, data=data)
+    with open(file_path, "rb") as file:
+        file1= {"document": file}  # Đọc dữ liệu từ file, không đóng file sau khi đọc
+        response = requests.post(url, data=data, files=file1)
+
+    with open(file_path1, "rb") as file1:
+        file2= {"document": file1}  # Đọc dữ liệu từ file, không đóng file sau khi đọc
+        response1 = requests.post(url, data=data, files=file2)
 
 def nmap(target, workbook):
     with open(f'Result/{target}/recon/{target}_ip/zoomeye.json', 'r') as f:
@@ -112,14 +131,20 @@ def exportation_subdomain(target):
     # final(target, workbook)
     subdomains(target, workbook)
     live(target, workbook)
-    workbook.save(f'Result/{target}/recon/Result.xlsx')
+    file_path = f'Result/{target}/recon/Result.xlsx'
+    file_path1 = f'Result/{target}/recon/result.zip'
+    workbook.save(file_path)
     # os.remove(f'Result/{target}/recon/{target}_ip/nmap_{target}.json')
     # os.remove(f'Result/{target}/recon/{target}_waf.json')
     # os.remove(f'Result/{target}/recon/final_subdomain_{target}.txt')
     # os.remove(f'Result/{target}/recon/final_status_{target}.json')
     # os.remove(f'Result/{target}/recon/{target}_live.txt')
+    os.system(f"zip -r Result/{target}/recon/result.zip Result/{target}/recon/{target}_url")
     print(G, 'Export Completed')
-
+    print(B,'Sending report....')
+    send_file_to_telegram(file_path, file_path1,'-895049403','6394974317:AAG098D_1b_RgY8EaudD_-_-3i5zG3Zk94c',target)
+    print(G,'Files sent successfully !')
+# send_file_to_telegram('Result/etc.vn/recon/Result.xlsx', 'Result/etc.vn/recon/result.zip','-895049403','6394974317:AAG098D_1b_RgY8EaudD_-_-3i5zG3Zk94c')
 
 def exportation_ip(target):
     print(W, 'Exporting Report...')
@@ -127,8 +152,15 @@ def exportation_ip(target):
     nmap(target, workbook)
     waf(target, workbook)
     hosting(target, workbook)
-    workbook.save(f'Result/{target}/recon/Result.xlsx')
+    file_path = f'Result/{target}/recon/Result.xlsx'
+    workbook.save(file_path)
+    os.system(f"zip -r Result/{target}/recon/result.zip Result/{target}/recon/{target}_url")
+    file_path1 = f'Result/{target}/recon/result.zip'
     # os.remove(f'Result/{target}/recon/{target}_ip/nmap_{target}.json')
     # os.remove(f'Result/{target}/recon/{target}_waf.json')
     # os.remove(f'Result/{target}/recon/ip_to_domain_{target}.json')
     print(G, 'Export Completed')
+    print(B,'Sending report....')
+    send_file_to_telegram(file_path, file_path1,'-895049403','6394974317:AAG098D_1b_RgY8EaudD_-_-3i5zG3Zk94c',target)
+    print(G,'Files sent successfully !')
+

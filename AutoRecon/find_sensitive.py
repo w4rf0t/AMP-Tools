@@ -28,7 +28,6 @@ def consumer(queue, event):
         print(value)
     print("complete")
     
-    
     print("consumer existed")
 
 def producer(queue, event, batch_data, function_run, file_to_write):

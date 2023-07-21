@@ -1,0 +1,47 @@
+[
+    {
+        "arguments": "dnsrecon/__main__.py -d etc.vn -j etc.vn_dns",
+        "date": "2023-07-21 15:00:18.036477",
+        "type": "ScanInfo"
+    },
+    {
+        "address": "14.225.24.83",
+        "domain": "etc.vn",
+        "mname": "ns1.vdconline.vn",
+        "type": "SOA"
+    },
+    {
+        "Version": "",
+        "address": "14.225.24.83",
+        "domain": "etc.vn",
+        "recursive": "True",
+        "target": "ns1.vdconline.vn",
+        "type": "NS"
+    },
+    {
+        "Version": "",
+        "address": "14.225.24.84",
+        "domain": "etc.vn",
+        "recursive": "True",
+        "target": "ns2.vdconline.vn",
+        "type": "NS"
+    },
+    {
+        "address": "104.47.26.74",
+        "domain": "etc.vn",
+        "exchange": "etc-vn.mail.protection.outlook.com",
+        "type": "MX"
+    },
+    {
+        "address": "104.47.110.36",
+        "domain": "etc.vn",
+        "exchange": "etc-vn.mail.protection.outlook.com",
+        "type": "MX"
+    },
+    {
+        "domain": "etc.vn",
+        "name": "etc.vn",
+        "strings": "v=spf1 include:spf.protection.outlook.com -all",
+        "type": "TXT"
+    }
+]

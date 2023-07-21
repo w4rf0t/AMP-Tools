@@ -7,8 +7,8 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 def zoomeye_login():
     login_url = "https://api.zoomeye.org/user/login"
     data = {
-        "username": "tuanminhkma@gmail.com",
-        "password": "**zuNHN*k2K8tEy"
+        "username": "anduu150620@gmail.com",
+        "password": "Andeptrai@156"
     }
     try:
         response = requests.post(login_url, json=data)

@@ -8,12 +8,11 @@ from AutoRecon.find_sensitive import find_sensitive
 from AutoRecon.detectwaf import *
 from AutoRecon.ip_to_domain import ip_To_Domain
 from AutoRecon.levenshtein import check_plagiarism_sub
-from AutoRecon.module.zoomeye import zoomeye_host
+# from AutoRecon.module.zoomeye import zoomeye_host
 from AutoRecon.dns_recon import dns_recon
 import os
 import time
 import asyncio
-from VulnScan.scanvuln import checkvuln
 from termcolor import colored
 from export import *
 
@@ -104,7 +103,7 @@ def main(target):
         t2.join()
         t3.join()
         t4.join()
-        find_sensitive(target, status_data)
+#        find_sensitive(target, status_data)
         exportation_subdomain(target)
 
     else:
@@ -125,7 +124,7 @@ def main(target):
         t1.join()
         t2.join()
         t3.join()
-        find_sensitive(target, status_data)
+ #       find_sensitive(target, status_data)
         exportation_ip(target)
     # checkvuln(target)
 
@@ -152,19 +151,19 @@ if __name__ == "__main__":
         os.makedirs(f'Result/{target}', exist_ok=True)
     except FileExistsError:
         pass
-    print(
-        colored(f"[*] Generating wildcard host for {target}...", "green"), end="\r")
-    zoomeye_host(target)
-    print(
-        colored(f"[*] Generating wildcard host for {target} done !", "green"))
+    # print(
+    #     colored(f"[*] Generating wildcard host for {target}...", "green"), end="\r")
+    # # zoomeye_host(target)
+    # print(
+    #     colored(f"[*] Generating wildcard host for {target} done !", "green"))
     main(target)
-    threads = []
-    with open(f"Result/{target}_hostname.txt", "r") as f:
-        for line in f:
-            line = line.strip()
-            t = Thread(target=main, args=[line])
-            threads.append(t)
-    for thread in threads:
-        thread.start()
-    for thread in threads:
-        thread.join()
+    # threads = []
+    # with open(f"Result/{target}_hostname.txt", "r") as f:
+    #     for line in f:
+    #         line = line.strip()
+    #         t = Thread(target=main, args=[line])
+    #         threads.append(t)
+    # for thread in threads:
+    #     thread.start()
+    # for thread in threads:
+    #     thread.join()

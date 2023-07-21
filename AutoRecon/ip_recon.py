@@ -70,7 +70,7 @@ def get_ip_nmap(target, status_data):
     os.system(
         f"cat Result/{target}/recon/zoomeye_subdomain_{target}.txt >> Result/{target}/recon/final_subdomain_{target}.txt")
     command_probe = [
-        f"cat Result/{target}/recon/zoomeye_subdomain_{target}.txt | ~/go/bin/httprobe >>  Result/{target}/recon/{target}_live.txt"]
+        f"cat Result/{target}/recon/zoomeye_subdomain_{target}.txt | httprobe >>  Result/{target}/recon/{target}_live.txt"]
     subprocess.run(command_probe, stdout=subprocess.DEVNULL,
                    stderr=subprocess.DEVNULL, shell=True)
 
@@ -107,11 +107,11 @@ def scan_input_IP(target, status_data):
             file5.write(ip+"\n")
 
     command_probe = [
-        f"cat Result/{target}/recon/final_subdomain_{target}.txt | ~/go/bin/httprobe >>  Result/{target}/recon/{target}_live.txt"]
+        f"cat Result/{target}/recon/final_subdomain_{target}.txt | httprobe >>  Result/{target}/recon/{target}_live.txt"]
     subprocess.run(command_probe, stdout=subprocess.DEVNULL,
                    stderr=subprocess.DEVNULL, shell=True)
     command_httpx = [
-        f"cat Result/{target}/recon/{target}_live.txt | ~/go/bin/httpx -sc -td -ip -server -nc -json -o Result/{target}/recon/final_status_{target}.json"]
+        f"cat Result/{target}/recon/{target}_live.txt | httpx -sc -td -ip -server -nc -json -o Result/{target}/recon/final_status_{target}.json"]
     subprocess.run(command_httpx, stdout=subprocess.DEVNULL,
                    stderr=subprocess.DEVNULL, shell=True)
 

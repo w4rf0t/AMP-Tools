@@ -16,13 +16,13 @@ def call_subfinder(target, dataf):
     with open(f"Result/{target}/status_of_function.json", "w") as f:
         json.dump(dataf, f, indent=4)
     # Passive
-    subprocess.run(["~/go/bin/subfinder", "-d", target, "-silent", "-all", "-o", f"Result/{target}/recon/subdomain_{target}_subfinder.txt"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, shell=True)
+    subprocess.run(["subfinder", "-d", target, "-silent", "-all", "-o", f"Result/{target}/recon/subdomain_{target}_subfinder.txt"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, shell=True)
 
 
     url = "https://api.securitytrails.com/v1/domain/{}/subdomains".format(
         target)
     headers = {
-        "apikey": "qejFbjUjH2nIKYR9QEFqnDrwMH1VRKfY"
+        "apikey": "eemhS0PjUSMWCp1s2BwX1Z8QsSpEN9Gx"
     }
     response = requests.get(url, headers=headers)  # proxies=proxies,
     subdomains = set()
@@ -48,12 +48,12 @@ def sanitize_input(target):
         f"awk '!seen[$0]++' Result/{target}/recon/subdomain_{target}.txt > Result/{target}/recon/final_subdomain_{target}.txt; rm Result/{target}/recon/subdomain_{target}.txt ")
 
     command_probe = [
-        f"cat Result/{target}/recon/final_subdomain_{target}.txt | ~/go/bin/httprobe >>  Result/{target}/recon/{target}_live.txt"]
+        f"cat Result/{target}/recon/final_subdomain_{target}.txt | httprobe >>  Result/{target}/recon/{target}_live.txt"]
     subprocess.run(command_probe, stdout=subprocess.DEVNULL,
                    stderr=subprocess.DEVNULL, shell=True)
 
     command_httpx = [
-        f"cat Result/{target}/recon/{target}_live.txt | ~/go/bin/httpx -sc -td -ip -server -nc -json -o Result/{target}/recon/final_status_{target}.json"]
+        f"cat Result/{target}/recon/{target}_live.txt | httpx -sc -td -ip -server -nc -json -o Result/{target}/recon/final_status_{target}.json"]
     subprocess.run(command_httpx, stdout=subprocess.DEVNULL,
                    stderr=subprocess.DEVNULL, shell=True)
 
