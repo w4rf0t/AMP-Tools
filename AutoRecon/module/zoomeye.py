@@ -55,6 +55,7 @@ def zoomeye_ip(target, ip):
     jwt_token = zoomeye_login()
     while jwt_token == None:
         jwt_token = zoomeye_login()
+    # print("JWT token",jwt_token)
     search_url = "https://api.zoomeye.org/host/search?query={}".format(ip)
     headers = {
         "Authorization": f"JWT {jwt_token}"

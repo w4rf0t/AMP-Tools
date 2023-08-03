@@ -7,6 +7,7 @@ import codecs
 import unicodedata
 from AutoRecon.module.zoomeye import zoomeye_ip
 
+
 W = "\033[0m"
 R = "\033[31m"
 G = "\033[32m"
@@ -44,24 +45,26 @@ def get_ip_nmap(target, status_data):
             # load json file
             with open(f"Result/{target}/recon/{target}_ip/zoomeye_{ip1}.json") as file3:
                 data_json = json.load(file3)
-                for data in data_json['matches']:
-                    try:
-                        title = data['portinfo']['title']
-                        if title is not None and len(title) > 0:
-                            title[0] = codecs.decode(
-                                title[0], 'unicode_escape')
-                            title[0] = title[0].encode(
-                                'latin-1').decode('utf-8')
-                    except:
-                        pass
-                    pretty_json = {"ip": ip, "port": data['portinfo']['port'], "title": title, "service": data['portinfo']['service'],
-                                   "app": data['portinfo']['app'], "extrainfo": data['portinfo']['extrainfo'], "version": data['portinfo']['version']}
-                    # add json to json_data
-                    json_data.append(pretty_json)
-                    if pretty_json["service"] == "http" or pretty_json["service"] == "https":
-                        file2.write(
-                            pretty_json["ip"]+":"+str(pretty_json["port"])+"\n")
-
+                try:
+                    for data in data_json['matches']:
+                        try:
+                            title = data['portinfo']['title']
+                            if title is not None and len(title) > 0:
+                                title[0] = codecs.decode(
+                                    title[0], 'unicode_escape')
+                                title[0] = title[0].encode(
+                                    'latin-1').decode('utf-8')
+                        except:
+                            pass
+                        pretty_json = {"ip": ip, "port": data['portinfo']['port'], "title": title, "service": data['portinfo']['service'],
+                                    "app": data['portinfo']['app'], "extrainfo": data['portinfo']['extrainfo'], "version": data['portinfo']['version']}
+                        # add json to json_data
+                        json_data.append(pretty_json)
+                        if pretty_json["service"] == "http" or pretty_json["service"] == "https":
+                            file2.write(
+                                pretty_json["ip"]+":"+str(pretty_json["port"])+"\n")
+                except:
+                    continue
     with open(f"Result/{target}/recon/{target}_ip/zoomeye.json", "w", encoding="utf-8") as file4:
         json.dump(json_data, file4, indent=4, ensure_ascii=False)
     subprocess.run(
@@ -86,7 +89,7 @@ def scan_input_IP(target, status_data):
     with open(f"Result/{target}/status_of_function.json", "w") as f:
         json.dump(status_data, f, indent=4)
     print(B, "Generating IP ports service...")
-    # os.system(f"nmap -sT -sV {target} >> Result/{target}/recon/{target}_ip/nmap_{target}.txt")
+    os.system(f"nmap -Pn -p- {target} >> Result/{target}/recon/{target}_ip/nmap_{target}.txt")
 
     pattern = r'(\d+)\/(\w+)\s+(\w+)\s+([\w\.\-\s]+?)\s*(?:\n|$)'
     regex = re.compile(pattern)
@@ -114,7 +117,38 @@ def scan_input_IP(target, status_data):
         f"cat Result/{target}/recon/{target}_live.txt | httpx -sc -td -ip -server -nc -json -o Result/{target}/recon/final_status_{target}.json"]
     subprocess.run(command_httpx, stdout=subprocess.DEVNULL,
                    stderr=subprocess.DEVNULL, shell=True)
-
+    # with open(f"Result/{target}/recon/final_status_{target}.json", 'r') as readfile:
+    #     lines = readfile.readlines()
+    # fake_get_ip_nmap(target)
+    zoomeye_ip(target,target)
+    with open(f'Result/{target}/recon/zoomeye_subdomain_{target}.txt', "a") as file2:
+        ip1 = ip.replace(".", "_").split(":")[0]
+    # load json file
+        with open(f"Result/{target}/recon/{target}_ip/zoomeye_{ip1}.json") as file3:
+            data_json = json.load(file3)
+            for data in data_json['matches']:
+                try:
+                    title = data['portinfo']['title']
+                    if title is not None and len(title) > 0:
+                        title[0] = codecs.decode(
+                            title[0], 'unicode_escape')
+                        title[0] = title[0].encode(
+                            'latin-1').decode('utf-8')
+                except:
+                    pass
+                pretty_json = {"ip": ip.split(":")[0], "port": data['portinfo']['port'], "title": title, "service": data['portinfo']['service'],
+                                "app": data['portinfo']['app'], "extrainfo": data['portinfo']['extrainfo'], "version": data['portinfo']['version']}
+                # add json to json_data
+                # json_data.append(pretty_json)
+                if pretty_json["service"] == "http" or pretty_json["service"] == "https":
+                    file2.write(
+                        pretty_json["ip"]+":"+str(pretty_json["port"])+"\n")
+                # os.system(f'mv Result/{target}/recon/{target}_ip/zoomeye_{ip1}.json Result/{target}/recon/{target}_ip/zoomeye.json')
+                with open(f"Result/{target}/recon/{target}_ip/zoomeye.json", "w", encoding="utf-8") as file4:
+                    # data = [].append(pretty_json)
+                    json.dump(pretty_json, file4, indent=4, ensure_ascii=False)
+    subprocess.run(
+        f"rm -rf Result/{target}/recon/{target}_ip/zoomeye_*.json", shell=True)
     status_data["ip_Recon"]["scan_input_IP"] = "1"
     with open(f"Result/{target}/status_of_function.json", "w") as f:
         json.dump(status_data, f, indent=4)

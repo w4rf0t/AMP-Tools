@@ -5,8 +5,8 @@ from AutoRecon.subfolder_recon import *
 from AutoRecon.subdomain_recon import *
 from AutoRecon.ip_recon import *
 from AutoRecon.find_sensitive import find_sensitive
-from AutoRecon.detectwaf import *
 from AutoRecon.ip_to_domain import ip_To_Domain
+from AutoRecon.detectwaf import *
 from AutoRecon.levenshtein import check_plagiarism_sub
 # from AutoRecon.module.zoomeye import zoomeye_host
 from AutoRecon.dns_recon import dns_recon
@@ -14,36 +14,14 @@ import os
 import time
 import asyncio
 from termcolor import colored
+import pyfiglet
 from export import *
 
 
 def menu():
     subprocess.call("clear", shell=True)
-    text = '''
-
-  █████╗ ███╗   ███╗██████╗
- ██╔══██╗████╗ ████║██╔══██╗
- ███████║██╔████╔██║██████╔╝         /-version 1.0-/
- ██╔══██║██║╚██╔╝██║██╔═══╝         /this tool is for educational purposes only/
- ██║  ██║██║ ╚═╝ ██║██║             /Power by ETC Technology Systems JSC
- ╚═╝  ╚═╝╚═╝     ╚═╝╚═╝
-'''
-    colors = ['magenta']
-    color_index = 0
-
-    for line in text.split('\n'):
-        colored_line = ''
-        for char in line:
-            if char != ' ':
-                colored_line += colored(char,
-                                        colors[color_index % len(colors)])
-                color_index += 1
-            else:
-                colored_line += ' '
-        print(colored_line)
-    print(colored('''
-    [*]   use -h or --help for help
-    [*]   example: python3 main.py example.com''', "white"))
+    print(colored(pyfiglet.Figlet(font="standard").renderText("AMP") +' is running ..',"magenta"))
+    print(colored('''[*]   use -h or --help for help\n[*]   example: python3 main.py example.com''', "white"))
 
 
 def main(target):
@@ -81,7 +59,8 @@ def main(target):
             "find_sensitive": "-1"
         }}
     try:
-            os.makedirs(f'Result/{target}/recon/vuln', exist_ok=True)
+        os.makedirs(f'Result/{target}/recon', exist_ok=True)
+        os.makedirs(f'Result/{target}/vuln', exist_ok=True)
     except Exception as e:
         pass
     IP_regex = re.compile(r"^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$")
@@ -103,28 +82,29 @@ def main(target):
         t2.join()
         t3.join()
         t4.join()
-#        find_sensitive(target, status_data)
+        # find_sensitive(target, status_data)
         exportation_subdomain(target)
 
     else:
-        with open(f"Result/{target}/status_of_function.json", "w") as f:
-            json.dump(status_data_json_ip, f, indent=4)
-        with open(f"Result/{target}/status_of_function.json", "r") as f:
-            status_data = json.load(f)
-        ip_Recon(target, status_data)
-        check_plagiarism_sub(target)
-        with open(f"Result/{target}/status_of_function.json", "r") as f:
-            status_data = json.load(f)
-        t1 = Thread(target=waf_Recon, args=[target, status_data])
-        t2 = Thread(target=js_Recon, args=[target, status_data])
-        t3 = Thread(target=ip_To_Domain, args=[target, status_data])
-        t1.start()
-        t2.start()
-        t3.start()
-        t1.join()
-        t2.join()
-        t3.join()
- #       find_sensitive(target, status_data)
+        ip_To_Domain(target, status_data_json_ip)
+        # with open(f"Result/{target}/status_of_function.json", "w") as f:
+        #     json.dump(status_data_json_ip, f, indent=4)
+        # with open(f"Result/{target}/status_of_function.json", "r") as f:
+        #     status_data = json.load(f)
+        # ip_Recon(target, status_data)
+        # asyncio.run(check_plagiarism_sub(target))
+        # with open(f"Result/{target}/status_of_function.json", "r") as f:
+        #     status_data = json.load(f)
+        # t1 = Thread(target=waf_Recon, args=[target, status_data])
+        # t2 = Thread(target=js_Recon, args=[target, status_data])
+        # t3 = Thread(target=ip_To_Domain, args=[target, status_data])
+        # t1.start()
+        # t2.start()
+        # t3.start()
+        # t1.join()
+        # t2.join()
+        # t3.join()
+        # find_sensitive(target, status_data)
         exportation_ip(target)
     # checkvuln(target)
 
@@ -153,9 +133,9 @@ if __name__ == "__main__":
         pass
     # print(
     #     colored(f"[*] Generating wildcard host for {target}...", "green"), end="\r")
-    # # zoomeye_host(target)
-    # print(
-    #     colored(f"[*] Generating wildcard host for {target} done !", "green"))
+    # zoomeye_host(target)
+    print(
+        colored(f"[*] Generating wildcard host for {target} done !", "green"))
     main(target)
     # threads = []
     # with open(f"Result/{target}_hostname.txt", "r") as f:

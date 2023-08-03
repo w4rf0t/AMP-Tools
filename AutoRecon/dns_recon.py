@@ -3,14 +3,20 @@ import subprocess
 import json
 import csv
 
+W = "\033[0m"
+R = "\033[31m"
+G = "\033[32m"
+O = "\033[33m"
+B = "\033[34m"
+
 def dns_recon(target, status_data):
-    print(" Dns Enumerating...")
+    print(B,"Dns Enumerating...")
     status_data["Sub_Recon"]["dns_recon"] = "0"
     with open(f"Result/{target}/status_of_function.json", "w") as f:
         json.dump(status_data, f, indent=4)
-    dnss = subprocess.Popen('python3.10 dnsrecon/__main__.py -d '+ target + f' -j {target}_dns', shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    dnss = subprocess.Popen('python3.10 dnsrecon/__main__.py -d '+ target + f' -j Result/{target}/{target}_dns.json', shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     dnss.communicate()
-    print(" DNS scan done !")
+    print(G,"DNS scan done !")
     subprocess._cleanup()
     
     filename = f"{target}_dns"

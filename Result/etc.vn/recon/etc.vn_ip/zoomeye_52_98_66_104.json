@@ -1,0 +1,132 @@
+{
+    "code": 60000,
+    "total": 1,
+    "available": 1,
+    "matches": [
+        {
+            "jarm": "",
+            "ico": {
+                "mmh3": "",
+                "md5": ""
+            },
+            "txtfile": {
+                "robotsmd5": "",
+                "securitymd5": ""
+            },
+            "ip": "52.98.66.104",
+            "portinfo": {
+                "hostname": "",
+                "os": "Windows",
+                "port": 80,
+                "service": "http",
+                "title": null,
+                "version": "10.0",
+                "device": "web application",
+                "extrainfo": "ASP.NET",
+                "rdns": "",
+                "app": "Microsoft IIS httpd",
+                "banner": "HTTP/1.1  301 Moved Permanently\nDate: Tue, 04 Jul 2023 13:53:03 GMT\nLocation: https://52.98.66.104/owa/\nServer: Microsoft-IIS/10.0\nX-Feserver: SG2PR01CA0132\nSG2PR01CA0132\nX-Feproxyinfo: SG2PR01CA0132.APCPRD01.PROD.EXCHANGELABS.COM\nMs-Cv: j2C5D9L+XM0VXAKg7S8GUA.0\nCache-Control: no-cache\nContent-Length: 0\nRequest-Id: 0fb9608f-fed2-cd5c-155c-02a0ed2f0650\nX-Requestid: 67977651-4b6c-4445-9240-38f7af5bf732\nX-Feefzinfo: XSP\nPragma: no-cache\nX-Powered-By: ASP.NET\n\n"
+            },
+            "timestamp": "2023-07-04T21:53:08",
+            "geoinfo": {
+                "continent": {
+                    "code": "AP",
+                    "names": {
+                        "en": "Asia",
+                        "zh-CN": "\u4e9a\u6d32"
+                    },
+                    "geoname_id": null
+                },
+                "owner": "",
+                "country": {
+                    "code": "SG",
+                    "names": {
+                        "en": "Singapore",
+                        "zh-CN": "\u65b0\u52a0\u5761"
+                    },
+                    "geoname_id": null
+                },
+                "base_station": "",
+                "city": {
+                    "names": {
+                        "en": "Singapore",
+                        "zh-CN": "\u65b0\u52a0\u5761"
+                    },
+                    "geoname_id": null
+                },
+                "timezone": "UTC+8",
+                "isp": "Microsoft Corporation",
+                "idc": "",
+                "scene": {
+                    "en": "Used",
+                    "cn": "\u5df2\u4f7f\u7528"
+                },
+                "zipcode": "04",
+                "organization": "Microsoft Corporation",
+                "location": {
+                    "lon": "103.853519",
+                    "lat": "1.286529"
+                },
+                "aso": "",
+                "asn": "8075",
+                "subdivisions": {
+                    "names": {
+                        "en": "Singapore",
+                        "zh-CN": "\u65b0\u52a0\u5761"
+                    },
+                    "geoname_id": null
+                },
+                "PoweredBy": "\u57c3\u6587",
+                "organization_CN": null
+            },
+            "protocol": {
+                "application": "HTTPS",
+                "probe": "GetRequest",
+                "transport": "tcp"
+            },
+            "honeypot": 0,
+            "whois": {
+                "2021-12-14": {
+                    "admin_c": "",
+                    "country": "",
+                    "descr": "",
+                    "inetnum": "52.96.0.0 - 52.115.255.255",
+                    "ip_end": "52.115.255.255",
+                    "ip_start": "52.96.0.0",
+                    "irt": [],
+                    "last_modified": "2021-12-14",
+                    "mnt_by": "",
+                    "mnt_irt": "",
+                    "mnt_lower": "",
+                    "mnt_routes": "",
+                    "netname": "MSFT",
+                    "notify": "",
+                    "organization": {
+                        "address": "98052,One Microsoft Way,Redmond,WA",
+                        "admin_c": "IPHOS5-ARIN,MAC74-ARIN",
+                        "country": "US",
+                        "descr": "",
+                        "email": "",
+                        "fax_no": "",
+                        "last_modified": "2023-06-13",
+                        "mnt_by": "",
+                        "mnt_ref": "",
+                        "notify": "",
+                        "org": "",
+                        "org_name": "Microsoft Corporation",
+                        "organization": "MSFT",
+                        "phone": "",
+                        "source": "ARIN",
+                        "tech_c": "BEDAR6-ARIN,IPHOS5-ARIN,MRPD-ARIN,SINGH683-ARIN"
+                    },
+                    "person": [],
+                    "role": [],
+                    "source": "ARIN",
+                    "status": "allocation",
+                    "tech_c": ""
+                }
+            }
+        }
+    ],
+    "facets": {}
+}

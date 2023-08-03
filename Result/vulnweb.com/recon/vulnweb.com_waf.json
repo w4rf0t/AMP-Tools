@@ -1,0 +1,78 @@
+[
+    {
+        "url": "http://www.vulnweb.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://testphp.vulnweb.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://testhtml5.vulnweb.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://testasp.vulnweb.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://testaspnet.vulnweb.com",
+        "detected": true,
+        "firewall": "RequestValidationMode",
+        "manufacturer": "Microsoft"
+    }
+][
+    {
+        "url": "http://44.238.29.244:80",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://testphp.vulnweb.com",
+        "detected": true,
+        "firewall": "Generic",
+        "manufacturer": "Unknown"
+    }
+][
+    {
+        "url": "http://testhtml5.vulnweb.com",
+        "detected": true,
+        "firewall": "Generic",
+        "manufacturer": "Unknown"
+    }
+][][
+    {
+        "url": "http://testphp.vulnweb.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://testasp.vulnweb.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+][
+    {
+        "url": "http://www.vulnweb.com",
+        "detected": false,
+        "firewall": "None",
+        "manufacturer": "None"
+    }
+]

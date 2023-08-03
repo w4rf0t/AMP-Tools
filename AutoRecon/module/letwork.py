@@ -42,7 +42,7 @@ def read_config():
 def reverse_ip_lookup_hackertarget(ip, api_key):
     url = f"https://api.hackertarget.com/reverseiplookup/?q={ip}"
     if api_key.get("hackertarget"):
-        url += f"&apikey={api_key['hackertarget']}"
+        url += "&apikey=9c86e2dc2ec96b723fb9c7e4a1de64469a19cf5d4042526ca15e3dd6ee38ae9e9ff8a6a4ba1b1031"
     response = requests.get(url)
     return response.text.strip()
 

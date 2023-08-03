@@ -49,7 +49,8 @@ def js_Recon(target,status_data=None):
         for thread in threads_gf:
             thread.join()
     except Exception as e:
-        print(e)
+        # print(e)
+        pass
     # os.system(f"cat Result/{target}/recon/{target}_live.txt;while read url; do ~/.local/dirsearch -u $url --random-agent --follow-redirects --deep-recursive -x 500 -o Result/{target}/recon/{target}_url/$url-dirsearch.txt; done")
     status_data['js_Recon']['js_Recon'] = "1"
     with open(f"Result/{target}/status_of_function.json","w") as f:

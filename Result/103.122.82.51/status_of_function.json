@@ -1,0 +1,15 @@
+{
+    "ip_Recon": {
+        "scan_input_IP": "-1",
+        "ip_to_domain": "1"
+    },
+    "js_Recon": {
+        "js_Recon": "-1"
+    },
+    "waf_Recon": {
+        "wafwoof": "-1"
+    },
+    "find_sensitive": {
+        "find_sensitive": "-1"
+    }
+}

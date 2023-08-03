@@ -1,0 +1,80 @@
+[
+    {
+        "44.238.29.244": {
+            "host": "44.238.29.244",
+            "port": "80",
+            "scheme": "http",
+            "tech": [
+                "IIS:8.5",
+                "Microsoft ASP.NET",
+                "Windows Server"
+            ],
+            "title": "IIS Windows Server"
+        }
+    },
+    {
+        "testphp.vulnweb.com": {
+            "host": "44.228.249.3",
+            "port": "80",
+            "scheme": "http",
+            "tech": [
+                "DreamWeaver",
+                "Nginx:1.19.0",
+                "PHP:5.6.40",
+                "Ubuntu"
+            ],
+            "title": "Home of Acunetix Art"
+        }
+    },
+    {
+        "testasp.vulnweb.com": {
+            "host": "44.238.29.244",
+            "port": "80",
+            "scheme": "http",
+            "tech": [
+                "DreamWeaver",
+                "IIS:8.5",
+                "Microsoft ASP.NET",
+                "Windows Server"
+            ],
+            "title": "acuforum forums"
+        }
+    },
+    {
+        "www.vulnweb.com": {
+            "host": "44.228.249.3",
+            "port": "80",
+            "scheme": "http",
+            "tech": [
+                "Nginx:1.19.0"
+            ],
+            "title": "Acunetix Web Vulnerability Scanner - Test websites"
+        }
+    },
+    {
+        "testhtml5.vulnweb.com": {
+            "host": "44.228.249.3",
+            "port": "80",
+            "scheme": "http",
+            "tech": [
+                "AngularJS",
+                "Nginx:1.19.0"
+            ],
+            "title": "SecurityTweets - HTML5 test website for Acunetix Web Vulnerability Scanner"
+        }
+    },
+    {
+        "testaspnet.vulnweb.com": {
+            "host": "44.238.29.244",
+            "port": "80",
+            "scheme": "http",
+            "tech": [
+                "IIS:8.5",
+                "Microsoft ASP.NET:2.0.50727",
+                "Microsoft Visual Studio",
+                "Windows Server"
+            ],
+            "title": "acublog news"
+        }
+    }
+]
