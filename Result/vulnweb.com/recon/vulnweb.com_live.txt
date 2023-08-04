@@ -1,6 +1,6 @@
 http://testphp.vulnweb.com
+http://www.vulnweb.com
+http://testasp.vulnweb.com
 http://testhtml5.vulnweb.com
 http://testaspnet.vulnweb.com
-http://testphp.vulnweb.com
-http://testasp.vulnweb.com
-http://www.vulnweb.com
+http://44.238.29.244:80

@@ -11,7 +11,7 @@ B = "\033[34m"
 
 
 def call_subfinder(target, dataf):
-    # print(B, 'Enumerating subdomain...', "\r")
+    print(B,'[*] Enumerating subdomain...', end="\r")
     dataf["Sub_Recon"]["call_subfinder"] = "0"
     with open(f"Result/{target}/status_of_function.json", "w") as f:
         json.dump(dataf, f, indent=4)
@@ -104,4 +104,4 @@ def sub_Recon(target):
     dataf["Sub_Recon"]["sanitize_input"] = "1"
     with open(f"Result/{target}/status_of_function.json", "w") as f:
         json.dump(dataf, f, indent=4)
-    print(G, "Enumerating subdomain done !")
+    print(G,"[*] Enumerating subdomain done !")

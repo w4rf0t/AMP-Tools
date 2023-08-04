@@ -11,7 +11,6 @@ from AutoRecon.levenshtein import check_plagiarism_sub
 # from AutoRecon.module.zoomeye import zoomeye_host
 from AutoRecon.dns_recon import dns_recon
 import os
-import time
 import asyncio
 from termcolor import colored
 import pyfiglet
@@ -67,23 +66,24 @@ def main(target):
     if not IP_regex.match(target):
         with open(f"Result/{target}/status_of_function.json", "w") as f:
             json.dump(status_data_json_subdomain, f, indent=4)  
-        sub_Recon(target)
+        # sub_Recon(target)
 
         with open(f"Result/{target}/status_of_function.json", "r") as f:
             status_data = json.load(f)
-        ip_Recon(target, status_data)
-        asyncio.run(check_plagiarism_sub(target))
-        t2 = Thread(target=js_Recon, args=[target, status_data])
-        t3 = Thread(target=waf_Recon, args=[target, status_data])
-        t4 = Thread(target=dns_recon, args=[target, status_data])
-        t2.start()
-        t3.start()
-        t4.start()
-        t2.join()
-        t3.join()
-        t4.join()
+        # ip_Recon(target, status_data)
+        # asyncio.run(check_plagiarism_sub(target))
+        asyncio.run(js_Recon(target, status_data))
+        # t2 = Thread(target=js_Recon, args=[target, status_data])
+        # t3 = Thread(target=waf_Recon, args=[target, status_data])
+        # t4 = Thread(target=dns_recon, args=[target, status_data])
+        # t2.start()
+        # t3.start()
+        # t4.start()
+        # t2.join()
+        # t3.join()
+        # t4.join()
         # find_sensitive(target, status_data)
-        exportation_subdomain(target)
+        # exportation_subdomain(target)
 
     else:
         ip_To_Domain(target, status_data_json_ip)

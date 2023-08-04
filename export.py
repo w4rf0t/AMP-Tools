@@ -134,7 +134,7 @@ def live(target, workbook):
         worksheet6.append((live_domain,))
 
 def dns(target, workbook):
-    with open(f'Result/{target}/{target}_dns.json', 'r') as f:
+    with open(f'Result/{target}/recon/{target}_dns.json', 'r') as f:
         data = json.load(f)
     # ip_ports = {}
     # if type(data) == list:
@@ -156,6 +156,7 @@ def dns(target, workbook):
         cell.font = openpyxl.styles.Font(bold=True)
     
     for item in data:
+        # print(item)
         if 'arguments' in item:
             row = (item.get('arguments', ''), item.get('date', ''), item.get('type', ''),
                    '', '', '', '', '', '')
@@ -172,6 +173,7 @@ def dns(target, workbook):
             row = ('', '', '', '', item.get('domain', ''),
                    '', '', '', item.get('exchange', ''))
             worksheet7.append(row)
+        # print(row)
 
 
 def exportation_subdomain(target):
@@ -184,18 +186,18 @@ def exportation_subdomain(target):
     live(target, workbook)
     dns(target, workbook)
     file_path = f'Result/{target}/recon/Result.xlsx'
-    file_path1 = f'Result/{target}/recon/result.zip'
+    # file_path1 = f'Result/{target}/recon/result.zip'
     workbook.save(file_path)
     # os.remove(f'Result/{target}/recon/{target}_ip/nmap_{target}.json')
     # os.remove(f'Result/{target}/recon/{target}_waf.json')
     # os.remove(f'Result/{target}/recon/final_subdomain_{target}.txt')
     # os.remove(f'Result/{target}/recon/final_status_{target}.json')
     # os.remove(f'Result/{target}/recon/{target}_live.txt')
-    os.system(f"zip -r Result/{target}/recon/result.zip Result/{target}/recon/{target}_url")
+    # os.system(f"zip -r Result/{target}/recon/result.zip Result/{target}/recon/{target}_url")
     print(G, 'Export Completed')
-    print(B,'Sending report....')
+    # print(B,'Sending report....')
     # send_file_to_telegram(file_path, file_path1,'-895049403','6394974317:AAG098D_1b_RgY8EaudD_-_-3i5zG3Zk94c',target)
-    print(G,'Files sent successfully !')
+    # print(G,'Files sent successfully !')
 # send_file_to_telegram('Result/etc.vn/recon/Result.xlsx', 'Result/etc.vn/recon/result.zip','-895049403','6394974317:AAG098D_1b_RgY8EaudD_-_-3i5zG3Zk94c')
 
 def exportation_ip(target):

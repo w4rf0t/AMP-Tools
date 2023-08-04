@@ -20,7 +20,7 @@ def get_ip_nmap(target, status_data):
     with open(f"Result/{target}/status_of_function.json", "w") as f:
         json.dump(status_data, f, indent=4)
 
-    print(B, "Generating IP ports service...")
+    print(B,"[*] Generating IP ports service...",end="\r")
     with open(f'Result/{target}/recon/final_status_{target}.json', "r") as file1:
         datas = json.load(file1)
     IPs = []
@@ -81,14 +81,14 @@ def get_ip_nmap(target, status_data):
     with open(f"Result/{target}/status_of_function.json", "w") as f:
         json.dump(status_data, f, indent=4)
 
-    print(G, "Generating IP ports service done !")
+    print(G,"[*] Generating IP ports service done !")
 
 
 def scan_input_IP(target, status_data):
     status_data["ip_Recon"]["scan_input_IP"] = "0"
     with open(f"Result/{target}/status_of_function.json", "w") as f:
         json.dump(status_data, f, indent=4)
-    print(B, "Generating IP ports service...")
+    print(B,"[*] Generating IP ports service...",end="\r")
     os.system(f"nmap -Pn -p- {target} >> Result/{target}/recon/{target}_ip/nmap_{target}.txt")
 
     pattern = r'(\d+)\/(\w+)\s+(\w+)\s+([\w\.\-\s]+?)\s*(?:\n|$)'
@@ -154,7 +154,7 @@ def scan_input_IP(target, status_data):
         json.dump(status_data, f, indent=4)
     subprocess.run(
         f"rm -rf Result/{target}/recon/{target}_ip/nmap_*.txt", shell=True)
-    print(G, "Generating IP ports service done !")
+    print(G,"[*] Generating IP ports service done !")
 
 
 def ip_Recon(target, status_data):

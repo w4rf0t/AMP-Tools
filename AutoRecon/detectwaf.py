@@ -10,9 +10,10 @@ O = "\033[33m"
 B = "\033[34m"
 
 def wafwoof(target):
-    print(B, 'Detecting WAF...')   
+    print(B,'[*] Detecting WAF...',end="\r")   
     with open(f'Result/{target}/recon/{target}_live.txt', "r") as file1:
         with open(f'Result/{target}/recon/{target}_waf.json', "a") as file2:
+            final_json = []
             for line in file1:
                 line = line.strip()
                 temp_filename = f'Result/{target}/recon/{str(uuid.uuid4())}.json'
@@ -21,10 +22,11 @@ def wafwoof(target):
                 with open(temp_filename, 'r') as temp_file:
                     try:
                         data = json.load(temp_file)
-                        json.dump(data, file2, indent=4)
+                        final_json.append(data)
                     except:
                         pass
                 os.remove(temp_filename)
+            json.dump(data, file2, indent=4)
 def waf_Recon(target,status_data):
     status_data['waf_Recon']['wafwoof'] = "0"
     with open(f"Result/{target}/status_of_function.json","w") as f:
@@ -33,5 +35,5 @@ def waf_Recon(target,status_data):
     status_data['waf_Recon']['wafwoof'] = "1"
     with open(f"Result/{target}/status_of_function.json","w") as f:
         json.dump(status_data, f, indent=4)
-    print(G, 'WAF Detection Completed')
+    print(G,'[*] WAF Detection Completed')
     
