@@ -1,7 +1,7 @@
 {
     "info": {
         "args": "/home/ninja/.local/bin/dirsearch -l Result/vulnweb.com/recon/vulnweb.com_live.txt --random-agent --follow-redirects --skip-on-status=404 --deep-recursive -e php,asp,aspx,jsp,html,zip,jar,js,css,txt,log,bin,tar,conf,config,backup,swp,sql,db,dbf,mdb,sqlite,sqlite3,dat,db2,db3,dbf,psd,torrent,git,7z,bz2,gz,rar,tar,zip,bak,backup,old,xml -x 500 -t 500 -r --format=json -o Result/vulnweb.com/recon/vulnweb.com_url/dirsearch.json",
-        "time": "Sun Aug  6 23:59:30 2023"
+        "time": "Mon Aug  7 00:01:46 2023"
     },
     "results": [
         {
@@ -353,6 +353,41 @@
             "redirect": "",
             "status": 403,
             "url": "http://44.238.29.244/templates/.%2e/cgi-bin/cgi-bin/.%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd"
+        },
+        {
+            "content-length": 312,
+            "content-type": "text/html",
+            "redirect": "",
+            "status": 403,
+            "url": "http://44.238.29.244/templates/.%2e/cgi-bin/.%2e/%2e%2e//google.com"
+        },
+        {
+            "content-length": 312,
+            "content-type": "text/html",
+            "redirect": "",
+            "status": 403,
+            "url": "http://44.238.29.244/templates/.%2e/cgi-bin/.%2e/.%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd"
+        },
+        {
+            "content-length": 312,
+            "content-type": "text/html",
+            "redirect": "",
+            "status": 403,
+            "url": "http://44.238.29.244/templates/.%2e/cgi-bin/.%2e/\\..\\..\\..\\..\\..\\..\\..\\..\\..\\etc\\passwd"
+        },
+        {
+            "content-length": 1233,
+            "content-type": "text/html",
+            "redirect": "",
+            "status": 403,
+            "url": "http://44.238.29.244/templates/.%2e/cgi-bin/.%2e/aspnet_client/"
+        },
+        {
+            "content-length": 1233,
+            "content-type": "text/html",
+            "redirect": "",
+            "status": 403,
+            "url": "http://44.238.29.244/aspnet_client/"
         }
     ]
 }
