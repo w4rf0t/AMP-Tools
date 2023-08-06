@@ -1,6 +1,8 @@
 #!/bin/bash
 
 cd ~
+pip3 install -r requirements.txt
+
 go install github.com/lc/subjs@latest
 go install github.com/tomnomnom/httprobe@latest
 go install github.com/0xsha/GoLinkFinder@latest
@@ -17,4 +19,20 @@ mv gf/examples/*.json ~/.gf
 mv Gf-Patterns/*.json ~/.gf
 rm -rf gf
 rm -rf Gf-Patterns
+
+if [[ -f ~/.zshrc ]]; then
+    # Thêm các dòng vào tệp .zshrc
+    echo 'export PATH=~/.local/bin:$PATH' >> ~/.zshrc
+    echo 'export GOPATH=...' >> ~/.zshrc
+    source ~/.zshrc
+    echo "Cập nhật và source ~/.zshrc thành công!"
+fi
+
+if [[ -f ~/.bashrc ]]; then
+    # Thêm các dòng vào tệp .bashrc
+    echo 'export PATH=~/.local/bin:$PATH' >> ~/.bashrc
+    echo 'export GOPATH=...' >> ~/.bashrc
+    source ~/.bashrc
+    echo "Cập nhật và source ~/.bashrc thành công!"
+fi
 

@@ -14,7 +14,7 @@ def dns_recon(target, status_data):
     status_data["Sub_Recon"]["dns_recon"] = "0"
     with open(f"Result/{target}/status_of_function.json", "w") as f:
         json.dump(status_data, f, indent=4)
-    dnss = subprocess.Popen('python3.10 dnsrecon/__main__.py -d '+ target + f' -j Result/{target}/recon/{target}_dns.json', shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    dnss = subprocess.Popen('dnsrecon -d '+ target + f' -j Result/{target}/recon/{target}_dns.json', shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     dnss.communicate()
     print(G,"[*] DNS scan done !           ")
     subprocess._cleanup()

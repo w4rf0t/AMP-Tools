@@ -1,7 +1,7 @@
 [
     {
-        "arguments": "dnsrecon/__main__.py -d vulnweb.com -j Result/vulnweb.com/recon/vulnweb.com_dns.json",
-        "date": "2023-08-04 13:39:32.136089",
+        "arguments": "/home/ninja/.local/bin/dnsrecon -d vulnweb.com -j Result/vulnweb.com/recon/vulnweb.com_dns.json",
+        "date": "2023-08-06 23:19:51.042477",
         "type": "ScanInfo"
     },
     {
@@ -20,7 +20,7 @@
         "Version": "",
         "address": "199.167.66.107",
         "domain": "vulnweb.com",
-        "recursive": "True",
+        "recursive": "False",
         "target": "ns1.eurodns.com",
         "type": "NS"
     },

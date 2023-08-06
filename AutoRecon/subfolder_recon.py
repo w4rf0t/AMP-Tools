@@ -14,6 +14,26 @@ B = "\033[34m"
 
 def execute_command(command):
     subprocess.run(command, shell=True, check=True, stderr=subprocess.PIPE)
+    
+async def run_dirsearch(target_url, target):
+    command = (
+        f"dirsearch -u {target_url} --random-agent --follow-redirects --skip-on-status=404 "
+        "--deep-recursive -e php,asp,aspx,jsp,html,zip,jar,js,css,txt,log,bin,tar,conf,config,backup,swp,sql,db,dbf,mdb,sqlite,sqlite3,dat,db2,db3,dbf,psd,torrent,git,7z,bz2,gz,rar,tar,zip,bak,backup,old,xml "
+        "-x 500 -t 500 -r --format=json"
+    )
+    process = await asyncio.create_subprocess_shell(
+        command, stdout=subprocess.PIPE, stderr=subprocess.PIPE
+    )
+async def output_handler():
+        while True:
+            line = await process.stdout.readline()
+            if not line:
+                break
+            line = line.decode().strip()
+            if line.startswith("Target:"):
+                print(line)
+    
+    
 
 async def js_Recon(target,status_data=None):
     print(B,'[*] Directory enumerating...',end="\r")
@@ -68,9 +88,20 @@ async def js_Recon(target,status_data=None):
     #         thread.join()
     # except Exception as e:
     #     pass
-    # dirsearch_command = f"cat Result/{target}/recon/{target}_live.txt | httpx -silent -mc 200 | xargs -I %% bash -c 'python3 dirsearch/dirsearch.py -u %% --random-agent --follow-redirects --deep-recursive -x 500 -o Result/{target}/recon/{target}_url/%%-dirsearch.txt'"
-    os.system(f"dirsearch/dirsearch.py -l Result/{target}/recon/{target}_live.txt --random-agent --follow-redirects --skip-on-status=404 --deep-recursive -e php,asp,aspx,jsp,html,zip,jar,js,css,txt,log,bin,tar,conf,config,backup,swp,sql,db,dbf,mdb,sqlite,sqlite3,dat,db2,db3,dbf,psd,torrent,git,7z,bz2,gz,rar,tar,zip,bak,backup,old,xml -x 500 -t 500 -r -w dirsearch/db/dicc.txt --format=json -o Result/{target}/recon/{target}_url/dirsearch.json")
-    # os.system(f"cat Result/{target}/recon/{target}_live.txt;while read url; do dirsearch/dirsearch.py -u $url --random-agent --follow-redirects --deep-recursive -x 500 -o Result/{target}/recon/{target}_url/$url-dirsearch.txt; done")
+    command_dirsearch =f"dirsearch -l Result/{target}/recon/{target}_live.txt --random-agent --follow-redirects --skip-on-status=404 --deep-recursive -e php,asp,aspx,jsp,html,zip,jar,js,css,txt,log,bin,tar,conf,config,backup,swp,sql,db,dbf,mdb,sqlite,sqlite3,dat,db2,db3,dbf,psd,torrent,git,7z,bz2,gz,rar,tar,zip,bak,backup,old,xml -x 500 -t 500 -r --format=json -o Result/{target}/recon/{target}_url/dirsearch.json"
+    process = await asyncio.create_subprocess_shell(command_dirsearch, shell=True,stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    async def output_handler():
+        while True:
+            line = await process.stdout.readline()
+            if not line:
+                break
+            line = line.decode().strip()
+            if line.startswith("URL:"):
+                print(line)
+    
+    asyncio.create_task(output_handler())
+    await process.wait()
+    
     status_data['js_Recon']['js_Recon'] = "1"
     with open(f"Result/{target}/status_of_function.json","w") as f:
         json.dump(status_data,f,indent=4)
