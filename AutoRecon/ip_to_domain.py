@@ -8,9 +8,8 @@ def reverse_ip_lookup_hackertarget(ip):
     response = requests.get(url)
     return response.text.strip()
 
-
 def ip_To_Domain(target,status_data):
-    print(colored(" Reversing IP to domain...","blue"))
+    print(colored(" [*] Reversing IP to domain...","blue"),end="\r")
     status_data["ip_Recon"]["ip_to_domain"] = "0"
     with open(f"Result/{target}/status_of_function.json","w") as f:
         json.dump(status_data, f, indent=4)
@@ -21,4 +20,4 @@ def ip_To_Domain(target,status_data):
     status_data["ip_Recon"]["ip_to_domain"] = "1"
     with open(f"Result/{target}/status_of_function.json","w") as f:
         json.dump(status_data, f, indent=4)
-    print(colored(" Reversing IP to domain done ","green"))
+    print(colored(" [*] Reversing IP to domain done ","green"))

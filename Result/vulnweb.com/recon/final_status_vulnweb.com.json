@@ -1,16 +1,5 @@
 [
     {
-        "www.vulnweb.com": {
-            "host": "44.228.249.3",
-            "port": "80",
-            "scheme": "http",
-            "tech": [
-                "Nginx:1.19.0"
-            ],
-            "title": "Acunetix Web Vulnerability Scanner - Test websites"
-        }
-    },
-    {
         "testphp.vulnweb.com": {
             "host": "44.228.249.3",
             "port": "80",
@@ -36,6 +25,17 @@
                 "Windows Server"
             ],
             "title": "acuforum forums"
+        }
+    },
+    {
+        "www.vulnweb.com": {
+            "host": "44.228.249.3",
+            "port": "80",
+            "scheme": "http",
+            "tech": [
+                "Nginx:1.19.0"
+            ],
+            "title": "Acunetix Web Vulnerability Scanner - Test websites"
         }
     },
     {

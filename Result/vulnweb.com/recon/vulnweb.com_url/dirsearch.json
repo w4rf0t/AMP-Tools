@@ -1,225 +1,50 @@
 {
     "info": {
-        "args": "/home/ninja/.local/bin/dirsearch -l Result/vulnweb.com/recon/vulnweb.com_live.txt --random-agent --follow-redirects --skip-on-status=404 --deep-recursive -e php,asp,aspx,jsp,html,zip,jar,js,css,txt,log,bin,tar,conf,config,backup,swp,sql,db,dbf,mdb,sqlite,sqlite3,dat,db2,db3,dbf,psd,torrent,git,7z,bz2,gz,rar,tar,zip,bak,backup,old,xml -x 500 -t 500 -r --format=json -o Result/vulnweb.com/recon/vulnweb.com_url/dirsearch.json",
-        "time": "Mon Aug  7 00:01:46 2023"
+        "args": "/home/kali/.local/bin/dirsearch -l Result/vulnweb.com/recon/vulnweb.com_live.txt --random-agent --follow-redirects -x 300-502 -t 500 -r --format=json -o Result/vulnweb.com/recon/vulnweb.com_url/dirsearch.json",
+        "time": "Mon Aug  7 14:23:11 2023"
     },
     "results": [
         {
-            "content-length": 312,
-            "content-type": "text/html",
-            "redirect": "",
-            "status": 403,
-            "url": "http://testasp.vulnweb.com/\\..\\..\\..\\..\\..\\..\\..\\..\\..\\etc\\passwd"
-        },
-        {
-            "content-length": 1233,
-            "content-type": "text/html",
-            "redirect": "",
-            "status": 403,
-            "url": "http://testasp.vulnweb.com/aspnet_client/"
-        },
-        {
-            "content-length": 1233,
-            "content-type": "text/html",
-            "redirect": "",
-            "status": 403,
-            "url": "http://testasp.vulnweb.com/aspnet_client/"
-        },
-        {
-            "content-length": 1233,
-            "content-type": "text/html",
-            "redirect": "",
-            "status": 403,
-            "url": "http://testasp.vulnweb.com/cgi-bin/"
-        },
-        {
-            "content-length": 1233,
-            "content-type": "text/html",
-            "redirect": "",
-            "status": 403,
-            "url": "http://testasp.vulnweb.com/cgi-bin/"
-        },
-        {
-            "content-length": 312,
-            "content-type": "text/html",
-            "redirect": "",
-            "status": 403,
-            "url": "http://testasp.vulnweb.com/cgi-bin/.%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd"
-        },
-        {
-            "content-length": 0,
+            "content-length": 14561,
             "content-type": "text/html",
             "redirect": "",
             "status": 200,
-            "url": "http://testasp.vulnweb.com/db.asp"
-        },
-        {
-            "content-length": 3538,
-            "content-type": "text/html",
-            "redirect": "",
-            "status": 200,
-            "url": "http://testasp.vulnweb.com/default.asp"
-        },
-        {
-            "content-length": 1233,
-            "content-type": "text/html",
-            "redirect": "",
-            "status": 403,
-            "url": "http://testasp.vulnweb.com/images/"
-        },
-        {
-            "content-length": 1233,
-            "content-type": "text/html",
-            "redirect": "",
-            "status": 403,
-            "url": "http://testasp.vulnweb.com/jscripts/tiny_mce/"
-        },
-        {
-            "content-length": 1233,
-            "content-type": "text/html",
-            "redirect": "",
-            "status": 403,
-            "url": "http://testasp.vulnweb.com/html/"
-        },
-        {
-            "content-length": 1233,
-            "content-type": "text/html",
-            "redirect": "",
-            "status": 403,
-            "url": "http://testasp.vulnweb.com/images/"
-        },
-        {
-            "content-length": 3194,
-            "content-type": "text/html",
-            "redirect": "",
-            "status": 200,
-            "url": "http://testasp.vulnweb.com/login.asp"
-        },
-        {
-            "content-length": 3538,
-            "content-type": "text/html",
-            "redirect": "",
-            "status": 200,
-            "url": "http://testasp.vulnweb.com/Default.asp"
-        },
-        {
-            "content-length": 1233,
-            "content-type": "text/html",
-            "redirect": "",
-            "status": 403,
-            "url": "http://testasp.vulnweb.com/jscripts/"
-        },
-        {
-            "content-length": 1233,
-            "content-type": "text/html",
-            "redirect": "",
-            "status": 403,
-            "url": "http://testasp.vulnweb.com/jscripts/tiny_mce/"
-        },
-        {
-            "content-length": 1233,
-            "content-type": "text/html",
-            "redirect": "",
-            "status": 403,
-            "url": "http://testasp.vulnweb.com/jscripts/"
-        },
-        {
-            "content-length": 3617,
-            "content-type": "text/html",
-            "redirect": "",
-            "status": 200,
-            "url": "http://testasp.vulnweb.com/register.asp"
-        },
-        {
-            "content-length": 13,
-            "content-type": "text/plain",
-            "redirect": "",
-            "status": 200,
-            "url": "http://testasp.vulnweb.com/robots.txt"
-        },
-        {
-            "content-length": 2809,
-            "content-type": "text/html",
-            "redirect": "",
-            "status": 200,
-            "url": "http://testasp.vulnweb.com/search.asp"
-        },
-        {
-            "content-length": 1233,
-            "content-type": "text/html",
-            "redirect": "",
-            "status": 403,
-            "url": "http://testasp.vulnweb.com/t/"
-        },
-        {
-            "content-length": 1233,
-            "content-type": "text/html",
-            "redirect": "",
-            "status": 403,
-            "url": "http://testasp.vulnweb.com/templates/"
-        },
-        {
-            "content-length": 1233,
-            "content-type": "text/html",
-            "redirect": "",
-            "status": 403,
-            "url": "http://testasp.vulnweb.com/templates/"
-        },
-        {
-            "content-length": 276,
-            "content-type": "text/html",
-            "redirect": "",
-            "status": 403,
-            "url": "http://testhtml5.vulnweb.com/cgi-bin/"
-        },
-        {
-            "content-length": 276,
-            "content-type": "text/html",
-            "redirect": "",
-            "status": 403,
-            "url": "http://testhtml5.vulnweb.com/cgi-bin"
+            "url": "http://testaspnet.vulnweb.com/about.aspx"
         },
         {
             "content-length": 894,
             "content-type": "image/x-icon",
             "redirect": "",
             "status": 200,
-            "url": "http://testhtml5.vulnweb.com/favicon.ico"
+            "url": "http://testaspnet.vulnweb.com/favicon.ico"
         },
         {
-            "content-length": 178,
-            "content-type": "text/html",
-            "redirect": "",
-            "status": 405,
-            "url": "http://testhtml5.vulnweb.com/login"
-        },
-        {
-            "content-length": 4462,
+            "content-length": 13363,
             "content-type": "text/html",
             "redirect": "",
             "status": 200,
-            "url": "http://testhtml5.vulnweb.com/report"
+            "url": "http://testaspnet.vulnweb.com/login.aspx"
         },
         {
-            "content-length": 312,
+            "content-length": 13388,
             "content-type": "text/html",
             "redirect": "",
-            "status": 403,
-            "url": "http://testaspnet.vulnweb.com/templates/cgi-bin/.%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd"
+            "status": 200,
+            "url": "http://testaspnet.vulnweb.com/login.aspx?ReturnUrl=%2flogout.aspx"
         },
         {
-            "content-length": 1233,
-            "content-type": "text/html",
+            "content-length": 13,
+            "content-type": "text/plain",
             "redirect": "",
-            "status": 403,
-            "url": "http://testaspnet.vulnweb.com/temp/"
+            "status": 200,
+            "url": "http://testaspnet.vulnweb.com/robots.txt"
         },
         {
-            "content-length": 1233,
+            "content-length": 13048,
             "content-type": "text/html",
             "redirect": "",
-            "status": 403,
-            "url": "http://testaspnet.vulnweb.com/temp/"
+            "status": 200,
+            "url": "http://testaspnet.vulnweb.com/signup.aspx"
         },
         {
             "content-length": 3,
@@ -229,165 +54,375 @@
             "url": "http://testaspnet.vulnweb.com/test.txt"
         },
         {
-            "content-length": 2940,
-            "content-type": "text/html",
+            "content-length": 266,
+            "content-type": "text/xml",
             "redirect": "",
-            "status": 403,
-            "url": "http://testaspnet.vulnweb.com/Trace.axd"
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/.idea/misc.xml"
         },
         {
-            "content-length": 1233,
+            "content-length": 951,
             "content-type": "text/html",
             "redirect": "",
-            "status": 403,
-            "url": "http://testaspnet.vulnweb.com/TEMP/"
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/.idea/"
         },
         {
-            "content-length": 312,
-            "content-type": "text/html",
+            "content-length": 6,
+            "content-type": "application/octet-stream",
             "redirect": "",
-            "status": 403,
-            "url": "http://testaspnet.vulnweb.com/templates/.%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd"
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/.idea/.name"
         },
         {
-            "content-length": 312,
-            "content-type": "text/html",
+            "content-length": 171,
+            "content-type": "text/xml",
             "redirect": "",
-            "status": 403,
-            "url": "http://44.238.29.244/templates/\\..\\..\\..\\..\\..\\..\\..\\..\\..\\etc\\passwd"
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/.idea/encodings.xml"
         },
         {
-            "content-length": 1233,
-            "content-type": "text/html",
+            "content-length": 275,
+            "content-type": "text/xml",
             "redirect": "",
-            "status": 403,
-            "url": "http://44.238.29.244/aspnet_client/"
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/.idea/modules.xml"
         },
         {
-            "content-length": 1233,
-            "content-type": "text/html",
+            "content-length": 143,
+            "content-type": "text/xml",
             "redirect": "",
-            "status": 403,
-            "url": "http://44.238.29.244/templates/.%2e/aspnet_client/"
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/.idea/scopes/scope_settings.xml"
         },
         {
-            "content-length": 312,
-            "content-type": "text/html",
+            "content-length": 173,
+            "content-type": "text/xml",
             "redirect": "",
-            "status": 403,
-            "url": "http://44.238.29.244/templates/.%2e/cgi-bin/.%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd"
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/.idea/vcs.xml"
         },
         {
-            "content-length": 312,
+            "content-length": 951,
             "content-type": "text/html",
             "redirect": "",
-            "status": 403,
-            "url": "http://44.238.29.244/templates/.%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd"
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/.idea/"
         },
         {
-            "content-length": 312,
-            "content-type": "text/html",
+            "content-length": 12473,
+            "content-type": "text/xml",
             "redirect": "",
-            "status": 403,
-            "url": "http://44.238.29.244/templates/\\..\\..\\..\\..\\..\\..\\..\\..\\..\\etc\\passwd"
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/.idea/workspace.xml"
         },
         {
-            "content-length": 312,
+            "content-length": 5265,
             "content-type": "text/html",
             "redirect": "",
-            "status": 403,
-            "url": "http://44.238.29.244/templates/cgi-bin/.%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd"
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/404.php"
         },
         {
-            "content-length": 312,
+            "content-length": 400,
             "content-type": "text/html",
             "redirect": "",
-            "status": 403,
-            "url": "http://44.238.29.244/templates/.%2e/%2e%2e//google.com"
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/_mmServerScripts/"
         },
         {
-            "content-length": 312,
+            "content-length": 93,
             "content-type": "text/html",
             "redirect": "",
-            "status": 403,
-            "url": "http://44.238.29.244/templates/.%2e/.%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd"
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/_mmServerScripts/MMHTTPDB.php"
         },
         {
-            "content-length": 312,
+            "content-length": 262,
             "content-type": "text/html",
             "redirect": "",
-            "status": 403,
-            "url": "http://44.238.29.244/templates/.%2e/\\..\\..\\..\\..\\..\\..\\..\\..\\..\\etc\\passwd"
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/admin/"
         },
         {
-            "content-length": 312,
+            "content-length": 262,
             "content-type": "text/html",
             "redirect": "",
-            "status": 403,
-            "url": "http://44.238.29.244/templates/.%2e/aspnet_client/.%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd"
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/admin/"
         },
         {
-            "content-length": 312,
+            "content-length": 4903,
             "content-type": "text/html",
             "redirect": "",
-            "status": 403,
-            "url": "http://44.238.29.244/templates/.%2e/aspnet_client/\\..\\..\\..\\..\\..\\..\\..\\..\\..\\etc\\passwd"
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/cart.php"
         },
         {
-            "content-length": 312,
-            "content-type": "text/html",
+            "content-length": 224,
+            "content-type": "text/xml",
             "redirect": "",
-            "status": 403,
-            "url": "http://44.238.29.244/templates/.%2e/aspnet_client/cgi-bin/.%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd"
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/crossdomain.xml"
         },
         {
-            "content-length": 312,
+            "content-length": 281,
             "content-type": "text/html",
             "redirect": "",
-            "status": 403,
-            "url": "http://44.238.29.244/templates/.%2e/cgi-bin/\\..\\..\\..\\..\\..\\..\\..\\..\\..\\etc\\passwd"
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/Connections/"
         },
         {
-            "content-length": 312,
-            "content-type": "text/html",
+            "content-length": 1,
+            "content-type": "application/octet-stream",
             "redirect": "",
-            "status": 403,
-            "url": "http://44.238.29.244/templates/.%2e/cgi-bin/cgi-bin/.%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd"
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/CVS/Root"
         },
         {
-            "content-length": 312,
+            "content-length": 595,
             "content-type": "text/html",
             "redirect": "",
-            "status": 403,
-            "url": "http://44.238.29.244/templates/.%2e/cgi-bin/.%2e/%2e%2e//google.com"
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/CVS/"
         },
         {
-            "content-length": 312,
-            "content-type": "text/html",
+            "content-length": 1,
+            "content-type": "application/octet-stream",
             "redirect": "",
-            "status": 403,
-            "url": "http://44.238.29.244/templates/.%2e/cgi-bin/.%2e/.%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd"
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/CVS/Entries"
         },
         {
-            "content-length": 312,
-            "content-type": "text/html",
+            "content-length": 894,
+            "content-type": "image/x-icon",
             "redirect": "",
-            "status": 403,
-            "url": "http://44.238.29.244/templates/.%2e/cgi-bin/.%2e/\\..\\..\\..\\..\\..\\..\\..\\..\\..\\etc\\passwd"
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/favicon.ico"
         },
         {
-            "content-length": 1233,
+            "content-length": 377,
             "content-type": "text/html",
             "redirect": "",
-            "status": 403,
-            "url": "http://44.238.29.244/templates/.%2e/cgi-bin/.%2e/aspnet_client/"
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/images/"
         },
         {
-            "content-length": 1233,
+            "content-length": 2586,
+            "content-type": "application/zip",
+            "redirect": "",
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/index.zip"
+        },
+        {
+            "content-length": 3265,
+            "content-type": "application/octet-stream",
+            "redirect": "",
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/index.bak"
+        },
+        {
+            "content-length": 377,
             "content-type": "text/html",
             "redirect": "",
-            "status": 403,
-            "url": "http://44.238.29.244/aspnet_client/"
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/images/"
+        },
+        {
+            "content-length": 5523,
+            "content-type": "text/html",
+            "redirect": "",
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/login.php"
+        },
+        {
+            "content-length": 4830,
+            "content-type": "text/html",
+            "redirect": "",
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/logout.php"
+        },
+        {
+            "content-length": 2669,
+            "content-type": "text/html",
+            "redirect": "",
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/pictures/"
+        },
+        {
+            "content-length": 4732,
+            "content-type": "text/html",
+            "redirect": "",
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/search.php"
+        },
+        {
+            "content-length": 5056,
+            "content-type": "text/html",
+            "redirect": "",
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/product.php"
+        },
+        {
+            "content-length": 0,
+            "content-type": "text/html",
+            "redirect": "",
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/secured/"
+        },
+        {
+            "content-length": 6033,
+            "content-type": "text/html",
+            "redirect": "",
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/signup.php"
+        },
+        {
+            "content-length": 5523,
+            "content-type": "text/html",
+            "redirect": "",
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/login.php"
+        },
+        {
+            "content-length": 268,
+            "content-type": "text/html",
+            "redirect": "",
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/vendor/"
+        },
+        {
+            "content-length": 0,
+            "content-type": "text/html",
+            "redirect": "",
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/_mmServerScripts/mysql.php"
+        },
+        {
+            "content-length": 6660,
+            "content-type": "image/gif",
+            "redirect": "",
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/images/logo.gif"
+        },
+        {
+            "content-length": 33,
+            "content-type": "text/plain",
+            "redirect": "",
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/pictures/credentials.txt"
+        },
+        {
+            "content-length": 1535,
+            "content-type": "application/octet-stream",
+            "redirect": "",
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/pictures/wp-config.bak"
+        },
+        {
+            "content-length": 771,
+            "content-type": "application/octet-stream",
+            "redirect": "",
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/pictures/WS_FTP.LOG"
+        },
+        {
+            "content-length": 45963,
+            "content-type": "text/html",
+            "redirect": "",
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/secured/phpinfo.php"
+        },
+        {
+            "content-length": 52844,
+            "content-type": "application/json",
+            "redirect": "",
+            "status": 200,
+            "url": "http://testphp.vulnweb.com/vendor/installed.json"
+        },
+        {
+            "content-length": 4472,
+            "content-type": "text/html",
+            "redirect": "",
+            "status": 200,
+            "url": "http://testhtml5.vulnweb.com/comment"
+        },
+        {
+            "content-length": 493,
+            "content-type": "text/html",
+            "redirect": "",
+            "status": 200,
+            "url": "http://testhtml5.vulnweb.com/examples"
+        },
+        {
+            "content-length": 894,
+            "content-type": "image/x-icon",
+            "redirect": "",
+            "status": 200,
+            "url": "http://testhtml5.vulnweb.com/favicon.ico"
+        },
+        {
+            "content-length": 4462,
+            "content-type": "text/html",
+            "redirect": "",
+            "status": 200,
+            "url": "http://testhtml5.vulnweb.com/report"
+        },
+        {
+            "content-length": 386,
+            "content-type": "text/html",
+            "redirect": "",
+            "status": 200,
+            "url": "http://testhtml5.vulnweb.com/samples/"
+        },
+        {
+            "content-length": 386,
+            "content-type": "text/html",
+            "redirect": "",
+            "status": 200,
+            "url": "http://testhtml5.vulnweb.com/samples"
+        },
+        {
+            "content-length": 926,
+            "content-type": "text/html",
+            "redirect": "",
+            "status": 200,
+            "url": "http://testasp.vulnweb.com/_vti_cnf/"
+        },
+        {
+            "content-length": 926,
+            "content-type": "text/html",
+            "redirect": "",
+            "status": 200,
+            "url": "http://testasp.vulnweb.com/_vti_cnf/"
+        },
+        {
+            "content-length": 3194,
+            "content-type": "text/html",
+            "redirect": "",
+            "status": 200,
+            "url": "http://testasp.vulnweb.com/login.asp"
+        },
+        {
+            "content-length": 13,
+            "content-type": "text/plain",
+            "redirect": "",
+            "status": 200,
+            "url": "http://testasp.vulnweb.com/robots.txt"
+        },
+        {
+            "content-length": 338,
+            "content-type": "text/html",
+            "redirect": "",
+            "status": 200,
+            "url": "http://testasp.vulnweb.com/_vti_cnf/logout.asp"
+        },
+        {
+            "content-length": 772,
+            "content-type": "text/html",
+            "redirect": "",
+            "status": 200,
+            "url": "http://testasp.vulnweb.com/_vti_cnf/login.asp"
         }
     ]
 }

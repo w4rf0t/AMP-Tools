@@ -23,21 +23,16 @@ def consumer(queue, event):
         try:
             value = queue.get(timeout=5)
         except:
-            print("Queue is empty")
             break
-        print(value)
-    print("complete")
+        # print(value)
     
-    print("consumer existed")
 
 def producer(queue, event, batch_data, function_run, file_to_write):
-    print("produder running")
     while not event.is_set():
         for item in batch_data:
             
             data =  function_run(item, file_to_write)
             queue.put(data)
-    print("producer existed")
 
 def split(a, n):
     k, m = divmod(len(a), n)
@@ -61,7 +56,7 @@ def process_js_file(data, file_to_write):
         matches = re.findall(values, data)
         
         if(matches):
-            print(f'Find {key}:  {matches}')
+            # print(f'Find {key}:  {matches}')
             file_to_write.write(f'Find {key}:  {matches}\n')
 
 
@@ -85,14 +80,14 @@ def sensitives(url,f):
         for key, values in re_pattern.items():
             matches = re.findall(values, contents)
             if(matches):
-                print(f'Find {key}:  {matches}')
+                # print(f'Find {key}:  {matches}')
                 f.write(f'Find {key}:  {matches}\n')
                 # return f'Find {key}:  {matches}'
     except:
         pass
     
 def find_sensitive(target,status_data):
-    print(" Start find sensitive...")
+    print(" [*] Start find sensitive...",end="\r")
     status_data['find_sensitive']['find_sensitive'] = "0"
     with open(f"Result/{target}/status_of_function.json","w") as f:
         json.dump(status_data, f, indent=4)     
@@ -107,4 +102,4 @@ def find_sensitive(target,status_data):
         json.dump(status_data, f, indent=4)  
         
     os.system(f'cat Result/{target}/recon/temp.txt | uniq >> Result/{target}/recon/sensitive_data.txt; rm Result/{target}/recon/temp.txt')
-    print("Finish find sensitive")
+    print(" [*] Finish find sensitive !")

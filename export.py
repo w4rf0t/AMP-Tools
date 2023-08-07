@@ -177,7 +177,7 @@ def dns(target, workbook):
 
 
 def exportation_subdomain(target):
-    print(W, 'RExporting Report...')
+    print(B,'[*] Exporting Report...')
     workbook = openpyxl.Workbook()
     nmap(target, workbook)
     waf(target, workbook)
@@ -194,7 +194,7 @@ def exportation_subdomain(target):
     # os.remove(f'Result/{target}/recon/final_status_{target}.json')
     # os.remove(f'Result/{target}/recon/{target}_live.txt')
     # os.system(f"zip -r Result/{target}/recon/result.zip Result/{target}/recon/{target}_url")
-    print(G, 'Export Completed')
+    print(G,'[*] Export Completed')
     # print(B,'Sending report....')
     # send_file_to_telegram(file_path, file_path1,'-895049403','6394974317:AAG098D_1b_RgY8EaudD_-_-3i5zG3Zk94c',target)
     # print(G,'Files sent successfully !')

@@ -15,11 +15,11 @@ import asyncio
 from termcolor import colored
 import pyfiglet
 from export import *
-
+from VulnScan.scanvuln import checkvuln
 
 def menu():
     subprocess.call("clear", shell=True)
-    print(colored(pyfiglet.Figlet(font="standard").renderText("AMP") +' is running ..',"magenta"))
+    # print(colored(pyfiglet.Figlet(font="standard").renderText("AMP") +' is running ..',"magenta"))
     print(colored('''[*]   use -h or --help for help\n[*]   example: python3 main.py example.com''', "white"))
 
 
@@ -33,8 +33,9 @@ def main(target):
         "ip_Recon": {
             "get_ip_nmap": "-1"
         },
-        "js_Recon": {
-            "js_Recon": "-1"
+        "subfolder_Recon": {
+            "js_Recon": "-1",
+            "dirsearch": "-1",
         },
         "waf_Recon": {
             "wafwoof": "-1"
@@ -48,8 +49,9 @@ def main(target):
             "scan_input_IP": "-1",
             "ip_to_domain": "-1",
         },
-        "js_Recon": {
-            "js_Recon": "-1"
+        "subfolder_Recon": {
+            "js_Recon": "-1",
+            "dirsearch": "-1",
         },
         "waf_Recon": {
             "wafwoof": "-1"
@@ -66,47 +68,40 @@ def main(target):
     if not IP_regex.match(target):
         with open(f"Result/{target}/status_of_function.json", "w") as f:
             json.dump(status_data_json_subdomain, f, indent=4)  
-        # sub_Recon(target)
+        sub_Recon(target)
 
         with open(f"Result/{target}/status_of_function.json", "r") as f:
             status_data = json.load(f)
-        # ip_Recon(target, status_data)
-        # asyncio.run(check_plagiarism_sub(target))
-        asyncio.run(js_Recon(target, status_data))
-        # t2 = Thread(target=js_Recon, args=[target, status_data])
-        # t3 = Thread(target=waf_Recon, args=[target, status_data])
-        # t4 = Thread(target=dns_recon, args=[target, status_data])
-        # t2.start()
-        # t3.start()
-        # t4.start()
-        # t2.join()
-        # t3.join()
-        # t4.join()
-        # find_sensitive(target, status_data)
-        # exportation_subdomain(target)
+        ip_Recon(target, status_data)
+        asyncio.run(check_plagiarism_sub(target))
+        t3 = Thread(target=waf_Recon, args=[target, status_data])
+        t4 = Thread(target=dns_recon, args=[target, status_data])
+        t3.start()
+        t4.start()
+        t3.join()
+        t4.join()
+        asyncio.run(subfolder_recon(target, status_data))
+        find_sensitive(target, status_data)
+        exportation_subdomain(target)
 
     else:
         ip_To_Domain(target, status_data_json_ip)
-        # with open(f"Result/{target}/status_of_function.json", "w") as f:
-        #     json.dump(status_data_json_ip, f, indent=4)
-        # with open(f"Result/{target}/status_of_function.json", "r") as f:
-        #     status_data = json.load(f)
-        # ip_Recon(target, status_data)
-        # asyncio.run(check_plagiarism_sub(target))
-        # with open(f"Result/{target}/status_of_function.json", "r") as f:
-        #     status_data = json.load(f)
-        # t1 = Thread(target=waf_Recon, args=[target, status_data])
-        # t2 = Thread(target=js_Recon, args=[target, status_data])
-        # t3 = Thread(target=ip_To_Domain, args=[target, status_data])
-        # t1.start()
-        # t2.start()
-        # t3.start()
-        # t1.join()
-        # t2.join()
-        # t3.join()
-        # find_sensitive(target, status_data)
+        with open(f"Result/{target}/status_of_function.json", "w") as f:
+            json.dump(status_data_json_ip, f, indent=4)
+        with open(f"Result/{target}/status_of_function.json", "r") as f:
+            status_data = json.load(f)
+        ip_Recon(target, status_data)
+        asyncio.run(check_plagiarism_sub(target))
+        with open(f"Result/{target}/status_of_function.json", "r") as f:
+            status_data = json.load(f)
+        t1 = Thread(target=waf_Recon, args=[target, status_data])
+        t1.start()
+        t1.join()
+        asyncio.run(subfolder_recon(target, status_data))
+        
+        find_sensitive(target, status_data)
         exportation_ip(target)
-    # checkvuln(target)
+    checkvuln(target)
 
 
 if __name__ == "__main__":
@@ -115,10 +110,12 @@ if __name__ == "__main__":
     G = "\033[32m"
     O = "\033[33m"
     B = "\033[34m"
-    menu()
+    subprocess.call("clear", shell=True)
+    print(colored(pyfiglet.Figlet(font="standard").renderText("AMP") +' is running ..',"magenta"))
     try:
         target = sys.argv[1]
         if (target == '-h' or target == '--help'):
+            menu()
             raise Exception
     except:
         target = input(colored(" Enter a target: ", "blue"))
@@ -131,11 +128,10 @@ if __name__ == "__main__":
         os.makedirs(f'Result/{target}', exist_ok=True)
     except FileExistsError:
         pass
-    # print(
-    #     colored(f"[*] Generating wildcard host for {target}...", "green"), end="\r")
+    # print(colored(f" [*] Generating wildcard host for {target}...", "blue"), end="\r")
     # zoomeye_host(target)
-    print(
-        colored(f"[*] Generating wildcard host for {target} done !", "green"))
+    # print(
+    #     colored(f"[*] Generating wildcard host for {target} done !", "green"))
     main(target)
     # threads = []
     # with open(f"Result/{target}_hostname.txt", "r") as f:

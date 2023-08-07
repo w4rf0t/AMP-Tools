@@ -1,12 +1,5 @@
 [
     {
-        "url": "https://103.122.82.51:9443",
-        "detected": false,
-        "firewall": "None",
-        "manufacturer": "None"
-    }
-][
-    {
         "url": "https://103.122.82.51:1445",
         "detected": false,
         "firewall": "None",
