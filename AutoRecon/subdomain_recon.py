@@ -2,6 +2,9 @@ import subprocess
 import os
 import json
 import requests
+from AutoRecon.module.load_config import *
+from AutoRecon.module.check_ip import *
+from AutoRecon.module.scidr import *
 
 W = "\033[0m"
 R = "\033[31m"
@@ -10,42 +13,59 @@ O = "\033[33m"
 B = "\033[34m"
 
 
-def call_subfinder(target, dataf):
+def recon_sub(target, dataf):
     print(B,'[*] Enumerating subdomain...', end="\r")
     dataf["Sub_Recon"]["call_subfinder"] = "0"
     with open(f"Result/{target}/status_of_function.json", "w") as f:
         json.dump(dataf, f, indent=4)
     # Passive
-    subprocess.run(["subfinder", "-d", target, "-silent", "-all", "-o", f"Result/{target}/recon/subdomain_{target}_subfinder.txt"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, shell=True)
-
-
-    url = "https://api.securitytrails.com/v1/domain/{}/subdomains".format(
-        target)
-    headers = {
-        "apikey": "eemhS0PjUSMWCp1s2BwX1Z8QsSpEN9Gx"
-    }
-    response = requests.get(url, headers=headers)  # proxies=proxies,
-    subdomains = set()
-    if response.status_code == 200:
-        response_json = response.json()
-        for subdomain in response_json["subdomains"]:
-            full_subdomain = f"{subdomain}.{target}"
-            subdomains.add(full_subdomain)
-    else:
-        pass
-    with open(f"Result/{target}/recon/subdomain_{target}_securitytraials.txt", "a") as f:
-        for subdomain in subdomains:
-            f.write("%s\n" % subdomain)
+    try: call_scidr(target) 
+    except: pass
+    try: call_subfinder(target)
+    except: pass
+    try: call_securitytrails(target)
+    except: pass
+    
     dataf["Sub_Recon"]["call_subfinder"] = "1"
     with open(f"Result/{target}/status_of_function.json", "w") as f:
         json.dump(dataf, f, indent=4)
+        
+def call_subfinder(target):
+    subfinder_command = f"subfinder -d {target} -silent -all -o Result/{target}/recon/subdomain_{target}_subfinder.txt"
+    process = subprocess.Popen(subfinder_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+    stdout, stderr = process.communicate()
+    
+def call_securitytrails(target): 
+    config=load_config()
+    securitrails_api_key=config.get('securitrails_api_key') 
+    if securitrails_api_key =="":
+        securitrails_api_key = input("Please enter your Securitytrails_Api_Key: ")
+        config['securitrails_api_key'] = securitrails_api_key
+        
+    url = "https://api.securitytrails.com/v1/domain/{}/subdomains".format(
+            target)
+    headers = {
+        "apikey": f"{securitrails_api_key}"
+        }
+    response = requests.get(url, headers=headers,timeout=10)
+    subdomains = set()
+    response_json = response.json()
+    for subdomain in response_json["subdomains"]:
+        full_subdomain = f"{subdomain}.{target}"
+        subdomains.add(full_subdomain)
+    with open(f"Result/{target}/recon/subdomain_{target}_securitytrails.txt", "a") as f:
+        for subdomain in subdomains:
+            f.write("%s\n" % subdomain)
 
+            
+def call_scidr(target):
+    scidr(target)
 
 def sanitize_input(target):
-    os.system(
-        f"cat Result/{target}/recon/subdomain_{target}_* >> Result/{target}/recon/subdomain_{target}.txt; rm Result/{target}/recon/subdomain_{target}_*.txt ")
-    os.system(
-        f"awk '!seen[$0]++' Result/{target}/recon/subdomain_{target}.txt > Result/{target}/recon/final_subdomain_{target}.txt; rm Result/{target}/recon/subdomain_{target}.txt ")
+    os.system(f"cat Result/{target}/recon/subdomain_{target}_subfinder.txt >> Result/{target}/recon/subdomain_{target}.txt;rm Result/{target}/recon/subdomain_{target}_subfinder.txt ")
+    os.system(f"cat Result/{target}/recon/subdomain_{target}_securitytrails.txt >> Result/{target}/recon/subdomain_{target}.txt;rm Result/{target}/recon/subdomain_{target}_securitytrails.txt ")
+    os.system(f"cat Result/{target}/recon/subdomain_{target}_scidr.txt >> Result/{target}/recon/subdomain_{target}.txt;rm Result/{target}/recon/subdomain_{target}_scidr.txt ")
+    os.system(f"awk '!seen[$0]++' Result/{target}/recon/subdomain_{target}.txt > Result/{target}/recon/final_subdomain_{target}.txt; rm Result/{target}/recon/subdomain_{target}.txt ")
 
     command_probe = [
         f"cat Result/{target}/recon/final_subdomain_{target}.txt | httprobe >>  Result/{target}/recon/{target}_live.txt"]
@@ -75,6 +95,7 @@ def sanitize_input(target):
         host = data['host']
         port = data['port']
         scheme = data['scheme']
+        url=data['url']
         try:
             tech = data['tech']
         except:
@@ -83,7 +104,7 @@ def sanitize_input(target):
             title = data['title']
         except:
             title = None
-        object = {data['url'].split("//")[1].split(":")[0]: {'host': host,
+        object = {data['url'].split("//")[1].split(":")[0]: {'url':url,'host': host,
                                                              'port': port, 'scheme': scheme, 'tech': tech, 'title': title}}
         finaldata.append(object)
     with open(f'Result/{target}/recon/final_status_{target}.json', 'w', encoding='utf-8') as f:
@@ -94,13 +115,11 @@ def sanitize_input(target):
 def sub_Recon(target):
     with open(f'Result/{target}/status_of_function.json', 'r') as f:
         dataf = json.load(f)
-        call_subfinder(target, dataf)
+        recon_sub(target, dataf)
     dataf["Sub_Recon"]["sanitize_input"] = "0"
     with open(f"Result/{target}/status_of_function.json", "w") as f:
         json.dump(dataf, f, indent=4)
-
     sanitize_input(target)
-
     dataf["Sub_Recon"]["sanitize_input"] = "1"
     with open(f"Result/{target}/status_of_function.json", "w") as f:
         json.dump(dataf, f, indent=4)

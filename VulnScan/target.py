@@ -684,12 +684,7 @@ def colfinder():
                                         print("\t[!] Column found: < " + column + " >")
                                 except (KeyboardInterrupt, SystemExit):
                                     raise
-                                except (
-                                    urllib.error.URLError,
-                                    socket.gaierror,
-                                    socket.error,
-                                    socket.timeout,
-                                ):
+                                except :
                                     pass
 
                             print(
@@ -700,12 +695,7 @@ def colfinder():
 
                     except (KeyboardInterrupt, SystemExit):
                         raise
-                    except (
-                        urllib.error.URLError,
-                        socket.gaierror,
-                        socket.error,
-                        socket.timeout,
-                    ):
+                    except:
                         pass
                 print("[!] Fuzzing is finished!")
                 break

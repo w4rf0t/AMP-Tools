@@ -2,9 +2,13 @@ import json
 # import subprocess
 from termcolor import colored
 import requests
+from AutoRecon.module.load_config import *
+
+config=load_config()
+hackertargetApiKey =config.get('hackertargetApiKey')
 
 def reverse_ip_lookup_hackertarget(ip):
-    url = f"https://api.hackertarget.com/reverseiplookup/?q={ip}&apikey=9c86e2dc2ec96b723fb9c7e4a1de64469a19cf5d4042526ca15e3dd6ee38ae9e9ff8a6a4ba1b1031"
+    url = f"https://api.hackertarget.com/reverseiplookup/?q={ip}&apikey={hackertargetApiKey}"
     response = requests.get(url)
     return response.text.strip()
 
