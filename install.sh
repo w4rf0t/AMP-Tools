@@ -14,8 +14,8 @@ fi
 if [[ -f ~/.bashrc ]]; then
     # Thêm các dòng vào tệp .bashrc
     echo 'export PATH=~/.local/bin:$PATH' >> ~/.bashrc
-    echo 'export GOROOT=$(which go)' >> ~/.zshrc
-    echo 'export GOPATH=~/go/bin' >> ~/.zshrc
+    echo 'export GOROOT=$(which go)' >> ~/.bashrc
+    echo 'export GOPATH=~/go/bin' >> ~/.bashrc
     source ~/.bashrc
     echo "Cập nhật và source ~/.bashrc thành công!"
 fi
